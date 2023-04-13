@@ -150,7 +150,7 @@ html {
     }
 
     h3 {
-            padding-top: 50px;
+        padding-top: 40px;
         font-size: 40px;
         text-align: center;
     }
@@ -344,7 +344,11 @@ html {
             padding: 10px;
         }
 
-        .tabor2 .contact-form-school a {
+        .tabor2-inner p {
+            margin: 8px 0;
+        }
+
+        .tabor2 a {
             font-size: 16px;
         }
 
@@ -352,44 +356,27 @@ html {
             margin: 0;
         }
 
-
         .tabor3 {
-            padding-bottom: 80px;
+            overflow: hidden;
         }
 
         .slider {
             margin-top: 50px;
-            margin-left: 50%;
-            transform: translateX(-50%);
-            width: 700px;
-            height: 500px;
-            overflow: hidden;
-            animation: slide 18s infinite;
-            background: url(img/photos-TS/tabor1_small.jpg);
+            width: 100%;
+            height: 600px;
+            animation: slide 13s infinite;
+            background: url(img/photos-TS/tabor02_small.jpg);
         }
 
+        
+
             @keyframes slide {
-                17% {
-                    background: url(img/photos-TS/tabor2_small.jpg);
+                50% {
+                    background: url(img/photos-TS/tabor07_small.jpg);
                 }
 
-                34% {
-                    background: url(img/photos-TS/tabor3_small.jpg);
-                }
-
-                51% {
-                    background: url(img/photos-TS/tabor4_small.jpg);
-                }
-
-                68% {
-                    background: url(img/photos-TS/tabor5_small.jpg);
-                }
-
-                85% {
-                    background: url(img/photos-TS/tabor6_small.jpg);
-                }
                 100% {
-                    background: url(img/photos-TS/tabor1_small.jpg);
+                    background: url(img/photos-TS/tabor02_small.jpg);
                 }
 
             }
@@ -405,13 +392,11 @@ html {
             height: 530px;
             background-color: rgba(248, 187, 31, 0.763);
             box-shadow: 0px 20px 25px 5px rgba(0, 0, 0, 0.703);
-            margin-bottom: 100px;
         }
 
         .soustredeni1 {
-            padding-left: 30px;
-            padding-right: 30px;
-            padding-bottom: 20px;
+            padding: 30px;
+
         }
 
         .soustredeni1 h3 {
@@ -432,7 +417,7 @@ html {
             background-color: #aeadad;
             color: black;
             margin-left: 290px;
-            margin-top: 50px;
+            margin-top: 40px;
         }
 
         .soustredeni2 {
@@ -451,6 +436,76 @@ html {
             padding: 30px;
             box-shadow: 10px 10px 10px grey;
         }
+
+
+
+/* Tenisový obchod */
+
+#obchod {
+    margin-top: 100px;
+}
+
+.obchod {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    height: 800px;
+    background-color: white;
+    box-shadow: 0px 20px 25px 5px rgba(0, 0, 0, 0.703);
+}
+
+.obchod1 {
+    overflow: hidden;
+}
+
+.obchod1 img {
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+}
+
+
+.obchod2 {
+    padding: 30px;
+  ;
+}
+
+.obchod2 h3 {
+    padding-top: 20px;
+}
+
+.obchod2 > p {
+    font-size: 25px;
+}
+
+.obchod2 li  {
+    font-size: 25px;
+    margin-top: 30px;
+}
+
+.obchod2 > li > img {
+    height: 40px;
+    
+}
+
+.obchod2 > button {
+    font-size: 18px;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 2px 2px 15px black;
+    background-color: #aeadad;
+    margin-top: 40px;
+    height: 120px;
+    width: 90px;
+}
+
+.btn-phone {
+    margin-left: 400px;
+}
+
+.obchod2 > button > img {
+    width: 100%;
+}
+
 
 
 
