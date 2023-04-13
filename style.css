@@ -222,10 +222,11 @@ html {
     background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(img/photos-courts/kurty-orez.jpg);
     background-size: 100% auto;
     background-repeat: no-repeat;
+    background-attachment:fixed;
     width: 100%;
     height: 800px;
     z-index: 0.5;
-    background-position: center top 20%;
+    /* background-position: center top 20%; */
 }
 
 
@@ -234,6 +235,57 @@ html {
 
 
 /*  TENISOVÁ ŠKOLA */
+
+
+    /* Úspěchy TS */
+
+    .tenisove-uspechy{
+        display: flex;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+        .uspech {
+      
+            width: 590px;
+            height: 300px;
+            display: flex;
+            
+            
+            background-color: rgb(59, 59, 59);
+            color: white;
+        }
+        .uspech-foto img {
+            height: 100%;
+            cursor: pointer;
+            
+        }    
+
+        .uspech-foto img:active,
+        .uspech-foto img:focus {
+            scale: 3;
+        }
+
+        .uspech-text {
+            padding: 20px;
+            padding-top: 0;
+            margin-top: 0;
+        }
+
+        .uspech-text p {
+            font-weight: 700;
+           
+        }
+
+        .uspech-text li {
+            padding-bottom: 10px;
+        }
+
+
+
+
+
+
 
 
 
@@ -441,72 +493,112 @@ html {
 
 /* Tenisový obchod */
 
-#obchod {
-    margin-top: 100px;
-}
+    #obchod {
+        margin-top: 100px;
+    }
 
-.obchod {
-    display: grid;
-    grid-template-columns: 45% 55%;
-    height: 800px;
-    background-color: white;
-    box-shadow: 0px 20px 25px 5px rgba(0, 0, 0, 0.703);
-}
+    .obchod {
+        display: grid;
+        grid-template-columns: 45% 55%;
+        height: 720px;
+        background-color: white;
+        box-shadow: 0px 20px 25px 5px rgba(0, 0, 0, 0.703);
+    }
 
-.obchod1 {
-    overflow: hidden;
-}
+    .obchod1 {
+        overflow: hidden;
+        height: 720px;
+    }
 
-.obchod1 img {
-    height: 100%;
-    width: 100%;
-    object-fit:cover;
-}
+    .obchod1 img {
+        height: 100%;
+        width: 100%;
+        object-fit:cover;
+    }
+
+    .obchod2 {
+        padding: 30px;
+    }
+
+    .obchod2 h3 {
+        padding-top: 20px;
+    }
+
+    .obchod2 > p {
+        font-size: 25px;
+    }
+
+    .obchod2 li  {
+        font-size: 25px;
+        margin-top: 20px;
+    }
+
+    .obchod2 > li > img {
+        height: 40px;
+    }
+
+    .obchod2 {
+        position: relative;
+    }
+
+    .btn-open, .btn-phone {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        border-right: 1px solid black;
+        border-left: 1px solid rgb(113, 113, 113);
+        border-top: 1px solid rgb(117, 117, 117);
+        border-bottom: 1px solid black;
+        border-radius: 15px;
+        cursor: pointer;
+        box-shadow: 2px 2px 15px black;
+        background-color: #aeadad;
+        margin-top: 40px;
+        height: 70px;
+        padding: 5px;
+        width: 70px;
+        overflow:hidden;
+        cursor:pointer;
+        /* transition: width 5s; */
+        }
+
+    .btn-open img, .btn-phone img {
+        height: 85%;
+        float: left;
+        
+    }
+
+    .text-open, .text-phone {
+        font-size: 18px;
+    }
+    .image-open, .image-phone {
+        height: 85%;
+        padding-left: 10px;
+        padding-right: 10px;
+        
+    }
+
+    .active {
+        width: 420px;
+    }
+
+    .btn-phone {
+    left: 540px;
+    }
+
+    .btn-phone.active {
+        left: 175px;
+        padding-left: 20px;
+        align-items: right;
+    }
 
 
-.obchod2 {
-    padding: 30px;
-  ;
-}
+    .btn-phone {
+        justify-content: right;
 
-.obchod2 h3 {
-    padding-top: 20px;
-}
-
-.obchod2 > p {
-    font-size: 25px;
-}
-
-.obchod2 li  {
-    font-size: 25px;
-    margin-top: 30px;
-}
-
-.obchod2 > li > img {
-    height: 40px;
-    
-}
-
-.obchod2 > button {
-    font-size: 18px;
-    border-radius: 15px;
-    cursor: pointer;
-    box-shadow: 2px 2px 15px black;
-    background-color: #aeadad;
-    margin-top: 40px;
-    height: 120px;
-    width: 90px;
-}
-
-.btn-phone {
-    margin-left: 400px;
-}
-
-.obchod2 > button > img {
-    width: 100%;
-}
-
-
+    }
+   
 
 
 

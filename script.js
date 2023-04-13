@@ -45,46 +45,25 @@ btnSoustredeni.addEventListener("click", function(){
 
 
 
-// Tábor - automatická změna fotek
 
-// let image = document.querySelector("#image")
-// let images = ["img/Nová složka/TS-tabor-01.jpg", "img/Nová složka/TS-tabor02.jpg","img/Nová složka/TS-tabor05.jpg","img/Nová složka/TS-tabor06.jpg", "img/Nová složka/TS-tabor15.jpg","img/Nová složka/TS-tabor20.jpg"]
+// Tenisový obchod kliknutí na btn open nebo Telephone
 
-// setInterval (function(){
-//                 let number = Math.floor(Math.random()*6)
-//                 image.src = images[number]
-//         },3000
-// )
+let btnOpen = document.querySelector(".btn-open")
+let btnTelephone = document.querySelector(".btn-phone")
 
+btnTelephone.addEventListener("click", function(){
+       btnTelephone.classList.toggle("active")
+        btnOpen.classList.toggle("active")
+});
 
-
-
-
-
-
+btnOpen.addEventListener("click", function(){
+        btnTelephone.classList.toggle("active")
+         btnOpen.classList.toggle("active")
+ });
 
 
-// Gallery Tenisový obchod - scrollování
 
-let galleryPhotos = document.querySelector(".gallery-photos")
-let backBtn = document.querySelector("#backBtn")
-let nextBtn = document.querySelector("#nextBtn")
 
-galleryPhotos.addEventListener("wheel", function(e){
-        e.preventDefault();
-        galleryPhotos.scrollLeft += e.deltaY;
-        galleryPhotos.style.scrollBehaviour = "auto";
-})
-
-nextBtn.addEventListener("click", function(){
-        galleryPhotos.style.scrollBehaviour = "smooth";
-        galleryPhotos.scrollLeft += 200;
-})
-
-backBtn.addEventListener("click", function(){
-        galleryPhotos.style.scroll = "smooth";
-        galleryPhotos.scrollLeft -= 200;
-})
 
 
 // Gallery OVopen - scrollování
@@ -110,44 +89,7 @@ backBtn2.addEventListener("click", function(){
 })
 
 
-// Gallery - kliknutí na kalendář u Obchodu
 
-let btnTimetable = document.querySelector(".btn-timetable")
-let popupTimetable = document.querySelector(".popup-timetable")
-let closeTimetable = document.querySelector(".close-timetable")
-
-btnTimetable.addEventListener("click", function(){
-        if (popupPhone.style.visibility === "visible"){
-        popupPhone.style.visibility ="hidden"
-        popupTimetable.style.visibility = "visible"
-        popupTimetable.style.transform ="scale(1)"
-        } else {
-        popupTimetable.style.visibility = "visible"
-        popupTimetable.style.transform ="scale(1)"
-}
-});
-
-popupTimetable.addEventListener("click", function(){
-        popupTimetable.style.visibility = "hidden"
-        popupTimetable.style.transform ="scale(0.1)"
-});
-
-
-// Gallery - kliknutí na telefon u obchodu
-let btnPhone = document.querySelector(".btn-phone")
-let popupPhone = document.querySelector(".popup-phone")
-let closePhone = document.querySelector(".close-phone")
-let html = document.querySelector("html")
-
-btnPhone.addEventListener("click", function(){
-        popupPhone.style.visibility = "visible"
-        popupPhone.style.transform ="scale(1)"
-});
-
-popupPhone.addEventListener("click", function(){
-        popupPhone.style.visibility = "hidden"
-        popupPhone.style.transform ="scale(0.1)"
-});
 
 
 // Gallery - kliknutí na telefon u OVopen
