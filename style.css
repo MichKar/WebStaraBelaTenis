@@ -13,9 +13,9 @@ html {
 
 /***** RESUABLE ******/
     .container {
-        width: 900px;
-        margin: 0 auto;
-        padding-left: 2%;
+        max-width: 900px;
+        margin: 2% auto;
+        margin-bottom: 0;
     }
 
     .clarfix:after {
@@ -25,13 +25,13 @@ html {
     }
 
 
-    
+
 /***** NAVIGATION *******/
     
     .backgr {
         width: 100%;
         background-color: #00000089;
-        border-bottom: 1px solid  rgb(248, 186, 31); 
+        border-bottom: 1px solid rgb(248, 186, 31); 
         position: fixed;
         z-index: 900;
         transition: all 0.3s ease-in-out;
@@ -44,6 +44,11 @@ html {
         justify-content: space-between;
         z-index: 1000;
         text-transform: uppercase;
+    }
+
+    .navbar.container {
+        margin-top: 0;
+        margin-bottom: 0;
     }
 
     .scroll-down header {
@@ -138,19 +143,42 @@ html {
     }
 
     h1 {
-        max-width: 1000px;
-        font-size: 18px;
-        border-bottom: 3px solid rgb(248, 186, 31);
-        box-shadow: 0px 10px 15px 5px rgba(0, 0, 0, 0.703);
-        padding: 5px 10px;
-        margin: 50px 0px;
+        font-size: 30px;
+        width: auto;
+        padding-top: 40px;
         text-align: center;
     }
+
+    h1:after {
+        content:"";
+        display:block;
+        width:300px;
+        border-bottom: 3px solid rgb(248, 186, 31);
+        margin: 7px auto;
+        box-shadow: 10px 4px 5px 1px rgba(0, 0, 0, 0.703);
+    }
+
+
 
     h3 {
         padding-top: 40px;
         font-size: 30px;
         text-align: center;
+    }
+
+
+    h3:after {
+        content:"";
+        display:block;
+        width:300px;
+        border-bottom: 3px solid rgb(248, 186, 31);
+        margin: 7px auto;
+        box-shadow: 10px 4px 5px 1px rgba(0, 0, 0, 0.703);
+    }
+
+    #turnaje h3:after, #soustredeni h3:after, #obchod h3:after  {
+        border-bottom: none;
+        box-shadow: none;
     }
 
     h4 {
@@ -173,7 +201,7 @@ html {
         width: 600px;
         margin: 0 auto;
         margin-bottom: 70px;
-        box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.703);
+        box-shadow: 0px 10px 25px 5px rgba(0, 0, 0, 0.703);
         border: 1px solid black;
         }
 
@@ -230,8 +258,11 @@ html {
 /* Úspěchy TS */
 
     .uspechy-background{
-        background: url(img/bg2.jpg);
         padding-bottom: 40px;
+        background:linear-gradient(rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.7)),url(img/cup1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment:fixed;
     }
 
     .tenisove-uspechy{
@@ -246,7 +277,9 @@ html {
         display: flex;
         background-color: rgb(59, 59, 59);
         color: white;
+        box-shadow: 5px 5px 20px rgb(59, 59, 59);
     }
+
     .uspech-foto img {
         height: 100%;
         cursor: pointer;
@@ -305,7 +338,7 @@ html {
         height: 300px;
         width: 200px;
         margin: 2%;
-        box-shadow: 5px 5px 20px white;
+        box-shadow: 5px 5px 20px rgb(185, 185, 185);
         overflow: hidden;
         position: relative;
         cursor: pointer;
@@ -336,8 +369,8 @@ html {
     }
 
     .trainer:hover .trainer-info {
-            right: 0;
-            visibility: visible;
+        right: 0;
+        visibility: visible;
     }
 
     .trainer-info p {
@@ -374,7 +407,7 @@ html {
     #tabor {
         margin-top: 100px;
         background-color: white;
-        box-shadow: 0px 20px 25px 5px rgba(0, 0, 0, 0.703);
+        box-shadow: 0px 10px 25px 5px rgba(0, 0, 0, 0.703);
         margin-bottom: 90px;
     }
 
@@ -386,18 +419,17 @@ html {
     }
 
     .tabor1a2 {
-
         display: grid;
-        grid-template-columns: 62% 27%;
+        grid-template-columns: 63% 27%;
         gap: 5%;
         margin-bottom: 20px;
     }
 
     .tabor2-inner {
         border: 1px solid grey;
-        box-shadow: 0px 20px 25px 5px rgba(0, 0, 0, 0.703);
+        box-shadow: 0px 10px 25px 5px rgba(0, 0, 0, 0.703);
         border-radius:15px;
-        margin-top: 30px;
+        margin-top: 60px;
         padding: 10px;
     }
 
@@ -418,23 +450,22 @@ html {
     }
 
     .slider-tabor {
-        margin-top: 20px;
         width: 100%;
         height: 400px;
-        animation: slide 25s infinite;
+        animation: slide 30s infinite;
         background: url(img/photos-TS/tabor01_small.jpg);
     }
 
         @keyframes slide {
-            5% {background: url(img/photos-TS/tabor01_small.jpg);}
-            20% {background: url(img/photos-TS/tabor02_small.jpg);}
-            30% {background: url(img/photos-TS/tabor03_small.jpg);}
-            40% {background: url(img/photos-TS/tabor04_small.jpg);}
-            50% {background: url(img/photos-TS/tabor05_small.jpg);}
-            60% {background: url(img/photos-TS/tabor06_small.jpg);}
-            70% {background: url(img/photos-TS/tabor07_small.jpg);}
-            80% {background: url(img/photos-TS/tabor15_small.jpg);}
-            90% {background: url(img/photos-TS/tabor19_small.jpg);}
+            0% {background: url(img/photos-TS/tabor01_small.jpg);}
+            11% {background: url(img/photos-TS/tabor02_small.jpg);}
+            22% {background: url(img/photos-TS/tabor03_small.jpg);}
+            33% {background: url(img/photos-TS/tabor04_small.jpg);}
+            44% {background: url(img/photos-TS/tabor05_small.jpg);}
+            55% {background: url(img/photos-TS/tabor06_small.jpg);}
+            66% {background: url(img/photos-TS/tabor07_small.jpg);}
+            77% {background: url(img/photos-TS/tabor15_small.jpg);}
+            89% {background: url(img/photos-TS/tabor19_small.jpg);}
             100% {background: url(img/photos-TS/tabor01_small.jpg);}
         }
 
@@ -444,12 +475,12 @@ html {
 
 /* Tenisové soustředění */
 
-    .soustredeni {
+    .soustredeni1a2 {
         display: grid;
         grid-template-columns:45% 55%;
         height: 500px;
         background-color: rgba(248, 187, 31, 0.763);
-        box-shadow: 0px 20px 25px 5px rgba(0, 0, 0, 0.703);
+        box-shadow: 0px 10px 25px 5px rgba(0, 0, 0, 0.703);
     }
 
     .soustredeni1 {
@@ -475,6 +506,7 @@ html {
     }
 
     .soustredeni2 {
+        height: 500px;
         overflow: hidden;
     }
 
@@ -482,13 +514,14 @@ html {
         height: 100%;
         width: 100%;
         object-fit:cover;
+
     }
 
     .soustredeni3 {
         display: none;
         background-color: rgba(248, 187, 31, 0.763);
         padding: 30px;
-        box-shadow: 10px 10px 10px grey;
+        box-shadow: 0px 10px 25px 5px rgba(0, 0, 0, 0.703);
     }
 
 
@@ -504,7 +537,7 @@ html {
         grid-template-columns: 50% 50%;
         height: 600px;
         background-color: white;
-        box-shadow: 0px 20px 25px 5px rgba(0, 0, 0, 0.703);
+        box-shadow: 0px 10px 25px 5px rgba(0, 0, 0, 0.703);
         margin-bottom: 100px;
     }
 
@@ -521,7 +554,7 @@ html {
 
     .slider-obchod {
         width: 100%;
-        animation: shop 10s infinite;
+        animation: shop 15s infinite;
         background: url(img/photos-shop/shop1_small.jpg);
         }
 
@@ -534,16 +567,19 @@ html {
 
     .slider-ovopen {
         width: 100%;
-        animation: ovopen 10s infinite;
+        animation: ovopen 30s infinite;
         background: url(img/photos-ovopen/ovopen2_small.jpg);
         }
 
         @keyframes ovopen {
-            5% {background: url(img/photos-ovopen/ovopen2_small.jpg);}
-            25% {background: url(img/photos-ovopen/ovopen3_small.jpg);}
-            45% {background: url(img/photos-ovopen/ovopen4_small.jpg);}
-            65% {background: url(img/photos-ovopen/ovopen5_small.jpg);}
-            85% {background: url(img/photos-ovopen/ovopen6_small.jpg);}
+            0% {background: url(img/photos-ovopen/ovopen2_small.jpg);}
+            12% {background: url(img/photos-ovopen/ovopen3_small.jpg);}
+            25% {background: url(img/photos-ovopen/ovopen4_small.jpg);}
+            37% {background: url(img/photos-ovopen/ovopen5_small.jpg);}
+            50% {background: url(img/photos-ovopen/ovopen6_small.jpg);}
+            62% {background: url(img/photos-ovopen/ovopen7_small.jpg);}
+            75% {background: url(img/photos-ovopen/ovopen8_small.jpg);}
+            87% {background: url(img/photos-ovopen/ovopen9_small.jpg);}
             100% {background: url(img/photos-ovopen/ovopen2_small.jpg);}
         }
 
@@ -604,8 +640,8 @@ html {
         }
 
         .btn-phone {
-        right: 40px;
-        justify-content: right;
+            right: 40px;
+            justify-content: right;
         }
 
         .btn-phone p {
@@ -639,19 +675,17 @@ html {
 
     .ovopen img {
         width: 100px;
-        top: 20px;
-        right: 0;
+        right: -20px;
+        top: -50px;
         position: absolute;
         cursor: pointer;
     }
 
-    .ovopen h3 {
-        width: 200px;
-        text-align: left;;
-    }
-
     #turnaje .btn-phone {
         margin-top: 50px;
+        right: 50%;
+        transform: translatex(50%);
+        cursor: default;
     }
 
     #turnaje .btn-phone p {
@@ -668,6 +702,10 @@ html {
 
 /* KONTAKT */
 
+    .kontakt-backgr {
+        background-color: white;;
+    }
+
     #kontakt h1 {
         margin-bottom: 0;
     }
@@ -677,14 +715,14 @@ html {
         margin-top: 10px;
     }
 
+
    .contact-box {
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: 40% 60%;
-    background-color: rgba(255, 255, 255, 0.864);
-    box-shadow: 10px 10px 10px grey;
-    color: black;
-    margin-bottom: 100px;
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        color: black;
+        padding-top: 20px;
+        padding-bottom: 10px;
     }
 
     .div1 {
@@ -736,11 +774,18 @@ html {
     } 
 
     .kontakt-leto {
-        background-color: rgb(255, 241, 207);
+        background: linear-gradient(rgb(248, 186, 31),rgb(255, 241, 207));
         padding: 10px;
         border: 1px solid rgb(192, 192, 192);
         margin-top: 30px;
+        animation: spravce 1s infinite;
     }
+
+        @keyframes spravce {
+            0% {background: linear-gradient(rgb(255, 241, 207),rgb(255, 241, 207));}
+            50% {background: linear-gradient(rgb(255, 241, 207),rgb(248, 186, 31))}
+            100% {background: linear-gradient(rgb(255, 241, 207),rgb(255, 241, 207));}
+        } 
 
     .kontakt-zima {
         background-color: rgb(224, 234, 255);
@@ -759,6 +804,7 @@ html {
 
     .div2 {
         overflow: hidden;
+        height: 627px;
     }
 
     .map {
@@ -775,10 +821,18 @@ html {
 
 /****** FOOTER ******/
     .backgr-footer {
-        background-color: #ffffff9f;
-        border-top: 3px solid  rgb(248, 186, 31);
+        background-color: #4b4b4b9f;
+        border-top: 1px solid  rgb(248, 186, 31);
         border-bottom: 0;
         }
+
+    .copyright a {
+        color: black;
+    }
+    .backgr-footer .container {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 
     .footer-all {
         padding: 3px 0;
@@ -792,12 +846,14 @@ html {
     .quick-links {
         display: flex;
         gap: 8px;
+        
     }
 
     .quick-links a {
         color: black;
         font-size: 13px;
         font-weight:200;
+        cursor: pointer;
     }
 
     footer {
