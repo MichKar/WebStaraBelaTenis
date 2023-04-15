@@ -13,7 +13,7 @@ html {
 
 /***** RESUABLE ******/
     .container {
-        width: 1200px;
+        width: 900px;
         margin: 0 auto;
         padding-left: 2%;
     }
@@ -24,12 +24,14 @@ html {
         display: table;
     }
 
+
+    
 /***** NAVIGATION *******/
     
     .backgr {
         width: 100%;
         background-color: #00000089;
-        border-bottom: 3px solid  rgb(248, 186, 31); 
+        border-bottom: 1px solid  rgb(248, 186, 31); 
         position: fixed;
         z-index: 900;
         transition: all 0.3s ease-in-out;
@@ -37,7 +39,7 @@ html {
 
     .navbar {
         display: flex;
-        height: 70px;
+        height: 40px;
         align-items: center;
         justify-content: space-between;
         z-index: 1000;
@@ -55,9 +57,9 @@ html {
     }
 
     .logo img {
-        width: 130px;
+        width: 80px;
         overflow: visible;
-        margin-top: -25px;
+        margin-top: -15px;
         position: absolute;
     }
 
@@ -74,7 +76,7 @@ html {
         font-weight: 550;
         padding: 22px 20px;
         color: white;
-        font-size: 20px;  
+        font-size: 15px;  
         transition: all 0.5s ease;
     }
 
@@ -85,18 +87,18 @@ html {
     .dropdown {
         display: flex;
         flex-direction: column;
-        top: 72px;
+        top: 54px;
         padding-left: 0;
         position: absolute;
         background-color: #00000089;
         visibility: hidden;
         opacity: 0;
-        width: 250px;
-        text-transform:none;
+        width: 200px;
+        text-transform: none;
     }
 
     .dropdown li {
-       line-height: 5px; 
+       line-height: 0; 
     }
 
     .navbar ul li:hover > ul {
@@ -107,10 +109,10 @@ html {
     .btn-rezervation-system {
         background-color: rgb(248, 186, 31);
         color: black;
-        padding:8px 16px;
+        padding:6px 16px;
         text-decoration: none;
-        border-radius: 20px;
-        font-size: 16px;
+        border-radius: 30px;
+        font-size: 12px;
         font-weight: 800;
         cursor: pointer;
         transition: scale 0.2 ease;
@@ -136,31 +138,27 @@ html {
     }
 
     h1 {
-        max-width: 1200px;
-        font-size: 25px;
-        border-bottom: 9px solid rgb(248, 186, 31);
-        box-shadow: 0px 20px 25px 5px rgba(0, 0, 0, 0.703);
+        max-width: 1000px;
+        font-size: 18px;
+        border-bottom: 3px solid rgb(248, 186, 31);
+        box-shadow: 0px 10px 15px 5px rgba(0, 0, 0, 0.703);
         padding: 5px 10px;
         margin: 50px 0px;
         text-align: center;
     }
 
-    h2 {
-        padding-top: 40px;
-    }
-
     h3 {
         padding-top: 40px;
-        font-size: 40px;
+        font-size: 30px;
         text-align: center;
     }
 
     h4 {
-        font-size: 25px;
+        font-size: 18px;
     }
 
     p {
-        font-size: 20px;
+        font-size: 16px;
         text-align: justify;
     }
   
@@ -169,41 +167,35 @@ html {
 
 /* TABLE */
 
-    .prices caption {
-        font-size: 25px;
-        padding: 20px;
-        font-weight: 1000;
-    }
-
     .prices {
         color:  black;
         text-align: center;
-        width: 800px;
+        width: 600px;
         margin: 0 auto;
         margin-bottom: 70px;
         box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.703);
-        border: 2px solid black;
+        border: 1px solid black;
         }
 
     .prices-info {
-        font-size: 16px;
-        padding: 14px;
+        font-size: 14px;
+        padding: 10px;
         background-color: #aeadad;
-        font-weight: 400;
-        border-top: 2px solid black;
+        font-weight: 300;
+        border-top: 1px solid black;
     }
 
     tr, td {
-        font-size: 21px;
+        font-size: 16px;
         background-color:#aeadad;
-        padding: 7px;
+        padding: 5px;
     }
 
     th {
-        font-size: 25px;
+        font-size: 16px;
         padding: 10px;
         background-color: #aeadad;
-        border-bottom: 2px solid black;
+        border-bottom: 1px solid black;
     }
 
     td {
@@ -217,276 +209,287 @@ html {
 /****** MAIN ******/
 
 /* Sekce 1 - foto kurtů */
-.section1 {
-    background-color: #171717;
-    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(img/photos-courts/kurty-orez.jpg);
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    background-attachment:fixed;
-    width: 100%;
-    height: 800px;
-    z-index: 0.5;
-    /* background-position: center top 20%; */
-}
+    .section1 {
+        background-color: #171717;
+        background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(img/photos-courts/kurty-orez.jpg);
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-attachment:fixed;
+        width: 100%;
+        height: 600px;
+        overflow: hidden;
+        z-index: 0.5;
+        background-position: center top -40px;
+    }
 
 
 
 
 
 
-/*  TENISOVÁ ŠKOLA */
+/* Úspěchy TS */
 
-
-    /* Úspěchy TS */
+    .uspechy-background{
+        background: url(img/bg2.jpg);
+        padding-bottom: 40px;
+    }
 
     .tenisove-uspechy{
         display: flex;
-        gap: 20px;
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+
+    .uspech {
+        width: 450px;
+        height: 210px;
+        display: flex;
+        background-color: rgb(59, 59, 59);
+        color: white;
+    }
+    .uspech-foto img {
+        height: 100%;
+        cursor: pointer;
+        width: 200px;
+    }    
+
+    .uspech-foto img:active {
+        scale: 3;
+    }
+
+    .uspech-text {
+        padding: 20px;
+        padding-top: 0;
+    }
+
+    .uspech-text .rok {
+        font-size: 16px;
+        letter-spacing: 5px;
+        margin-bottom: 12px;
+    }
+
+    .uspech-text .jmeno {
+        font-size: 16px;
+        font-weight: 600;
+        border-bottom: 1px solid rgb(248, 186, 31);
+        margin: 7px 0px;
+    }
+
+    .uspech-text li {
+        padding-bottom: 7px;
+        font-size: 12px;
+        font-weight: 100;
+    }
+
+
+
+
+
+
+
+
+
+/* trenérský tým */
+
+    .backgr-trainers h3 {
+        color: white;    
+    }
+
+    .trainers {
+        display: flex;
+        justify-content: center;
+        padding: 50px 0;
+    }
+
+    .trainer {
+        height: 300px;
+        width: 200px;
+        margin: 2%;
+        box-shadow: 5px 5px 20px white;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    .trainer img {
+        height: 100%;
+        width: 100%;
+        scale: 1.1;
+        object-fit: cover;
+        
+    }
+
+    .trainer-info {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: -100%;
+        position: absolute;
+        background: #ffffff8f;
+        backdrop-filter: blur(5px);
+        transition: all 1s ease;
+    }
+
+    .trainer-info p {
+        margin: 15px 0;
+    }
+
+    .trainer:hover .trainer-info {
+            right: 0;
+            visibility: visible;
+    }
+
+    .trainer-info p {
+        font-size: 25px;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 600;
+        padding-bottom: 5px 0;
+    }
+
+    .trainer-info li {
+        font-size: 13px;
+        padding: 6px 18px;
+        list-style-type: none;
+    }
+
+    .backgr-trainers {
+        background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(img/court-ballon.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment:fixed;
+        width: 100%;
+        margin: 0; 
+    }
+
+    .backgr-trainers h2 {
+        color: white;
+    }
+
+
+
+
+/* Tenisový tábor */
+    #tabor {
+        margin-top: 100px;
+        background-color: white;
+        box-shadow: 0px 20px 25px 5px rgba(0, 0, 0, 0.703);
+        margin-bottom: 90px;
+    }
+
+    .tabor1 {
+        padding-left: 40px;
+        padding-right: 30px;
+        padding-bottom: 0;
+        font-size: 18px;
+    }
+
+    .tabor1a2 {
+
+        display: grid;
+        grid-template-columns: 62% 27%;
+        gap: 5%;
         margin-bottom: 20px;
     }
 
-        .uspech {
-      
-            width: 590px;
-            height: 300px;
-            display: flex;
-            
-            
-            background-color: rgb(59, 59, 59);
-            color: white;
-        }
-        .uspech-foto img {
-            height: 100%;
-            cursor: pointer;
-            
-        }    
+    .tabor2-inner {
+        border: 1px solid grey;
+        box-shadow: 0px 20px 25px 5px rgba(0, 0, 0, 0.703);
+        border-radius:15px;
+        margin-top: 30px;
+        padding: 10px;
+    }
 
-        .uspech-foto img:active {
-            scale: 3;
-        }
+    .tabor2-inner p {
+        margin: 8px 0;
+    }
 
-        .uspech-text {
-            padding: 20px;
-            padding-top: 0;
-            margin-top: 0;
-        }
+    .tabor2-inner .contact-form a {
+        font-size: 13px;
+    }
 
-        .uspech-text p {
-            font-weight: 700;
-           
-        }
+    .tabor2 h4 {
+        margin: 0;
+    }
 
-        .uspech-text li {
-            padding-bottom: 10px;
-        }
+    .tabor3 {
+        overflow: hidden;
+    }
 
+    .slider-tabor {
+        margin-top: 20px;
+        width: 100%;
+        height: 400px;
+        animation: slide 25s infinite;
+        background: url(img/photos-TS/tabor01_small.jpg);
+    }
 
-
-
-
-
-
-
-
-    /* trenérský tým */
-
-        .backgr-trainers h3 {
-            color: white;    
-        }
-
-        .trainers {
-            display: flex;
-            justify-content: center;
-            padding: 70px 0;
-        }
-
-        .trainer {
-            height: 500px;
-            width: 300px;
-            margin: 30px;
-            box-shadow: 5px 5px 20px white;
-            overflow: hidden;
-            position: relative;
-            cursor: pointer;
-            border-radius: 10px;
-        }
-
-        .trainer img {
-            height: 100%;
-            width: 100%;
-            scale: 1.2;
-            object-fit: cover;
-            
-        }
-
-        .trainer-info {
-            width: 100%;
-            height: 100%;
-            top: 0;
-            right: -100%;
-            position: absolute;
-            background: #ffffff8f;
-            backdrop-filter: blur(5px);
-            transition: all 1s ease;
-        }
-
-        .trainer:hover .trainer-info {
-                right: 0;
-                visibility: visible;
-        }
-
-        .trainer-info p {
-            font-size: 35px;
-            text-transform: uppercase;
-            text-align: center;
-            font-weight: 600;
-            padding-bottom: 10px;
-            padding-top: 10px;
-            
-        }
-
-        .trainer-info li {
-            font-size: 18px;
-            padding: 10px 20px;
-            list-style-type: none;
-        }
-
-        .backgr-trainers {
-            background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(img/court-ballon.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment:fixed;
-            width: 100%;
-            margin: 0; 
-        }
-
-        .backgr-trainers h2 {
-            color: white;
+        @keyframes slide {
+            5% {background: url(img/photos-TS/tabor01_small.jpg);}
+            20% {background: url(img/photos-TS/tabor02_small.jpg);}
+            30% {background: url(img/photos-TS/tabor03_small.jpg);}
+            40% {background: url(img/photos-TS/tabor04_small.jpg);}
+            50% {background: url(img/photos-TS/tabor05_small.jpg);}
+            60% {background: url(img/photos-TS/tabor06_small.jpg);}
+            70% {background: url(img/photos-TS/tabor07_small.jpg);}
+            80% {background: url(img/photos-TS/tabor15_small.jpg);}
+            90% {background: url(img/photos-TS/tabor19_small.jpg);}
+            100% {background: url(img/photos-TS/tabor01_small.jpg);}
         }
 
 
-    /* Tenisový tábor */
-        #tabor {
-            margin-top: 100px;
-            background-color: white;
-            box-shadow: 0px 20px 25px 5px rgba(0, 0, 0, 0.703);
-            margin-bottom: 100px;
-        }
-
-        .tabor1 {
-            padding-left: 30px;
-            padding-right: 30px;
-            padding-bottom: 0;
-        }
-
-        .tabor1a2 {
-
-            display: grid;
-            grid-template-columns: 62% 27%;
-            gap: 5%;
-            margin-bottom: 20px;
-        }
-
-        .tabor2-inner {
-            border: 1px solid grey;
-            box-shadow: 0px 20px 25px 5px rgba(0, 0, 0, 0.703);
-            border-radius:15px;
-            margin-top: 60px;
-            padding: 10px;
-        }
-
-        .tabor2-inner p {
-            margin: 8px 0;
-        }
-
-        .tabor2 a {
-            font-size: 16px;
-        }
-
-        .tabor2 h4 {
-            margin: 0;
-        }
-
-        .tabor3 {
-            overflow: hidden;
-        }
-
-        .slider {
-            margin-top: 50px;
-            width: 100%;
-            height: 600px;
-            animation: slide 13s infinite;
-            background: url(img/photos-TS/tabor02_small.jpg);
-        }
-
-        
-
-            @keyframes slide {
-                50% {
-                    background: url(img/photos-TS/tabor07_small.jpg);
-                }
-
-                100% {
-                    background: url(img/photos-TS/tabor02_small.jpg);
-                }
-
-            }
 
 
 
+/* Tenisové soustředění */
 
-    /* Tenisové soustředění */
+    .soustredeni {
+        display: grid;
+        grid-template-columns:45% 55%;
+        height: 500px;
+        background-color: rgba(248, 187, 31, 0.763);
+        box-shadow: 0px 20px 25px 5px rgba(0, 0, 0, 0.703);
+    }
 
-        .soustredeni {
-            display: grid;
-            grid-template-columns:45% 55%;
-            height: 530px;
-            background-color: rgba(248, 187, 31, 0.763);
-            box-shadow: 0px 20px 25px 5px rgba(0, 0, 0, 0.703);
-        }
+    .soustredeni1 {
+        padding: 40px;
+    }
 
-        .soustredeni1 {
-            padding: 30px;
+    .soustredeni1 > p {
+        font-size: 17px;
+    }
 
-        }
+    .soustredeni1 > button {
+        width: 140px;
+        font-size: 14px;
+        padding: 8px 10px;
+        border-radius: 15px;
+        cursor: pointer;
+        box-shadow: 2px 2px 15px black;
+        text-align: end;
+        background-color: #aeadad;
+        color: black;
+        margin-left: 190px;
+        margin-top: 40px;
+    }
 
-        .soustredeni1 h3 {
-            padding-top: 20px;
-        }
+    .soustredeni2 {
+        overflow: hidden;
+    }
 
-        .soustredeni1 > p {
-            font-size: 25px;
-        }
+    .soustredeni2 img {
+        height: 100%;
+        width: 100%;
+        object-fit:cover;
+    }
 
-        .soustredeni1 > button {
-            font-size: 18px;
-            padding: 10px 20px;
-            border-radius: 15px;
-            cursor: pointer;
-            box-shadow: 2px 2px 15px black;
-            text-align: end;
-            background-color: #aeadad;
-            color: black;
-            margin-left: 290px;
-            margin-top: 40px;
-        }
-
-        .soustredeni2 {
-            overflow: hidden;
-        }
-
-        .soustredeni2 img {
-            height: 100%;
-            width: 100%;
-            object-fit:cover;
-        }
-
-        .soustredeni3 {
-            display: none;
-            background-color: rgba(248, 187, 31, 0.763);
-            padding: 30px;
-            box-shadow: 10px 10px 10px grey;
-        }
+    .soustredeni3 {
+        display: none;
+        background-color: rgba(248, 187, 31, 0.763);
+        padding: 30px;
+        box-shadow: 10px 10px 10px grey;
+    }
 
 
 
@@ -499,14 +502,15 @@ html {
     .box {
         display: grid;
         grid-template-columns: 50% 50%;
-        height: 800px;
+        height: 600px;
         background-color: white;
         box-shadow: 0px 20px 25px 5px rgba(0, 0, 0, 0.703);
+        margin-bottom: 100px;
     }
 
     .box1 {
         overflow: hidden;
-        height: 800px;
+        height: 600px;
     }
 
     .box1 img {
@@ -515,93 +519,147 @@ html {
         object-fit:cover;
     }
 
+    .slider-obchod {
+        width: 100%;
+        animation: shop 10s infinite;
+        background: url(img/photos-shop/shop1_small.jpg);
+        }
+
+        @keyframes shop {
+            5% {background: url(img/photos-shop/shop1_small.jpg);}
+            35% {background: url(img/photos-shop/shop2_small.jpg);}
+            70% {background: url(img/photos-shop/shop3_small.jpg);}
+            100% {background: url(img/photos-shop/shop1_small.jpg);}
+        }
+
+    .slider-ovopen {
+        width: 100%;
+        animation: ovopen 10s infinite;
+        background: url(img/photos-ovopen/ovopen2_small.jpg);
+        }
+
+        @keyframes ovopen {
+            5% {background: url(img/photos-ovopen/ovopen2_small.jpg);}
+            25% {background: url(img/photos-ovopen/ovopen3_small.jpg);}
+            45% {background: url(img/photos-ovopen/ovopen4_small.jpg);}
+            65% {background: url(img/photos-ovopen/ovopen5_small.jpg);}
+            85% {background: url(img/photos-ovopen/ovopen6_small.jpg);}
+            100% {background: url(img/photos-ovopen/ovopen2_small.jpg);}
+        }
+
     .box2 {
-        padding: 70px;
+        padding: 40px;
     }
 
     .box2 h3 {
-        padding-top: 20px;
+        padding-top: 10px;
     }
 
     .box2 > p {
-        font-size: 25px;
+        font-size: 17px;
     }
 
     .box2 li  {
-        font-size: 25px;
-        margin-top: 20px;
+        font-size: 17px;
+        margin-top: 16px;
     }
 
     .box2 > li > img {
-        height: 40px;
+        height: 25px;
     }
 
     .box2 {
         position: relative;
     }
 
-    .btn-open, .btn-phone {
-        position: absolute;
-        display: flex;
-        align-items: center;
-        gap: 30px;
-        border-right: 1px solid black;
-        border-left: 1px solid rgb(113, 113, 113);
-        border-top: 1px solid rgb(117, 117, 117);
-        border-bottom: 1px solid black;
-        border-radius: 15px;
-        cursor: pointer;
-        box-shadow: 2px 2px 15px black;
-        background-color: #aeadad;
-        height: 70px;
-        padding: 5px;
-        width: 70px;
-        overflow:hidden;
-        cursor:pointer;
-        transition: width 2s ease-in;
+    /* tlačítka otevíračka + kontakt telefon */
+        .btn-open, .btn-phone {
+            margin-top: 100px;
+            border-right: 1px solid black;
+            border-left: 1px solid rgb(113, 113, 113);
+            border-top: 1px solid rgb(117, 117, 117);
+            border-bottom: 1px solid black;
+            border-radius: 15px;
+            cursor: pointer;
+            box-shadow: 2px 2px 15px black;
+            background-color: #aeadad;
+            display: flex;
+            position: absolute;
+            height: 35px;
+            padding: 5px;
+            transition: width 0.1s ease-out;
+            overflow:hidden;
+            width: 35px;
         }
 
-    .btn-open img, .btn-phone img {
-        height: 85%;
-        float: left;
+        .btn-open p {
+            padding-left: 30px;
+            font-size: 14px;
+            margin: 0;
+        }
+
+
+        .active {
+            width: 300px; 
+        }
+
+        .btn-phone {
+        right: 40px;
+        justify-content: right;
+        }
+
+        .btn-phone p {
+            margin: 7px;
+            padding-right: 10px;
+            font-size: 15px;
+        }
+
+        .btn-phone.active {
+            right: 40px;
+            align-items: right;
+        }
+
+
+
+
+/* Turnaje pro amatéry - OVopen */
+
+    #turnaje .box {
+        background-color:#171717;
+        color: #d7d7d7;
     }
 
-    .text-open, .text-phone {
-        font-size: 18px;
-        width: max-content;
-        overflow: hidden;;
+    #turnaje .box2  a {
+        color:#d7d7d7;
     }
 
-
-    .image-open, .image-phone {
-        height: 85%;
-        padding-left: 10px;
-        padding-right: 10px; 
+    .ovopen {
+    position: relative;
     }
 
-    .active {
-        width: 420px; 
+    .ovopen img {
+        width: 100px;
+        top: 20px;
+        right: 0;
+        position: absolute;
+        cursor: pointer;
     }
 
-    .text-open {
-        padding-bottom: 18px;
+    .ovopen h3 {
+        width: 200px;
+        text-align: left;;
     }
 
-    .btn-phone {
-    right: 30px;
-    justify-content: right;
+    #turnaje .btn-phone {
+        margin-top: 50px;
     }
 
-    .btn-phone.active {
-        right: 30px;
-        padding-left: 20px;
-        align-items: right;
-
+    #turnaje .btn-phone p {
+        font-size: 14px;
+        margin: 7px 10px 0 0;
+        color: black;
     }
-
-   
-
-
+        
 
 
 
@@ -609,6 +667,15 @@ html {
 
 
 /* KONTAKT */
+
+    #kontakt h1 {
+        margin-bottom: 0;
+    }
+
+    #kontakt h2 {
+        padding-top: 0px;
+        margin-top: 10px;
+    }
 
    .contact-box {
     max-width: 100%;
@@ -621,15 +688,15 @@ html {
     }
 
     .div1 {
-        padding: 20px 40px 90px 40px;
+        padding: 15px 40px 15px 40px;
     }
 
     .div1 p {
-        font-size: 17px;
+        font-size: 13px;
     }
 
     .address {
-        height: 120px;
+        height: 80px;
     }
 
     .address img {
@@ -638,30 +705,27 @@ html {
     }
 
     .address p {
-        margin-left: 48px;
+        margin-left: 35px;
+        margin-top: 0;
     }
 
-    .mail {
-        margin-left: 0px;
-    }
-
-    .mail a {
-        font-size: 20px;
-    }
+   .ts {
+    font-size: 17px;
+   }
 
     .contact-form {
-        margin-bottom: 10px;
+        margin-bottom: 7px;
     }
 
     .contact-form img {
-        width: 25px;
-        height: 25px;
+        width: 23px;
+        height: 23px;
         float: left;
     }
 
     .contact-form a {
         margin: 0 0 0 10px;
-        font-size: 20px;
+        font-size: 13px;
         color: black;
         text-decoration: none;
     }
@@ -670,6 +734,28 @@ html {
         text-decoration:  underline;
         cursor: pointer; 
     } 
+
+    .kontakt-leto {
+        background-color: rgb(255, 241, 207);
+        padding: 10px;
+        border: 1px solid rgb(192, 192, 192);
+        margin-top: 30px;
+    }
+
+    .kontakt-zima {
+        background-color: rgb(224, 234, 255);
+        padding: 10px;
+        border: 1px solid rgb(192, 192, 192);
+        margin-top: 30px;
+    }
+
+    .kontakt-ts {
+        background-color: #ececec;
+        padding: 10px;
+        border: 1px solid rgb(192, 192, 192);
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
 
     .div2 {
         overflow: hidden;
@@ -700,21 +786,18 @@ html {
         color: black;
         align-items:center;
         justify-content: space-between;
+        font-size: 11px;
     }
     
     .quick-links {
         display: flex;
-        gap: 10px;
-    }
-
-    .quick-links p {
-        font-size: 17px;
-        font-weight:200;
+        gap: 8px;
     }
 
     .quick-links a {
         color: black;
-        font-size: 17px;
+        font-size: 13px;
+        font-weight:200;
     }
 
     footer {
