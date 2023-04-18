@@ -103,20 +103,12 @@ html {
         background-color: #00000089;
         visibility: hidden;
         opacity: 0;
-        width: 180px;
+        width: 210px;
         text-transform: none;
-    
     }
 
     .dropdown li {
        line-height: 0; 
-
-    }
-
-    .dropdown a {
-        margin: 0;
-        padding: 0;
-        line-height: 0; 
     }
 
     .navbar ul li:hover > ul {
@@ -199,8 +191,9 @@ html {
     }
 
     p {
-        font-size: 16px;
+        font-size: 14px;
         text-align: justify;
+        /* line-height: 25px;  */
     }
   
     
@@ -227,13 +220,15 @@ html {
         background-position: center top -40px;
     }
 
+/* areál */
+
+#nas-areal p {
+    line-height: 25px;
+}
 
 
 /* Rezervace */
-
-
 #rezervace p {
-    font-size: 14px;
     line-height: 25px;  
 }
 
@@ -346,10 +341,15 @@ td {
         height: 100%;
         cursor: pointer;
         width: 200px;
+        transform: scale(1);
     }    
 
-    .uspech-foto img:active {
-        scale: 3;
+
+
+    @keyframes zvetseniFotky {
+       0% {scale: 1}
+        50% {scale: 3}
+
     }
 
     .uspech-text {
@@ -552,18 +552,20 @@ td {
     }
 
     .soustredeni1 {
+        
         padding: 30px;
+        padding-top: 50px;
         position: relative;
     }
 
     .soustredeni1 > p {
-        font-size: 17px;
+        line-height: 25px;
     }
 
     .soustredeni1 > button {
         width: 140px;
+        top: 350px;
         right: 30px;
-        font-size: 14px;
         padding: 8px 10px;
         border-radius: 15px;
         cursor: pointer;
@@ -571,7 +573,6 @@ td {
         box-shadow: 2px 2px 15px black;
         background-color: #aeadad;
         color: black;
-        margin-top: 40px;
     }
 
     .soustredeni2 img {
@@ -590,7 +591,7 @@ td {
     }
 
     .soustredeni3 p {
-        font-size: 14px;
+        line-height: 25px;
     }
 
 

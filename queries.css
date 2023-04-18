@@ -107,11 +107,11 @@
         margin-top: 2%;
     }
 
+ 
     .soustredeni1 > button {
-        margin-top: 0;
+  
+        top: 320px;
     }
-
-
 
 
 
@@ -160,15 +160,13 @@
         text-align: left;
     }
 
-
-
-
-
-
-
-
+    .navbar ul li a {
+        padding: 10px;
+    }
 
 }
+
+
 
 
 @media only screen and (max-width: 750px){
@@ -218,37 +216,54 @@
 }
 
 .navigation {
-    display: none;
-    
+    display: none;   
+    /* left: -100%; */
+    transition: left 2s ease;
 }
-.activ-menu ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 0;
-}
-
-.activ-menu ul li {
-    padding: 5px 0;
-}
- .activ-menu {
+.activ-menu {
     display: block;
     position: absolute;
-    left: 0;
-    right: 0;
-    top: 40px;
-    width: 100vw;
+    right: 0px;
+    top: 41px;
+    width: 400px;
     background-color: #000000b3;
-    height: 130px;
-    z-index: -10;
+    height: 259px
+
 } 
+.activ-menu ul {
+    margin: 0;
+    padding: 0;
+    align-items: left;
+    width: 150px;
+}
+
+
+.activ-menu> ul li {
+    display: flex;
+    flex-direction: column;
+    padding: 9px 0 8.5px 0;
+    line-height: 0px;
+}
+.activ-menu > ul li a:hover {
+    color: white;
+}
+
+.activ-menu ul li:hover {
+    background-color: black;
+}
 
 .backgr {
     background-color: #000000b3;
 }
 
 .dropdown {
-    display: none;
+    top: 0;
+    left: 150px;
+    background: none;
+}
+
+.dropdown li {
+    width: 190px;
 }
 
 .navbar .btn-rezervation-system {
@@ -338,12 +353,7 @@
 }
 
 
-@media only screen and (max-width: 680px){
-    
-    .soustredeni1 {
-        padding-top: 3%;
-    }
-}
+
 
 
 @media only screen and (max-width: 670px){
@@ -411,6 +421,16 @@
     }
 }
 
+@media only screen and (max-width: 610px){
+.soustredeni1 {
+    padding-top: 30px;
+}
+}
+
+
+
+
+
 @media only screen and (max-width: 590px){
     .tabor3 {
         height: 220px;
@@ -418,14 +438,33 @@
 }
 
 
+
+
+
 @media only screen and (max-width: 550px){
     
+    .container {
+            padding-left: 0%;
+            padding-right: 0%;
+       }
+
+       .navbar, #nas-areal, #rezervace, #tenisova-skola, .footer-all {
+        padding-left: 2%;
+        padding-right: 2%;
+       }
+
+
+ 
     .section1 {
-        height: 200px;
+        height: 250px;
     }
 
     .soustredeni1 {
     margin-bottom: 20px;
+    }
+
+    .soustredeni1 > button {
+        top: 170px;
     }
 
     .soustredeni1a2 {
@@ -458,9 +497,39 @@
     .navbar .btn-rezervation-system {
         margin-right: -55%;
     }
+
+    .activ-menu {
+        width: 100vw;
+        left: 0;
+        padding-left: 100px;
+        background-color: rgb(18, 18, 18);
+        z-index: -10;
+        padding-bottom: 4px;
+    }
+
+    .backgr {
+        background-color: rgb(18, 18, 18);
+    }
+
+    .activ-menu>dropdown {
+        height: max-content;
+    }
+
+    .section1 {
+     
+        background-attachment:fixed;
+        
+        background-position: center top;
+    }
+
 }
 
 
+@media only screen and (max-width: 475px){
+    
+    .section1 {
+        height: 200px;
+    }
 
 
 
@@ -468,3 +537,4 @@
     /* zobrazit hover pořád u trenérů */
 }
 
+}

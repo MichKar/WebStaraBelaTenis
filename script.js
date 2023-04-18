@@ -22,22 +22,24 @@ window.addEventListener("scroll", function(){
 });
 
 
-// HAMBURGER MENU - zobrazení hlavního menu
-let hamburger = document.querySelector(".image-menu")
-let navigation = document.querySelector(".navigation")
 
+
+// HAMBURGER MENU - zobrazení hlavního menu
+let hamburger = document.querySelector("#image-menu");
+let navigation = document.querySelector(".navigation");
 
 
 hamburger.addEventListener("click", function(){
-//        if(hamburger.attr("src") == "img/icons/menu-orange.png") {
-//                 console.log("nejde")
-                
-//                 hamburger.attr("src") = "img/icons/close_orange.png"
-//        } else {
-//                 hamburger.attr("src") = "img/icons/menu-orange.png"
-//        }
-        
-       navigation.classList.toggle("activ-menu")
+        console.log(hamburger.src)
+       if(hamburger.src == "http://127.0.0.1:5500/img/icons/menu-orange.png") {                         
+                hamburger.src = "img/icons/close_orange.png"
+                console.log("zapnutí křížku OK")
+                navigation.classList.toggle("activ-menu")
+       }  else  {
+                hamburger.src = "img/icons/menu-orange.png"
+                console.log("zapnutí hamburgeru OK")
+                navigation.classList.toggle("activ-menu")
+       };
 
 
 });
@@ -87,4 +89,11 @@ btnOpen.addEventListener("click", function(){
         btnPhone.classList.toggle("active")
          btnOpen.classList.toggle("active")
  });
+
+
+
+
+// //  kliknutí na úspěch -foto, zvětší se a naopak
+let uspechFoto = document.querySelector(".uspech-foto")
+
 
