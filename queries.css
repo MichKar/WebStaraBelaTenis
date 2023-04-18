@@ -1,11 +1,470 @@
 @media only screen and (max-width: 1400px){
+    
     .section1 {
         height: 500px;
     }
-};
+}
 
 @media only screen and (max-width: 1000px){
+    
     .section1 {
         height: 400px;
     }
-};
+}
+
+@media only screen and (max-width: 950px){
+
+    .rezervace {
+        display: block;
+    }
+
+    .btn-open, #obchod .btn-phone {
+        margin-top: 50px;
+    }
+
+}
+
+
+@media only screen and (max-width: 930px){
+    
+    .btn-open {
+        margin-top: 10px;
+        width: 100%;
+        position: relative;
+    }
+
+    .btn-open p {
+        margin-left: 7px;
+        padding-left: 0;
+    }
+    
+    #obchod .btn-phone {
+        margin-top: 20px;
+        width: 100%;
+        position: relative;
+        margin-left: 40px;
+        justify-content: left;
+    }
+
+    .btn-phone img {
+        order: -1;
+    }
+
+    .btn-phone p {
+        margin-left: 7px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 910px){
+    
+    #turnaje .btn-phone {
+        margin-top: 5%;
+    }
+
+    #turnaje .box2 li {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+@media only screen and (max-width: 860px){
+    
+    .trainers {
+        flex-wrap: wrap;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+}
+
+
+@media only screen and (max-width: 850px){
+    
+    .tenisove-uspechy {
+        display: block;
+
+    }
+    .uspech {
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+
+    .soustredeni1a2 {
+        height: 400px;
+    }
+
+    .soustredeni1 > h3{
+        padding-top: 0;
+        margin-top: 2%;
+    }
+
+    .soustredeni1 > button {
+        margin-top: 0;
+    }
+
+
+
+
+
+}
+
+
+@media only screen and (max-width: 817px){
+    
+    .section1 {
+        height: 300px;
+    }
+    
+    .slider-tabor {
+        animation: none;
+        height: 300px;
+        background: url(img/photos-TS/tabor08_small.jpg);
+        background-size: 100% auto;
+    }
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 790px){
+    .tabor1a2 {
+        grid-template-columns: 62% 32%;
+        gap: 2%;
+    }
+
+}
+
+
+@media only screen and (max-width: 775px){
+    
+    .trainers {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .btn-phone p {
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: left;
+    }
+
+
+
+
+
+
+
+
+
+}
+
+
+@media only screen and (max-width: 750px){
+    
+    .soustredeni1 > h3{
+        padding: 0;
+        margin: 0;
+    }
+
+    .btn-open, .btn-phone {
+        max-width: 90%;
+    }
+
+    #obchod h3 {
+        padding: 0;
+        margin: 20px 0;
+    }
+
+    .box2 li  {
+        font-size: 15px;
+        margin-top: 5px;
+    }
+
+    #obchod .box2 {
+        padding: 20px;
+    }
+
+    #obchod .box {
+        height: 500px;
+    }
+
+    #obchod .box1 {
+        height: 500px;
+    }
+
+    .tabor3 {
+        height: 300px;
+
+}
+/* skrytí navigace */
+
+.btn-menu {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: block;
+}
+
+.navigation {
+    display: none;
+    
+}
+.activ-menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+}
+
+.activ-menu ul li {
+    padding: 5px 0;
+}
+ .activ-menu {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 40px;
+    width: 100vw;
+    background-color: #000000b3;
+    height: 130px;
+    z-index: -10;
+} 
+
+.backgr {
+    background-color: #000000b3;
+}
+
+.dropdown {
+    display: none;
+}
+
+.navbar .btn-rezervation-system {
+    font-size: 10px;
+    margin-right: -70%;
+}
+}
+
+
+
+
+
+@media only screen and (max-width: 735px){
+   
+    .druzstva {
+        display: block;
+    }
+
+    .druzstvo {
+        align-items: left;
+    }
+
+    .soustredeni1a2 {
+        grid-template-columns:50% 50%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 720px){
+    
+    .trainers {
+
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+
+    .quick-links {
+        flex-direction: column;
+        gap: 0px;
+        align-items: flex-end;
+    }
+
+    .quick-links >p {
+        display: none;
+    }
+
+
+    .tabor1a2 {
+        display: block;
+    }
+
+    .tabor2 {
+        width: 240px;
+        margin: 0 auto;
+    }
+
+    .tabor3 {
+        height: 270px;
+
+}
+
+}
+
+
+@media only screen and (max-width: 680px){
+    
+    .soustredeni1 {
+        padding-top: 3%;
+    }
+}
+
+
+@media only screen and (max-width: 670px){
+    
+    #obchod .box {
+        display: block;
+        height: 450px;
+        width: 100%;
+    }
+    #obchod .box1 {
+        display: none;
+    }
+
+    #obchod .box2 {
+        width: 100%;
+    }
+
+    #turnaje .box {
+        display: block;
+        width: 100%;
+        height: 450px;
+    }
+
+    #turnaje .box1 {
+        display: none;
+    }
+
+    .ts h2 {
+        font-size: 5px;
+    }
+
+
+    .navbar .btn-rezervation-system {
+        margin-right: -65%;
+    }
+
+    .container {
+        margin: 0 auto;
+    }
+
+}
+
+
+
+
+
+@media only screen and (max-width: 650px){
+    
+    .prices {
+        width: 90%;
+    }
+    
+    .contact-box {
+        display: block;
+        padding-bottom: 50px;
+    }
+
+    .contact-box .div2 {
+        height: 200px;
+    }
+
+    
+    .tabor3 {
+        height: 250px;
+    }
+}
+
+@media only screen and (max-width: 590px){
+    .tabor3 {
+        height: 220px;
+    }
+}
+
+
+@media only screen and (max-width: 550px){
+    
+    .section1 {
+        height: 200px;
+    }
+
+    .soustredeni1 {
+    margin-bottom: 20px;
+    }
+
+    .soustredeni1a2 {
+        display: block;
+        height: 100%;
+    }
+
+    .soustredeni2 {
+        height: 250px;
+    }
+
+    .soustredeni2 img {
+        height: 250px;
+        object-fit:cover;
+    }
+
+    .ovopen img {
+        width: 100px;
+        right: 7px;
+        top: -50px;
+        position: absolute;
+        cursor: pointer;
+    }
+    
+    #turnaje .box {
+        height: 500px;
+    }
+
+
+    .navbar .btn-rezervation-system {
+        margin-right: -55%;
+    }
+}
+
+
+
+
+
+@media only screen and (max-width: 470px){
+    /* zobrazit hover pořád u trenérů */
+}
+

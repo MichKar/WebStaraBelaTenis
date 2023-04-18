@@ -22,6 +22,33 @@ window.addEventListener("scroll", function(){
 });
 
 
+// HAMBURGER MENU - zobrazení hlavního menu
+let hamburger = document.querySelector(".image-menu")
+let navigation = document.querySelector(".navigation")
+
+
+
+hamburger.addEventListener("click", function(){
+//        if(hamburger.attr("src") == "img/icons/menu-orange.png") {
+//                 console.log("nejde")
+                
+//                 hamburger.attr("src") = "img/icons/close_orange.png"
+//        } else {
+//                 hamburger.attr("src") = "img/icons/menu-orange.png"
+//        }
+        
+       navigation.classList.toggle("activ-menu")
+
+
+});
+
+
+
+
+
+
+
+
 // TENISOVÉ SOUSTŘEDĚNÍ - více info rozkliknutí
 
 let btnSoustredeni = document.querySelector(".btn-soustredeni")

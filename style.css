@@ -16,6 +16,8 @@ html {
         max-width: 900px;
         margin: 2% auto;
         margin-bottom: 0;
+        padding-left: 2%;
+        padding-right: 2%;
     }
 
     .clarfix:after {
@@ -55,7 +57,7 @@ html {
         transform: translate3D(0, -100%, 0);
     }
 
-    .scroll-up .backgr {
+    .scroll-up .backgr, .scroll-up .activ-menu {
        background-color: rgba(0, 0, 0, 0.5);
        backdrop-filter: blur(10px);
        filter: drop-shadow(0 -10px 20px rgba(2, 2, 2, 0.95))
@@ -76,13 +78,16 @@ html {
         display: inline-block;
     }
 
+
+
     .navbar ul li a {
         text-decoration: none;
         font-weight: 550;
-        padding: 22px 20px;
+        padding: 20px;
         color: white;
-        font-size: 15px;  
+        font-size: 13px;  
         transition: all 0.5s ease;
+
     }
 
     .navbar ul li a:hover {
@@ -98,12 +103,20 @@ html {
         background-color: #00000089;
         visibility: hidden;
         opacity: 0;
-        width: 200px;
+        width: 180px;
         text-transform: none;
+    
     }
 
     .dropdown li {
        line-height: 0; 
+
+    }
+
+    .dropdown a {
+        margin: 0;
+        padding: 0;
+        line-height: 0; 
     }
 
     .navbar ul li:hover > ul {
@@ -117,7 +130,7 @@ html {
         padding:6px 16px;
         text-decoration: none;
         border-radius: 30px;
-        font-size: 12px;
+        font-size: 10px;
         font-weight: 800;
         cursor: pointer;
         transition: scale 0.2 ease;
@@ -143,7 +156,7 @@ html {
     }
 
     h1 {
-        font-size: 30px;
+        font-size: 23px;
         width: auto;
         padding-top: 40px;
         text-align: center;
@@ -162,7 +175,7 @@ html {
 
     h3 {
         padding-top: 40px;
-        font-size: 30px;
+        font-size: 23px;
         text-align: center;
     }
 
@@ -193,42 +206,6 @@ html {
     
 
 
-/* TABLE */
-
-    .prices {
-        color:  black;
-        text-align: center;
-        width: 600px;
-        margin: 0 auto;
-        margin-bottom: 70px;
-        box-shadow: 0px 10px 25px 5px rgba(0, 0, 0, 0.703);
-        border: 1px solid black;
-        }
-
-    .prices-info {
-        font-size: 14px;
-        padding: 10px;
-        background-color: #aeadad;
-        font-weight: 300;
-        border-top: 1px solid black;
-    }
-
-    tr, td {
-        font-size: 16px;
-        background-color:#aeadad;
-        padding: 5px;
-    }
-
-    th {
-        font-size: 16px;
-        padding: 10px;
-        background-color: #aeadad;
-        border-bottom: 1px solid black;
-    }
-
-    td {
-        background-color: rgba(255, 255, 255, 0.864);
-    }
 
 
 
@@ -252,6 +229,92 @@ html {
 
 
 
+/* Rezervace */
+
+
+#rezervace p {
+    font-size: 14px;
+    line-height: 25px;  
+}
+
+.rezervace {
+    display: grid;
+    grid-template-columns: 58% 37%;
+    gap: 5%;
+    
+}
+
+
+
+
+/* CENÍK */
+
+/* .cenik-backgr {
+    background:linear-gradient(rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.7)),url(img/bg1.jpg);
+    padding-bottom: 20px;
+} */
+
+.prices {
+    color:  black;
+    text-align: center;
+    width: 600px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    box-shadow: 0px 10px 25px 5px rgba(0, 0, 0, 0.703);
+    border: 1px solid black;
+    }
+
+.prices-info {
+    font-size: 14px;
+    padding: 10px;
+    background-color: #aeadad;
+    font-weight: 300;
+    border-top: 1px solid black;
+}
+
+tr, td {
+    font-size: 16px;
+    background-color:#aeadad;
+    padding: 5px;
+}
+
+th {
+    font-size: 16px;
+    padding: 10px;
+    background-color: #aeadad;
+    border-bottom: 1px solid black;
+}
+
+td {
+    background-color: rgba(255, 255, 255, 0.864);
+}
+
+
+/* Tenisová škola */
+
+/* družstva */
+
+.druzstva {
+    display: grid;
+    gap: 5%;
+    grid-template-columns: 16% 16% 16% 16% 16%;
+    margin-bottom: 20px;
+}
+
+.druzstvo {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+.druzstvo > a {
+    color: black;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+
+
 
 
 
@@ -259,7 +322,6 @@ html {
 
     .uspechy-background{
         padding-bottom: 40px;
-        background:linear-gradient(rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.7)),url(img/cup1.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment:fixed;
@@ -296,8 +358,8 @@ html {
     }
 
     .uspech-text .rok {
-        font-size: 16px;
-        letter-spacing: 5px;
+        font-size: 14px;
+        letter-spacing: 7px;
         margin-bottom: 12px;
     }
 
@@ -335,7 +397,7 @@ html {
     }
 
     .trainer {
-        height: 300px;
+        height: 310px;
         width: 200px;
         margin: 2%;
         box-shadow: 5px 5px 20px rgb(185, 185, 185);
@@ -404,6 +466,7 @@ html {
 
 
 /* Tenisový tábor */
+
     #tabor {
         margin-top: 100px;
         background-color: white;
@@ -415,21 +478,21 @@ html {
         padding-left: 40px;
         padding-right: 30px;
         padding-bottom: 0;
-        font-size: 18px;
     }
 
     .tabor1a2 {
         display: grid;
-        grid-template-columns: 63% 27%;
+        grid-template-columns: 62% 28%;
         gap: 5%;
         margin-bottom: 20px;
+
     }
 
     .tabor2-inner {
         border: 1px solid grey;
         box-shadow: 0px 10px 25px 5px rgba(0, 0, 0, 0.703);
         border-radius:15px;
-        margin-top: 60px;
+        margin-top: 45px;
         padding: 10px;
     }
 
@@ -454,6 +517,10 @@ html {
         height: 400px;
         animation: slide 30s infinite;
         background: url(img/photos-TS/tabor01_small.jpg);
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        background-position: center center;
     }
 
         @keyframes slide {
@@ -462,7 +529,7 @@ html {
             22% {background: url(img/photos-TS/tabor03_small.jpg);}
             33% {background: url(img/photos-TS/tabor04_small.jpg);}
             44% {background: url(img/photos-TS/tabor05_small.jpg);}
-            55% {background: url(img/photos-TS/tabor06_small.jpg);}
+            55% {background: url(img/photos-TS/tabor08_small.jpg);}
             66% {background: url(img/photos-TS/tabor07_small.jpg);}
             77% {background: url(img/photos-TS/tabor15_small.jpg);}
             89% {background: url(img/photos-TS/tabor19_small.jpg);}
@@ -481,10 +548,12 @@ html {
         height: 500px;
         background-color: rgba(248, 187, 31, 0.763);
         box-shadow: 0px 10px 25px 5px rgba(0, 0, 0, 0.703);
+        overflow: hidden;
     }
 
     .soustredeni1 {
-        padding: 40px;
+        padding: 30px;
+        position: relative;
     }
 
     .soustredeni1 > p {
@@ -493,21 +562,16 @@ html {
 
     .soustredeni1 > button {
         width: 140px;
+        right: 30px;
         font-size: 14px;
         padding: 8px 10px;
         border-radius: 15px;
         cursor: pointer;
+        position: absolute;
         box-shadow: 2px 2px 15px black;
-        text-align: end;
         background-color: #aeadad;
         color: black;
-        margin-left: 190px;
         margin-top: 40px;
-    }
-
-    .soustredeni2 {
-        height: 500px;
-        overflow: hidden;
     }
 
     .soustredeni2 img {
@@ -522,6 +586,11 @@ html {
         background-color: rgba(248, 187, 31, 0.763);
         padding: 30px;
         box-shadow: 0px 10px 25px 5px rgba(0, 0, 0, 0.703);
+       
+    }
+
+    .soustredeni3 p {
+        font-size: 14px;
     }
 
 
@@ -593,6 +662,7 @@ html {
 
     .box2 > p {
         font-size: 17px;
+        width: 90%;
     }
 
     .box2 li  {
@@ -686,11 +756,16 @@ html {
         right: 50%;
         transform: translatex(50%);
         cursor: default;
+        justify-content: left;
     }
 
-    #turnaje .btn-phone p {
+    #turnaje .btn-phone img {
+        order: -1;
+    }
+
+    #turnaje .btn-phone a {
         font-size: 14px;
-        margin: 7px 10px 0 0;
+        margin: 7px 10px 0 7px;
         color: black;
     }
         
@@ -714,7 +789,6 @@ html {
         padding-top: 0px;
         margin-top: 10px;
     }
-
 
    .contact-box {
         max-width: 100%;
@@ -778,13 +852,13 @@ html {
         padding: 10px;
         border: 1px solid rgb(192, 192, 192);
         margin-top: 30px;
-        animation: spravce 1s infinite;
+        animation: spravce .8s infinite;
     }
 
         @keyframes spravce {
-            0% {background: linear-gradient(rgb(255, 241, 207),rgb(255, 241, 207));}
-            50% {background: linear-gradient(rgb(255, 241, 207),rgb(248, 186, 31))}
-            100% {background: linear-gradient(rgb(255, 241, 207),rgb(255, 241, 207));}
+            0% {background: rgb(255, 241, 207);}
+            50% {background: rgb(255, 206, 91);}
+            100% {background: rgb(255, 241, 207);}
         } 
 
     .kontakt-zima {
@@ -845,7 +919,9 @@ html {
     
     .quick-links {
         display: flex;
+        flex-direction: row;
         gap: 8px;
+        align-items: center;
         
     }
 
