@@ -31,13 +31,12 @@ let navigation = document.querySelector(".navigation");
 
 hamburger.addEventListener("click", function(){
         console.log(hamburger.src)
-       if(hamburger.src == "http://127.0.0.1:5500/img/icons/menu-orange.png") {                         
+        // if(hamburger.src.includes == "menu-orange.png") {   
+       if(hamburger.src.includes == "http://127.0.0.1:5500/img/icons/menu-orange.png") {                         
                 hamburger.src = "img/icons/close_orange.png"
-                console.log("zapnutí křížku OK")
                 navigation.classList.toggle("activ-menu")
        }  else  {
                 hamburger.src = "img/icons/menu-orange.png"
-                console.log("zapnutí hamburgeru OK")
                 navigation.classList.toggle("activ-menu")
        };
 
@@ -94,6 +93,10 @@ btnOpen.addEventListener("click", function(){
 
 
 // //  kliknutí na úspěch -foto, zvětší se a naopak
-let uspechFoto = document.querySelector(".uspech-foto")
+let uspechFoto = document.querySelectorAll(".uspech-foto")
 
+uspechFoto.forEach(function(oneUspech){
+        oneUspech.addEventListener("click", function(){
+                oneUspech.classList.toggle("zoom")
+        })})
 

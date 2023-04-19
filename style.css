@@ -287,25 +287,48 @@ td {
 
 /* Tenisová škola */
 
+#tenisova-skola p {
+    line-height: 25px;
+}
+
+
+#tenisova-skola .contact-form{
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
 /* družstva */
 
 .druzstva {
-    display: grid;
-    gap: 5%;
-    grid-template-columns: 16% 16% 16% 16% 16%;
+    display: flex;
+    gap: 10% 3%;
+    justify-content: center;
     margin-bottom: 20px;
+    flex-flow: wrap;
 }
 
 .druzstvo {
-    flex-direction: column;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    
 }
 
 .druzstvo > a {
     color: black;
-    font-weight: 500;
+    background-color: rgba(248, 187, 31, 0.763);
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 1px solid rgb(121, 121, 121);
+    border-left: 1px solid rgb(121, 121, 121);
     letter-spacing: 1px;
+    width: 100px;
+    text-align: center;
+    margin: 5px;
+    padding: 6px 16px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 13px;
+    cursor: pointer;
 }
 
 
@@ -316,10 +339,13 @@ td {
 /* Úspěchy TS */
 
     .uspechy-background{
+        background:linear-gradient(rgba(255, 255, 255, 0.859),rgba(255, 255, 255, 0.85)),url(img/cup4.jpg);
+     
         padding-bottom: 40px;
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment:fixed;
+        background-position: center center;
     }
 
     .tenisove-uspechy{
@@ -339,17 +365,22 @@ td {
 
     .uspech-foto img {
         height: 100%;
-        cursor: pointer;
+        cursor:zoom-in;
         width: 200px;
-        transform: scale(1);
+       
     }    
 
+    .uspech-foto {
+        transition: scale 0.3s ease-in-out;
+    }
 
+    .zoom {
+        scale: 3;
+        z-index: 500;
+    }   
 
-    @keyframes zvetseniFotky {
-       0% {scale: 1}
-        50% {scale: 3}
-
+    .zoom img {
+        cursor:zoom-out;
     }
 
     .uspech-text {
@@ -393,7 +424,7 @@ td {
     .trainers {
         display: flex;
         justify-content: center;
-        padding: 50px 0;
+        padding:50px 0;
     }
 
     .trainer {
@@ -937,3 +968,53 @@ td {
         position: relative;
         bottom: 0;
     }
+
+
+
+
+
+    /* ORGANIZAČNÍ ŘÁD TENISOVÉ ŠKOLY - NOVÉ HTML */
+    .organizacni-rad-TS {
+        margin: 0 auto;
+        max-width: 900px;
+        padding: 0 2% 10% 2%;
+    }
+   
+
+    .organizacni-rad-TS h1{
+        padding-top: 100px;
+        padding-bottom: 50px;
+        margin-top: 0;
+    }
+    .organizacni-rad-TS p {
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    .btn-zpet {
+            background-color: rgb(248, 186, 31);
+            padding:10px 30px;
+            border-radius: 30px;
+            font-size: 10px;
+            cursor: pointer;
+            transition: scale 0.2 ease;
+            border-top: 1px solid grey;
+            border-left: 1px solid grey;
+            border-right: 1px solid rgb(42, 42, 42);
+            border-bottom: 1px solid rgb(42, 42, 42);
+            position: fixed;
+            margin-top: 100px;
+        }
+        
+        .btn-zpet:hover {
+            scale: 1.05;
+        }
+
+        .btn-zpet a {
+            text-decoration: none;
+            color: rgb(43, 43, 43);
+        }
+ 
+        .rad-kontakt h4  {
+            margin: 0;
+        }

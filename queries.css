@@ -12,6 +12,7 @@
     }
 }
 
+
 @media only screen and (max-width: 950px){
 
     .rezervace {
@@ -56,7 +57,6 @@
         padding-right: 0;
     }
 
-
 }
 
 
@@ -69,6 +69,21 @@
     #turnaje .box2 li {
         font-size: 14px;
     }
+
+    .druzstva {
+        width: 320px;
+        align-self: start;
+        flex-direction: column;
+        height: 350px;
+        place-content: start;
+        margin: 0 auto;
+        gap: 5% 10%;
+    }
+
+    .druzstvo {
+        padding: 2%;
+    }
+    
 }
 
 
@@ -83,19 +98,22 @@
         margin-left: 20%;
         margin-right: 20%;
     }
-
 }
 
 
 @media only screen and (max-width: 850px){
     
     .tenisove-uspechy {
-        display: block;
+        flex-direction: column;
+       margin-bottom: 0;
+       gap: 0;
 
     }
+
     .uspech {
         margin: 0 auto;
-        margin-bottom: 30px;
+        margin-bottom: 5%;
+        
     }
 
     .soustredeni1a2 {
@@ -107,13 +125,13 @@
         margin-top: 2%;
     }
 
- 
     .soustredeni1 > button {
-  
         top: 320px;
     }
 
-
+    .contact-box {
+        grid-template-columns: 50% 50%;
+    }
 
 }
 
@@ -137,13 +155,11 @@
 
 
 
-
 @media only screen and (max-width: 790px){
     .tabor1a2 {
         grid-template-columns: 62% 32%;
         gap: 2%;
     }
-
 }
 
 
@@ -163,7 +179,6 @@
     .navbar ul li a {
         padding: 10px;
     }
-
 }
 
 
@@ -171,6 +186,11 @@
 
 @media only screen and (max-width: 750px){
     
+
+    .section1 {
+        background-position: center top -4%;
+    }
+
     .soustredeni1 > h3{
         padding: 0;
         margin: 0;
@@ -204,106 +224,72 @@
 
     .tabor3 {
         height: 300px;
-
-}
-/* skrytí navigace */
-
-.btn-menu {
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    display: block;
-}
-
-.navigation {
-    display: none;   
-    /* left: -100%; */
-    transition: left 2s ease;
-}
-.activ-menu {
-    display: block;
-    position: absolute;
-    right: 0px;
-    top: 41px;
-    width: 400px;
-    background-color: #000000b3;
-    height: 259px
-
-} 
-.activ-menu ul {
-    margin: 0;
-    padding: 0;
-    align-items: left;
-    width: 150px;
-}
-
-
-.activ-menu> ul li {
-    display: flex;
-    flex-direction: column;
-    padding: 9px 0 8.5px 0;
-    line-height: 0px;
-}
-.activ-menu > ul li a:hover {
-    color: white;
-}
-
-.activ-menu ul li:hover {
-    background-color: black;
-}
-
-.backgr {
-    background-color: #000000b3;
-}
-
-.dropdown {
-    top: 0;
-    left: 150px;
-    background: none;
-}
-
-.dropdown li {
-    width: 190px;
-}
-
-.navbar .btn-rezervation-system {
-    font-size: 10px;
-    margin-right: -70%;
-}
-}
-
-
-
-
-
-@media only screen and (max-width: 735px){
-   
-    .druzstva {
-        display: block;
     }
 
-    .druzstvo {
-        align-items: left;
-    }
+    /* skrytí  navigace */
 
-    .soustredeni1a2 {
-        grid-template-columns:50% 50%;
-    }
+        .btn-menu {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            display: block;
+        }
 
+        .navigation {
+            display: none;   
+            /* left: -100%; */
+            transition: left 2s ease;
+        }
+        .activ-menu {
+            display: block;
+            position: absolute;
+            right: 0px;
+            top: 41px;
+            width: 400px;
+            background-color: #000000b3;
+            height: 259px
+
+        } 
+        .activ-menu ul {
+            margin: 0;
+            padding: 0;
+            align-items: left;
+            width: 150px;
+        }
+
+        .activ-menu> ul li {
+            display: flex;
+            flex-direction: column;
+            padding: 9px 0 8.5px 0;
+            line-height: 0px;
+        }
+        .activ-menu > ul li a:hover {
+            color: white;
+        }
+
+        .activ-menu ul li:hover {
+            background-color: black;
+        }
+
+        .backgr {
+            background-color: #000000b3;
+        }
+
+        .dropdown {
+            top: 0;
+            left: 150px;
+            background: none;
+        }
+
+        .dropdown li {
+            width: 190px;
+        }
+
+        .navbar .btn-rezervation-system {
+            font-size: 10px;
+            margin-right: -70%;
+        }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -319,11 +305,9 @@
 @media only screen and (max-width: 720px){
     
     .trainers {
-
         margin-left: 0%;
         margin-right: 0%;
     }
-
 
     .quick-links {
         flex-direction: column;
@@ -335,7 +319,6 @@
         display: none;
     }
 
-
     .tabor1a2 {
         display: block;
     }
@@ -346,10 +329,8 @@
     }
 
     .tabor3 {
-        height: 270px;
-
-}
-
+        height: 270px;  
+    }
 }
 
 
@@ -385,13 +366,27 @@
         font-size: 5px;
     }
 
-
     .navbar .btn-rezervation-system {
         margin-right: -65%;
     }
 
     .container {
         margin: 0 auto;
+    }
+
+    .contact-box {
+        display: block;
+        padding-bottom: 50px;
+    }
+
+    .contact-box .div2 {
+        height: 200px;
+    }
+ 
+    .kontakt-leto, .kontakt-zima, .kontakt-ts {
+        margin-left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
     }
 
 }
@@ -402,19 +397,13 @@
 
 @media only screen and (max-width: 650px){
     
+    .section1 {
+        background-position: center top;
+    }
+
     .prices {
         width: 90%;
     }
-    
-    .contact-box {
-        display: block;
-        padding-bottom: 50px;
-    }
-
-    .contact-box .div2 {
-        height: 200px;
-    }
-
     
     .tabor3 {
         height: 250px;
@@ -422,9 +411,9 @@
 }
 
 @media only screen and (max-width: 610px){
-.soustredeni1 {
-    padding-top: 30px;
-}
+    .soustredeni1 {
+        padding-top: 30px;
+    }
 }
 
 
@@ -448,16 +437,23 @@
             padding-right: 0%;
        }
 
-       .navbar, #nas-areal, #rezervace, #tenisova-skola, .footer-all {
-        padding-left: 2%;
-        padding-right: 2%;
-       }
+    .navbar, #nas-areal, #rezervace, #tenisova-skola, .footer-all {
+    padding-left: 2%;
+    padding-right: 2%;
+    }
 
-
- 
     .section1 {
         height: 250px;
+        background-position: center top;
     }
+
+    #tabor {
+        margin-top: 0;
+    }
+
+    #tabor h3 {
+        margin-top: 0;
+    padding-top: 100px;    }
 
     .soustredeni1 {
     margin-bottom: 20px;
@@ -481,6 +477,13 @@
         object-fit:cover;
     }
 
+
+    .box {
+
+        margin-bottom: 0;
+    }
+
+
     .ovopen img {
         width: 100px;
         right: 7px;
@@ -492,7 +495,6 @@
     #turnaje .box {
         height: 500px;
     }
-
 
     .navbar .btn-rezervation-system {
         margin-right: -55%;
@@ -511,17 +513,45 @@
         background-color: rgb(18, 18, 18);
     }
 
-    .activ-menu>dropdown {
+    .activ-menu > dropdown {
         height: max-content;
     }
 
-    .section1 {
-     
-        background-attachment:fixed;
-        
-        background-position: center top;
+    .uspech-foto img {
+        cursor:default;
+        object-fit: cover;
+    }    
+
+    .uspech {
+        width: 100%;
+        height: auto;
     }
 
+    .zoom {
+        scale: 1;
+    }   
+
+    .zoom img {
+        cursor:default;
+    }
+
+    .prices {
+        width: 100%;
+    }
+
+
+
+    #kontakt h1 {
+        margin-top: 0;
+        padding-top: 100px;
+    }
+
+}
+
+@media only screen and (max-width: 520px){
+    .tabor3 {
+        height: 200px;
+    }
 }
 
 
@@ -529,12 +559,38 @@
     
     .section1 {
         height: 200px;
+        background-position: center top 10px;
+    }
+    .tabor3 {
+        height: 180px;
     }
 
-
-
-@media only screen and (max-width: 470px){
-    /* zobrazit hover pořád u trenérů */
+        /* zobrazit hover pořád u trenérů */
 }
 
+
+@media only screen and (max-width: 440px){
+    .navbar .btn-rezervation-system {
+        margin-right: -45%;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 340px){
+    .navbar .btn-rezervation-system {
+        margin-right: -35%;
+    }
+
+    .section1 {
+        background-position: center top 30px;
+    }
+}
+
+
+@media only screen and (max-width: 280px){
+    .section1 {
+        height: 150px;
+    }
 }
