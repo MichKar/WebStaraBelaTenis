@@ -19,56 +19,11 @@
         display: block;
     }
 
-    .btn-open, #obchod .btn-phone {
-        margin-top: 50px;
-    }
-
 }
 
-
-@media only screen and (max-width: 930px){
-    
-    .btn-open {
-        margin-top: 10px;
-        width: 100%;
-        position: relative;
-    }
-
-    .btn-open p {
-        margin-left: 7px;
-        padding-left: 0;
-    }
-    
-    #obchod .btn-phone {
-        margin-top: 20px;
-        width: 100%;
-        position: relative;
-        margin-left: 40px;
-        justify-content: left;
-    }
-
-    .btn-phone img {
-        order: -1;
-    }
-
-    .btn-phone p {
-        margin-left: 7px;
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-}
 
 
 @media only screen and (max-width: 910px){
-    
-    #turnaje .btn-phone {
-        margin-top: 5%;
-    }
-
-    #turnaje .box2 li {
-        font-size: 14px;
-    }
 
     .druzstva {
         width: 320px;
@@ -98,6 +53,13 @@
         margin-left: 20%;
         margin-right: 20%;
     }
+
+    .btn-open p {
+        font-size: 12px;
+    }
+
+
+
 }
 
 
@@ -107,7 +69,6 @@
         flex-direction: column;
        margin-bottom: 0;
        gap: 0;
-
     }
 
     .uspech {
@@ -116,23 +77,44 @@
         
     }
 
-    .soustredeni1a2 {
-        height: 400px;
-    }
-
-    .soustredeni1 > h3{
-        padding-top: 0;
-        margin-top: 2%;
-    }
-
-    .soustredeni1 > button {
-        top: 320px;
-    }
-
     .contact-box {
         grid-template-columns: 50% 50%;
     }
 
+    .btns {
+        display: flex;
+        flex-direction: column;
+        gap: 5%;
+    }
+
+    .btn-open, .btn-phone {
+        width: 95%;
+        cursor: default;
+        justify-content: left;
+        margin-top: 5%;
+    }
+ 
+    .btn-phone a {
+        padding-left: 5%;
+        font-size: 12px;
+    }
+
+    .btn-phone img {
+        order: -1;
+    }
+
+.obchod2 h3 {
+    padding-top: 0;
+}
+
+
+    .turnaje1 li {
+        margin-top: 0;
+    }
+
+    .turnaje1 h3 {
+        padding-top: 0;
+    }
 }
 
 
@@ -148,36 +130,37 @@
         background: url(img/photos-TS/tabor08_small.jpg);
         background-size: 100% auto;
     }
-}
 
-
-
-
-
-
-@media only screen and (max-width: 790px){
     .tabor1a2 {
         grid-template-columns: 62% 32%;
         gap: 2%;
     }
+
 }
+
+
+
+
+
+
+
+
+
 
 
 @media only screen and (max-width: 775px){
     
+    .navbar ul li a {
+        padding: 10px;
+    }
+
     .trainers {
         margin-left: 10%;
         margin-right: 10%;
     }
 
-    .btn-phone p {
+    .btns {
         margin-top: 0;
-        margin-bottom: 0;
-        text-align: left;
-    }
-
-    .navbar ul li a {
-        padding: 10px;
     }
 }
 
@@ -191,41 +174,11 @@
         background-position: center top -4%;
     }
 
-    .soustredeni1 > h3{
-        padding: 0;
-        margin: 0;
-    }
 
-    .btn-open, .btn-phone {
-        max-width: 90%;
-    }
 
-    #obchod h3 {
-        padding: 0;
-        margin: 20px 0;
-    }
-
-    .box2 li  {
-        font-size: 15px;
-        margin-top: 5px;
-    }
-
-    #obchod .box2 {
-        padding: 20px;
-    }
-
-    #obchod .box {
-        height: 500px;
-    }
-
-    #obchod .box1 {
-        height: 500px;
-    }
-
-    .tabor3 {
-        height: 300px;
-    }
-
+    .soustredeni1 > button {
+        margin-left: 50%;
+  }
     /* skrytí  navigace */
 
         .btn-menu {
@@ -238,8 +191,9 @@
         .navigation {
             display: none;   
             /* left: -100%; */
-            transition: left 2s ease;
+            /* transition: left 2s ease; */
         }
+
         .activ-menu {
             display: block;
             position: absolute;
@@ -250,6 +204,7 @@
             height: 259px
 
         } 
+
         .activ-menu ul {
             margin: 0;
             padding: 0;
@@ -264,7 +219,7 @@
             line-height: 0px;
         }
         .activ-menu > ul li a:hover {
-            color: white;
+            color: rgb(248, 186, 31);
         }
 
         .activ-menu ul li:hover {
@@ -289,7 +244,23 @@
             font-size: 10px;
             margin-right: -70%;
         }
+
+
+        .obchod1, .turnaje2 {
+        display: none;
+        }
+
+        .obchod, .turnaje {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-ovopen > a > img {
+            top: -100px;
+        }
+
 }
+
 
 
 
@@ -324,7 +295,7 @@
     }
 
     .tabor2 {
-        width: 240px;
+        width: 90%;
         margin: 0 auto;
     }
 
@@ -339,39 +310,12 @@
 
 @media only screen and (max-width: 670px){
     
-    #obchod .box {
-        display: block;
-        height: 450px;
-        width: 100%;
-    }
-    #obchod .box1 {
-        display: none;
-    }
-
-    #obchod .box2 {
-        width: 100%;
-    }
-
-    #turnaje .box {
-        display: block;
-        width: 100%;
-        height: 450px;
-    }
-
-    #turnaje .box1 {
-        display: none;
-    }
-
-    .ts h2 {
-        font-size: 5px;
-    }
-
     .navbar .btn-rezervation-system {
         margin-right: -65%;
     }
 
-    .container {
-        margin: 0 auto;
+    .ts h2 {
+        font-size: 5px;
     }
 
     .contact-box {
@@ -389,8 +333,10 @@
         width: 80%;
     }
 
+    .obchod2 li:last-of-type {
+        margin-top: 15px;
+    }
 }
-
 
 
 
@@ -406,21 +352,21 @@
     }
     
     .tabor3 {
-        height: 250px;
+        height: 240px;
     }
+
+    .soustredeni1 h3{
+        padding-top: 0;
+    }
+
+    .soustredeni1 > button {
+        margin-left: 0;
+        width: 100%;
+  }
 }
 
-@media only screen and (max-width: 610px){
-    .soustredeni1 {
-        padding-top: 30px;
-    }
-}
 
-
-
-
-
-@media only screen and (max-width: 590px){
+@media only screen and (max-width: 580px){
     .tabor3 {
         height: 220px;
     }
@@ -430,70 +376,16 @@
 
 
 
+
 @media only screen and (max-width: 550px){
     
     .container {
-            padding-left: 0%;
-            padding-right: 0%;
-       }
+        padding: 0;
+        margin: 0;
+   }
 
-    .navbar, #nas-areal, #rezervace, #tenisova-skola, .footer-all {
-    padding-left: 2%;
-    padding-right: 2%;
-    }
-
-    .section1 {
-        height: 250px;
-        background-position: center top;
-    }
-
-    #tabor {
-        margin-top: 0;
-    }
-
-    #tabor h3 {
-        margin-top: 0;
-    padding-top: 100px;    }
-
-    .soustredeni1 {
-    margin-bottom: 20px;
-    }
-
-    .soustredeni1 > button {
-        top: 170px;
-    }
-
-    .soustredeni1a2 {
-        display: block;
-        height: 100%;
-    }
-
-    .soustredeni2 {
-        height: 250px;
-    }
-
-    .soustredeni2 img {
-        height: 250px;
-        object-fit:cover;
-    }
-
-
-    .box {
-
-        margin-bottom: 0;
-    }
-
-
-    .ovopen img {
-        width: 100px;
-        right: 7px;
-        top: -50px;
-        position: absolute;
-        cursor: pointer;
-    }
-    
-    #turnaje .box {
-        height: 500px;
+   .backgr {
+        background-color: rgb(18, 18, 18);
     }
 
     .navbar .btn-rezervation-system {
@@ -509,12 +401,26 @@
         padding-bottom: 4px;
     }
 
-    .backgr {
-        background-color: rgb(18, 18, 18);
-    }
-
     .activ-menu > dropdown {
         height: max-content;
+    }
+
+    .navbar, #nas-areal, #rezervace, #tenisova-skola, .footer-all {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .section1 {
+        height: 250px;
+        background-position: center top;
+    }
+
+    .uspechy-background {
+    padding-bottom: 0;
+    }
+
+    .uspech-last{
+        margin-bottom: 0px;
     }
 
     .uspech-foto img {
@@ -537,20 +443,49 @@
 
     .prices {
         width: 100%;
+        margin-bottom: 70px;
     }
 
+    .tabor3 {
+        height: 200px;
+    }
 
+    .tabor3 {
+        border:20px solid rgba(255, 255, 255, 0);
+    }
 
-    #kontakt h1 {
+    #tabor, #soustredeni, #obchod, #turnaje {
+        margin: 0;
+    }
+
+    .soustredeni1a2 {
+        display: block;
+    }
+
+    .soustredeni2 {
+        height: 250px;
+    }
+
+    .soustredeni2 img {
+        height: 250px;
+        object-fit:cover;
+    }
+
+    .soustredeni2 {
+        border: 20px solid rgba(248, 187, 31, 0);
+    }
+
+    .uspechy-background h3, #tym h3, #kontakt h1,#tabor h3, #soustredeni h3, .turnaje h3, .obchod h3 {
         margin-top: 0;
         padding-top: 100px;
     }
-
 }
+
+
 
 @media only screen and (max-width: 520px){
     .tabor3 {
-        height: 200px;
+        height: 180px;
     }
 }
 
@@ -562,10 +497,29 @@
         background-position: center top 10px;
     }
     .tabor3 {
-        height: 180px;
+        height: 170px;
+    }
+}
+
+@media only screen and (max-width: 450px){
+
+    .obchod1, .turnaje2 {
+        display: none;
+        }
+
+    .obchod1, .turnaje2 {
+        display: flex;
+        height: 500px;
     }
 
-        /* zobrazit hover pořád u trenérů */
+    .obchod1 {
+        border: 20px solid white;
+        order: 1;
+    }
+
+    .turnaje2 {
+        border: 20px solid #171717;
+    }
 }
 
 

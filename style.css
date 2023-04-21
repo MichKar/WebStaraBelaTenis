@@ -57,8 +57,8 @@ html {
         transform: translate3D(0, -100%, 0);
     }
 
-    .scroll-up .backgr, .scroll-up .activ-menu {
-       background-color: rgba(0, 0, 0, 0.5);
+    .scroll-up .backgr {
+       background-color: rgba(0, 0, 0, 0.705);
        backdrop-filter: blur(10px);
        filter: drop-shadow(0 -10px 20px rgba(2, 2, 2, 0.95))
     }
@@ -89,8 +89,8 @@ html {
         transition: all 0.5s ease;
 
     }
-
-    .navbar ul li a:hover {
+    .navbar ul li a:focus,
+    .navbar ul li a:hover   {
         color: rgb(248, 186, 31);
     }
 
@@ -100,11 +100,12 @@ html {
         top: 54px;
         padding-left: 0;
         position: absolute;
-        background-color: #00000089;
         visibility: hidden;
         opacity: 0;
         width: 210px;
         text-transform: none;
+        background-color: #00000089;
+     
     }
 
     .dropdown li {
@@ -126,6 +127,7 @@ html {
         font-weight: 800;
         cursor: pointer;
         transition: scale 0.2 ease;
+        user-select: none;
     }
     
     .btn-rezervation-system:hover {
@@ -193,7 +195,6 @@ html {
     p {
         font-size: 14px;
         text-align: justify;
-        /* line-height: 25px;  */
     }
   
     
@@ -244,11 +245,6 @@ html {
 
 /* CENÍK */
 
-/* .cenik-backgr {
-    background:linear-gradient(rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.7)),url(img/bg1.jpg);
-    padding-bottom: 20px;
-} */
-
 .prices {
     color:  black;
     text-align: center;
@@ -284,7 +280,6 @@ td {
     background-color: rgba(255, 255, 255, 0.864);
 }
 
-
 /* Tenisová škola */
 
 #tenisova-skola p {
@@ -296,6 +291,7 @@ td {
     margin-bottom: 30px;
     margin-top: 20px;
 }
+
 
 /* družstva */
 
@@ -424,7 +420,7 @@ td {
     .trainers {
         display: flex;
         justify-content: center;
-        padding:50px 0;
+        padding: 50px 0;
     }
 
     .trainer {
@@ -436,6 +432,7 @@ td {
         position: relative;
         cursor: pointer;
         border-radius: 10px;
+        user-select: none;
     }
 
     .trainer img {
@@ -550,7 +547,6 @@ td {
         background: url(img/photos-TS/tabor01_small.jpg);
         background-size: 100% auto;
         background-repeat: no-repeat;
-        overflow: hidden;
         background-position: center center;
     }
 
@@ -575,17 +571,14 @@ td {
 
     .soustredeni1a2 {
         display: grid;
-        grid-template-columns:45% 55%;
-        height: 500px;
+        grid-template-columns:50% 50%;
         background-color: rgba(248, 187, 31, 0.763);
         box-shadow: 0px 10px 25px 5px rgba(0, 0, 0, 0.703);
         overflow: hidden;
     }
 
     .soustredeni1 {
-        
         padding: 30px;
-        padding-top: 50px;
         position: relative;
     }
 
@@ -595,15 +588,16 @@ td {
 
     .soustredeni1 > button {
         width: 140px;
-        top: 350px;
-        right: 30px;
+        margin-top: 10%;
+        margin-left: 60%;
         padding: 8px 10px;
         border-radius: 15px;
         cursor: pointer;
-        position: absolute;
+        position: relative;
         box-shadow: 2px 2px 15px black;
         background-color: #aeadad;
         color: black;
+        border: none;
     }
 
     .soustredeni2 img {
@@ -627,34 +621,21 @@ td {
 
 
 
-/* BOX MODEL (Tenisový obchod a tenisové turnaje) */
+/* Tenisový obchod */
 
     #obchod {
         margin-top: 100px;
-    }
-
-    .box {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        height: 600px;
-        background-color: white;
-        box-shadow: 0px 10px 25px 5px rgba(0, 0, 0, 0.703);
         margin-bottom: 100px;
     }
 
-    .box1 {
-        overflow: hidden;
-        height: 600px;
+    .obchod {
+        display: grid;
+        grid-template-columns:50% 50%;
+        box-shadow: 0px 10px 25px 5px rgba(0, 0, 0, 0.703);
+        /* height: 550px; */
     }
 
-    .box1 img {
-        height: 100%;
-        width: 100%;
-        object-fit:cover;
-    }
-
-    .slider-obchod {
-        width: 100%;
+    .obchod1 {
         animation: shop 15s infinite;
         background: url(img/photos-shop/shop1_small.jpg);
         }
@@ -666,8 +647,145 @@ td {
             100% {background: url(img/photos-shop/shop1_small.jpg);}
         }
 
-    .slider-ovopen {
+    .obchod1 img {
+        object-fit:cover;
+        height: 100%;
+    }
+
+    .obchod2 {
+        padding: 40px;
+        background-color: white;
+    }
+
+    .obchod2 h3 {
+        padding-top: 10px;
+    }
+
+    .obchod2 > p {
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    .obchod2 li  {
+        font-size: 14px;
+        margin-top: 10px;
+        line-height: 25px;
+    }
+
+    .obchod2 > li > img {
+        height: 25px;
+    }
+ 
+        .btns {
+            display: flex;
+            justify-content: space-between;
+            gap:2%;
+            margin-top: 15%;
+        }
+
+        .btn-open, .btn-phone {
+            position: relative;
+            border-right: 1px solid black;
+            border-left: 1px solid rgb(113, 113, 113);
+            border-top: 1px solid rgb(117, 117, 117);
+            border-bottom: 1px solid black;
+            border-radius: 15px;
+            cursor: pointer;
+            box-shadow: 2px 2px 15px black;
+            background-color: #aeadad;
+            display: flex;
+            justify-content: left;
+            height: 35px;
+            width: 35px;
+            padding: 5px;
+            transition: width 0.1s ease-out;
+            overflow:hidden;
+            align-items: center;
+        }
+
+        .btn-open p {
+            padding-left: 5%;
+            font-size: 13px;
+            margin: 0;
+        }
+
+        .active {
+            width: 80%; 
+        }
+
+        .btn-phone {
+            justify-content: right;
+
+        }
+
+        .btn-phone a {
+            padding-right: 10px;
+            font-size: 13px;
+            text-decoration: none;
+            color: black;
+        }
+
+
+
+
+
+/* Turnaje pro amatéry - OVopen */
+
+    #turnaje {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .turnaje {
+        color: #d7d7d7;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        box-shadow: 0px 10px 25px 5px rgba(0, 0, 0, 0.703);
+       
+    }
+
+    .turnaje1 {
+        padding: 40px;
+        background-color:#171717;
+    }
+    
+    .turnaje1>p> a {
+        color:#d7d7d7;
+    }
+
+    .turnaje1 > p {
+        font-size: 14px;
+        line-height: 25px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .turnaje1 li  {
+        font-size: 14px;
+        margin-top: 10px;
+        line-height: 25px;
+    }
+
+    .logo-ovopen {
+        position: relative;
+        float:right;
+        width: 80px;
+    }
+
+    .logo-ovopen > a > img {
+        width: 80px;
+        top: -120px;
+        position: absolute;
+        cursor: pointer;
+    }
+
+    .turnaje2 img {
+        object-fit:cover;
         width: 100%;
+        height: 100%;
+    }
+
+    .turnaje2 {
         animation: ovopen 30s infinite;
         background: url(img/photos-ovopen/ovopen2_small.jpg);
         }
@@ -684,123 +802,6 @@ td {
             100% {background: url(img/photos-ovopen/ovopen2_small.jpg);}
         }
 
-    .box2 {
-        padding: 40px;
-    }
-
-    .box2 h3 {
-        padding-top: 10px;
-    }
-
-    .box2 > p {
-        font-size: 17px;
-        width: 90%;
-    }
-
-    .box2 li  {
-        font-size: 17px;
-        margin-top: 16px;
-    }
-
-    .box2 > li > img {
-        height: 25px;
-    }
-
-    .box2 {
-        position: relative;
-    }
-
-    /* tlačítka otevíračka + kontakt telefon */
-        .btn-open, .btn-phone {
-            margin-top: 100px;
-            border-right: 1px solid black;
-            border-left: 1px solid rgb(113, 113, 113);
-            border-top: 1px solid rgb(117, 117, 117);
-            border-bottom: 1px solid black;
-            border-radius: 15px;
-            cursor: pointer;
-            box-shadow: 2px 2px 15px black;
-            background-color: #aeadad;
-            display: flex;
-            position: absolute;
-            height: 35px;
-            padding: 5px;
-            transition: width 0.1s ease-out;
-            overflow:hidden;
-            width: 35px;
-        }
-
-        .btn-open p {
-            padding-left: 30px;
-            font-size: 14px;
-            margin: 0;
-        }
-
-
-        .active {
-            width: 300px; 
-        }
-
-        .btn-phone {
-            right: 40px;
-            justify-content: right;
-        }
-
-        .btn-phone p {
-            margin: 7px;
-            padding-right: 10px;
-            font-size: 15px;
-        }
-
-        .btn-phone.active {
-            right: 40px;
-            align-items: right;
-        }
-
-
-
-
-/* Turnaje pro amatéry - OVopen */
-
-    #turnaje .box {
-        background-color:#171717;
-        color: #d7d7d7;
-    }
-
-    #turnaje .box2  a {
-        color:#d7d7d7;
-    }
-
-    .ovopen {
-    position: relative;
-    }
-
-    .ovopen img {
-        width: 100px;
-        right: -20px;
-        top: -50px;
-        position: absolute;
-        cursor: pointer;
-    }
-
-    #turnaje .btn-phone {
-        margin-top: 50px;
-        right: 50%;
-        transform: translatex(50%);
-        cursor: default;
-        justify-content: left;
-    }
-
-    #turnaje .btn-phone img {
-        order: -1;
-    }
-
-    #turnaje .btn-phone a {
-        font-size: 14px;
-        margin: 7px 10px 0 7px;
-        color: black;
-    }
-        
 
 
 
