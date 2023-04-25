@@ -24,24 +24,23 @@ window.addEventListener("scroll", function(){
 
 
 
-// HAMBURGER MENU - zobrazení hlavního menu
-let hamburger = document.querySelector("#image-menu");
+// HAMBURGER MENU - zobrazení/skytí hlavního menu
+let menu = document.querySelector(".btn-menu");
+let close = document.querySelector(".btn-close");
 let navigation = document.querySelector(".navigation");
 
 
-hamburger.addEventListener("click", function(){
-        console.log(hamburger.src)
-        // if(hamburger.src.includes == "menu-orange.png") {   
-       if(hamburger.src.includes == "http://127.0.0.1:5500/img/icons/menu-orange.png") {                         
-                hamburger.src = "img/icons/close_orange.png"
+menu.addEventListener("click", function(){
+        menu.style.display = "none"
+        close.style.display = "block"
+        navigation.classList.toggle("activ-menu")
+})
+
+close.addEventListener("click", function(){
+                close.style.display = "none"
+                menu.style.display = "block"
                 navigation.classList.toggle("activ-menu")
-       }  else  {
-                hamburger.src = "img/icons/menu-orange.png"
-                navigation.classList.toggle("activ-menu")
-       };
-
-
-});
+})
 
 
 
@@ -50,7 +49,7 @@ hamburger.addEventListener("click", function(){
 
 
 
-// TENISOVÉ SOUSTŘEDĚNÍ - více info rozkliknutí
+// TENISOVÉ SOUSTŘEDĚNÍ - více info po rozkliknutí
 
 let btnSoustredeni = document.querySelector(".btn-soustredeni")
 let soustredeni3 = document.querySelector(".soustredeni3")
@@ -92,11 +91,10 @@ btnOpen.addEventListener("click", function(){
 
 
 
-// //  kliknutí na úspěch -foto, zvětší se a naopak
+// //  kliknutí na úspěch-foto, zvětší se a naopak
 let uspechFoto = document.querySelectorAll(".uspech-foto")
 
 uspechFoto.forEach(function(oneUspech){
         oneUspech.addEventListener("click", function(){
                 oneUspech.classList.toggle("zoom")
         })})
-

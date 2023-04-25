@@ -12,6 +12,7 @@ html {
 }
 
 /***** RESUABLE ******/
+   
     .container {
         max-width: 900px;
         margin: 2% auto;
@@ -78,8 +79,6 @@ html {
         display: inline-block;
     }
 
-
-
     .navbar ul li a {
         text-decoration: none;
         font-weight: 550;
@@ -87,8 +86,8 @@ html {
         color: white;
         font-size: 13px;  
         transition: all 0.5s ease;
-
     }
+
     .navbar ul li a:focus,
     .navbar ul li a:hover   {
         color: rgb(248, 186, 31);
@@ -105,7 +104,6 @@ html {
         width: 210px;
         text-transform: none;
         background-color: #00000089;
-     
     }
 
     .dropdown li {
@@ -138,14 +136,14 @@ html {
         scale: 0.95;
     }
 
-    .btn-menu {
+    .btn-menu, .btn-close {
         width: 30px;
         height: 30px;
         cursor: pointer;
         display: none;
     }
 
-    .btn-menu img {
+    .btn-menu img, .btn-close img {
         width: 100%;
     }
 
@@ -164,8 +162,6 @@ html {
         margin: 7px auto;
         box-shadow: 10px 4px 5px 1px rgba(0, 0, 0, 0.703);
     }
-
-
 
     h3 {
         padding-top: 40px;
@@ -221,11 +217,41 @@ html {
         background-position: center top -40px;
     }
 
+    .aktuality {
+          display: none;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid orange;
+        width: 200px;
+        margin-top: 240px;
+
+        
+    }
+
+    .aktuality-nadpis {
+        color: white;
+        font-weight: 900;
+        font-size: 20px;
+        
+    }
+
+    .aktuality-box {
+        margin-top: 0;
+    }
+
+
+
+
+
+
+
+
+
 /* areál */
 
 #nas-areal p {
     line-height: 25px;
 }
+
 
 
 /* Rezervace */
@@ -311,7 +337,7 @@ td {
 
 .druzstvo > a {
     color: black;
-    background-color: rgba(248, 187, 31, 0.763);
+    background-color: rgb(248, 186, 31);
     border-bottom: 1px solid black;
     border-right: 1px solid black;
     border-top: 1px solid rgb(121, 121, 121);
@@ -537,30 +563,36 @@ td {
     }
 
     .tabor3 {
-        overflow: hidden;
-    }
-
-    .slider-tabor {
-        width: 100%;
         height: 400px;
         animation: slide 30s infinite;
-        background: url(img/photos-TS/tabor01_small.jpg);
-        background-size: 100% auto;
-        background-repeat: no-repeat;
-        background-position: center center;
+        background: url(img/photos-TS/tabor01_small.jpg) center center;
     }
 
         @keyframes slide {
-            0% {background: url(img/photos-TS/tabor01_small.jpg);}
-            11% {background: url(img/photos-TS/tabor02_small.jpg);}
-            22% {background: url(img/photos-TS/tabor03_small.jpg);}
-            33% {background: url(img/photos-TS/tabor04_small.jpg);}
-            44% {background: url(img/photos-TS/tabor05_small.jpg);}
-            55% {background: url(img/photos-TS/tabor08_small.jpg);}
-            66% {background: url(img/photos-TS/tabor07_small.jpg);}
-            77% {background: url(img/photos-TS/tabor15_small.jpg);}
-            89% {background: url(img/photos-TS/tabor19_small.jpg);}
-            100% {background: url(img/photos-TS/tabor01_small.jpg);}
+            0% {background: url(img/photos-TS/tabor01_small.jpg) center center;}
+            11% {background: url(img/photos-TS/tabor02_small.jpg) center center;}
+            22% {background: url(img/photos-TS/tabor03_small.jpg) center center;}
+            33% {background: url(img/photos-TS/tabor04_small.jpg) center center;}
+            44% {background: url(img/photos-TS/tabor05_small.jpg) center center;}
+            55% {background: url(img/photos-TS/tabor08_small.jpg) center center;}
+            66% {background: url(img/photos-TS/tabor07_small.jpg) center center;}
+            77% {background: url(img/photos-TS/tabor15_small.jpg) center center;}
+            89% {background: url(img/photos-TS/tabor19_small.jpg) center center;}
+            100% {background: url(img/photos-TS/tabor01_small.jpg) center center;}
+        }
+
+
+        @keyframes slideMobil {
+            0% {background: url(img/photos-TS/tabor01_small2.jpg) center center;}
+            11% {background: url(img/photos-TS/tabor02_small2.jpg) center center;}
+            22% {background: url(img/photos-TS/tabor03_small2.jpg) center center;}
+            33% {background: url(img/photos-TS/tabor04_small2.jpg) center center;}
+            44% {background: url(img/photos-TS/tabor05_small2.jpg) center center;}
+            55% {background: url(img/photos-TS/tabor08_small2.jpg) center center;}
+            66% {background: url(img/photos-TS/tabor07_small2.jpg) center center;}
+            77% {background: url(img/photos-TS/tabor15_small2.jpg) center center;}
+            89% {background: url(img/photos-TS/tabor19_small2.jpg) center center;}
+            100% {background: url(img/photos-TS/tabor01_small2.jpg) center center;}
         }
 
 
@@ -632,25 +664,21 @@ td {
         display: grid;
         grid-template-columns:50% 50%;
         box-shadow: 0px 10px 25px 5px rgba(0, 0, 0, 0.703);
-        /* height: 550px; */
     }
 
     .obchod1 {
         animation: shop 15s infinite;
-        background: url(img/photos-shop/shop1_small.jpg);
+        background: url(img/photos-shop/shop1_small.jpg) center center;
+        background-size: contain;
+        background-repeat: no-repeat;
         }
 
         @keyframes shop {
-            5% {background: url(img/photos-shop/shop1_small.jpg);}
-            35% {background: url(img/photos-shop/shop2_small.jpg);}
-            70% {background: url(img/photos-shop/shop3_small.jpg);}
-            100% {background: url(img/photos-shop/shop1_small.jpg);}
+            5% {background: url(img/photos-shop/shop1_small.jpg) center center;}
+            35% {background: url(img/photos-shop/shop2_small.jpg) center center;}
+            70% {background: url(img/photos-shop/shop3_small.jpg) center center;}
+            100% {background: url(img/photos-shop/shop1_small.jpg) center center;}
         }
-
-    .obchod1 img {
-        object-fit:cover;
-        height: 100%;
-    }
 
     .obchod2 {
         padding: 40px;
@@ -741,7 +769,6 @@ td {
         display: grid;
         grid-template-columns: 50% 50%;
         box-shadow: 0px 10px 25px 5px rgba(0, 0, 0, 0.703);
-       
     }
 
     .turnaje1 {
@@ -749,7 +776,7 @@ td {
         background-color:#171717;
     }
     
-    .turnaje1>p> a {
+    .turnaje1 > p > a {
         color:#d7d7d7;
     }
 
@@ -779,27 +806,23 @@ td {
         cursor: pointer;
     }
 
-    .turnaje2 img {
-        object-fit:cover;
-        width: 100%;
-        height: 100%;
-    }
-
     .turnaje2 {
         animation: ovopen 30s infinite;
-        background: url(img/photos-ovopen/ovopen2_small.jpg);
+        width: auto;
+        height: 100%;
+        background: url(img/photos-ovopen/ovopen2_small.jpg) center center;
         }
 
         @keyframes ovopen {
-            0% {background: url(img/photos-ovopen/ovopen2_small.jpg);}
-            12% {background: url(img/photos-ovopen/ovopen3_small.jpg);}
-            25% {background: url(img/photos-ovopen/ovopen4_small.jpg);}
-            37% {background: url(img/photos-ovopen/ovopen5_small.jpg);}
-            50% {background: url(img/photos-ovopen/ovopen6_small.jpg);}
-            62% {background: url(img/photos-ovopen/ovopen7_small.jpg);}
-            75% {background: url(img/photos-ovopen/ovopen8_small.jpg);}
-            87% {background: url(img/photos-ovopen/ovopen9_small.jpg);}
-            100% {background: url(img/photos-ovopen/ovopen2_small.jpg);}
+            0% {background: url(img/photos-ovopen/ovopen2_small.jpg) center center;}
+            12% {background: url(img/photos-ovopen/ovopen3_small.jpg) center center;}
+            25% {background: url(img/photos-ovopen/ovopen4_small.jpg) center center;}
+            37% {background: url(img/photos-ovopen/ovopen5_small.jpg) center center;}
+            50% {background: url(img/photos-ovopen/ovopen6_small.jpg) center center;}
+            62% {background: url(img/photos-ovopen/ovopen7_small.jpg) center center;}
+            75% {background: url(img/photos-ovopen/ovopen8_small.jpg) center center;}
+            87% {background: url(img/photos-ovopen/ovopen9_small.jpg) center center;}
+            100% {background: url(img/photos-ovopen/ovopen2_small.jpg) center center;}
         }
 
 

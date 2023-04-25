@@ -74,7 +74,6 @@
     .uspech {
         margin: 0 auto;
         margin-bottom: 5%;
-        
     }
 
     .contact-box {
@@ -103,10 +102,9 @@
         order: -1;
     }
 
-.obchod2 h3 {
-    padding-top: 0;
-}
-
+    .obchod2 h3 {
+        padding-top: 0;
+    }
 
     .turnaje1 li {
         margin-top: 0;
@@ -124,12 +122,7 @@
         height: 300px;
     }
     
-    .slider-tabor {
-        animation: none;
-        height: 300px;
-        background: url(img/photos-TS/tabor08_small.jpg);
-        background-size: 100% auto;
-    }
+
 
     .tabor1a2 {
         grid-template-columns: 62% 32%;
@@ -169,16 +162,17 @@
 
 @media only screen and (max-width: 750px){
     
-
     .section1 {
         background-position: center top -4%;
     }
 
-
-
     .soustredeni1 > button {
         margin-left: 50%;
   }
+
+
+
+
     /* skrytí  navigace */
 
         .btn-menu {
@@ -300,6 +294,7 @@
     }
 
     .tabor3 {
+        animation: none;
         height: 270px;  
     }
 }
@@ -350,10 +345,6 @@
     .prices {
         width: 90%;
     }
-    
-    .tabor3 {
-        height: 240px;
-    }
 
     .soustredeni1 h3{
         padding-top: 0;
@@ -366,11 +357,6 @@
 }
 
 
-@media only screen and (max-width: 580px){
-    .tabor3 {
-        height: 220px;
-    }
-}
 
 
 
@@ -399,10 +385,6 @@
         background-color: rgb(18, 18, 18);
         z-index: -10;
         padding-bottom: 4px;
-    }
-
-    .activ-menu > dropdown {
-        height: max-content;
     }
 
     .navbar, #nas-areal, #rezervace, #tenisova-skola, .footer-all {
@@ -447,12 +429,14 @@
     }
 
     .tabor3 {
-        height: 200px;
+        animation: slideMobil 30s infinite;
+        border: 20px solid rgb(255, 255, 255);
+        border-top: 20px solid rgba(255, 255, 255, 0);
+    }
+    .tabor3 {
+        height: 180px;
     }
 
-    .tabor3 {
-        border:20px solid rgba(255, 255, 255, 0);
-    }
 
     #tabor, #soustredeni, #obchod, #turnaje {
         margin: 0;
@@ -479,14 +463,14 @@
         margin-top: 0;
         padding-top: 100px;
     }
+
+
 }
 
 
 
 @media only screen and (max-width: 520px){
-    .tabor3 {
-        height: 180px;
-    }
+
 }
 
 
@@ -502,10 +486,6 @@
 }
 
 @media only screen and (max-width: 450px){
-
-    .obchod1, .turnaje2 {
-        display: none;
-        }
 
     .obchod1, .turnaje2 {
         display: flex;
@@ -541,6 +521,8 @@
         background-position: center top 30px;
     }
 }
+
+
 
 
 @media only screen and (max-width: 280px){
