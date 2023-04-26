@@ -321,7 +321,7 @@ td {
 
 /* družstva */
 
-.druzstva {
+#druzstva {
     display: flex;
     gap: 10% 3%;
     justify-content: center;
@@ -997,22 +997,22 @@ td {
 
 
 
-    /* ORGANIZAČNÍ ŘÁD TENISOVÉ ŠKOLY - NOVÉ HTML */
-    .organizacni-rad-TS {
+/* ORGANIZAČNÍ ŘÁD TENISOVÉ ŠKOLY + HISTORIE - NOVÉ HTML */
+    .organizacni-rad-TS, .historie {
         margin: 0 auto;
         max-width: 900px;
         padding: 0 2% 10% 2%;
     }
    
 
-    .organizacni-rad-TS h1{
+    .organizacni-rad-TS h1, .historie h1 {
         padding-top: 100px;
         padding-bottom: 50px;
         margin-top: 0;
     }
-    .organizacni-rad-TS p {
+    .organizacni-rad-TS p, .historie p {
         font-size: 14px;
-        line-height: 25px;
+        line-height: 30px;
     }
 
     .btn-zpet {
@@ -1028,6 +1028,7 @@ td {
             border-bottom: 1px solid rgb(42, 42, 42);
             position: fixed;
             margin-top: 100px;
+            user-select: none;
         }
         
         .btn-zpet:hover {
@@ -1041,4 +1042,16 @@ td {
  
         .rad-kontakt h4  {
             margin: 0;
+        }
+
+        .historie img {
+            width: 350px;
+            display: inline-block;
+            object-fit: cover;
+        }
+
+        .kurt6a7 {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
         }
