@@ -1,3 +1,14 @@
+/* zrušení prokliku na telefony u PC min 700px */
+@media(min-width:700px){
+    a[href^="tel:"] {
+    pointer-events: none;
+    }
+}
+
+
+
+
+
 @media only screen and (max-width: 1400px){
     
     .section1 {
@@ -122,8 +133,6 @@
         height: 300px;
     }
     
-
-
     .tabor1a2 {
         grid-template-columns: 62% 32%;
         gap: 2%;
@@ -157,7 +166,16 @@
     }
 }
 
+@media only screen and (min-width: 750px){
+    
+    .btn-menu {
+        display: none;
+}
 
+.btn-close {
+    display: none;
+}
+}
 
 
 @media only screen and (max-width: 750px){
@@ -183,20 +201,20 @@
         }
 
         .navigation {
-            display: none;   
-            /* left: -100%; */
-            /* transition: left 2s ease; */
+            display: none;  
+            right: -100%;
+            transition: right 3s ease; 
         }
 
         .activ-menu {
             display: block;
             position: absolute;
-            right: 0px;
+            right: 0;
             top: 41px;
             width: 400px;
             background-color: #000000b3;
-            height: 259px
-
+            height: 259px;
+            transition: right 3s ease;
         } 
 
         .activ-menu ul {
@@ -304,6 +322,9 @@
         gap: 0;
     }
 }
+
+
+
 
 
 
@@ -470,6 +491,9 @@
         padding-top: 100px;
     }
 
+    .logo-ovopen {
+        top: -40px;
+    }
 
 }
 
@@ -519,12 +543,19 @@
 
 
 @media only screen and (max-width: 340px){
+
     .navbar .btn-rezervation-system {
-        margin-right: -35%;
+        margin-right: -30%;
     }
 
     .section1 {
         background-position: center top 30px;
+    }
+
+    .container {
+        width: 100vw;
+        margin: 0;
+        padding: 2%;
     }
 }
 
