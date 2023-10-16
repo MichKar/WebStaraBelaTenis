@@ -12,7 +12,6 @@ html {
 }
 
 /***** RESUABLE ******/
-   
     .container {
         max-width: 900px;
         margin: 2% auto;
@@ -28,9 +27,7 @@ html {
     }
 
 
-
 /***** NAVIGATION *******/
-    
     .backgr {
         width: 100%;
         background-color: #00000089;
@@ -60,15 +57,20 @@ html {
 
     .scroll-up .backgr {
        background-color: rgba(0, 0, 0, 0.705);
-       /* -webkit-backdrop-filter: blur(5px); */
        backdrop-filter: blur(10px);
-       
        filter: drop-shadow(0 -10px 20px rgba(2, 2, 2, 0.95))
+    }
+
+    .scroll-up .dropdown {
+        backdrop-filter: blur(10px);
+    }
+
+    .scroll-up .activ-menu {
+        backdrop-filter: blur(10px);
     }
 
     .logo img {
         width: 80px;
-        overflow: visible;
         margin-top: -15px;
         position: absolute;
     }
@@ -105,7 +107,7 @@ html {
         opacity: 0;
         width: 210px;
         text-transform: none;
-        background-color: #00000089
+        background-color: #00000089;
     }
 
     .dropdown li {
@@ -177,7 +179,6 @@ html {
         text-align: center;
     }
 
-
     h3:after {
         content:"";
         display: block;
@@ -202,12 +203,6 @@ html {
     }
   
 
-
-
-
-
-
-
 /****** MAIN ******/
 
 /* Sekce 1 - foto kurtů */
@@ -224,42 +219,22 @@ html {
         background-position: center top -40px;
     }
 
-    .aktuality {
-          display: none;
-        background-color: rgb(255, 255, 255);
-        border: 1px solid orange;
-        width: 200px;
-        margin-top: 240px;
-
-        
-    }
-
-    .aktuality-nadpis {
-        color: white;
-        font-weight: 900;
-        font-size: 20px;
-        
-    }
-
-    .aktuality-box {
-        margin-top: 0;
-    }
-
-
-
-
-
-
-
-
+/* AKTUALITY */
+#aktuality {
+    /* display: none */
+    background-color: rgb(248, 186, 31);
+    padding: 5px;
+    font-weight: 600;
+    height: 23px;
+    letter-spacing: 5px;
+    font-size: 14px;
+    
+}
 
 /* areál */
-
 #nas-areal p {
     line-height: 25px;
 }
-
-
 
 /* Rezervace */
 #rezervace p {
@@ -283,11 +258,7 @@ html {
     cursor: pointer;
 }
 
-
-
-
 /* CENÍK */
-
 .prices {
     color:  black;
     text-align: center;
@@ -323,21 +294,18 @@ td {
     background-color: rgba(255, 255, 255, 0.864);
 }
 
-/* Tenisová škola */
 
+/* Tenisová škola */
 #tenisova-skola p {
     line-height: 25px;
 }
-
 
 #tenisova-skola .contact-form{
     margin-bottom: 30px;
     margin-top: 20px;
 }
 
-
 /* družstva */
-
 #druzstva {
     display: flex;
     gap: 10% 3%;
@@ -348,8 +316,7 @@ td {
 
 .druzstvo {
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column; 
 }
 
 .druzstvo > a {
@@ -370,13 +337,7 @@ td {
     cursor: pointer;
 }
 
-
-
-
-
-
 /* Úspěchy TS */
-
     .uspechy-background{
         background:linear-gradient(rgba(255, 255, 255, 0.859),rgba(255, 255, 255, 0.85)),url(img/cup4.jpg);
         padding-bottom: 40px;
@@ -444,16 +405,7 @@ td {
         font-weight: 100;
     }
 
-
-
-
-
-
-
-
-
 /* trenérský tým */
-
     .backgr-trainers h3 {
         color: white;    
     }
@@ -481,7 +433,6 @@ td {
         width: 100%;
         scale: 1.1;
         object-fit: cover;
-        
     }
 
     .trainer-info {
@@ -531,11 +482,7 @@ td {
         color: white;
     }
 
-
-
-
 /* Tenisový tábor */
-
     #tabor {
         margin-top: 100px;
         background-color: white;
@@ -554,7 +501,6 @@ td {
         grid-template-columns: 62% 28%;
         gap: 5%;
         margin-bottom: 20px;
-
     }
 
     .tabor2-inner {
@@ -596,7 +542,6 @@ td {
             100% {background: url(img/photos-TS/tabor01_small.jpg) center center;}
         }
 
-
         @keyframes slideMobil {
             0%  {background: url(img/photos-TS/tabor01_small2.jpg) center center;}
             11% {background: url(img/photos-TS/tabor02_small2.jpg) center center;}
@@ -610,12 +555,7 @@ td {
             100% {background: url(img/photos-TS/tabor01_small2.jpg) center center;}
         }
 
-
-
-
-
 /* Tenisové soustředění */
-
     .soustredeni1a2 {
         display: grid;
         grid-template-columns:50% 50%;
@@ -651,7 +591,6 @@ td {
         height: 100%;
         width: 100%;
         object-fit:cover;
-
     }
 
     .soustredeni3 {
@@ -659,17 +598,13 @@ td {
         background-color: rgba(248, 187, 31, 0.763);
         padding: 30px;
         box-shadow: 0px 10px 25px 5px rgba(0, 0, 0, 0.703);
-       
     }
 
     .soustredeni3 p {
         line-height: 25px;
     }
 
-
-
 /* Tenisový obchod */
-
     #obchod {
         margin-top: 100px;
         margin-bottom: 100px;
@@ -722,61 +657,55 @@ td {
         height: 25px;
     }
  
-        .btns {
-            display: flex;
-            justify-content: space-between;
-            gap:2%;
-            margin-top: 15%;
-        }
+    .btns {
+        display: flex;
+        justify-content: space-between;
+        gap:2%;
+        margin-top: 15%;
+    }
 
-        .btn-open, .btn-phone {
-            position: relative;
-            border-right: 1px solid black;
-            border-left: 1px solid rgb(113, 113, 113);
-            border-top: 1px solid rgb(117, 117, 117);
-            border-bottom: 1px solid black;
-            border-radius: 15px;
-            cursor: pointer;
-            box-shadow: 2px 2px 15px black;
-            background-color: #aeadad;
-            display: flex;
-            justify-content: left;
-            height: 35px;
-            width: 35px;
-            padding: 5px;
-            transition: width 0.1s ease-out;
-            overflow:hidden;
-            align-items: center;
-        }
+    .btn-open, .btn-phone {
+        position: relative;
+        border-right: 1px solid black;
+        border-left: 1px solid rgb(113, 113, 113);
+        border-top: 1px solid rgb(117, 117, 117);
+        border-bottom: 1px solid black;
+        border-radius: 15px;
+        cursor: pointer;
+        box-shadow: 2px 2px 15px black;
+        background-color: #aeadad;
+        display: flex;
+        justify-content: left;
+        height: 35px;
+        width: 35px;
+        padding: 5px;
+        transition: width 0.1s ease-out;
+        overflow:hidden;
+        align-items: center;
+    }
 
-        .btn-open p {
-            padding-left: 5%;
-            font-size: 13px;
-            margin: 0;
-        }
+    .btn-open p {
+        padding-left: 5%;
+        font-size: 13px;
+        margin: 0;
+    }
 
-        .active {
-            width: 80%; 
-        }
+    .active {
+        width: 80%; 
+    }
 
-        .btn-phone {
-            justify-content: right;
+    .btn-phone {
+        justify-content: right;
+    }
 
-        }
-
-        .btn-phone a {
-            padding-right: 10px;
-            font-size: 13px;
-            text-decoration: none;
-            color: black;
-        }
-
-
-
-
+    .btn-phone a {
+        padding-right: 10px;
+        font-size: 13px;
+        text-decoration: none;
+        color: black;
+    }
 
 /* Turnaje pro amatéry - OVopen */
-
     #turnaje {
         margin-top: 100px;
         margin-bottom: 100px;
@@ -824,7 +753,18 @@ td {
         cursor: pointer;
     }
 
+    .turnaje1 >.active {
+        margin: 0 auto;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .turnaje1 >.active img {
+        order: -1;
+    }
+
     .turnaje2 {
+        -moz-animation: ovopen 30s infinite;
         animation: ovopen 30s infinite;
         width: auto;
         height: 100%;
@@ -844,13 +784,7 @@ td {
         }
 
 
-
-
-
-
-
 /* KONTAKT */
-
     .kontakt-backgr {
         background-color: white;;
     }
@@ -895,9 +829,9 @@ td {
         margin-top: 0;
     }
 
-   .ts {
-    font-size: 17px;
-   }
+    .ts {
+        font-size: 17px;
+    }
 
     .contact-form {
         margin-bottom: 7px;
@@ -922,11 +856,12 @@ td {
     } 
 
     .kontakt-leto {
-        background: linear-gradient(rgb(248, 186, 31),rgb(255, 241, 207));
+        /* background: linear-gradient(rgb(248, 186, 31),rgb(255, 241, 207));  -- EFEKTY */
+        /* animation: spravce .8s infinite;  -- EFEKTY*/
+        background-color: rgb(255, 241, 207);
         padding: 10px;
         border: 1px solid rgb(192, 192, 192);
         margin-top: 30px;
-        animation: spravce .8s infinite;
     }
 
         @keyframes spravce {
@@ -959,24 +894,17 @@ td {
         height: 100%;
     }
 
-
-
-
-
-
-
-
-
 /****** FOOTER ******/
     .backgr-footer {
         background-color: #4b4b4b9f;
         border-top: 1px solid  rgb(248, 186, 31);
         border-bottom: 0;
-        }
+    }
 
     .copyright a {
         color: black;
     }
+
     .backgr-footer .container {
         margin-top: 0;
         margin-bottom: 0;
@@ -1010,10 +938,6 @@ td {
         bottom: 0;
     }
 
-
-
-
-
 /* ORGANIZAČNÍ ŘÁD TENISOVÉ ŠKOLY + HISTORIE - NOVÉ HTML */
     .organizacni-rad-TS, .historie {
         margin: 0 auto;
@@ -1032,20 +956,20 @@ td {
     }
 
     .btn-zpet {
-            background-color: rgb(248, 186, 31);
-            padding:10px 30px;
-            border-radius: 30px;
-            font-size: 10px;
-            cursor: pointer;
-            transition: scale 0.2 ease;
-            border-top: 1px solid grey;
-            border-left: 1px solid grey;
-            border-right: 1px solid rgb(42, 42, 42);
-            border-bottom: 1px solid rgb(42, 42, 42);
-            position: fixed;
-            margin-top: 100px;
-            user-select: none;
-        }
+        background-color: rgb(248, 186, 31);
+        padding:10px 30px;
+        border-radius: 30px;
+        font-size: 10px;
+        cursor: pointer;
+        transition: scale 0.2 ease;
+        border-top: 1px solid grey;
+        border-left: 1px solid grey;
+        border-right: 1px solid rgb(42, 42, 42);
+        border-bottom: 1px solid rgb(42, 42, 42);
+        position: fixed;
+        margin-top: 100px;
+        user-select: none;
+    }
         
     .btn-zpet:hover {
         scale: 1.05;

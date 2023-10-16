@@ -1,10 +1,8 @@
 // NAVIGACE - Rolování (skrytí + objevení)
-
 let body = document.body;
 let lastScroll = 0;
 
 window.addEventListener("scroll", function(){
-
         const currentScroll = window.pageYOffset;
 
         if (currentScroll <= 0) {
@@ -18,17 +16,12 @@ window.addEventListener("scroll", function(){
         };
 
         lastScroll = currentScroll;
-    
 });
-
-
-
 
 // HAMBURGER MENU - zobrazení/skytí hlavního menu
 let menu = document.querySelector(".btn-menu");
 let close = document.querySelector(".btn-close");
 let navigation = document.querySelector(".navigation");
-
 
 menu.addEventListener("click", function(){
         menu.style.display = "none";
@@ -42,18 +35,9 @@ close.addEventListener("click", function(){
                 navigation.classList.toggle("activ-menu");
 });
 
-
-
-
-
-
-
-
 // TENISOVÉ SOUSTŘEDĚNÍ - více info po rozkliknutí
-
 let btnSoustredeni = document.querySelector(".btn-soustredeni");
 let soustredeni3 = document.querySelector(".soustredeni3");
-
 
 btnSoustredeni.addEventListener("click", function(){
        if (soustredeni3.style.display=="none"){
@@ -68,13 +52,7 @@ btnSoustredeni.addEventListener("click", function(){
         }
 });
 
-
-
-
-
-
 // TENISOVÝ OBCHOD - kliknutí na btn open nebo Telephone
-
 let btnOpen = document.querySelector(".btn-open");
 let btnPhone = document.querySelector(".btn-phone");
 
@@ -88,10 +66,7 @@ btnOpen.addEventListener("click", function(){
          btnOpen.classList.toggle("active");
  });
 
-
-
-
-// //  kliknutí na úspěch-foto, zvětší se a naopak
+// kliknutí na úspěch-foto, zvětší se a naopak
 let uspechFoto = document.querySelectorAll(".uspech-foto");
 
 uspechFoto.forEach(function(oneUspech){
