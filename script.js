@@ -4,7 +4,6 @@ let lastScroll = 0;
 
 window.addEventListener("scroll", function(){
         const currentScroll = window.pageYOffset;
-
         if (currentScroll <= 0) {
                 body.classList.remove("scroll-up");
         } else if (currentScroll >  lastScroll && !body.classList.contains("scroll-down")){
@@ -14,7 +13,6 @@ window.addEventListener("scroll", function(){
                 body.classList.remove("scroll-down");
                 body.classList.add("scroll-up");
         };
-
         lastScroll = currentScroll;
 });
 
@@ -40,7 +38,7 @@ let btnSoustredeni = document.querySelector(".btn-soustredeni");
 let soustredeni3 = document.querySelector(".soustredeni3");
 
 btnSoustredeni.addEventListener("click", function(){
-       if (soustredeni3.style.display=="none"){
+        if (soustredeni3.style.display=="none"){
         soustredeni3.style.display = "block";
         btnSoustredeni.innerHTML="Méně informací &#9650";
         } else if (soustredeni3.style.display=="block"){
@@ -57,13 +55,13 @@ let btnOpen = document.querySelector(".btn-open");
 let btnPhone = document.querySelector(".btn-phone");
 
 btnPhone.addEventListener("click", function(){
-       btnPhone.classList.toggle("active");
+        btnPhone.classList.toggle("active");
         btnOpen.classList.toggle("active");
 });
 
 btnOpen.addEventListener("click", function(){
         btnPhone.classList.toggle("active");
-         btnOpen.classList.toggle("active");
+        btnOpen.classList.toggle("active");
  });
 
 // kliknutí na úspěch-foto, zvětší se a naopak

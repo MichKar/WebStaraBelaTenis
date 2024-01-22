@@ -62,8 +62,8 @@
   </section>
 
   <!-- AKTUALITY -->
-  <section id="aktuality">
-      <div class="aktuality-box"><marquee scrollamount=14>Rezervace na přetlakovou halu je již spuštěna! V případě příznivého počasí jsou stále k dispozici kurty 1-3.</marquee></div>
+    <section id="aktuality">
+    <marquee direction="left" onMouseOver="this.setAttribute('scrollamount', 0, 0);this.stop();" OnMouseOut="this.setAttribute('scrollamount', 12, 0);this.start();" scrollamount="7" bgcolor="#F8BA1F">Rezervace na přetlakovou halu je již spuštěna! V případě příznivého počasí jsou stále k dispozici kurty 1-3 (v tomto případě volejte správcům). </marquee>
   </section>
 
    <!-- AREÁL -->
@@ -77,15 +77,12 @@
     <h1>Rezervace kurtů</h1>
          <div class="rezervace">
             <div class="rezervace1">
-              <p>Rezervovat kurty lze přes <a class="btn-rezervation-system" href="https://starabela.rezervujse.cz/StaraBelaServlet/app" target="_blank">rezervační&nbsp;systém</a> nebo <a href="tel:+420737560427" class="btn-telefonicky">telefonicky&nbsp;737&nbsp;560&nbsp;427</a>.</p><br>
-              <p><strong>POZOR!!! Rezervaci lze zrušit nejpozději 24h předem.</strong> Pokud již rezervační systém neumožní Vaši rezervaci zrušit, je nutno kontaktovat správce kurtů v pracovní době 8:00 - 20:00.</p>
+              <p>Rezervovat kurty lze přes <a class="btn-rezervation-system" href="https://starabela.rezervujse.cz/StaraBelaServlet/app" target="_blank">rezervační&nbsp;systém</a> nebo <a href="#kontakt" class="btn-telefonicky">telefonicky</a>.</p><br>
+              <p><strong>POZOR!!! Rezervaci lze zrušit nejpozději 24h předem.</strong> Pokud již rezervační systém neumožní Vaši rezervaci zrušit, je nutno zrušit telefonicky.</p>
             </div>
             <div class="rezervace2">
               <!-- <p>LETNÍ SEZÓNA</p> -->
-              <p><strong>TIP PRO ZÁKAZNÍKY!!! </strong><br>Každý den od neděle do čtvrtku se po 20:00 v rezervačním systému otevírají kurty číslo 4 a 5 pro veřejnost v časech 15:00 - 20:00 na následující pracovní den. Máte tedy možnost obsadit případné volné hodiny na těchto kurtech, které členové oddílu nevyužili. (např. v pondělí ve 20:01 se zobrazí případní volné hodiny k rezervaci na kurtech č. 4 a 5 na úterý).</p>
-    
-              <!-- <P>ZIMNÍ SEZÓNA</P>
-              <p>V případě rezervace kurtů v tenisové hale v dopoledních hodinách v tentýž den je nutno kontaktovat provozovatele. Děkujeme za pochopení.</p> -->
+              <!-- <p><strong>TIP PRO ZÁKAZNÍKY!!! </strong><br>Každý den od neděle do čtvrtku se po 20:00 v rezervačním systému otevírají kurty číslo 4 a 5 pro veřejnost v časech 15:00 - 20:00 na následující pracovní den. Máte tedy možnost obsadit případné volné hodiny na těchto kurtech, které členové oddílu nevyužili. (např. v pondělí ve 20:01 se zobrazí případní volné hodiny k rezervaci na kurtech č. 4 a 5 na úterý).</p> -->
             </div>
           </div>
   </section>
@@ -175,7 +172,21 @@
     <div class="uspechy-background">
       <div class="container">
           <h3>Úspěchy tenisové školy</h3>
+
           <div class="tenisove-uspechy">
+            <div class="uspech">
+              <div class="uspech-foto">
+                <img src="img/photos-TS/uspechyTS/2023 Kristýna Přikrylová s pohárem z MČR Starších žaček..jpg" alt=""></a></div>
+              <div class="uspech-text">
+                <p class="rok">2023</p>
+                <p class="jmeno">Kristýna Přikrylová</p>
+                <li>halová vicemistryně ČR ve čtyřhře starších žaček</li> 
+                <li>1. místo v roč. 2010 v Severomoravském kraji (4. v ČR)</li> 
+                <li>248. místo v Evropském žebříčku do 14 let</li> 
+                <li>vítězka několika celostátních i mezinárodních turnajů</li> 
+              </div>
+            </div>
+
             <div class="uspech">
               <div class="uspech-foto">
                 <img src="img/photos-TS/uspechyTS/2023_Babytenis_Sipek_Simon..jpg" alt=""></a></div>
@@ -183,18 +194,67 @@
                 <p class="rok">2023</p>
                 <p class="jmeno">Šimon Šípek</p>
                 <li>vítěz Severomoravského přeboru jednotlivců v kategorii Babytenis</li> 
-              </div>
+                <li>vítěz letní Babolat Tour 2023</li> 
+                <li>vítěz 5 turnajů v kategorii Babytenis</li> 
+                </div>
             </div>
+          </div>
 
+
+
+
+          <div class="tenisove-uspechy">
             <div class="uspech">
               <div class="uspech-foto"><img src="img/photos-TS/uspechyTS/2023_mladsi_zaci..jpg" alt=""></div>
               <div class="uspech-text">
                 <p class="rok">2023</p>
                 <p  class="jmeno">Tým mladších žáků <br></p>
                 <li>vítěz Severomoravského přeboru družstev</li> 
+              </div>
+            </div>
+
+            <div class="uspech">
+              <div class="uspech-foto"><img src="img/photos-TS/uspechyTS/2023 babytenis 3 hraci,Šípek,Kovářová,Kvapíková..jpg" alt=""></div>
+              <div class="uspech-text">
+                <p class="rok">2023</p>
+                <p  class="jmeno">Babytenis<br></p>
+                <li>Tereza Kvapíková</li> 
+                <li>Gabka Kovářová</li> 
+                <li>Šimon Šípek</li> 
+                <li>3 naši hráči reprezentovali Severní Moravu na Mistrovství ČR 2023 v kategorii Babytenis</li> 
                 </div>
             </div>
           </div>
+
+
+
+
+
+          <div class="tenisove-uspechy">
+            <div class="uspech">
+              <div class="uspech-foto">
+                <img src="img/photos-TS/uspechyTS/2023 Marie Losková..jpg" alt=""></a></div>
+              <div class="uspech-text">
+                <p class="rok">2023</p>
+                <p class="jmeno">Marie Losková</p>
+                <li>vítězka 4 turnajů v kategorii Mladší žačky</li>  
+              </div>
+            </div>
+
+            <div class="uspech">
+              <div class="uspech-foto">
+                <img src="img/photos-TS/uspechyTS/2023 Kryštof Mech..jpg" alt=""></a></div>
+              <div class="uspech-text">
+                <p class="rok">2023</p>
+                <p class="jmeno">Kryštof Mech</p>
+                <li>celkové 2. místo v letní Babolat Tour v kategorii Minitenis</li> 
+                </div>
+            </div>
+          </div>
+
+
+
+
 
           <div class="tenisove-uspechy">
             <div class="uspech">

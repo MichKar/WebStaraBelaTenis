@@ -204,7 +204,6 @@ html {
   
 
 /****** MAIN ******/
-
 /* Sekce 1 - foto kurtů */
     .section1 {
         background-color: #171717;
@@ -221,14 +220,16 @@ html {
 
 /* AKTUALITY */
 #aktuality {
-    /* display: none */
-    background-color: rgb(248, 186, 31);
+    display: none;
+    margin:0;
+    padding:0;
+}
+
+marquee {
     padding: 5px;
     font-weight: 600;
-    height: 23px;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     font-size: 14px;
-    
 }
 
 /* areál */
@@ -239,12 +240,6 @@ html {
 /* Rezervace */
 #rezervace p {
     line-height: 25px;  
-}
-
-.rezervace {
-    display: grid;
-    grid-template-columns: 58% 37%;
-    gap: 5%;
 }
 
 .btn-telefonicky {
@@ -343,7 +338,7 @@ td {
         padding-bottom: 40px;
         background-repeat: no-repeat;
         background-size: cover;
-        background-attachment:fixed;
+        background-attachment: fixed;
         background-position: center center;
     }
 
@@ -401,7 +396,7 @@ td {
 
     .uspech-text li {
         padding-bottom: 7px;
-        font-size: 12px;
+        font-size: 10px;
         font-weight: 100;
     }
 
