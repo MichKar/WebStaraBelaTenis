@@ -1,0 +1,1130 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif, "Lucida Sans";
+  background-color: #e4e4e4;
+}
+
+
+/***** RESUABLE ******/
+.container {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/***** NAVIGATION *******/
+.navbar {
+  display: flex;
+  width: 100%;
+  max-width: 1800px;
+  flex-direction: row;
+  box-sizing: border-box;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  text-transform: uppercase;
+  position: fixed;
+  transition: all 0.7s ease-in-out;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.scroll-down header {
+  display: none;
+}
+
+.scroll-up .navbar {
+  background-color: rgba(0, 0, 0, 0.9);
+  height: 50px;
+  font-weight: 100;
+  border-bottom: 1px solid rgb(248, 186, 31);
+}
+/* .scroll-up .navigation {
+  display: none;
+} */
+
+.scroll-up .navbar ul li a::after {
+  bottom: 8px;
+}
+
+.logo img {
+  width: 120px;
+  margin-top: 80px;
+  transform: rotate(-10deg);
+  transition: all 1s ease;
+}
+.navigation {
+  display: flex; 
+  flex-direction: row;
+  align-items: center;
+}
+.navigation li {
+  list-style-type: none;
+  padding: 22px 0;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+
+.navigation li a {
+  text-decoration: none;
+  padding: 20px;
+  color: white;
+  font-size: 20px;
+  transition: all 0.5s ease;
+  position: relative;
+}
+.navigation li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(248, 186, 31);
+  transition: all 0.5s ease;
+}
+
+.navigation li a:hover::after {
+  width: 100%;
+}
+
+.navigation li a:focus,
+.navigation li a:hover {
+  color: rgb(248, 186, 31);
+}
+
+.btn-rezervation-system {
+  height: 40px;
+  width: 50px;
+  transition: scale 0.5s ease;
+}
+
+.btn-rezervation-system:hover {
+  scale: 1.05;
+}
+
+.btn-rezervation-system:active {
+  scale: 0.95;
+}
+
+.btn-menu,
+.btn-close {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.btn-menu:hover, 
+.btn-close:hover {
+  scale: 1.05;
+}
+
+.btn-menu img, 
+.btn-close img {
+  width: 95%;
+  height: 85%;
+  padding-top: 2px;
+}
+
+/***** SEKCE 1 - úvodní foto + ktuality ******/
+.section-intro {
+  background-color: #171717;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(img/photos-courts/kurty-orez.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100svh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* aktuality */
+.news {
+  display: none;
+  /* display: block; */
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 70px;
+}
+
+.img-arrow-down {
+  width: 130px;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: moveUpAndDown 2s ease-in-out infinite;
+}
+
+@keyframes moveUpAndDown {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-20px);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+
+/***** SEKCE2 - AREÁL ******/
+/* hlavní info */
+h1,
+h2 {
+  font-size: 23px;
+  width: auto;
+  padding-top: 40px;
+  text-align: center;
+}
+
+h1:after,
+h2:after {
+  content: "";
+  display: block;
+  width: 300px;
+  border-bottom: 3px solid rgb(248, 186, 31);
+  margin: 7px auto;
+  box-shadow: 10px 4px 5px 1px rgba(0, 0, 0, 0.703);
+}
+
+h3 {
+  padding-top: 40px;
+  font-size: 23px;
+  text-align: center;
+}
+
+h3:after {
+  content: "";
+  display: block;
+  width: 300px;
+  border-bottom: 3px solid rgb(248, 186, 31);
+  margin: 7px auto;
+  box-shadow: 10px 4px 5px 1px rgba(0, 0, 0, 0.703);
+}
+
+/* .turnaje h3:after,
+.soustredeni h3:after,
+.obchod h3:after {
+  border-bottom: none;
+  box-shadow: none;
+} */
+
+h4 {
+  font-size: 18px;
+}
+
+p {
+  font-size: 14px;
+  text-align: justify;
+  line-height: 30px;
+}
+
+marquee {
+  padding: 5px;
+  font-weight: 600;
+  width: 100vw;
+  letter-spacing: 3px;
+  font-size: 14px;
+}
+
+/* areál */
+.section-areal {
+  
+  padding: 10%;
+}
+.areal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.areal-info {
+  max-width: 400px;
+}
+
+.areal-foto {
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
+}
+.areal-foto img {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Rezervace */
+.areal-rezervation {
+  max-width: 400px;
+}
+/* .btn-telefonicky {
+  background-color: rgb(248, 186, 31);
+  color: black;
+  padding: 6px 16px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 10px;
+  font-weight: 800;
+  cursor: pointer;
+} */
+
+/* CENÍK */
+.prices {
+  color: black;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  /* margin-bottom: 70px; */
+  box-shadow: 0px 10px 25px 5px rgba(0, 0, 0, 0.703);
+  border: 1px solid black;
+}
+
+/* .prices-info {
+  font-size: 14px;
+  padding: 10px;
+  background-color: #aeadad;
+  font-weight: 300;
+  border-top: 1px solid black;
+} */
+
+tr,
+td {
+  font-size: 16px;
+  background-color: #aeadad;
+  padding: 5px;
+}
+
+th {
+  font-size: 16px;
+  padding: 10px;
+  background-color: #aeadad;
+  border-bottom: 1px solid black;
+}
+
+td {
+  background-color: rgba(255, 255, 255, 0.864);
+}
+
+/* Tenisová škola */
+.tenisova-skola p {
+  line-height: 25px;
+}
+
+.tenisova-skola .contact-form {
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+/* družstva */
+.druzstva {
+  display: flex;
+  gap: 10% 3%;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-flow: wrap;
+}
+
+.druzstvo {
+  display: flex;
+  flex-direction: column;
+}
+
+.druzstvo > a {
+  color: black;
+  background-color: rgb(248, 186, 31);
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-top: 1px solid rgb(121, 121, 121);
+  border-left: 1px solid rgb(121, 121, 121);
+  letter-spacing: 1px;
+  width: 100px;
+  text-align: center;
+  margin: 5px;
+  padding: 6px 16px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* Úspěchy TS */
+.uspechy-background {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.859),
+      rgba(255, 255, 255, 0.85)
+    ),
+    url(img/cup4.jpg);
+  padding-bottom: 40px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+.tenisove-uspechy {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.uspech {
+  width: 450px;
+  height: 210px;
+  display: flex;
+  background-color: rgb(59, 59, 59);
+  color: white;
+  box-shadow: 5px 5px 20px rgb(59, 59, 59);
+}
+.uspech-prazdny {
+  width: 450px;
+  height: 210px;
+  display: flex;
+  background-color: none;
+  color: white;
+  box-shadow: none;
+}
+
+.uspech-foto img {
+  height: 100%;
+  cursor: zoom-in;
+  width: 200px;
+}
+
+.uspech-foto {
+  transition: scale 0.3s ease-in-out;
+}
+
+.zoom {
+  scale: 3;
+  z-index: 500;
+}
+
+.zoom img {
+  cursor: zoom-out;
+}
+
+.uspech-text {
+  padding: 20px;
+  padding-top: 0;
+}
+
+.uspech-text .rok {
+  font-size: 14px;
+  letter-spacing: 7px;
+  margin-bottom: 12px;
+}
+
+.uspech-text .jmeno {
+  font-size: 16px;
+  font-weight: 600;
+  border-bottom: 1px solid rgb(248, 186, 31);
+  margin: 7px 0px;
+}
+
+.uspech-text li {
+  padding-bottom: 7px;
+  font-size: 10px;
+  font-weight: 100;
+}
+
+/* trenérský tým */
+.backgr-trainers h3 {
+  color: white;
+}
+
+.trainers {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+.trainer {
+  height: 310px;
+  width: 200px;
+  margin: 2%;
+  box-shadow: 5px 5px 20px rgb(185, 185, 185);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  border-radius: 10px;
+  user-select: none;
+}
+
+.trainer img {
+  height: 100%;
+  width: 100%;
+  scale: 1.1;
+  object-fit: cover;
+}
+
+.trainer-info {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: -100%;
+  position: absolute;
+  background: #ffffff8f;
+  backdrop-filter: blur(5px);
+  transition: all 1s ease;
+}
+
+.trainer-info p {
+  margin: 15px 0;
+}
+
+.trainer:hover .trainer-info {
+  right: 0;
+  visibility: visible;
+}
+
+.trainer-info p {
+  font-size: 25px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 5px 0;
+}
+
+.trainer-info li {
+  font-size: 13px;
+  padding: 6px 18px;
+  list-style-type: none;
+}
+
+.backgr-trainers {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(img/court-ballon.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  margin: 0;
+}
+
+.backgr-trainers h2 {
+  color: white;
+}
+
+/* Tenisový tábor */
+.tabor {
+  margin-top: 100px;
+  background-color: white;
+  box-shadow: 0px 10px 25px 5px rgba(0, 0, 0, 0.703);
+  margin-bottom: 90px;
+}
+
+.tabor1 {
+  padding-left: 40px;
+  padding-right: 30px;
+  padding-bottom: 0;
+}
+
+.tabor1a2 {
+  display: grid;
+  grid-template-columns: 62% 28%;
+  gap: 5%;
+  margin-bottom: 20px;
+}
+
+.tabor2-inner {
+  border: 1px solid grey;
+  box-shadow: 0px 10px 25px 5px rgba(0, 0, 0, 0.703);
+  border-radius: 15px;
+  margin-top: 45px;
+  padding: 10px;
+}
+
+.tabor2-inner p {
+  margin: 8px 0;
+}
+
+.tabor2-inner .contact-form a {
+  font-size: 13px;
+}
+
+.tabor2 h4 {
+  margin: 0;
+}
+
+.tabor3 {
+  height: 400px;
+  animation: slide 30s infinite;
+  background: url(img/photos-TS/tabor01_small.jpg) center center;
+}
+
+@keyframes slide {
+  0% {
+    background: url(img/photos-TS/tabor01_small.jpg) center center;
+  }
+  11% {
+    background: url(img/photos-TS/tabor02_small.jpg) center center;
+  }
+  22% {
+    background: url(img/photos-TS/tabor03_small.jpg) center center;
+  }
+  33% {
+    background: url(img/photos-TS/tabor04_small.jpg) center center;
+  }
+  44% {
+    background: url(img/photos-TS/tabor05_small.jpg) center center;
+  }
+  55% {
+    background: url(img/photos-TS/tabor08_small.jpg) center center;
+  }
+  66% {
+    background: url(img/photos-TS/tabor07_small.jpg) center center;
+  }
+  77% {
+    background: url(img/photos-TS/tabor15_small.jpg) center center;
+  }
+  89% {
+    background: url(img/photos-TS/tabor19_small.jpg) center center;
+  }
+  100% {
+    background: url(img/photos-TS/tabor01_small.jpg) center center;
+  }
+}
+
+@keyframes slideMobil {
+  0% {
+    background: url(img/photos-TS/tabor01_small2.jpg) center center;
+  }
+  11% {
+    background: url(img/photos-TS/tabor02_small2.jpg) center center;
+  }
+  22% {
+    background: url(img/photos-TS/tabor03_small2.jpg) center center;
+  }
+  33% {
+    background: url(img/photos-TS/tabor04_small2.jpg) center center;
+  }
+  44% {
+    background: url(img/photos-TS/tabor05_small2.jpg) center center;
+  }
+  55% {
+    background: url(img/photos-TS/tabor08_small2.jpg) center center;
+  }
+  66% {
+    background: url(img/photos-TS/tabor07_small2.jpg) center center;
+  }
+  77% {
+    background: url(img/photos-TS/tabor15_small2.jpg) center center;
+  }
+  89% {
+    background: url(img/photos-TS/tabor19_small2.jpg) center center;
+  }
+  100% {
+    background: url(img/photos-TS/tabor01_small2.jpg) center center;
+  }
+}
+
+/* Tenisové soustředění */
+.soustredeni1a2 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background-color: rgba(248, 187, 31, 0.763);
+  box-shadow: 0px 10px 25px 5px rgba(0, 0, 0, 0.703);
+  overflow: hidden;
+}
+
+.soustredeni1 {
+  padding: 30px;
+  position: relative;
+}
+
+.soustredeni1 > p {
+  line-height: 25px;
+}
+
+.soustredeni1 > button {
+  width: 140px;
+  margin-top: 10%;
+  margin-left: 60%;
+  padding: 8px 10px;
+  border-radius: 15px;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 2px 2px 15px black;
+  background-color: #aeadad;
+  color: black;
+  border: none;
+}
+
+.soustredeni2 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.soustredeni3 {
+  display: none;
+  background-color: rgba(248, 187, 31, 0.763);
+  padding: 30px;
+  box-shadow: 0px 10px 25px 5px rgba(0, 0, 0, 0.703);
+}
+
+.soustredeni3 p {
+  line-height: 25px;
+}
+
+/* Tenisový obchod */
+.obchod {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.obchod {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  box-shadow: 0px 10px 25px 5px rgba(0, 0, 0, 0.703);
+}
+
+.obchod1 {
+  animation: shop 20s infinite;
+  background: url(img/photos-shop/obchod1_small.jpg) center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@keyframes shop {
+  0% {
+    background: url(img/photos-shop/obchod1_small.jpg) center center;
+  }
+  17% {
+    background: url(img/photos-shop/obchod2_small.jpg) center center;
+  }
+  34% {
+    background: url(img/photos-shop/obchod3_small.jpg) center center;
+  }
+  51% {
+    background: url(img/photos-shop/obchod4_small.jpg) center center;
+  }
+  68% {
+    background: url(img/photos-shop/obchod5_small.jpg) center center;
+  }
+  85% {
+    background: url(img/photos-shop/obchod6_small.jpg) center center;
+  }
+  100% {
+    background: url(img/photos-shop/obchod1_small.jpg) center center;
+  }
+}
+
+.obchod2 {
+  padding: 40px;
+  background-color: white;
+}
+
+.obchod2 h3 {
+  padding-top: 10px;
+}
+
+.obchod2 > p {
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.obchod2 li {
+  font-size: 14px;
+  margin-top: 10px;
+  line-height: 25px;
+}
+
+.obchod2 > li > img {
+  height: 25px;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+  gap: 2%;
+  margin-top: 15%;
+}
+
+.btn-open,
+.btn-phone {
+  position: relative;
+  border-right: 1px solid black;
+  border-left: 1px solid rgb(113, 113, 113);
+  border-top: 1px solid rgb(117, 117, 117);
+  border-bottom: 1px solid black;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 2px 2px 15px black;
+  background-color: #aeadad;
+  display: flex;
+  justify-content: left;
+  height: 35px;
+  width: 35px;
+  padding: 5px;
+  transition: width 0.1s ease-out;
+  overflow: hidden;
+  align-items: center;
+}
+
+.btn-open p {
+  padding-left: 5%;
+  font-size: 13px;
+  margin: 0;
+}
+
+.active {
+  width: 80%;
+}
+
+.btn-phone {
+  justify-content: right;
+}
+
+.btn-phone a {
+  padding-right: 10px;
+  font-size: 13px;
+  text-decoration: none;
+  color: black;
+}
+
+/* Turnaje pro amatéry - OVopen */
+#turnaje {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.turnaje {
+  color: #d7d7d7;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  box-shadow: 0px 10px 25px 5px rgba(0, 0, 0, 0.703);
+}
+
+.turnaje1 {
+  padding: 40px;
+  background-color: #171717;
+}
+
+.turnaje1 > p > a {
+  color: #d7d7d7;
+}
+
+.turnaje1 > p {
+  font-size: 14px;
+  line-height: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.turnaje1 li {
+  font-size: 14px;
+  margin-top: 10px;
+  line-height: 25px;
+}
+
+.logo-ovopen {
+  position: relative;
+  float: right;
+  width: 80px;
+}
+
+.logo-ovopen > a > img {
+  width: 80px;
+  top: -120px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.turnaje1 > .active {
+  margin: 0 auto;
+  justify-content: center;
+  gap: 10px;
+}
+
+.turnaje1 > .active img {
+  order: -1;
+}
+
+.turnaje2 {
+  -moz-animation: ovopen 30s infinite;
+  animation: ovopen 30s infinite;
+  width: auto;
+  height: 100%;
+  background: url(img/photos-ovopen/ovopen2_small.jpg) center center;
+}
+
+@keyframes ovopen {
+  0% {
+    background: url(img/photos-ovopen/ovopen2_small.jpg) center center;
+  }
+  12% {
+    background: url(img/photos-ovopen/ovopen3_small.jpg) center center;
+  }
+  25% {
+    background: url(img/photos-ovopen/ovopen4_small.jpg) center center;
+  }
+  37% {
+    background: url(img/photos-ovopen/ovopen5_small.jpg) center center;
+  }
+  50% {
+    background: url(img/photos-ovopen/ovopen6_small.jpg) center center;
+  }
+  62% {
+    background: url(img/photos-ovopen/ovopen7_small.jpg) center center;
+  }
+  75% {
+    background: url(img/photos-ovopen/ovopen8_small.jpg) center center;
+  }
+  87% {
+    background: url(img/photos-ovopen/ovopen9_small.jpg) center center;
+  }
+  100% {
+    background: url(img/photos-ovopen/ovopen2_small.jpg) center center;
+  }
+}
+
+/* KONTAKT */
+.kontakt-backgr {
+  background-color: white;
+}
+
+.kontakt h1 {
+  margin-bottom: 0;
+}
+
+.kontakt h2 {
+  padding-top: 0px;
+  margin-top: 10px;
+}
+
+.contact-box {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  color: black;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.div1 {
+  padding: 15px 40px 15px 40px;
+}
+
+.div1 p {
+  font-size: 13px;
+}
+
+.address {
+  height: 80px;
+}
+
+.address img {
+  width: 40px;
+  height: 40px;
+}
+
+.address p {
+  margin-left: 35px;
+  margin-top: 0;
+}
+
+.ts {
+  font-size: 17px;
+}
+
+.contact-form {
+  margin-bottom: 7px;
+}
+
+.contact-form img {
+  width: 23px;
+  height: 23px;
+  float: left;
+}
+
+.contact-form a {
+  margin: 0 0 0 10px;
+  font-size: 13px;
+  color: black;
+  text-decoration: none;
+}
+
+.contact-form a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.kontakt-leto {
+  /* background: linear-gradient(rgb(248, 186, 31),rgb(255, 241, 207));  -- EFEKTY */
+  /* animation: spravce .8s infinite;  -- EFEKTY*/
+  background-color: rgb(255, 241, 207);
+  padding: 10px;
+  border: 1px solid rgb(192, 192, 192);
+  margin-top: 30px;
+}
+
+@keyframes spravce {
+  0% {
+    background: rgb(255, 241, 207);
+  }
+  50% {
+    background: rgb(255, 206, 91);
+  }
+  100% {
+    background: rgb(255, 241, 207);
+  }
+}
+
+.kontakt-zima {
+  background-color: rgb(224, 234, 255);
+  padding: 10px;
+  border: 1px solid rgb(192, 192, 192);
+  margin-top: 30px;
+}
+
+.kontakt-ts {
+  background-color: #ececec;
+  padding: 10px;
+  border: 1px solid rgb(192, 192, 192);
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.div2 {
+  overflow: hidden;
+  height: 627px;
+}
+
+.map {
+  height: 100%;
+}
+
+/****** FOOTER ******/
+.backgr-footer {
+  background-color: #4b4b4b9f;
+  border-top: 1px solid rgb(248, 186, 31);
+  border-bottom: 0;
+}
+
+.copyright a {
+  color: black;
+}
+
+.backgr-footer .container {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.footer-all {
+  padding: 3px 0;
+  display: flex;
+  color: black;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+}
+
+.quick-links {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+}
+
+.quick-links a {
+  color: black;
+  font-size: 13px;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+}
+
+/* ORGANIZAČNÍ ŘÁD TENISOVÉ ŠKOLY + HISTORIE - NOVÉ HTML */
+.organizacni-rad-TS,
+.historie {
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 0 2% 10% 2%;
+}
+
+.organizacni-rad-TS h1,
+.historie h1 {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  margin-top: 0;
+}
+.organizacni-rad-TS p,
+.historie p {
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.btn-zpet {
+  background-color: rgb(248, 186, 31);
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-size: 10px;
+  cursor: pointer;
+  transition: scale 0.2 ease;
+  border-top: 1px solid grey;
+  border-left: 1px solid grey;
+  border-right: 1px solid rgb(42, 42, 42);
+  border-bottom: 1px solid rgb(42, 42, 42);
+  position: fixed;
+  margin-top: 100px;
+  user-select: none;
+}
+
+.btn-zpet:hover {
+  scale: 1.05;
+}
+
+.btn-zpet a {
+  text-decoration: none;
+  color: rgb(43, 43, 43);
+}
+
+.rad-kontakt h4 {
+  margin: 0;
+}
+
+.historie img {
+  width: 350px;
+  height: auto;
+  display: inline-block;
+  object-fit: cover;
+}
+
+.kurt6a7 {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.historie-sloupce {
+  display: flex;
+  justify-content: space-between;
+  gap: 5%;
+}
+
+.historie-sloupce:nth-child(1) {
+  flex-shrink: 0;
+  flex-grow: 1;
+}

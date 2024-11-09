@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no"> <!-- vypnutí autodetekce pro iPhony-->
+    <title>TJ Sokol Stará Bělá</title>
+    <link rel="icon" type="image/png" href="img/logo/favicona.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="queries.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">   <!-- písmo -->
+</head>
+
+<body>
+
+     <!----- HEADER ----->
+  <header>
+        <nav class="navbar">
+          <div class="logo">
+            <a href="index.html"><img src="img/logo/logo-small.png" alt="logo"></a>
+          </div>
+          <ul class="navigation">
+            <li><a href="#section-areal-bg">areál</a></li>
+            <li><a href="#section-tenisova-skola-bg">tenisová škola</a></li>
+            <li><a href="#akce">akce</a></li>
+            <li><a href="#kontakt">kontakt</a></li>
+          </ul>
+          <a href="https://starabela.rezervujse.cz/StaraBelaServlet/app" target="_blank"><img class="btn-rezervation-system"
+              src="img/icons/calendar-orange.png" alt="rezervační systém"></a>
+          <div class="btn-menu-close">
+            <div class="btn-menu"><img src="img/icons/menu-orange.png" alt="menu"></div>
+            <div class="btn-close"><img src="img/icons/close-orange.png" alt="zavřít"></div>
+          </div>
+        </nav>
+  </header>
+
+
+<main>
+
+
+   <!----- SEKCE 1. ÚVODNÍ FOTO + AKTUALITY ----->
+  <section class="section-intro">
+    <a href="#section-areal-bg"><img class="img-arrow-down" src="img/icons/arrow-down-slim.png" alt="šipka dolů"></a>
+    
+    <!-- AKTUALITY -->
+    <div class="news">
+      <marquee direction="left" onMouseOver="this.setAttribute('scrollamount', 0, 0);this.stop();"
+      OnMouseOut="this.setAttribute('scrollamount', 12, 0);this.start();" scrollamount="7" bgcolor="#F8BA1F">Kurty č. 1 -
+      3 v provozu od 8. 4. 2024. Rezervace spuštěna.</marquee>
+      
+      <!-- Rezervace na přetlakovou halu je již spuštěna! V případě příznivého počasí jsou stále k dispozici kurty 1-3 (v tomto případě volejte správcům). -->
+    </div>
+  </section>
+
+
+
+
+
+
+   <!----- SEKCE AREÁL ----->
+    <section id="section-areal-bg">
+      <div class="container">
+        <div class="section-areal">
+          
+          <!-- o areálu -->
+          <div class="areal">
+            <div class="areal-info">
+            <h1>Tenisový areál TJ&nbsp;Sokol&nbsp;Stará&nbsp;Bělá</h1>
+            <p>Tenisové kurty se nachází v těsném sousedství fotbalového hřiště a koupaliště v Ostravě&nbsp;-&nbsp;Staré Bělé. K
+              dispozici je celkem 7 antukových kurtů (z toho 5 kurtů s umělým osvětlením), cvičná odrazová stěna, terasa s
+              venkovním posezením a občerstvením. V zimě je na 2 kurtech postavena přetlaková nafukovací hala.</p>
+          </div>
+        
+          <!-- fotky -->
+          <div class="areal-foto">
+            <!-- <img src="img/photos-courts/hala1.jpg" alt="foto areálu 1"> -->
+            <img src="img/photos-courts/ovopen1.JPG" alt="foto areálu 2">
+          </div>
+        </div>
+          
+          <!-- rezervace -->
+          <div class="rezervationPrices">
+            <div class="areal-rezervation">
+            <h2>Rezervace kurtů</h2>
+                <p>Rezervovat kurty lze online nebo telefonicky.</p><br>
+                <p><strong>POZOR!!! Rezervaci lze zrušit nejpozději 24h předem.</strong> Pokud již rezervační systém neumožní
+                  Vaši rezervaci zrušit, je nutno zrušit telefonicky.</p>
+              
+              <!-- <p>LETNÍ SEZÓNA: TIP PRO ZÁKAZNÍKY!!! </strong><br>Každý den od neděle do čtvrtku se po 20:00 v rezervačním systému otevírají kurty číslo 4 a 5 pro veřejnost v časech 15:00 - 20:00 na následující pracovní den. Máte tedy možnost obsadit případné volné hodiny na těchto kurtech, které členové oddílu nevyužili. (např. v pondělí ve 20:01 se zobrazí případní volné hodiny k rezervaci na kurtech č. 4 a 5 na úterý).</p> -->
+          </div>
+        
+          <!-- ceník kurtů -->
+          <div class="price">
+            <div class="price-backgr">
+              <div class="container">
+                <h2>Ceník kurtů</h2>
+                <table class="prices">
+                  <tr>
+                    <th colspan="2">LETNÍ SEZÓNA (duben - říjen)</th>
+                  </tr>
+                  <tr>
+                    <td>8:00 - 13:00</td>
+                    <td>120 Kč/hod.</td>
+                  </tr>
+                  <tr>
+                    <td>13:00 - 20:00</td>
+                    <td>160 Kč/hod.</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">ZIMNÍ SEZÓNA (říjen - duben)</th>
+                  </tr>
+                  <tr>
+                    <td>8:00 - 14:00</td>
+                    <td>390 Kč/hod.</td>
+                  </tr>
+                  <tr>
+                    <td>14:00 - 20:00</td>
+                    <td>490 Kč/hod.</td>
+                  </tr>
+                  <tr>
+                    <td>VÍKENDY 8:00 - 20:00</td>
+                    <td>440 Kč/hod.</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+      <!----- SEKCE 3. TENISOVÁ ŠKOLA ----->
+  <section  class="container" class="tenisova-skola">
+    <h2>Tenisová škola</h2>
+    <p>Tenisová škola působí v rámci tenisového oddílu od roku 2002 a soustředí se hlavně na výchovu dětí a mládeže, <strong>jak pro závodní, tak i pro rekreační tenis</strong>. V rámci tenisové školy jsou také nabízeny velmi oblíbené a hojně navštěvované <strong>"Lekce pro dospělé"</strong>.</p>
+    <p>Akuální informace, události, soutěže a fotky sledujte na našem Facebooku.</p>
+  
+    <div class="contact-form"><img src="img/icons/facebook.png"  alt="facebook">
+      <a href="https://www.facebook.com/profile.php?id=100057183500794" target="_blank">Tenisová škola Stará Bělá</a></div>
+
+    <div class="contact-form"><img src="img/icons/document.png"  alt="dokument">
+      <a href="TS-rad.html">Organizační řád Tenisové školy TJ Sokol Stará Bělá</a></div>
+      
+    <p>Primárním cílem tenisové školy je vychovat co nejvíce mladých tenistů, naučit je lásce k tomuto sportu a vytvořit takové tréninkové podmínky, které zaručí jejich sportovní růst. Ti nejlepší, kteří mají závodní ambice, se mohou stát členem některého z družstev dle věkové kategorie a účastnit se registrovaných soutěží Českého tenisového svazu. </p>
+    <p>Naše tenisová škola má aktuálně <strong>tyto družstva </strong> (kliknutím se dostanete na výsledky daných družstev):</p>
+    <div class="druzstva">
+      <div class="druzstvo">
+        <a href="https://cztenis.cz/babytenis/druzstva/sezona/2023/soutez/8306" target="_blank">Babytenis A</a>
+        <a href="https://cztenis.cz/babytenis/druzstva/sezona/2023/soutez/8309" target="_blank">Babytenis B</a></div>
+      <div class="druzstvo">
+        <a href="https://cztenis.cz/mladsi-zactvo/druzstva/sezona/2023/soutez/8297" target="_blank">Mladší žáci A</a>
+        <a href="https://cztenis.cz/mladsi-zactvo/druzstva/sezona/2023/soutez/8299" target="_blank">Mladší žáci B</a>
+        <a href="https://cztenis.cz/mladsi-zactvo/druzstva/sezona/2023/soutez/8302" target="_blank">Mladší žáci C</a></div>
+      <div class="druzstvo">
+        <a href="https://cztenis.cz/starsi-zactvo/druzstva/sezona/2023/soutez/8288" target="_blank">Starší žáci A</a>
+        <a href="https://cztenis.cz/starsi-zactvo/druzstva/sezona/2023/soutez/8293" target="_blank">Starší žáci B</a></div>
+      <div class="druzstvo">
+        <a href="https://cztenis.cz/dorost/druzstva/sezona/2023/soutez/8243" target="_blank">Dorost A</a>
+        <a href="https://cztenis.cz/dorost/druzstva/sezona/2023/soutez/8284" target="_blank">Dorost B</a></div>
+      <div class="druzstvo">
+        <a href="https://cztenis.cz/dospeli/druzstva/sezona/2023/soutez/8233" target="_blank">Dospělí A</a>
+        <a href="https://cztenis.cz/dospeli/druzstva/sezona/2023/soutez/8237" target="_blank">Dospělí B</a></div>
+    </div>
+  </section>
+
+   <!-- ÚSPĚCHY TENISOVÉ ŠKOLY -->
+  <section class="tenisove-uspechy">
+    <div class="uspechy-background">
+      <div class="container">
+          <h3>Úspěchy tenisové školy</h3>
+
+
+
+          <div class="tenisove-uspechy">
+            <div class="uspech">
+              <div class="uspech-foto">
+                <img src="img/photos-TS/uspechyTS/2024_KP.jpg"></a></div>
+              <div class="uspech-text">
+                <p class="rok">2024</p>
+                <p class="jmeno">Kristýna Přikrylová</p>
+                <li>finalistka dvouhry na Halovém mistrovství ČR</li> 
+                <li>halová mistryně ČR ve čtyřhře starších žaček</li> 
+                <li>92. místo v Evropském žebříčku do 14 let</li> 
+              </div>
+            </div>
+
+            <div class="uspech">
+              <div class="uspech-foto">
+                <img src="img/photos-TS/uspechyTS/2023_Babytenis_Sipek_Simon..jpg" ></a></div>
+              <div class="uspech-text">
+                <p class="rok">2023</p>
+                <p class="jmeno">Šimon Šípek</p>
+                <li>vítěz Severomoravského přeboru jednotlivců v kategorii Babytenis</li> 
+                <li>vítěz letní Babolat Tour 2023</li> 
+                <li>vítěz 5 turnajů v kategorii Babytenis</li> 
+                </div>
+            </div>
+           
+          </div>
+
+
+
+          <div class="tenisove-uspechy">
+            <div class="uspech">
+              <div class="uspech-foto">
+                <img src="img/photos-TS/uspechyTS/2023 Kristýna Přikrylová s pohárem z MČR Starších žaček..jpg"></a></div>
+              <div class="uspech-text">
+                <p class="rok">2023</p>
+                <p class="jmeno">Kristýna Přikrylová</p>
+                <li>halová vicemistryně ČR ve čtyřhře starších žaček</li> 
+                <li>1. místo v roč. 2010 v Severomoravském kraji (4. v ČR)</li> 
+                <li>248. místo v Evropském žebříčku do 14 let</li> 
+                <li>vítězka několika celostátních i mezinárodních turnajů</li> 
+              </div>
+            </div>
+
+            <div class="uspech">
+              <div class="uspech-foto"><img src="img/photos-TS/uspechyTS/2023_mladsi_zaci..jpg" alt=""></div>
+              <div class="uspech-text">
+                <p class="rok">2023</p>
+                <p  class="jmeno">Tým mladších žáků <br></p>
+                <li>vítěz Severomoravského přeboru družstev</li> 
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <div class="tenisove-uspechy">
+          
+            <div class="uspech">
+              <div class="uspech-foto">
+                <img src="img/photos-TS/uspechyTS/2023 Marie Losková..jpg" alt=""></a></div>
+              <div class="uspech-text">
+                <p class="rok">2023</p>
+                <p class="jmeno">Marie Losková</p>
+                <li>vítězka 4 turnajů v kategorii Mladší žačky</li>  
+              </div>
+            </div>
+            <div class="uspech">
+              <div class="uspech-foto"><img src="img/photos-TS/uspechyTS/2023 babytenis 3 hraci,Šípek,Kovářová,Kvapíková..jpg" alt=""></div>
+              <div class="uspech-text">
+                <p class="rok">2023</p>
+                <p  class="jmeno">Babytenis<br></p>
+                <li>Tereza Kvapíková</li> 
+                <li>Gabka Kovářová</li> 
+                <li>Šimon Šípek</li> 
+                <li>3 naši hráči reprezentovali Severní Moravu na Mistrovství ČR 2023 v kategorii Babytenis</li> 
+                </div>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="tenisove-uspechy">
+
+            <div class="uspech">
+              <div class="uspech-foto">
+                <img src="img/photos-TS/uspechyTS/2023 Kryštof Mech..jpg" alt=""></a></div>
+              <div class="uspech-text">
+                <p class="rok">2023</p>
+                <p class="jmeno">Kryštof Mech</p>
+                <li>celkové 2. místo v letní Babolat Tour v kategorii Minitenis</li> 
+                </div>
+            </div>
+            <div class="uspech">
+              <div class="uspech-foto"><img src="img/photos-TS/uspechyTS/2022_Babytenis..jpg" alt=""></div>
+              <div class="uspech-text">
+                <p class="rok">2022</p>
+                <p  class="jmeno">Babytenisový tým <br> (8 - 9 let)</p>
+                <li>vítěz Severomoravského přeboru</li> 
+                <li>2. místo v závěrečném turnaji o Mistra Severní Moravy</li> 
+                </div>
+            </div>
+          </div>
+
+
+
+          <div class="tenisove-uspechy">
+            <div class="uspech">
+              <div class="uspech-foto">
+                <img src="img/photos-TS/uspechyTS/2022_mladsi_zaci_Kristyna_Prikrylova..jpg" alt=""></a></div>
+              <div class="uspech-text">
+                <p class="rok">2022</p>
+                <p class="jmeno">Kristýna Přikrylová</p>
+                <li>halová mistryně ČR ve čtyřhře mladších žaček</li> 
+                <li>4. místo v celostátním žebříčku mladších žaček</li> 
+                <li>vítězka českopolské Friendshiptour 2022</li> 
+              </div>
+            </div>
+            <div class="uspech">
+              <div class="uspech-foto"><img src="img/photos-TS/uspechyTS/2021_Minitenis..jpg" alt=""></div>
+              <div class="uspech-text">
+                <p class="rok">2021</p>
+                <p  class="jmeno">Minitenisový tým<br> (6 - 7 let)</p>
+                <li>2. nejlepší tým na Severní Moravě</li> 
+                </div>
+            </div>
+          </div>
+
+
+
+          <div class="tenisove-uspechy">
+
+            <div class="uspech">
+              <div class="uspech-foto"><img src="img/photos-TS/uspechyTS/2021_Babytenis..jpg" alt=""></div>
+              <div class="uspech-text">
+                <p class="rok">2021</p>
+                <p class="jmeno">Babytenisový tým<br>  (8 - 9 let)</p>
+                <li>3. nejlepší tým na Severní Moravě</li> 
+              </div>
+            </div>
+            <div class="uspech">
+              <div class="uspech-foto"><img src="img/photos-TS/uspechyTS/2020_Minitenis..jpg" alt=""></div>
+              <div class="uspech-text">
+                <p class="rok">2020</p>
+                <p class="jmeno">Minitenisový tým <br>(6 - 7 let)</p>
+                <li>vítěz Oblastního přeboru</li> 
+              </div>
+            </div>
+          </div>
+              
+          <div class="tenisove-uspechy"> 
+       
+              <div class="uspech">
+                <div class="uspech-foto"><img src="img/photos-TS/uspechyTS/2020_Kristyna_Prikrylova..jpg" alt=""></div>
+                <div class="uspech-text">
+                  <p class="rok">2020</p>
+                  <p class="jmeno">Kristýna Přikrylová</p>
+                  <li>vítězka 6 turnajů v kategorii mladší žačky</li> 
+                </div>
+              </div>
+
+              <div class="uspech-prazdny">
+          <div class="uspech-foto"></div>
+          <div class="uspech-text"></div>
+                  
+                </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+   <!-- CENÍK TENISOVÉ ŠKOLY -->
+  <section class="container" class="cenik-TS">
+      <table class="prices">
+        <h3>Ceník tréninkových jednotek</h3>
+          <tr>
+              <th>Počet hráčů</th>
+              <th>Cena za 1 osobu</th>
+          </tr>
+          <tr>
+              <td>1 hráč</td>
+              <td>440 Kč</td>
+          </tr>
+          <tr>
+              <td>2 hráči</td>
+              <td>230 Kč</td>
+          </tr>
+          <tr>
+              <td>3 hráči</td>
+              <td>160 Kč</td>
+          </tr>
+          <tr>
+              <td>4 hráči</td>
+              <td>130 Kč</td>
+          </tr>
+          <tr>
+            <td colspan="2" class="prices-info">Cena je vždy za 1 tréninkovou jednotku (60 minut) a zahrnuje i pronájem kurtu<br>(neplatí pro zimní sezónu).</td>
+          </tr>
+      </table>
+  </section>
+
+   <!-- TÝM TENISOVÉ ŠKOLY -->
+  <section class="tym">
+    <div class="backgr-trainers">
+      <div class="container">
+        <h3 class="container">Trenérský tým</h3>
+        <div class="trainers">
+          <div class="trainer">
+            <img src="img/trainers/JiříP..jpg" alt="">
+            <div class="trainer-info">
+              <p>Jiří Priesol</p>
+              <li>zakladatel a hlavní trenér tenisové školy</li>
+              <li>trenér II. třídy</li>
+              <li>17 let praxe na profesionální úrovni</li>
+              <li>hráč A-týmu Staré Bělé (Krajský přebor)</li>
+              <li>v minulosti hráč Severomoravské divize</li>
+            </div>
+          </div>
+
+          <div class="trainer">
+            <img src="img/trainers/JakubJ..jpg" alt="">
+            <div class="trainer-info"> 
+            <p>Jakub Jüttner</p>
+            <li>trenér s dvouletou praxí v australském Sydney</li></div>
+          </div> 
+
+          <div class="trainer">
+            <img src="img/trainers/MarekH..jpg" alt="">
+            <div class="trainer-info">
+            <p>Mgr. Marek Holaň</p>
+            <li>trenér III. třídy</li>
+            <li>hráč TJ Sokol Stará Bělá</li></div>
+          </div>
+
+          <div class="trainer">
+            <img src="img/trainers/TomášV..jpg" alt="">
+            <div class="trainer-info">
+            <p>Ing. Tomáš Vrzala</p>
+            <li>trenér</li>
+            <li>bývalý hráč ligového Milo Olomouc</li>
+            <li>Mistr ČR 2010, 2012, 2013, 2014 v kategorii 40-45 let</li>
+            <li> v minulosti hráč okolo 50. místa světového žebříčku ITF 50-55</li></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+     <!----- SEKCE 4. AKCE ----->
+  <!-- TÁBOR -->
+  <section class="container">
+    <div class="tabor">
+        <h3>Příměstský tenisový tábor</h3>
+        <div class="tabor1a2">
+
+          <div class="tabor1">
+            <p><strong>&#128197 Termín: 8. 7. - 12. 7. 2024</strong></p>
+            <p>Tenisová škola každoročně v červenci pro děti pořádá <strong>Příměstský tenisový tábor konaný v našem areálu</strong>, jehož obsahem jsou především tenisové tréninky, kondiční a koordinační cvičení a hry. V rámci relaxace návštěva sousedního koupaliště. Pro hráče je zajištěn oběd + pitný režim, pronájem kurtů, kvalifikovaní trenéři, vstupy na koupaliště. Cena je 3.700&nbsp;Kč za 5 dní (lze i na jednotlivé dny). Sraz denně v 8:30, vyzvedávání v 15:30. Bližší informace a dotazy zodpoví Jirka Priesol.</p>
+          </div>
+
+          <div class="tabor2">
+            <div class="tabor2-inner">
+              <h4>Jiří Priesol</h4>
+              <div class="contact-form"><img src="img/icons/telephone_black.png" alt=""><p><a href="tel:+420604601387">604 601 387</a></p></div>
+              <div class="contact-form"><img src="img/icons/arroba.png" alt="">
+                <a href="mailto:jpriesol@seznam.cz">jpriesol@seznam.cz</a></div>
+              <div class="contact-form"><img src="img/icons/facebook.png"  alt="">
+                <a href="https://www.facebook.com/profile.php?id=100057183500794" target="_blank">Tenisová škola Stará Bělá</a></div> 
+            </div>
+          </div>
+        </div>
+    
+        <div class="tabor3"></div>
+    </div>
+  </section>
+
+ <!-- SOUSTŘEDĚNÍ -->
+  <section class="container" class="soustredeni">
+    <div class="soustredeni1a2">
+        <div class="soustredeni1">
+           <h3>Tenisové soustředění</h3>
+          <p>Tenisová škola pro své svěřence pořádá každý rok v srpnu Tenisové soustředění v Beskydech v obci Hutisko-Solanec. Jedná se o týdenní pobyt plný tenisu a her. </p>
+          <p><strong>&#128197 Termín: 27. 8. - 2. 9. 2023</strong></p>
+          <button class="btn-soustredeni">Více informací &#9660</button>
+        </div>
+        <div class="soustredeni2">
+          <img src="img/photos-TS/TS-soustredeni01_small.jpg" alt="">
+        </div>
+    </div>
+      <div class="soustredeni3">
+        <p><strong>Ubytování je v Turist hotelu Euro v obci Hutisko-Solanec</strong> asi 7 km od Rožnova pod Radhoštěm ve dvou-pětilůžkových pokojích. V areálu přilehlého kempu je k dispozici <strong>  široké sportovní zázemí</strong> (4 antukové kurty, bazén, sportovní hřiště, fotbalové hřiště a venkovní posilovna). 
+        <p>Hlavním programem soustředění jsou <strong>tenisové tréninky přímo v areálu</strong>. Děti se zdokonalí v tenise, zlepší svou fyzickou kondici, a to pod vedením zkušených trenérů. Jako doplňkové sporty jsou zařazeny fotbal, jiné míčové hry, bazén a pro starší také intenzivní tréninky fyzické kondice. 
+        Po celou dobu soustředění probíhají <strong>celotáborové hry a soutěže</strong> doplněné <strong>večerním promítáním filmů</strong> v improvizovaném letním kině a <strong>výlety do okolní přírody</strong>.</p>
+        <p>Toto tenisové soustředění probíhá společně s přátelským oddílem TJ Sokol Dolní Lhota (Jiří Výtisk).</p> 
+        <p><strong> Zodpovědná osoba: Jiří Priesol &#x2022 tel. 604 601 387 &#x2022 mail: jpriesol@seznam.cz</strong></p>
+      </div>
+  </section>
+
+ <!-- OBCHOD -->
+  <section class="container" class="obchod">
+    <div class="obchod">
+      <div class="obchod1">.</div>
+      <div class="obchod2">
+        <h3>Tenisový obchod</h3>
+        <p> Tenisový obchod je umístěn v 1. patře našeho areálu.</p>
+        <li>spousta tenisového vybavení</li>
+        <li>vyplétání raket od 350 Kč včetně výpletu</li>
+        <li>broušení bruslí od 100 Kč</li>
+        <li>Příjem a výdej balíků:</li>
+        <li style="list-style-type:none;"><img src="img/photos-shop/DPD.png" alt="DPD">
+            <img src="img/photos-shop/GLS.png" alt="GLS">
+            <img src="img/photos-shop/ppl.png" alt="PPL">
+            <img src="img/photos-shop/balikovna.png" alt="BALÍKOVNA">
+            <img src="img/photos-shop/WEDO.png" alt="WEDO"></li>
+        <div class="btns">
+          <div class="btn-open active">
+            <img src="img/icons/open.png" alt="otevírací doba">
+            <p>Po-Čt &bull; 8:00-11:30 &bull; 13:00-16:00<br>Pátek &bull; 8:00-11:30 &bull; 13:00-15:00</p></div>
+          <div class="btn-phone">
+            <a href="tel:+420603335254">Daniel Polášek &bull; Tel.&nbsp;603&nbsp;335&nbsp;254</a>
+            <img src="img/icons/telephone_black.png" alt="telefon"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TURNAJE -->
+  <section class="container" class="turnaje">
+    <div class="turnaje">
+      <div class="turnaje1">
+        <h3>Turnaje pro amatérské hráče</h3>
+        <div class="logo-ovopen clearfix"><a href="https://ovopen.cz/" target="_blank"><img src="img/logo/logo PRŮHLEDNÉ..gif" alt="OVopen.cz"></a></div>
+        
+        <p>Na našich kurtech se v létě konají turnaje pro amatérské hráče, které pořádá OVopen. Turnaje jsou určeny <strong> pro amatérské hráče</strong>, kteří si chtějí zahrát se stejně kvalitními soupeři nebo chtějí tenisově růst.</p>
+        <li><strong>3 výkonnostní kategorie:</strong> Start, Amatéři, Elita</li>
+          <li>speciální kategorie pouze pro <strong>Ženy</strong></li>
+          
+        <p>Bližší informace a seznam nadcházejících turnajů na <a href="https://ovopen.cz/" target="_blank">www.ovopen.cz</a>.</p>
+       
+        <div class="btn-phone active">
+          <a href="tel:+420777319536">Radim Karafiát &bull; Tel.&nbsp;777&nbsp;319&nbsp;536</a>
+         <img src="img/icons/telephone_black.png" alt="telefon"></div>
+         <div class="clearfix"></div>
+      </div>
+   
+      <div class="turnaje2">.</div>
+    </div>
+  </section>
+
+   <!----- SEKCE 5. KONTAKTY ----->
+  <section class="kontakt-backgr" class="kontakt">
+    <div class="container">
+      <h2>Kontakt</h2>
+      <div class="contact-box">
+        <div class="div1">
+          <div class="contact-form address"><img src="img/icons/maps-and-flags.png" alt=""><p><strong>TJ Sokol Stará Bělá z. s.</strong><br>Nad Rybníkem 1173/7<br>724 00 Ostrava - Stará Bělá<br>IČ: 44743980</p></div>
+          <div class="contact-form mail"><img src="img/icons/arroba.png" alt="">
+          <a href="mailto:st.bela-tenis@seznam.cz">st.bela-tenis@seznam.cz</a></div>
+          <div class="kontakt-leto">
+          <h2>LETNÍ SEZÓNA</h2>
+          <div class="contact-form phone"><img src="img/icons/telephone_black.png" alt="">
+          <a href="tel:+420737560427">737 560 427 - správce</a></div></div>
+          <div class="kontakt-zima">
+          <h2>ZIMNÍ SEZÓNA</h2>
+          <div class="contact-form phone"><img src="img/icons/telephone_black.png" alt="">
+          <a href="tel:+420603335254">603 335 254 - Daniel Polášek</a></div>
+          <div class="contact-form phone"><img src="img/icons/telephone_black.png" alt="">
+          <a href="tel:+420604601387">604 601 387 - Jiří Priesol</a></div></div>
+          <div class="kontakt-ts">
+          <h2 class="ts">TENISOVÁ ŠKOLA - Jiří Priesol</h2>
+          <div class="contact-form"><img src="img/icons/telephone_black.png" alt=""><a href="tel:+420604601387">604 601 387</a></div>
+          <div class="contact-form"><img src="img/icons/arroba.png" alt="">
+          <a href="mailto:jpriesol@seznam.cz">jpriesol@seznam.cz</a></div>
+          <div class="contact-form"><img src="img/icons/facebook.png"  alt="">
+          <a href="https://www.facebook.com/profile.php?id=100057183500794" target="_blank">Tenisová škola Stará Bělá</a></div>
+          </div>
+          <div class="clearfix"></div>  
+        </div>
+
+        <div class="div2">
+          <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1405.1884457002857!2d18.235397905897894!3d49.76486950693281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4713e5245a9e0cdf%3A0x6e7e206381b0f6bc!2zTmFkIFJ5Ym7DrWtlbSAxMTczLzcsIDcyNCAwMCBPc3RyYXZhLVN0YXLDoSBCxJtsw6E!5e0!3m2!1scs!2scz!4v1679900754922!5m2!1scs!2scz" width="100%" height="1000" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="myFrame"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+    <!----- FOOTER ----->
+<footer class="backgr-footer">
+  <div class="container">
+    <div class="footer-all">
+      <div class="copyright">&copy; <span class="year"></span> TJ Sokol Stará Bělá<br>
+      Webové stránky vytvořila <a href="mailto:botka@email.cz">Michaela Karafiátová</a></div>
+      <div class="quick-links">
+        <a href="index.html">Úvod </a><p>&bull;</p>
+        <a href="index.html#tenisova-skola">Tenisová&nbsp;škola </a><p>&bull;</p>
+        <a href="index.html#cenik">Ceník </a><p>&bull;</p>
+        <a href="index.html#kontakt">Kontakty </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
