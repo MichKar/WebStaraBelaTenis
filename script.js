@@ -61,6 +61,34 @@ window.addEventListener()
 
 
 
+
+const slider = document.querySelector('.slider'); // Slider container
+const slides = document.querySelectorAll('.slider img'); // Všechny obrázky
+const totalSlides = slides.length;
+
+let currentIndex = 0; // Výchozí obrázek
+
+function autoSlide() {
+  currentIndex = (currentIndex + 1) % totalSlides; // Cyklus obrázků
+  slider.style.transform = `translateX(-${currentIndex * 100}%)`; // Posunutí
+}
+
+// Automatické přepínání každé 3 sekundy
+setInterval(autoSlide, 3000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // TENISOVÉ SOUSTŘEDĚNÍ - více info po rozkliknutí
 let btnSoustredeni = document.querySelector(".btn-soustredeni");
 let soustredeni3 = document.querySelector(".soustredeni3");

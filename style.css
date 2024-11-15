@@ -48,9 +48,6 @@ body {
   font-weight: 100;
   border-bottom: 1px solid rgb(248, 186, 31);
 }
-/* .scroll-up .navigation {
-  display: none;
-} */
 
 .scroll-up .navbar ul li a::after {
   bottom: 8px;
@@ -140,7 +137,7 @@ body {
 .section-intro {
   background-color: #171717;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(img/photos-courts/kurty-orez.jpg);
+    url(img/photos-courts/kurty1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -171,15 +168,9 @@ body {
 }
 
 @keyframes moveUpAndDown {
-  0% {
-    transform: translateX(-50%) translateY(0);
-  }
-  50% {
-    transform: translateX(-50%) translateY(-20px);
-  }
-  100% {
-    transform: translateX(-50%) translateY(0);
-  }
+  0% {transform: translateX(-50%) translateY(0);}
+  50% {transform: translateX(-50%) translateY(-20px);}
+  100% {transform: translateX(-50%) translateY(0);}
 }
 
 
@@ -218,12 +209,6 @@ h3:after {
   box-shadow: 10px 4px 5px 1px rgba(0, 0, 0, 0.703);
 }
 
-/* .turnaje h3:after,
-.soustredeni h3:after,
-.obchod h3:after {
-  border-bottom: none;
-  box-shadow: none;
-} */
 
 h4 {
   font-size: 18px;
@@ -245,82 +230,195 @@ marquee {
 
 /* areál */
 .section-areal {
-  
-  padding: 10%;
+  /* background-color:  green; */
+  /* padding: 10%; */
 }
-.areal {
+/* .areal {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 50px;
   align-items: center;
   flex-wrap: wrap;
-}
-.areal-info {
-  max-width: 400px;
+  border: 1px solid red;
+} */
+
+
+.areal-photos {
+padding-top: 50px;
+  /* overflow: hidden; */
 }
 
-.areal-foto {
-  width: 600px;
-  height: 400px;
+.slider-wrapper {
+  position: relative;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.slider {
+  display: flex;
+  aspect-ratio: 16 / 9;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0.25);
   overflow: hidden;
 }
-.areal-foto img {
-  width: 100%;
-  overflow: hidden;
+
+.slider img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+
 }
+
+.slider-nav {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.slider-nav a {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+
+.slider-nar a:hover {
+  opacity: 1;
+}
+
 
 /* Rezervace */
 .areal-rezervation {
   max-width: 400px;
 }
-/* .btn-telefonicky {
-  background-color: rgb(248, 186, 31);
-  color: black;
-  padding: 6px 16px;
-  text-decoration: none;
-  border-radius: 30px;
-  font-size: 10px;
-  font-weight: 800;
+
+.rezervation-tel, .rezervation-sys {
   cursor: pointer;
-} */
+}
+
+.rezervation-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+}
+
+.rezervation-alert {
+  background: linear-gradient(black 90%, rgb(44, 44, 44));
+  border-radius: 15px;
+  color: orange;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  transition: all ease 1s;
+}
+.rezervation-alert:hover {
+  color: rgb(255, 255, 255);
+}
+
+.rezervation-alert * {
+  padding: 20px;
+}
 
 /* CENÍK */
 .prices {
-  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10%;
+  max-width: 700px;
+}
+
+.prices-card {
+  max-width: 300px;
+  align-items: center;
+  border-radius: 18px;
+}
+
+.card-summer {
+  width: 100%;
+  background: linear-gradient(rgba(255, 194, 80, 0.8), rgba(255, 194, 80, 0.8)), url(img/sun-bg.png);
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+}
+.card-summer:hover {
+  background: linear-gradient(rgba(255, 180, 40, 0.8), rgba(255, 194, 80, 0.8)), url(img/sun-bg.png);
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+}
+.card-winter {
+  width: 100%;
+  background: linear-gradient(rgba(36, 149, 255, 0.85), rgba(36, 149, 255, 0.85)), url(img/snowflake-bg.png);
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
+.card-winter:hover {
+  background: linear-gradient(rgba(78, 169, 255, 0.85), rgba(36, 149, 255, 0.85)), url(img/snowflake-bg.png);
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
+
+.prices-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  gap: 30px;
+  padding: 30px;
+  margin: 4px;
+  border-radius: 15px;
+}
+
+.prices-header-text p {
+  margin: 0;
+}
+
+.prices-body {
+  padding-bottom: 40px;
+}
+.prices-body p {
   text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
-  /* margin-bottom: 70px; */
-  box-shadow: 0px 10px 25px 5px rgba(0, 0, 0, 0.703);
-  border: 1px solid black;
 }
 
-/* .prices-info {
-  font-size: 14px;
-  padding: 10px;
-  background-color: #aeadad;
-  font-weight: 300;
-  border-top: 1px solid black;
-} */
-
-tr,
-td {
-  font-size: 16px;
-  background-color: #aeadad;
-  padding: 5px;
+.price-time {
+  position: relative;
+  padding-top: 20px; 
+  font-size: 20px;
 }
 
-th {
-  font-size: 16px;
-  padding: 10px;
-  background-color: #aeadad;
-  border-bottom: 1px solid black;
+.price-time::before {
+  content: '';
+  position: absolute;
+  top: 0; 
+  left: 50%;
+  width: 120px;
+  height: 1px;  
+  background-color: black; 
+  transform: translateX(-50%); 
 }
 
-td {
-  background-color: rgba(255, 255, 255, 0.864);
-}
+
+
+
+
+
+
 
 /* Tenisová škola */
 .tenisova-skola p {
@@ -570,69 +668,29 @@ td {
 }
 
 @keyframes slide {
-  0% {
-    background: url(img/photos-TS/tabor01_small.jpg) center center;
-  }
-  11% {
-    background: url(img/photos-TS/tabor02_small.jpg) center center;
-  }
-  22% {
-    background: url(img/photos-TS/tabor03_small.jpg) center center;
-  }
-  33% {
-    background: url(img/photos-TS/tabor04_small.jpg) center center;
-  }
-  44% {
-    background: url(img/photos-TS/tabor05_small.jpg) center center;
-  }
-  55% {
-    background: url(img/photos-TS/tabor08_small.jpg) center center;
-  }
-  66% {
-    background: url(img/photos-TS/tabor07_small.jpg) center center;
-  }
-  77% {
-    background: url(img/photos-TS/tabor15_small.jpg) center center;
-  }
-  89% {
-    background: url(img/photos-TS/tabor19_small.jpg) center center;
-  }
-  100% {
-    background: url(img/photos-TS/tabor01_small.jpg) center center;
-  }
+  0% {background: url(img/photos-TS/tabor01_small.jpg) center center;}
+  11% {background: url(img/photos-TS/tabor02_small.jpg) center center;}
+  22% {background: url(img/photos-TS/tabor03_small.jpg) center center;}
+  33% {background: url(img/photos-TS/tabor04_small.jpg) center center;}
+  44% {background: url(img/photos-TS/tabor05_small.jpg) center center;}
+  55% {background: url(img/photos-TS/tabor08_small.jpg) center center;}
+  66% {background: url(img/photos-TS/tabor07_small.jpg) center center;}
+  77% {background: url(img/photos-TS/tabor15_small.jpg) center center;}
+  89% {background: url(img/photos-TS/tabor19_small.jpg) center center;}
+  100% {background: url(img/photos-TS/tabor01_small.jpg) center center;}
 }
 
 @keyframes slideMobil {
-  0% {
-    background: url(img/photos-TS/tabor01_small2.jpg) center center;
-  }
-  11% {
-    background: url(img/photos-TS/tabor02_small2.jpg) center center;
-  }
-  22% {
-    background: url(img/photos-TS/tabor03_small2.jpg) center center;
-  }
-  33% {
-    background: url(img/photos-TS/tabor04_small2.jpg) center center;
-  }
-  44% {
-    background: url(img/photos-TS/tabor05_small2.jpg) center center;
-  }
-  55% {
-    background: url(img/photos-TS/tabor08_small2.jpg) center center;
-  }
-  66% {
-    background: url(img/photos-TS/tabor07_small2.jpg) center center;
-  }
-  77% {
-    background: url(img/photos-TS/tabor15_small2.jpg) center center;
-  }
-  89% {
-    background: url(img/photos-TS/tabor19_small2.jpg) center center;
-  }
-  100% {
-    background: url(img/photos-TS/tabor01_small2.jpg) center center;
-  }
+  0% {background: url(img/photos-TS/tabor01_small2.jpg) center center;}
+  11% {background: url(img/photos-TS/tabor02_small2.jpg) center center;}
+  22% {background: url(img/photos-TS/tabor03_small2.jpg) center center;}
+  33% {background: url(img/photos-TS/tabor04_small2.jpg) center center;}
+  44% {background: url(img/photos-TS/tabor05_small2.jpg) center center;}
+  55% {background: url(img/photos-TS/tabor08_small2.jpg) center center;}
+  66% {background: url(img/photos-TS/tabor07_small2.jpg) center center;}
+  77% {background: url(img/photos-TS/tabor15_small2.jpg) center center;}
+  89% {background: url(img/photos-TS/tabor19_small2.jpg) center center;}
+  100% {background: url(img/photos-TS/tabor01_small2.jpg) center center;}
 }
 
 /* Tenisové soustředění */
@@ -704,27 +762,13 @@ td {
 }
 
 @keyframes shop {
-  0% {
-    background: url(img/photos-shop/obchod1_small.jpg) center center;
-  }
-  17% {
-    background: url(img/photos-shop/obchod2_small.jpg) center center;
-  }
-  34% {
-    background: url(img/photos-shop/obchod3_small.jpg) center center;
-  }
-  51% {
-    background: url(img/photos-shop/obchod4_small.jpg) center center;
-  }
-  68% {
-    background: url(img/photos-shop/obchod5_small.jpg) center center;
-  }
-  85% {
-    background: url(img/photos-shop/obchod6_small.jpg) center center;
-  }
-  100% {
-    background: url(img/photos-shop/obchod1_small.jpg) center center;
-  }
+  0% {background: url(img/photos-shop/obchod1_small.jpg) center center;}
+  17% {background: url(img/photos-shop/obchod2_small.jpg) center center;}
+  34% {background: url(img/photos-shop/obchod3_small.jpg) center center;}
+  51% {background: url(img/photos-shop/obchod4_small.jpg) center center;}
+  68% {background: url(img/photos-shop/obchod5_small.jpg) center center;}
+  85% {background: url(img/photos-shop/obchod6_small.jpg) center center;}
+  100% {background: url(img/photos-shop/obchod1_small.jpg) center center;}
 }
 
 .obchod2 {
@@ -867,33 +911,15 @@ td {
 }
 
 @keyframes ovopen {
-  0% {
-    background: url(img/photos-ovopen/ovopen2_small.jpg) center center;
-  }
-  12% {
-    background: url(img/photos-ovopen/ovopen3_small.jpg) center center;
-  }
-  25% {
-    background: url(img/photos-ovopen/ovopen4_small.jpg) center center;
-  }
-  37% {
-    background: url(img/photos-ovopen/ovopen5_small.jpg) center center;
-  }
-  50% {
-    background: url(img/photos-ovopen/ovopen6_small.jpg) center center;
-  }
-  62% {
-    background: url(img/photos-ovopen/ovopen7_small.jpg) center center;
-  }
-  75% {
-    background: url(img/photos-ovopen/ovopen8_small.jpg) center center;
-  }
-  87% {
-    background: url(img/photos-ovopen/ovopen9_small.jpg) center center;
-  }
-  100% {
-    background: url(img/photos-ovopen/ovopen2_small.jpg) center center;
-  }
+  0% {background: url(img/photos-ovopen/ovopen2_small.jpg) center center;}
+  12% {background: url(img/photos-ovopen/ovopen3_small.jpg) center center;}
+  25% {background: url(img/photos-ovopen/ovopen4_small.jpg) center center;}
+  37% {background: url(img/photos-ovopen/ovopen5_small.jpg) center center;}
+  50% {background: url(img/photos-ovopen/ovopen6_small.jpg) center center;}
+  62% {background: url(img/photos-ovopen/ovopen7_small.jpg) center center;}
+  75% {background: url(img/photos-ovopen/ovopen8_small.jpg) center center;}
+  87% {background: url(img/photos-ovopen/ovopen9_small.jpg) center center;}
+  100% {background: url(img/photos-ovopen/ovopen2_small.jpg) center center;}
 }
 
 /* KONTAKT */
@@ -977,15 +1003,9 @@ td {
 }
 
 @keyframes spravce {
-  0% {
-    background: rgb(255, 241, 207);
-  }
-  50% {
-    background: rgb(255, 206, 91);
-  }
-  100% {
-    background: rgb(255, 241, 207);
-  }
+  0% {background: rgb(255, 241, 207);}
+  50% {background: rgb(255, 206, 91);}
+  100% {background: rgb(255, 241, 207);}
 }
 
 .kontakt-zima {
