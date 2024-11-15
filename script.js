@@ -61,7 +61,7 @@ window.addEventListener()
 
 
 
-
+// AUTOMATACKÉ PŘEHRÁVÁNÍ FOTEK - O AREÁLU
 const slider = document.querySelector('.slider'); // Slider container
 const slides = document.querySelectorAll('.slider img'); // Všechny obrázky
 const totalSlides = slides.length;
