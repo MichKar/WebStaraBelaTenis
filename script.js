@@ -56,26 +56,31 @@ window.addEventListener("scroll", function() {
         }
     });
 
-window.addEventListener()
 
 
 
 
-// AUTOMATACKÉ PŘEHRÁVÁNÍ FOTEK - O AREÁLU
-const slider = document.querySelector('.slider'); // Slider container
-const slides = document.querySelectorAll('.slider img'); // Všechny obrázky
-const totalSlides = slides.length;
 
-let currentIndex = 0; // Výchozí obrázek
 
-function autoSlide() {
-  currentIndex = (currentIndex + 1) % totalSlides; // Cyklus obrázků
-  slider.style.transform = `translateX(-${currentIndex * 100}%)`; // Posunutí
+// areál slider fotek
+const slider = document.querySelector('.slider');
+const slides = document.querySelectorAll('.one-slider');
+let currentSlide = 0;
+
+// Funkce pro posun
+function moveSlide(direction) {
+       console.log("Funguje");
+  const totalSlides = slides.length;
+  currentSlide = (currentSlide + direction + totalSlides) % totalSlides; // Umožní nekonečnou smyčku
+  slider.scrollTo({
+    left: slider.clientWidth * currentSlide,
+    behavior: 'smooth',
+  });
 }
 
-// Automatické přepínání každé 3 sekundy
-setInterval(autoSlide, 3000);
-
+// Přidání event listenerů na tlačítka
+document.querySelector('.left-pointer').addEventListener('click', () => moveSlide(-1));
+document.querySelector('.right-pointer').addEventListener('click', () => moveSlide(1));
 
 
 

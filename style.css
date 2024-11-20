@@ -1,7 +1,6 @@
 html {
   scroll-behavior: smooth;
 }
-
 body {
   margin: 0;
   padding: 0;
@@ -9,7 +8,6 @@ body {
   font-family: "Open Sans", sans-serif, "Lucida Sans";
   background-color: #e4e4e4;
 }
-
 
 /***** RESUABLE ******/
 .container {
@@ -37,22 +35,18 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 }
-
 .scroll-down header {
   display: none;
 }
-
 .scroll-up .navbar {
   background-color: rgba(0, 0, 0, 0.9);
   height: 50px;
   font-weight: 100;
   border-bottom: 1px solid rgb(248, 186, 31);
 }
-
 .scroll-up .navbar ul li a::after {
   bottom: 8px;
 }
-
 .logo img {
   width: 120px;
   margin-top: 80px;
@@ -71,7 +65,6 @@ body {
   position: relative;
   display: inline-block;
 }
-
 .navigation li a {
   text-decoration: none;
   padding: 20px;
@@ -90,42 +83,34 @@ body {
   background-color: rgb(248, 186, 31);
   transition: all 0.5s ease;
 }
-
 .navigation li a:hover::after {
   width: 100%;
 }
-
 .navigation li a:focus,
 .navigation li a:hover {
   color: rgb(248, 186, 31);
 }
-
 .btn-rezervation-system {
   height: 40px;
   width: 50px;
   transition: scale 0.5s ease;
 }
-
 .btn-rezervation-system:hover {
   scale: 1.05;
 }
-
 .btn-rezervation-system:active {
   scale: 0.95;
 }
-
 .btn-menu,
 .btn-close {
   width: 30px;
   height: 30px;
   cursor: pointer;
 }
-
 .btn-menu:hover, 
 .btn-close:hover {
   scale: 1.05;
 }
-
 .btn-menu img, 
 .btn-close img {
   width: 95%;
@@ -133,7 +118,7 @@ body {
   padding-top: 2px;
 }
 
-/***** SEKCE 1 - úvodní foto + ktuality ******/
+/***** SEKCE 1 - úvodní foto + aktuality ******/
 .section-intro {
   background-color: #171717;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -157,7 +142,6 @@ body {
   position: absolute;
   top: 70px;
 }
-
 .img-arrow-down {
   width: 130px;
   position: absolute;
@@ -166,7 +150,6 @@ body {
   transform: translateX(-50%);
   animation: moveUpAndDown 2s ease-in-out infinite;
 }
-
 @keyframes moveUpAndDown {
   0% {transform: translateX(-50%) translateY(0);}
   50% {transform: translateX(-50%) translateY(-20px);}
@@ -183,7 +166,6 @@ h2 {
   padding-top: 40px;
   text-align: center;
 }
-
 h1:after,
 h2:after {
   content: "";
@@ -193,13 +175,11 @@ h2:after {
   margin: 7px auto;
   box-shadow: 10px 4px 5px 1px rgba(0, 0, 0, 0.703);
 }
-
 h3 {
   padding-top: 40px;
   font-size: 23px;
   text-align: center;
 }
-
 h3:after {
   content: "";
   display: block;
@@ -208,18 +188,14 @@ h3:after {
   margin: 7px auto;
   box-shadow: 10px 4px 5px 1px rgba(0, 0, 0, 0.703);
 }
-
-
 h4 {
   font-size: 18px;
 }
-
 p {
   font-size: 14px;
   text-align: justify;
   line-height: 30px;
 }
-
 marquee {
   padding: 5px;
   font-weight: 600;
@@ -228,90 +204,194 @@ marquee {
   font-size: 14px;
 }
 
-/* areál */
+/******* areál ***********/
 .section-areal {
-  /* background-color:  green; */
-  /* padding: 10%; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
-/* .areal {
+.section-areal > * {
+  flex: 1;
+  padding: 100px;
+}
+.areal-photos {
+  padding-top: 50px;
+  flex-basis: 100%;
+}
+.slider-wrapper {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.slider-text {
+  flex: 0 0 100px; 
+  z-index: 1; 
+}
+.slider-image {
+  flex: 1; 
+  z-index: 1; 
+}
+.slider {
+  display: flex;
+  flex-direction: row;
+  aspect-ratio: 21 / 9;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 25px 50px -15px black;
+  overflow: hidden;
+  object-fit: cover;
+}
+.one-slider {
+  box-sizing: border-box;
+  flex: 1 0 100%;
+  padding: 50px 650px 30px 30px;
+  text-align: left;
+  line-height: 2;
+  font-size: 15px;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center; 
+  height: 300px;
+  background-size: cover; 
+  background-position: center; 
+  color: white; 
+  padding: 0 20px; 
+  display:flex;
+}
+.slide-1 {
+  background-image: linear-gradient(to right,  rgba(0, 128, 0, 0.673), rgba(0, 128, 0, 0.5)), url('img/photos-courts/kurty1.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+} 
+.slider-pointer {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  z-index: 10;
+  justify-content: space-between;
+  width: 100%;
+  pointer-events: none;
+}
+.left-pointer,
+.right-pointer {
+  pointer-events: all; /* Umožní klikání na tlačítka */
+  background: rgba(0, 0, 0, 0.674);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.left-pointer {
+  position: absolute;
+  left: 10px;
+}
+.right-pointer {
+  position: absolute;
+  right: 10px;
+}
+.left-pointer img,
+.right-pointer img {
+  width: 20px;
+  height: 20px;
+  transform: rotate(90deg);
+}
+.right-pointer img {
+  transform: rotate(-90deg);
+}
+
+
+/********* CENÍK ************/
+.areal-prices {
+  max-width: 700px;
+}
+.prices {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10%;
+}
+.prices-card {
+  min-width: 300px;
+  align-items: center;
+  border-radius: 18px;
+  position: relative;
+}
+.prices-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  gap: 30px;
+  padding: 30px;
+  margin: 4px;
+  border-radius: 15px;
+}
+.prices-header-text p {
+  margin: 0;
+}
+.prices-body {
+  height: 355px;
+  padding-bottom: 100px;
+}
+.prices-body p {
+  text-align: center;
+}
+.price-time {
+  position: relative;
+  padding-top: 20px; 
+  font-size: 20px;
+}
+.price-time::before {
+  content: '';
+  position: absolute;
+  top: 0; 
+  left: 50%;
+  width: 120px;
+  height: 1px;  
+  background-color: black; 
+  transform: translateX(-50%); 
+}
+.rezervation {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 50px;
-  align-items: center;
-  flex-wrap: wrap;
-  border: 1px solid red;
-} */
-
-
-.areal-photos {
-padding-top: 50px;
-  /* overflow: hidden; */
-}
-
-.slider-wrapper {
-  position: relative;
-  max-width: 48rem;
-  margin: 0 auto;
-}
-
-.slider {
-  display: flex;
-  aspect-ratio: 16 / 9;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0.25);
-  overflow: hidden;
-}
-
-.slider img {
-  flex: 1 0 100%;
-  scroll-snap-align: start;
-  object-fit: cover;
-
-}
-
-.slider-nav {
-  display: flex;
-  column-gap: 1rem;
   position: absolute;
-  bottom: 1.25rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
+  width: 100%;
+  bottom: -40px;
 }
-
-.slider-nav a {
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-  background-color: white;
-  opacity: 0.75;
-  transition: opacity ease 250ms;
-}
-
-.slider-nar a:hover {
-  opacity: 1;
-}
-
-
-/* Rezervace */
-.areal-rezervation {
-  max-width: 400px;
-}
-
 .rezervation-tel, .rezervation-sys {
   cursor: pointer;
+  background-color: #171717;
+  padding: 20px;
+  border-radius: 50%;
+  transition: all 1s ease;
 }
-
-.rezervation-icons {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 30px;
+.rezervation-tel:hover, .rezervation-sys:hover {
+  background-color: #3e3e3e;
 }
-
+.card-summer {
+  width: 100%;
+  background: linear-gradient(rgba(255, 194, 80, 0.8), rgba(219, 176, 143, 0.8)), url(img/sun-bg.png);
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+}
+.card-winter {
+  width: 100%;
+  background: linear-gradient(rgba(36, 149, 255, 0.85), rgba(36, 200, 255, 0.85)), url(img/snowflake-bg.png);
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
 .rezervation-alert {
   background: linear-gradient(black 90%, rgb(44, 44, 44));
   border-radius: 15px;
@@ -326,93 +406,9 @@ padding-top: 50px;
 .rezervation-alert:hover {
   color: rgb(255, 255, 255);
 }
-
-.rezervation-alert * {
+.rezervation-alert > * {
   padding: 20px;
 }
-
-/* CENÍK */
-.prices {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 10%;
-  max-width: 700px;
-}
-
-.prices-card {
-  max-width: 300px;
-  align-items: center;
-  border-radius: 18px;
-}
-
-.card-summer {
-  width: 100%;
-  background: linear-gradient(rgba(255, 194, 80, 0.8), rgba(255, 194, 80, 0.8)), url(img/sun-bg.png);
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat;
-}
-.card-summer:hover {
-  background: linear-gradient(rgba(255, 180, 40, 0.8), rgba(255, 194, 80, 0.8)), url(img/sun-bg.png);
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat;
-}
-.card-winter {
-  width: 100%;
-  background: linear-gradient(rgba(36, 149, 255, 0.85), rgba(36, 149, 255, 0.85)), url(img/snowflake-bg.png);
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat; 
-}
-.card-winter:hover {
-  background: linear-gradient(rgba(78, 169, 255, 0.85), rgba(36, 149, 255, 0.85)), url(img/snowflake-bg.png);
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat; 
-}
-
-.prices-header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-  gap: 30px;
-  padding: 30px;
-  margin: 4px;
-  border-radius: 15px;
-}
-
-.prices-header-text p {
-  margin: 0;
-}
-
-.prices-body {
-  padding-bottom: 40px;
-}
-.prices-body p {
-  text-align: center;
-}
-
-.price-time {
-  position: relative;
-  padding-top: 20px; 
-  font-size: 20px;
-}
-
-.price-time::before {
-  content: '';
-  position: absolute;
-  top: 0; 
-  left: 50%;
-  width: 120px;
-  height: 1px;  
-  background-color: black; 
-  transform: translateX(-50%); 
-}
-
 
 
 
