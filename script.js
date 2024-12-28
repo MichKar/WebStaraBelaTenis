@@ -58,18 +58,33 @@ window.addEventListener("scroll", function() {
 
 
 
-    //posouvání obrázků
-    const wrapper = document.querySelector('.wrapper');
+    
+//prolínání úvodních obrázků
+const wrapper = document.querySelector('.wrapper');
+let images = Array.from(wrapper.children);
+const rightBtn = document.querySelector('.right');
+const leftBtn = document.querySelector('.left');
 
-    function scrollToLeft() {
-        console.log('Scrolling left'); // Debugging log
-        wrapper.scrollBy({ left: -window.innerWidth, behavior: 'smooth' });
-    }
+let currentIndex = 0;
+images[currentIndex].classList.add('active');
 
-    function scrollToRight() {
-        console.log('Scrolling right'); // Debugging log
-        wrapper.scrollBy({ left: window.innerWidth, behavior: 'smooth' });
-    }
+// Posun obrázků vpravo
+rightBtn.addEventListener("click", function() {
+    images[currentIndex].classList.remove('active'); 
+    currentIndex = (currentIndex + 1) % images.length;
+    images[currentIndex].classList.add('active'); 
+});
+
+// Posun obrázků vlevo
+leftBtn.addEventListener("click", function() {
+        images[currentIndex].classList.remove('active'); 
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        images[currentIndex].classList.add('active'); 
+});
+
+
+
+
 
 
 

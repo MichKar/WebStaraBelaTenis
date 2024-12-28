@@ -142,67 +142,87 @@ p {
 }
 
 /***** SEKCE 1 - areál + aktuality ******/
-#section-areal {
-  background-color: #171717;
-  /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), */
-    /* url(img/photos-courts/kurty1.jpg); */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  /* width: 100%; */
-  /* height: 100svh; */
-  /* overflow: hidden; */
-  /* position: relative; */
-}
-
-
-
-
-
-.wrappik {
+.wrapper-with-btns {
+  position: relative;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
 
 .wrapper {
+  position: relative;
   display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
   width: 100vw;
   height: 100vh;
+  transition: opacity 1s ease;
 }
 
-.wrapper img {
-  flex-shrink: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
+.wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)); 
+  pointer-events: none; 
 }
 
-/* Skrytí posuvníku pro čistší vzhled */
 .wrapper::-webkit-scrollbar {
   display: none;
 }
+
+.wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.wrap.active {
+  opacity: 1;
+}
+
+.wrap img {
+  object-fit: cover;
+  user-select: none;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+}
+
+.wrap .picture-description {
+  z-index: 20;
+  position: absolute;
+  bottom: 50px;
+  left: 150px;
+  color: white;
+  background-color: black;
+  width: 500px;
+  height: 200px;
+  padding: 50px;
+}
+
+
+
 .arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  background-color: black;
   border: none;
   padding: 10px;
   cursor: pointer;
   z-index: 10;
 }
 
-.arrow.left {
-  left: 10px;
-}
-
 .arrow.right {
-  right: 10px;
+  right: 0px;
+}
+.arrow img {
+  width: 50px;
+  height: auto;
 }
 
 
