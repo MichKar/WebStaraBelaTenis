@@ -19,164 +19,135 @@
 
      <!----- HEADER ----->
   <header>
-        <nav class="navbar">
-          <div class="logo">
-            <a href="index.html"><img src="img/logo/logo-small.png" alt="logo"></a>
-          </div>
-          <ul class="navigation">
-            <li><a href="#section-areal-bg">areál</a></li>
-            <li><a href="#section-tenisova-skola-bg">tenisová škola</a></li>
-            <li><a href="#akce">akce</a></li>
-            <li><a href="#kontakt">kontakt</a></li>
-          </ul>
-          <a href="https://starabela.rezervujse.cz/StaraBelaServlet/app" target="_blank"><img class="btn-rezervation-system"
-              src="img/icons/calendar-orange.png" alt="rezervační systém"></a>
-          <div class="btn-menu-close">
-            <div class="btn-menu"><img src="img/icons/menu-orange.png" alt="menu"></div>
-            <div class="btn-close"><img src="img/icons/close-orange.png" alt="zavřít"></div>
-          </div>
-        </nav>
+    <nav class="navbar">
+      <div class="logo">
+       <h1><a href="index.html"><img src="img/logo/logo-small.png" alt="logo tenisové kurty Ostrava-Stará Bělá"></a></h1>
+      </div>
+      <ul class="navigation">
+        <li><a href="#section-areal">areál</a></li>
+        <li><a href="#section-tenisova-skola-bg">tenisová škola</a></li>
+        <li><a href="#akce">akce</a></li>
+        <li><a href="#kontakt">kontakt</a></li>
+      </ul>
+      <a href="https://starabela.rezervujse.cz/StaraBelaServlet/app" target="_blank"><img class="btn-rezervation-system"
+          src="img/icons/calendar-orange.png" alt="rezervační systém"></a>
+      <div class="btn-menu-close">
+        <div class="btn-menu"><img src="img/icons/menu-orange.png" alt="menu"></div>
+        <div class="btn-close"><img src="img/icons/close-orange.png" alt="zavřít"></div>
+      </div>
+    </nav>
   </header>
 
 
 <main>
 
+  <!----- SEKCE 1. AREÁL + AKTUALITY ----->
 
-   <!----- SEKCE 1. ÚVODNÍ FOTO + AKTUALITY ----->
-  <section class="section-intro">
-    <a href="#section-areal-bg"><img class="img-arrow-down" src="img/icons/arrow-down-slim.png" alt="šipka dolů"></a>
-    
-    <!-- AKTUALITY -->
-    <div class="news">
-      <marquee direction="left" onMouseOver="this.setAttribute('scrollamount', 0, 0);this.stop();"
-      OnMouseOut="this.setAttribute('scrollamount', 12, 0);this.start();" scrollamount="7" bgcolor="#F8BA1F">Kurty č. 1 -
-      3 v provozu od 8. 4. 2024. Rezervace spuštěna.</marquee>
-      
-      <!-- Rezervace na přetlakovou halu je již spuštěna! V případě příznivého počasí jsou stále k dispozici kurty 1-3 (v tomto případě volejte správcům). -->
-    </div>
-  </section>
+    <section id="section-areal">
 
-
-
-
-
-
-   <!----- SEKCE AREÁL ----->
-    <section id="section-areal-bg">
-      <div class="container">
-        <div class="section-areal">
-    
-          <!-- fotky -->
-          <div class="areal-photos">
-            <h2>Areál TJ Sokol Stará Bělá</h2>
-            <div class="slider-wrapper">
-              
-              <div class="slider">
-                <div class="one-slider">
-                  <div class="slider-image slide-1"><img src="img/photos-courts/kurty1.jpg" alt=""></div>
-                  <div class="slider-text">Tenisové kurty se nachází mezi fotbalových hřištěm a koupalištěm v Ostravě - Staré Bělé. K dispozici je celkem 7 antukových kurtů (z toho 5 včetně osvětlení) a cvičná odrazová stěna.</div>
-                </div>
-                <div class="one-slider">
-                  <div class="slider-image"></div>
-                  <div class="slider-text"> V areálu si můžete přijít i odpočinout. Máme tady příjemné venkovní posezení s občerstvením.</div>
-                </div>
-
-                <div class="one-slider">
-                  <div class="slider-image"></div>
-                  <div class="slider-text">Navštivte náš tenisový obchod, který je umístěn v 1. patře našeho areálu. Najít tu můžete převážně tenisové vybavení nebo využijte některých služeb: vyplétání raket od 350 Kč včetně výpletu, broušení bruslí od 100 Kč, příjem a výdej balíků: DPD, GLS, PPL, BALÍKOVNA, WEDO. Otevírací doba: Po-Čt • 8:00-11:30 • 13:00-16:00 Pátek • 8:00-11:30 • 13:00-15:00</div>
-                </div>
-
-                <div class="one-slider">
-                  <div class="slider-image"></div>
-                  <div class="slider-text">V zimě se hraje na 2 kurtech v nafukovací přetlakové hale.</div>
-                  </div>
-
-              </div> 
-              
-              <div class="slider-pointer">
-                <div class="left-pointer"><img src="img/icons/arrow-down-slim.png"></div>
-                <div class="right-pointer"><img src="img/icons/arrow-down-slim.png"></div>
-              </div>
-              
-            </div>
-          </div>
-    
-    
-         
-           
-           
-   
-           
-            
-         
-    
-          <!-- ceník kurtů -->
-          <div class="areal-prices">
-            <h2>Ceník kurtů</h2>
-            <div class="prices">
-              <div class="prices-card card-summer">
-                <div class="prices-header">
-                  <img src="img/icons/sun.png" width="50px" alt="letní sezona">
-                  <div class="prices-header-text">
-                    <p>LETNÍ SEZÓNA</p>
-                    <p>(duben - říjen)</p>
-                  </div>
-                </div>
-                <div class="prices-body">
-                    <p class="price-time">8:00 - 13:00</p>
-                    <p>120 Kč/hod.</p>
-                    <p class="price-time">13:00 - 20:00</p>
-                    <p>160 Kč/hod.</p>
-                </div>
-                <div class="rezervation">
-                  <div class="rezervation-sys"><img src="img/icons/calendar-orange.png" width="60px"
-                  alt="rezervační systém online" title="rezervační systém"></div>
-                  <div class="rezervation-tel"><img src="img/icons/telephone_orange.png" width="60px"
-                  alt="rezervační systém online" title="zavolat správcovi"></div>
-                </div>
-              </div>
-    
-              <div class="prices-card card-winter">
-                <div class="prices-header">
-                  <img src="img/icons/snowflake.png" width="50px" alt="zimní sezona">
-                  <div class="prices-header-text">
-                    <p>ZIMNÍ SEZÓNA</p>
-                    <p>(říjen - duben)</p>
-                  </div>
-                </div>
-                <div class="prices-body">
-                    <p class="price-time">8:00 - 14:00</p>
-                    <p>390 Kč/hod.</p>
-                    <p class="price-time">14:00 - 20:00</p>
-                    <p>440 Kč/hod.</p>
-                    <p class="price-time">VÍKENDY 8:00 - 20:00</p>
-                    <p>440 Kč/hod.</p>
-                </div>
-                <div class="rezervation">
-                  <div class="rezervation-sys"><img src="img/icons/calendar-orange.png" width="60px"
-                    alt="rezervační systém online" title="rezervační systém"></div>
-                  <div class="rezervation-tel"><img src="img/icons/telephone_orange.png" width="60px"
-                    alt="rezervační systém online" title="zavolat správcovi"></div>
-                </div>
-              </div>
-
-            </div>
-
-
-            <div class="rezervation-alert">
-              <img src="img/icons/alert.png" height="100px" width="50px">
-              <p>Upozornění! Rezervaci lze zrušit přes rezervační systém nejpozději 24h předem. Pokud vyjímečně chcete zrušit rezervaci na poslední chvíli, je nutné zrušit telefonicky.</p>
-            </div>
-            
-            <!-- <p>LETNÍ SEZÓNA: TIP PRO ZÁKAZNÍKY!!! </strong><br>Každý den od neděle do čtvrtku se po 20:00 v rezervačním systému otevírají kurty číslo 4 a 5 pro veřejnost v časech 15:00 - 20:00 na následující pracovní den. Máte tedy možnost obsadit případné volné hodiny na těchto kurtech, které členové oddílu nevyužili. (např. v pondělí ve 20:01 se zobrazí případní volné hodiny k rezervaci na kurtech č. 4 a 5 na úterý).</p> -->
-          </div>
+      <div class="wrappik">
+        <button class="arrow left" onclick="scrollToLeft()">&#8592;</button>
+        <button class="arrow right" onclick="scrollToRight()">&#8594;</button>
+        <div class="wrapper">
+            <img src="img/photos-courts/kurty1.jpg" alt="Obrázek 1">
+            <img src="img/photos-courts/kurty2.jpg" alt="Obrázek 2">
+            <img src="img/photos-courts/kurty3.jpg" alt="Obrázek 3">
+            <img src="img/photos-courts/kurty4.jpg" alt="Obrázek 4">
         </div>
+    </div>
+
+      <!-- <a href="#section-areal-bg"><img class="img-arrow-down" src="img/icons/arrow-down-slim.png" alt="šipka dolů"></a> -->
+      <div class="news">
+        <marquee direction="left" onMouseOver="this.setAttribute('scrollamount', 0, 0);this.stop();"
+        OnMouseOut="this.setAttribute('scrollamount', 12, 0);this.start();" scrollamount="7" bgcolor="#F8BA1F">Kurty č. 1 -
+        3 v provozu od 8. 4. 2024. Rezervace spuštěna.</marquee>
+        <!-- Rezervace na přetlakovou halu je již spuštěna! V případě příznivého počasí jsou stále k dispozici kurty 1-3 (v tomto případě volejte správcům). -->
       </div>
-      </div>
-      </div>
+       <!-- 
+              AREÁL - Tenisové kurty se nachází mezi fotbalových hřištěm a koupalištěm v Ostravě - Staré Bělé. K dispozici je celkem 7 antukových kurtů (z toho 5 včetně osvětlení) a cvičná odrazová stěna.
+            
+              OBČERSTVENÍ - V areálu si můžete přijít i odpočinout. Máme tady příjemné venkovní posezení s občerstvením.
+           
+              TENISOVÝ OBCHOD
+              Obchod je umístěn v 1. patře našeho areálu. Najít tu můžete převážně tenisové vybavení nebo využijte některých služeb: vyplétání raket od 350 Kč včetně výpletu, broušení bruslí od 100 Kč, příjem a výdej balíků: DPD, GLS, PPL, BALÍKOVNA, WEDO. Otevírací doba: <br>Po-Čt • 8:00-11:30 • 13:00-16:00 Pátek • 8:00-11:30 • 13:00-15:00
+            
+              NAFUKOVACÍ HALA - V zimě se hraje na 2 kurtech v nafukovací přetlakové hale. 
+            -->
     </section>
 
 
+  
+        
+             
+                  
+          
+            
+          
+          <!-- SEKCE 2 - ceník kurtů -->
+    <section class="section-bg">
+      <div class="areal-prices">
+        <h2>Ceník kurtů</h2>
+        <div class="prices">
+          
+          <div class="prices-card card-summer">
+            <div class="prices-header">
+                <p>LETNÍ SEZÓNA</p>
+                <p>(duben - říjen)</p>
+            </div>
+            <div class="prices-body">
+                <p class="price-time">8:00 - 13:00</p>
+                <p>120 Kč/hod.</p>
+                <p class="price-time">13:00 - 20:00</p>
+                <p>160 Kč/hod.</p>
+            </div>
+            <div class="rezervation">
+              <div class="rezervation-sys">
+                <img src="img/icons/calendar-orange.png" width="45px"
+              alt="ikona kalendáře pro rezervaci" title="rezervační systém">
+            </div>
+              <div class="rezervation-tel">
+                <img src="img/icons/telephone_orange.png" width="45px"
+              alt="ikona telefonu pro rezervaci" title="zavolat správcovi">
+            </div>
+            </div>
+          </div>
+
+          <div class="prices-card card-winter">
+            <div class="prices-header">
+                <p>ZIMNÍ SEZÓNA</p>
+                <p>(říjen - duben)</p>
+            </div>
+            <div class="prices-body">
+                <p class="price-time">8:00 - 14:00</p>
+                <p>390 Kč/hod.</p>
+                <p class="price-time">14:00 - 20:00</p>
+                <p>440 Kč/hod.</p>
+                <p class="price-time">VÍKENDY 8:00 - 20:00</p>
+                <p>440 Kč/hod.</p>
+            </div>
+            <div class="rezervation">
+              <div class="rezervation-sys"><img src="img/icons/calendar-orange.png" width="45px"
+                alt="ikona kalendáře pro rezervaci" title="rezervační systém"></div>
+              <div class="rezervation-tel"><img src="img/icons/telephone_orange.png" width="45px"
+                alt="ikona telefonu pro rezervaci" title="zavolat správcovi"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rezervation-alert">
+          <img src="img/icons/alert.png" height="100px" width="50px">
+          <p>Upozornění! Rezervaci lze zrušit přes rezervační systém nejpozději 24h předem. Pokud vyjímečně chcete zrušit rezervaci na poslední chvíli, je nutné zrušit telefonicky.</p>
+        </div>
+        
+        <!-- LETNÍ SEZÓNA: TIP PRO ZÁKAZNÍKY!!! </strong><br>Každý den od neděle do čtvrtku se po 20:00 v rezervačním systému otevírají kurty číslo 4 a 5 pro veřejnost v časech 15:00 - 20:00 na následující pracovní den. Máte tedy možnost obsadit případné volné hodiny na těchto kurtech, které členové oddílu nevyužili. (např. v pondělí ve 20:01 se zobrazí případní volné hodiny k rezervaci na kurtech č. 4 a 5 na úterý). -->
+      </div>
+    </section>
+          
+
+       
+      
+      
+    
 
 
 
@@ -222,7 +193,7 @@
   <section class="tenisove-uspechy">
     <div class="uspechy-background">
       <div class="container">
-          <h3>Úspěchy tenisové školy</h3>
+          <h2>Úspěchy tenisové školy</h2>
 
 
 
@@ -403,7 +374,7 @@
    <!-- CENÍK TENISOVÉ ŠKOLY -->
   <section class="container" class="cenik-TS">
       <table class="prices">
-        <h3>Ceník tréninkových jednotek</h3>
+        <h2>Ceník tréninkových jednotek</h2>
           <tr>
               <th>Počet hráčů</th>
               <th>Cena za 1 osobu</th>
@@ -434,7 +405,7 @@
   <section class="tym">
     <div class="backgr-trainers">
       <div class="container">
-        <h3 class="container">Trenérský tým</h3>
+        <h2 class="container">Trenérský tým</h2>
         <div class="trainers">
           <div class="trainer">
             <img src="img/trainers/JiříP..jpg" alt="">
@@ -482,7 +453,7 @@
   <!-- TÁBOR -->
   <section class="container">
     <div class="tabor">
-        <h3>Příměstský tenisový tábor</h3>
+        <h2>Příměstský tenisový tábor</h2>
         <div class="tabor1a2">
 
           <div class="tabor1">
@@ -510,7 +481,7 @@
   <section class="container" class="soustredeni">
     <div class="soustredeni1a2">
         <div class="soustredeni1">
-           <h3>Tenisové soustředění</h3>
+           <h2>Tenisové soustředění</h2>
           <p>Tenisová škola pro své svěřence pořádá každý rok v srpnu Tenisové soustředění v Beskydech v obci Hutisko-Solanec. Jedná se o týdenní pobyt plný tenisu a her. </p>
           <p><strong>&#128197 Termín: 27. 8. - 2. 9. 2023</strong></p>
           <button class="btn-soustredeni">Více informací &#9660</button>
@@ -560,7 +531,7 @@
   <section class="container" class="turnaje">
     <div class="turnaje">
       <div class="turnaje1">
-        <h3>Turnaje pro amatérské hráče</h3>
+        <h2>Turnaje pro amatérské hráče</h2>
         <div class="logo-ovopen clearfix"><a href="https://ovopen.cz/" target="_blank"><img src="img/logo/logo PRŮHLEDNÉ..gif" alt="OVopen.cz"></a></div>
         
         <p>Na našich kurtech se v létě konají turnaje pro amatérské hráče, které pořádá OVopen. Turnaje jsou určeny <strong> pro amatérské hráče</strong>, kteří si chtějí zahrát se stejně kvalitními soupeři nebo chtějí tenisově růst.</p>

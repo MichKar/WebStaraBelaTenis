@@ -17,6 +17,29 @@ body {
   padding-right: 15px;
 }
 
+h2 {
+  font-size: 23px;
+  width: auto;
+  padding-top: 40px;
+  text-align: center;
+}
+h2:after {
+  content: "";
+  display: block;
+  width: 300px;
+  border-bottom: 3px solid rgb(248, 186, 31);
+  margin: 7px auto;
+  box-shadow: 10px 4px 5px 1px rgba(0, 0, 0, 0.703);
+}
+h4 {
+  font-size: 18px;
+}
+p {
+  font-size: 14px;
+  text-align: justify;
+  line-height: 30px;
+}
+
 /***** NAVIGATION *******/
 .navbar {
   display: flex;
@@ -118,20 +141,72 @@ body {
   padding-top: 2px;
 }
 
-/***** SEKCE 1 - úvodní foto + aktuality ******/
-.section-intro {
+/***** SEKCE 1 - areál + aktuality ******/
+#section-areal {
   background-color: #171717;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(img/photos-courts/kurty1.jpg);
+  /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), */
+    /* url(img/photos-courts/kurty1.jpg); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  width: 100%;
-  height: 100svh;
-  overflow: hidden;
-  position: relative;
+  /* width: 100%; */
+  /* height: 100svh; */
+  /* overflow: hidden; */
+  /* position: relative; */
 }
+
+
+
+
+
+.wrappik {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  width: 100vw;
+  height: 100vh;
+}
+
+.wrapper img {
+  flex-shrink: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* Skrytí posuvníku pro čistší vzhled */
+.wrapper::-webkit-scrollbar {
+  display: none;
+}
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+
+
 
 /* aktuality */
 .news {
@@ -157,45 +232,6 @@ body {
 }
 
 
-/***** SEKCE2 - AREÁL ******/
-/* hlavní info */
-h1,
-h2 {
-  font-size: 23px;
-  width: auto;
-  padding-top: 40px;
-  text-align: center;
-}
-h1:after,
-h2:after {
-  content: "";
-  display: block;
-  width: 300px;
-  border-bottom: 3px solid rgb(248, 186, 31);
-  margin: 7px auto;
-  box-shadow: 10px 4px 5px 1px rgba(0, 0, 0, 0.703);
-}
-h3 {
-  padding-top: 40px;
-  font-size: 23px;
-  text-align: center;
-}
-h3:after {
-  content: "";
-  display: block;
-  width: 300px;
-  border-bottom: 3px solid rgb(248, 186, 31);
-  margin: 7px auto;
-  box-shadow: 10px 4px 5px 1px rgba(0, 0, 0, 0.703);
-}
-h4 {
-  font-size: 18px;
-}
-p {
-  font-size: 14px;
-  text-align: justify;
-  line-height: 30px;
-}
 marquee {
   padding: 5px;
   font-weight: 600;
@@ -204,114 +240,15 @@ marquee {
   font-size: 14px;
 }
 
-/******* areál ***********/
-.section-areal {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.section-areal > * {
-  flex: 1;
-  padding: 100px;
-}
-.areal-photos {
-  padding-top: 50px;
-  flex-basis: 100%;
-}
-.slider-wrapper {
-  position: relative;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-.slider-text {
-  flex: 0 0 100px; 
-  z-index: 1; 
-}
-.slider-image {
-  flex: 1; 
-  z-index: 1; 
-}
-.slider {
-  display: flex;
-  flex-direction: row;
-  aspect-ratio: 21 / 9;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  box-shadow: 0 25px 50px -15px black;
-  overflow: hidden;
-  object-fit: cover;
-}
-.one-slider {
-  box-sizing: border-box;
-  flex: 1 0 100%;
-  padding: 50px 650px 30px 30px;
-  text-align: left;
-  line-height: 2;
-  font-size: 15px;
-  scroll-snap-align: start;
-  display: flex;
-  align-items: center; 
-  height: 300px;
-  background-size: cover; 
-  background-position: center; 
-  color: white; 
-  padding: 0 20px; 
-  display:flex;
-}
-.slide-1 {
-  background-image: linear-gradient(to right,  rgba(0, 128, 0, 0.673), rgba(0, 128, 0, 0.5)), url('img/photos-courts/kurty1.jpg'); 
-  background-size: cover; 
-  background-position: center; 
-} 
-.slider-pointer {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  z-index: 10;
-  justify-content: space-between;
-  width: 100%;
-  pointer-events: none;
-}
-.left-pointer,
-.right-pointer {
-  pointer-events: all; /* Umožní klikání na tlačítka */
-  background: rgba(0, 0, 0, 0.674);
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-.left-pointer {
-  position: absolute;
-  left: 10px;
-}
-.right-pointer {
-  position: absolute;
-  right: 10px;
-}
-.left-pointer img,
-.right-pointer img {
-  width: 20px;
-  height: 20px;
-  transform: rotate(90deg);
-}
-.right-pointer img {
-  transform: rotate(-90deg);
-}
 
-
-/********* CENÍK ************/
+/********* SEKCE 3 - CENÍK ************/
 .areal-prices {
+  margin: 0 auto;
+  width: 80%;
   max-width: 700px;
 }
 .prices {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -324,18 +261,14 @@ marquee {
   position: relative;
 }
 .prices-header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-  gap: 30px;
+   background-color: white;
   padding: 30px;
   margin: 4px;
   border-radius: 15px;
 }
-.prices-header-text p {
+.prices-header p {
   margin: 0;
+  text-align: center;
 }
 .prices-body {
   height: 355px;
@@ -370,24 +303,24 @@ marquee {
 }
 .rezervation-tel, .rezervation-sys {
   cursor: pointer;
-  background-color: #171717;
-  padding: 20px;
+  background-color: #ffffff;
+  padding: 30px;
   border-radius: 50%;
   transition: all 1s ease;
 }
 .rezervation-tel:hover, .rezervation-sys:hover {
-  background-color: #3e3e3e;
+  scale: 1.1;
 }
 .card-summer {
   width: 100%;
-  background: linear-gradient(rgba(255, 194, 80, 0.8), rgba(219, 176, 143, 0.8)), url(img/sun-bg.png);
+  background: linear-gradient(rgba(219, 176, 143, 0.5), rgba(255, 194, 80, 0.8)), url(img/sun-bg.png);
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat;
 }
 .card-winter {
   width: 100%;
-  background: linear-gradient(rgba(36, 149, 255, 0.85), rgba(36, 200, 255, 0.85)), url(img/snowflake-bg.png);
+   background: linear-gradient(rgba(133, 253, 255, 0.85),rgba(15, 177, 91, 0.85) ), url(img/snowflake-bg.png);
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
@@ -400,7 +333,7 @@ marquee {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 100px;
   transition: all ease 1s;
 }
 .rezervation-alert:hover {

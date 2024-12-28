@@ -58,38 +58,18 @@ window.addEventListener("scroll", function() {
 
 
 
+    //posouvání obrázků
+    const wrapper = document.querySelector('.wrapper');
 
+    function scrollToLeft() {
+        console.log('Scrolling left'); // Debugging log
+        wrapper.scrollBy({ left: -window.innerWidth, behavior: 'smooth' });
+    }
 
-
-
-// areál slider fotek
-const slider = document.querySelector('.slider');
-const slides = document.querySelectorAll('.one-slider');
-let currentSlide = 0;
-
-// Funkce pro posun
-function moveSlide(direction) {
-       console.log("Funguje");
-  const totalSlides = slides.length;
-  currentSlide = (currentSlide + direction + totalSlides) % totalSlides; // Umožní nekonečnou smyčku
-  slider.scrollTo({
-    left: slider.clientWidth * currentSlide,
-    behavior: 'smooth',
-  });
-}
-
-// Přidání event listenerů na tlačítka
-document.querySelector('.left-pointer').addEventListener('click', () => moveSlide(-1));
-document.querySelector('.right-pointer').addEventListener('click', () => moveSlide(1));
-
-
-
-
-
-
-
-
-
+    function scrollToRight() {
+        console.log('Scrolling right'); // Debugging log
+        wrapper.scrollBy({ left: window.innerWidth, behavior: 'smooth' });
+    }
 
 
 
