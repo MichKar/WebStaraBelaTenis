@@ -18,7 +18,7 @@ body {
 }
 
 h2 {
-  font-size: 23px;
+  font-size: 35px;
   width: auto;
   padding-top: 40px;
   text-align: center;
@@ -146,7 +146,7 @@ p {
   position: relative;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .wrapper {
@@ -197,13 +197,33 @@ p {
   position: absolute;
   bottom: 50px;
   left: 150px;
-  color: white;
-  background-color: black;
-  width: 500px;
-  height: 200px;
+  color: rgb(160, 160, 160);
+  background-color: rgba(0, 0, 0, 0.45);
+  /* width: 500px; */
+  /* height: 200px; */
   padding: 50px;
+  user-select: none;
+  border-radius: 15px;
+  line-height: 30px;
 }
 
+.shop-columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* gap: 60px; */
+}
+
+.shop-columns li {
+  font-size: 15px;
+}
+
+.shop-columns img {
+  
+  height: 20px;
+  width: auto;
+
+}
 
 
 .arrow {
@@ -250,7 +270,6 @@ p {
   50% {transform: translateX(-50%) translateY(-20px);}
   100% {transform: translateX(-50%) translateY(0);}
 }
-
 
 marquee {
   padding: 5px;
@@ -370,46 +389,108 @@ marquee {
 
 
 /* Tenisová škola */
-.tenisova-skola p {
+.school-keys {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2px;
+}
+.school-key {
+  background-color: rgb(4, 99, 4); 
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  
+}
+#tennis-school p {
   line-height: 25px;
 }
 
-.tenisova-skola .contact-form {
-  margin-bottom: 30px;
-  margin-top: 20px;
+.school-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+}
+.school-icons button {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 15px 0 10px 0;
+  border-radius: 15px;
+  border: 1px solid grey;
+  align-items: center;
 }
 
+.school-icons button img {
+  width: 50px;
+}
+
+
 /* družstva */
-.druzstva {
+.competitions {
   display: flex;
-  gap: 10% 3%;
   justify-content: center;
   margin-bottom: 20px;
   flex-flow: wrap;
+  gap: 20px;
+  
 }
 
-.druzstvo {
+.competition {
+  background-color: white;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  height: 120px;
+  width: 160px;
+  border: 1px solid rgb(199, 170, 116);
+  font-size: 14px;
+}
+
+.competition > img {
+  width: auto;
+  height: 80%;
+  padding: 10px;
+  padding-top: 15px;
+}
+
+.competition > div {
   display: flex;
   flex-direction: column;
+  align-items: stretch;
+  justify-content: stretch;
+  height: 100%;
+  width: 100%;
 }
 
-.druzstvo > a {
-  color: black;
-  background-color: rgb(248, 186, 31);
-  border-bottom: 1px solid black;
-  border-right: 1px solid black;
-  border-top: 1px solid rgb(121, 121, 121);
-  border-left: 1px solid rgb(121, 121, 121);
-  letter-spacing: 1px;
-  width: 100px;
-  text-align: center;
-  margin: 5px;
-  padding: 6px 16px;
+.competition > div > a {
   text-decoration: none;
-  border-radius: 30px;
-  font-size: 13px;
-  cursor: pointer;
+  color: black;
+  background-color: rgb(199, 170, 116);
+  text-align: center;
+  flex-grow: 1;
+  margin-right: 2px;
+  margin-bottom: 0px;
+  margin-top: 2px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.competition > div > a:hover {
+  background-color: rgb(210, 181, 128);
+  transition: all .5s ease;
+}
+
+.competition > div > a:last-child {
+  margin-bottom: 2px;
+}
+
+
 
 /* Úspěchy TS */
 .uspechy-background {
@@ -425,67 +506,41 @@ marquee {
   background-position: center center;
 }
 
-.tenisove-uspechy {
-  display: flex;
-  gap: 30px;
-  margin-bottom: 30px;
-}
-
-.uspech {
-  width: 450px;
+.success {
+  margin:0 auto;
+  width: 550px;
   height: 210px;
   display: flex;
   background-color: rgb(59, 59, 59);
   color: white;
   box-shadow: 5px 5px 20px rgb(59, 59, 59);
-}
-.uspech-prazdny {
-  width: 450px;
-  height: 210px;
-  display: flex;
-  background-color: none;
-  color: white;
-  box-shadow: none;
+  margin-bottom: 10px;
+  /* flex: 1 1; */
 }
 
-.uspech-foto img {
+.success-photo img {
   height: 100%;
-  cursor: zoom-in;
   width: 200px;
 }
 
-.uspech-foto {
-  transition: scale 0.3s ease-in-out;
+.success-text {
+  padding: 0 20px 20px 20px;
 }
 
-.zoom {
-  scale: 3;
-  z-index: 500;
-}
-
-.zoom img {
-  cursor: zoom-out;
-}
-
-.uspech-text {
-  padding: 20px;
-  padding-top: 0;
-}
-
-.uspech-text .rok {
+.success-text .success-year {
   font-size: 14px;
   letter-spacing: 7px;
   margin-bottom: 12px;
 }
 
-.uspech-text .jmeno {
+.success-text .success-name {
   font-size: 16px;
   font-weight: 600;
   border-bottom: 1px solid rgb(248, 186, 31);
   margin: 7px 0px;
 }
 
-.uspech-text li {
+.success-text li {
   padding-bottom: 7px;
   font-size: 10px;
   font-weight: 100;
