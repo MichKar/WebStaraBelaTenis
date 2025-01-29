@@ -444,11 +444,45 @@ marquee {
   width: 50px;
 }
 
-
-
 .tennis-school-information, .tennis-school-contact {
   display: none;
 }
+.school-contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.tennis-school-contact a {
+  text-decoration: none;
+  color: black;
+  padding: 15px 20px;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 10px;
+}
+.tennis-school-contact a:hover {
+  background-color: rgb(207, 207, 207);
+  border-radius: 15px;
+  
+}
+.tennis-school-contact a img {
+  width: 20px;
+}
+.tennis-school-contact p {
+  text-align: center;
+}
+.ts-more-info {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -458,8 +492,10 @@ marquee {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
   overflow: auto;
 }
+
 .modal-content {
   background-color: white;
   margin: 5% auto;
@@ -470,6 +506,7 @@ marquee {
   border-radius: 10px;
   position: relative;
 }
+
 .close {
   position: absolute;
   top: 10px;
@@ -487,7 +524,6 @@ marquee {
   margin-bottom: 20px;
   flex-flow: wrap;
   gap: 20px;
-  
 }
 
 .competition {
@@ -543,6 +579,7 @@ marquee {
 
 
 
+
 /* Úspěchy TS */
 .uspechy-background {
   background: linear-gradient(
@@ -558,15 +595,50 @@ marquee {
 }
 
 .success {
-  margin:0 auto;
-  width: 550px;
-  height: 210px;
   display: flex;
+  visibility: hidden;
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top; 
+  max-height: 0;
+  transition: all 2s ease; 
+  margin: 0 auto;
+  width: 650px;
+  height: 210px;
   background-color: rgb(59, 59, 59);
   color: white;
   box-shadow: 5px 5px 20px rgb(59, 59, 59);
   margin-bottom: 10px;
-  /* flex: 1 1; */
+}
+
+.success.visible {
+  visibility: visible;
+  opacity: 1;
+  transform: scaleY(1);
+  max-height: 210px;
+  transition: all 2s ease;
+}
+
+#showMoreSuccess {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin: 30px auto;
+  padding: 0 15px;
+  background: rgb(73, 118, 55);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#showMoreSuccess:hover {
+  background: rgb(94, 135, 77);
+}
+
+#showMoreSuccess img {
+  width: 20px;
 }
 
 .success-photo img {
@@ -593,9 +665,13 @@ marquee {
 
 .success-text li {
   padding-bottom: 7px;
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 100;
 }
+
+
+
+
 
 /* trenérský tým */
 .backgr-trainers h3 {

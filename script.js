@@ -98,12 +98,10 @@ function showSection(className) {
 function showModal(modalId) {
         document.getElementById(modalId).style.display = "block";
     }
-    
     // Skrytí modalu
     function closeModal(modalId) {
         document.getElementById(modalId).style.display = "none";
     }
-    
     // Zavření modalu kliknutím mimo obsah
     window.onclick = function(event) {
         let modals = document.querySelectorAll('.modal');
@@ -115,7 +113,27 @@ function showModal(modalId) {
     }
 
 
+
+//TENISOVÉ ÚSPĚCHY - tlačítko více úspěchů
+document.addEventListener("DOMContentLoaded", function () {
+        const successItems = document.querySelectorAll(".success");
+        const showMoreButton = document.getElementById("showMoreSuccess");
+        let visibleCount = 5;
     
+        // Zobrazí se prvních 5 úspěchů
+        for (let i = 0; i < visibleCount; i++) {
+            successItems[i].classList.add("visible");
+        }
+    
+        showMoreButton.addEventListener("click", function () {
+            let hiddenItems = Array.from(successItems).filter(item => !item.classList.contains("visible"));
+            hiddenItems.slice(0, 5).forEach(item => item.classList.add("visible"));
+            if (hiddenItems.length <= 5) {
+                showMoreButton.style.display = "none";
+            }
+        });
+    });
+
 
 // TENISOVÉ SOUSTŘEDĚNÍ - více info po rozkliknutí
 let btnSoustredeni = document.querySelector(".btn-soustredeni");

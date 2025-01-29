@@ -45,7 +45,6 @@
 <main>
 
   <!----- SEKCE 1. AREÁL + AKTUALITY ----->
-
     <section id="section-areal">
 
       <div class="wrapper-with-btns">
@@ -102,18 +101,14 @@
         3 v provozu od 8. 4. 2024. Rezervace spuštěna.</marquee>
         <!-- Rezervace na přetlakovou halu je již spuštěna! V případě příznivého počasí jsou stále k dispozici kurty 1-3 (v tomto případě volejte správcům). -->
       </div>
-
     </section>
 
 
   
-        
-             
-                  
-          
             
+                        
           
-          <!-- SEKCE 2 - ceník kurtů -->
+  <!-- SEKCE 2 - ceník kurtů -->
     <section class="section-bg">
       <div class="areal-prices">
         <h2>Ceník kurtů</h2>
@@ -150,11 +145,11 @@
             </div>
             <div class="prices-body">
                 <p class="price-time">8:00 - 14:00</p>
-                <p>390 Kč/hod.</p>
+                <p>360 Kč/hod.</p>
                 <p class="price-time">14:00 - 20:00</p>
-                <p>440 Kč/hod.</p>
+                <p>490 Kč/hod.</p>
                 <p class="price-time">VÍKENDY 8:00 - 20:00</p>
-                <p>440 Kč/hod.</p>
+                <p>400 Kč/hod.</p>
             </div>
             <div class="rezervation">
               <a class="rezervation-sys" href="https://starabela.rezervujse.cz/StaraBelaServlet/app">
@@ -178,16 +173,8 @@
 
        
       
-      
-    
 
-
-
-
-
-
-
-      <!----- SEKCE 3. TENISOVÁ ŠKOLA ----->
+  <!----- SEKCE 3. TENISOVÁ ŠKOLA ----->
   <section id="tennis-school-bg">
     <div class="container">
       <div class="tennis-school">
@@ -209,11 +196,11 @@
           </a>
 
           <a onclick="showModal('tennisSchoolRulesModal')">
-            <img src="img/icons/insurance.png" alt="dokument" title="organizační řád TŠ">
+            <img src="img/icons/insurance.png" alt="dokument">
             <p>Organizační řád</p>
           </a>
           <a href="https://www.facebook.com/profile.php?id=100057183500794" target="_blank">
-            <img src="img/icons/facebook.png"  alt="facebook" title="Facebook TŠ">
+            <img src="img/icons/facebook.png"  alt="facebook">
             <p>Facebook</p>
           </a>
           <a href="#kontakt" onclick="showSection('tennis-school-contact')">
@@ -223,11 +210,11 @@
         </div>
 
 
-      
-      
+      <!-- TŠ VÍCE INFO PO ROZKLIKNUTÍ -->
+      <div class="ts-more-info">
         <!-- TŠ DRUŽSTVA -->
         <div class="tennis-school-competitions">
-        <p>Naše tenisová škola má aktuálně <strong>tyto družstva </strong> (kliknutím se dostanete na výsledky daných družstev):</p>
+        <p>Naše tenisová škola má v rámci Českého tenisového svazu aktuálně tato družstva (kliknutím se dostanete na výsledky daných družstev):</p>
       
         <div class="competitions">
           
@@ -277,54 +264,83 @@
           <p>Primárním cílem tenisové školy je vychovat co nejvíce mladých tenistů, naučit je lásce k tomuto sportu a vytvořit takové tréninkové podmínky, které zaručí jejich sportovní růst. Ti nejlepší, kteří mají závodní ambice, se mohou stát členem některého z družstev dle věkové kategorie a účastnit se registrovaných soutěží Českého tenisového svazu. </p>
         </div>
 
-       <!-- TŠ ORGANIZAČNÍ ŘÁD -->
+        <!--TŠ KONTAKT -->
+       <div class="tennis-school-contact">
+          <p>Kontaktní osoba tenisové školy:</p>
+          <div class="school-contact">
+            <a><img src="img/icons/user.png" alt="Jiří Priesol">Jiří Priesol</a>
+            <a href="tel:+420604601387"><img src="img/icons/telephone_black.png">604 601 387</a>
+            <a href="mailto:jpriesol@seznam.cz"><img src="img/icons/arroba.png" alt="">jpriesol@seznam.cz</a>
+          </div>
+          
+
+       </div>
+      </div>
+
+        <!-- TŠ ORGANIZAČNÍ ŘÁD -->
         <div id="tennisSchoolRulesModal" class="modal">
-            <div class="modal-content">
-              <span class="close" onclick="closeModal('tennisSchoolRulesModal')">&times;</span>
-          <h2>Organizační řád tenisové školy</h2>
-    
-          <p>Tento organizační řád slouží jako zdroj informací pro hráče naší TENISOVÉ ŠKOLY (dále jen TŠ). V tomto řádu jsou stručně shrnuta fakta a pravidla, kterými se TŠ řídí a platí pro všechny stejně bez výjimky.</p>
-    
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('tennisSchoolRulesModal')">&times;</span>
+          <h3>Organizační řád tenisové školy</h3>
+      
+          <p>Tento organizační řád slouží jako zdroj informací pro hráče naší TENISOVÉ ŠKOLY (dále jen TŠ). V tomto řádu jsou
+            stručně shrnuta fakta a pravidla, kterými se TŠ řídí a platí pro všechny stejně bez výjimky.</p>
+      
           <h4>1. Termíny tenisových tréninků</h4>
-          <p> Termíny tréninků jsou domluveny individuálně. Buď na určité období nebo z týdne na týden popř. z hodiny na hodinu a <strong>jsou pro hráče i trenéra závazné</strong>. V čase tréninku je hráč povinen dostavit se na trénink a to s potřebnou výbavou. Pokud hráč ještě nevlastní raketu, bude mu bezplatně zapůjčena.</p>
-    
+          <p> Termíny tréninků jsou domluveny individuálně. Buď na určité období nebo z týdne na týden popř. z hodiny na
+            hodinu a <strong>jsou pro hráče i trenéra závazné</strong>. V čase tréninku je hráč povinen dostavit se na trénink
+            a to s potřebnou výbavou. Pokud hráč ještě nevlastní raketu, bude mu bezplatně zapůjčena.</p>
+      
           <h4>2. Tenisový trénink</h4>
-          <p> Na hodinu tenisu by se hráč měl dostavit cca 10 minut před jejím zahájením tak, aby se stihnul před začátkem rozcvičit. Jedna tréninková hodina pak zahrnuje cca 55 minut hry a 5 minut času je vyhrazeno na úklid dvorce po tréninku. V případě delších tréninkových jednotek vždy posledních 5 minut náleží úpravě dvorce. </p>
-
+          <p> Na hodinu tenisu by se hráč měl dostavit cca 10 minut před jejím zahájením tak, aby se stihnul před začátkem
+            rozcvičit. Jedna tréninková hodina pak zahrnuje cca 55 minut hry a 5 minut času je vyhrazeno na úklid dvorce po
+            tréninku. V případě delších tréninkových jednotek vždy posledních 5 minut náleží úpravě dvorce. </p>
+      
           <h4>3. Omluva z tréninku</h4>
-          <p> <strong>Omluvit se z naplánované tréninkové hodiny je hráč povinen alespoň 1 den předem</strong>. V opačném případě může být hodina účtována ve stejné výši, jako kdyby se tréninkové hodiny zúčastnil. V zimním období je navíc vždy (pokud se hráč včas neomluví) účtována částka, které je potřebná pro zaplacení pronájmu haly.</p>
-    
+          <p> <strong>Omluvit se z naplánované tréninkové hodiny je hráč povinen alespoň 1 den předem</strong>. V opačném
+            případě může být hodina účtována ve stejné výši, jako kdyby se tréninkové hodiny zúčastnil. V zimním období je
+            navíc vždy (pokud se hráč včas neomluví) účtována částka, které je potřebná pro zaplacení pronájmu haly.</p>
+      
           <h4> 4. Účtování tréninkových hodin </h4>
-          <p>Vyúčtování tenisových tréninků je prováděno dle individuálních potřeb zákazníka, a to buď měsíčně, týdně nebo z tréninku na trénink.
-          Cena zahrnuje: tréninkové hodiny + v zimním období pronájem haly. Tuto částku je pak možno platit hotově v době tréninků nebo bankovním převodem. Aktuální ceník najdete v záložce "Tenisová škola".</p>
-
+          <p>Vyúčtování tenisových tréninků je prováděno dle individuálních potřeb zákazníka, a to buď měsíčně, týdně nebo z
+            tréninku na trénink.
+            Cena zahrnuje: tréninkové hodiny + v zimním období pronájem haly. Tuto částku je pak možno platit hotově v době
+            tréninků nebo bankovním převodem. Aktuální ceník najdete v záložce "Tenisová škola".</p>
+      
           <h4>5. Závodní tenis - turnaje jednotlivců</h4>
-          <p>Svěřenci, kteří již trénují delší dobu a výkonnostně jsou natolik vysoko, že to pro ně má smysl, se pod hlavičkou TJ Sokol Stará Bělá mohou vydat na turnaje jednotlivců, které jsou pořádány jinými oddíly v blízkém či vzdálenějším okolí. Tyto turnaje zaštiťuje Český tenisový svaz (ČTS), u kterého je náš oddíl řádně zaregistrován.</p>
-          <p>Jedinou podmínkou účasti jednotlivce na turnaji je platný registrační průkaz, který vydává ČTS. V případě zájmu a chuti do účasti na těchto oficiálních turnajích bez větších prodlení vyřídíme registraci v oddíle TJ Sokol Stará Bělá a požádáme ČTS o vystavení registračního průkazu. Celá administrativa probíhá elektronicky a lze vyřídit za pár minut.</p>
-    
+          <p>Svěřenci, kteří již trénují delší dobu a výkonnostně jsou natolik vysoko, že to pro ně má smysl, se pod hlavičkou
+            TJ Sokol Stará Bělá mohou vydat na turnaje jednotlivců, které jsou pořádány jinými oddíly v blízkém či
+            vzdálenějším okolí. Tyto turnaje zaštiťuje Český tenisový svaz (ČTS), u kterého je náš oddíl řádně zaregistrován.
+          </p>
+          <p>Jedinou podmínkou účasti jednotlivce na turnaji je platný registrační průkaz, který vydává ČTS. V případě zájmu a
+            chuti do účasti na těchto oficiálních turnajích bez větších prodlení vyřídíme registraci v oddíle TJ Sokol Stará
+            Bělá a požádáme ČTS o vystavení registračního průkazu. Celá administrativa probíhá elektronicky a lze vyřídit za
+            pár minut.</p>
+      
           <h4>6. Závodní tenis - soutěže družstev</h4>
-          <p>Registrace našeho tenisového oddílu u ČTS <strong>umožňuje našim svěřencům v jarních měsících změřit síly s hráči jiných klubů</strong> a to kolektivní formou v soutěžích družstev.</p>
-          <p>Družstva jsou rozdělena do kategorií dle věku dítěte: <strong>minitenis, babytenis, mladší žáci, starší žáci a dorost</strong>.</p>
-    
+          <p>Registrace našeho tenisového oddílu u ČTS <strong>umožňuje našim svěřencům v jarních měsících změřit síly s hráči
+              jiných klubů</strong> a to kolektivní formou v soutěžích družstev.</p>
+          <p>Družstva jsou rozdělena do kategorií dle věku dítěte: <strong>minitenis, babytenis, mladší žáci, starší žáci a
+              dorost</strong>.</p>
+      
           <h4> 7. Rekreační tenis</h4>
-          <p>Naše TŠ se nezabývá jen závodním tenisem. Pro ty, jenž nemají závodní ambice, funguje TŠ víceméně stejně. Poměr rekreačních hráčů k hráčům závodním a přípravce je cca 60:40.</p>
-          <p>TŠ se dále zaměřuje i na <strong>dospělé hráče</strong> a to většinou v individuálních trénincích (po domluvě i skupinových).</p>
-    
+          <p>Naše TŠ se nezabývá jen závodním tenisem. Pro ty, jenž nemají závodní ambice, funguje TŠ víceméně stejně. Poměr
+            rekreačních hráčů k hráčům závodním a přípravce je cca 60:40.</p>
+          <p>TŠ se dále zaměřuje i na <strong>dospělé hráče</strong> a to většinou v individuálních trénincích (po domluvě i
+            skupinových).</p>
+      
           <h4>8. Závěr</h4>
-          <p>Věřím, že tento informační dokument alespoň částečně dopomohl k tomu, abych osvětlil současný stav TŠ a jeho organizační řád.</p>
-          <p>Zároveň si dovoluji upozornit, že body 1 - 4 jsou pro všechny závazné a mají sloužit k zprůhlednění jak organizace hodin, tak i způsobu omluvy z tréninkových hodin a úhrady tréninků. Na základě těchto odstavců jsou jasně stanovena pravidla, kterými se TŠ řídí bez výjimky. Je jen na Vás, zda se rozhodnete se do TŠ začlenit a těmto pravidlům se podřídit nebo třeba zvolíte jiný sport. V každém případě Vám všem přeji hodně sportovních úspěchů. </p>
+          <p>Věřím, že tento informační dokument alespoň částečně dopomohl k tomu, abych osvětlil současný stav TŠ a jeho
+            organizační řád.</p>
+          <p>Zároveň si dovoluji upozornit, že body 1 - 4 jsou pro všechny závazné a mají sloužit k zprůhlednění jak
+            organizace hodin, tak i způsobu omluvy z tréninkových hodin a úhrady tréninků. Na základě těchto odstavců jsou
+            jasně stanovena pravidla, kterými se TŠ řídí bez výjimky. Je jen na Vás, zda se rozhodnete se do TŠ začlenit a
+            těmto pravidlům se podřídit nebo třeba zvolíte jiný sport. V každém případě Vám všem přeji hodně sportovních
+            úspěchů. </p>
           <p>V případě jakýchkoliv nejasností Vám vše rád vysvětlím osobně nebo jakoukoliv jinou formou.</p>
           <p>Za Tenisovou školu Stará Bělá Jirka Priesol</p>
         </div>
         </div>
-
-        <!--TŠ KONTAKT -->
-       <div class="tennis-school-contact">
-          <p>Kontaktní osoba tenisové školy:</p>
-          <p>Jiří Priesol</p>
-          <p>Tel. 604 601 387</p>
-          <p>Mail: jpriesol@seznam.cz</p>
-       </div>
 
       </div>
     </div>
@@ -336,153 +352,152 @@
    <!-- ÚSPĚCHY TENISOVÉ ŠKOLY -->
   <section class="tenisove-uspechy">
     <div class="uspechy-background">
-      <div class="container">
-        <h2>Úspěchy tenisové školy</h2>
-
-          <div class="success">
-            <div class="success-photo">
-              <img src="img/photos-TS/uspechyTS/2024_KP.jpg"></a>
-            </div>
-            <div class="success-text">
-              <p class="success-year">2024</p>
-              <p class="success-name">Kristýna Přikrylová</p>
-              <li>finalistka dvouhry na Halovém mistrovství ČR</li>
-              <li>halová mistryně ČR ve čtyřhře starších žaček</li>
-              <li>92. místo v Evropském žebříčku do 14 let</li>
-            </div>
-          </div>
-          
-          <div class="success">
-            <div class="success-photo">
-              <img src="img/photos-TS/uspechyTS/2023_Babytenis_Sipek_Simon..jpg"></a>
-            </div>
-            <div class="success-text">
-              <p class="success-year">2023</p>
-              <p class="success-name">Šimon Šípek</p>
-              <li>vítěz Severomoravského přeboru jednotlivců v kategorii Babytenis</li>
-              <li>vítěz letní Babolat Tour 2023</li>
-              <li>vítěz 5 turnajů v kategorii Babytenis</li>
-            </div>
-          </div>
-          
-          <div class="success">
-            <div class="success-photo">
-              <img src="img/photos-TS/uspechyTS/2023 Kristýna Přikrylová s pohárem z MČR Starších žaček..jpg"></a>
-            </div>
-            <div class="success-text">
-              <p class="success-year">2023</p>
-              <p class="success-name">Kristýna Přikrylová</p>
-              <li>halová vicemistryně ČR ve čtyřhře starších žaček</li>
-              <li>1. místo v roč. 2010 v Severomoravském kraji (4. v ČR)</li>
-              <li>248. místo v Evropském žebříčku do 14 let</li>
-              <li>vítězka několika celostátních i mezinárodních turnajů</li>
-            </div>
-          </div>
-          
-          <div class="success">
-            <div class="success-photo"><img src="img/photos-TS/uspechyTS/2023_mladsi_zaci..jpg"></div>
-            <div class="success-text">
-              <p class="success-year">2023</p>
-              <p class="success-name">Tým mladších žáků <br></p>
-              <li>vítěz Severomoravského přeboru družstev</li>
-            </div>
-          </div>
-          
-          <div class="success">
-            <div class="success-photo">
-              <img src="img/photos-TS/uspechyTS/2023 Marie Losková..jpg"></a>
-            </div>
-            <div class="success-text">
-              <p class="success-year">2023</p>
-              <p class="success-name">Marie Losková</p>
-              <li>vítězka 4 turnajů v kategorii Mladší žačky</li>
-            </div>
-          </div>
-
-          <div class="success">
-            <div class="success-photo"><img src="img/photos-TS/uspechyTS/2023 babytenis 3 hraci,Šípek,Kovářová,Kvapíková..jpg"
-                alt=""></div>
-            <div class="success-text">
-              <p class="success-year">2023</p>
-              <p class="success-name">Babytenis<br></p>
-              <li>Tereza Kvapíková</li>
-              <li>Gabka Kovářová</li>
-              <li>Šimon Šípek</li>
-              <li>3 naši hráči reprezentovali Severní Moravu na Mistrovství ČR 2023 v kategorii Babytenis</li>
-            </div>
-          </div>
-          
-          <div class="success">
-            <div class="success-photo">
-              <img src="img/photos-TS/uspechyTS/2023 Kryštof Mech..jpg"></a>
-            </div>
-            <div class="success-text">
-              <p class="success-year">2023</p>
-              <p class="success-name">Kryštof Mech</p>
-              <li>celkové 2. místo v letní Babolat Tour v kategorii Minitenis</li>
-            </div>
-          </div>
-
-          <div class="success">
-            <div class="success-photo"><img src="img/photos-TS/uspechyTS/2022_Babytenis..jpg"></div>
-            <div class="success-text">
-              <p class="success-year">2022</p>
-              <p class="success-name">Babytenisový tým <br> (8 - 9 let)</p>
-              <li>vítěz Severomoravského přeboru</li>
-              <li>2. místo v závěrečném turnaji o Mistra Severní Moravy</li>
-            </div>
-          </div>
-          
-          <div class="success">
-            <div class="success-photo">
-              <img src="img/photos-TS/uspechyTS/2022_mladsi_zaci_Kristyna_Prikrylova..jpg"></a>
-            </div>
-            <div class="success-text">
-              <p class="success-year">2022</p>
-              <p class="success-name">Kristýna Přikrylová</p>
-              <li>halová mistryně ČR ve čtyřhře mladších žaček</li>
-              <li>4. místo v celostátním žebříčku mladších žaček</li>
-              <li>vítězka českopolské Friendshiptour 2022</li>
-            </div>
-          </div>
-
-          <div class="success">
-            <div class="success-photo"><img src="img/photos-TS/uspechyTS/2021_Minitenis..jpg"></div>
-            <div class="success-text">
-              <p class="success-year">2021</p>
-              <p class="success-name">Minitenisový tým<br> (6 - 7 let)</p>
-              <li>2. nejlepší tým na Severní Moravě</li>
-            </div>
-          </div>
-          
-          <div class="success">
-            <div class="success-photo"><img src="img/photos-TS/uspechyTS/2021_Babytenis..jpg"></div>
-            <div class="success-text">
-              <p class="success-year">2021</p>
-              <p class="success-name">Babytenisový tým<br> (8 - 9 let)</p>
-              <li>3. nejlepší tým na Severní Moravě</li>
-            </div>
-          </div>
-
-          <div class="success">
-            <div class="success-photo"><img src="img/photos-TS/uspechyTS/2020_Minitenis..jpg"></div>
-            <div class="success-text">
-              <p class="success-year">2020</p>
-              <p class="success-name">Minitenisový tým <br>(6 - 7 let)</p>
-              <li>vítěz Oblastního přeboru</li>
-            </div>
-          </div>
-
-          <div class="success">
-            <div class="success-photo"><img src="img/photos-TS/uspechyTS/2020_Kristyna_Prikrylova..jpg"></div>
-            <div class="success-text">
-              <p class="success-year">2020</p>
-              <p class="success-name">Kristýna Přikrylová</p>
-              <li>vítězka 6 turnajů v kategorii mladší žačky</li>
-            </div>
-          </div>
-       
+  
+      <h2>Úspěchy tenisové školy</h2>
+  
+      <div class="success">
+        <div class="success-photo">
+          <img src="img/photos-TS/uspechyTS/2024_KP.jpg"></a>
+        </div>
+        <div class="success-text">
+          <p class="success-year">2024</p>
+          <p class="success-name">Kristýna Přikrylová</p>
+          <li>finalistka dvouhry na Halovém mistrovství ČR</li>
+          <li>halová mistryně ČR ve čtyřhře starších žaček</li>
+          <li>92. místo v Evropském žebříčku do 14 let</li>
+        </div>
       </div>
+  
+      <div class="success">
+        <div class="success-photo">
+          <img src="img/photos-TS/uspechyTS/2023_Babytenis_Sipek_Simon..jpg"></a>
+        </div>
+        <div class="success-text">
+          <p class="success-year">2023</p>
+          <p class="success-name">Šimon Šípek</p>
+          <li>vítěz Severomoravského přeboru jednotlivců v kategorii Babytenis</li>
+          <li>vítěz letní Babolat Tour 2023</li>
+          <li>vítěz 5 turnajů v kategorii Babytenis</li>
+        </div>
+      </div>
+  
+      <div class="success">
+        <div class="success-photo">
+          <img src="img/photos-TS/uspechyTS/2023 Kristýna Přikrylová s pohárem z MČR Starších žaček..jpg"></a>
+        </div>
+        <div class="success-text">
+          <p class="success-year">2023</p>
+          <p class="success-name">Kristýna Přikrylová</p>
+          <li>halová vicemistryně ČR ve čtyřhře starších žaček</li>
+          <li>1. místo v roč. 2010 v Severomoravském kraji (4. v ČR)</li>
+          <li>248. místo v Evropském žebříčku do 14 let</li>
+          <li>vítězka několika celostátních i mezinárodních turnajů</li>
+        </div>
+      </div>
+  
+      <div class="success">
+        <div class="success-photo"><img src="img/photos-TS/uspechyTS/2023_mladsi_zaci..jpg"></div>
+        <div class="success-text">
+          <p class="success-year">2023</p>
+          <p class="success-name">Tým mladších žáků <br></p>
+          <li>vítěz Severomoravského přeboru družstev</li>
+        </div>
+      </div>
+  
+      <div class="success">
+        <div class="success-photo">
+          <img src="img/photos-TS/uspechyTS/2023 Marie Losková..jpg"></a>
+        </div>
+        <div class="success-text">
+          <p class="success-year">2023</p>
+          <p class="success-name">Marie Losková</p>
+          <li>vítězka 4 turnajů v kategorii Mladší žačky</li>
+        </div>
+      </div>
+  
+      <div class="success">
+        <div class="success-photo"><img src="img/photos-TS/uspechyTS/2023 babytenis 3 hraci,Šípek,Kovářová,Kvapíková..jpg"
+            alt=""></div>
+        <div class="success-text">
+          <p class="success-year">2023</p>
+          <p class="success-name">Babytenis<br></p>
+          <li>Tereza Kvapíková | Gabka Kovářová | Šimon Šípek</li>
+          <li>3 naši hráči reprezentovali Severní Moravu na Mistrovství ČR 2023 v kategorii Babytenis</li>
+        </div>
+      </div>
+  
+      <div class="success">
+        <div class="success-photo">
+          <img src="img/photos-TS/uspechyTS/2023 Kryštof Mech..jpg"></a>
+        </div>
+        <div class="success-text">
+          <p class="success-year">2023</p>
+          <p class="success-name">Kryštof Mech</p>
+          <li>celkové 2. místo v letní Babolat Tour v kategorii Minitenis</li>
+        </div>
+      </div>
+  
+      <div class="success">
+        <div class="success-photo"><img src="img/photos-TS/uspechyTS/2022_Babytenis..jpg"></div>
+        <div class="success-text">
+          <p class="success-year">2022</p>
+          <p class="success-name">Babytenisový tým (8 - 9 let)</p>
+          <li>vítěz Severomoravského přeboru</li>
+          <li>2. místo v závěrečném turnaji o Mistra Severní Moravy</li>
+        </div>
+      </div>
+  
+      <div class="success">
+        <div class="success-photo">
+          <img src="img/photos-TS/uspechyTS/2022_mladsi_zaci_Kristyna_Prikrylova..jpg"></a>
+        </div>
+        <div class="success-text">
+          <p class="success-year">2022</p>
+          <p class="success-name">Kristýna Přikrylová</p>
+          <li>halová mistryně ČR ve čtyřhře mladších žaček</li>
+          <li>4. místo v celostátním žebříčku mladších žaček</li>
+          <li>vítězka českopolské Friendshiptour 2022</li>
+        </div>
+      </div>
+  
+      <div class="success">
+        <div class="success-photo"><img src="img/photos-TS/uspechyTS/2021_Minitenis..jpg"></div>
+        <div class="success-text">
+          <p class="success-year">2021</p>
+          <p class="success-name">Minitenisový tým (6 - 7 let)</p>
+          <li>2. nejlepší tým na Severní Moravě</li>
+        </div>
+      </div>
+  
+      <div class="success">
+        <div class="success-photo"><img src="img/photos-TS/uspechyTS/2021_Babytenis..jpg"></div>
+        <div class="success-text">
+          <p class="success-year">2021</p>
+          <p class="success-name">Babytenisový tým (8 - 9 let)</p>
+          <li>3. nejlepší tým na Severní Moravě</li>
+        </div>
+      </div>
+  
+      <div class="success">
+        <div class="success-photo"><img src="img/photos-TS/uspechyTS/2020_Minitenis..jpg"></div>
+        <div class="success-text">
+          <p class="success-year">2020</p>
+          <p class="success-name">Minitenisový tým (6 - 7 let)</p>
+          <li>vítěz Oblastního přeboru</li>
+        </div>
+      </div>
+  
+      <div class="success">
+        <div class="success-photo"><img src="img/photos-TS/uspechyTS/2020_Kristyna_Prikrylova..jpg"></div>
+        <div class="success-text">
+          <p class="success-year">2020</p>
+          <p class="success-name">Kristýna Přikrylová</p>
+          <li>vítězka 6 turnajů v kategorii mladší žačky</li>
+        </div>
+      </div>
+  
+      <button id="showMoreSuccess" class="btn-arrow"><p>Další úspěchy</p> <img src="img/icons/arrow-down-slim.png"></button>
+  
     </div>
   </section>
 
