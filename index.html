@@ -129,13 +129,15 @@
                 <p>120 Kč/hod.</p>
                 <p class="price-time">13:00 - 20:00</p>
                 <p>160 Kč/hod.</p>
+                <p class="price-time">VÍKENDY 8:00 - 20:00</p>
+                <p>160 Kč/hod.</p>
             </div>
             <div class="rezervation">
               <a class="rezervation-sys" href="https://starabela.rezervujse.cz/StaraBelaServlet/app">
-                <img src="img/icons/calendar-orange.png" width="45px" alt="ikona kalendáře pro rezervaci" title="rezervační systém">
+                <img src="img/icons/calendar-orangeAndGrey.png" alt="ikona kalendáře pro rezervaci" title="rezervační systém">
               </a>
               <a class="rezervation-tel" href="tel:+420737560427">
-                <img src="img/icons/telephone_orange.png" width="45px"
+                <img src="img/icons/telephone_orange.png" 
               alt="ikona telefonu pro rezervaci" title="správce tel. 737560427">
             </a>
             </div>
@@ -156,9 +158,9 @@
             </div>
             <div class="rezervation">
               <a class="rezervation-sys" href="https://starabela.rezervujse.cz/StaraBelaServlet/app">
-               <img src="img/icons/calendar-orange.png" width="45px" alt="ikona kalendáře pro rezervaci" title="rezervační systém">
+               <img src="img/icons/calendar-orangeAndGrey.png" alt="ikona kalendáře pro rezervaci" title="rezervační systém">
               </a>
-              <a class="rezervation-tel" href="tel:+420604601387"><img src="img/icons/telephone_orange.png" width="45px"
+              <a class="rezervation-tel" href="tel:+420604601387"><img src="img/icons/telephone_orange.png" 
                 alt="ikona telefonu pro rezervaci" title="Jirka Priesol 604601387"></a>
             </div>
           </div>
@@ -197,34 +199,34 @@
           <p class="school-key">lekce pro dospělé</p>
         </div>
         <div class="school-icons">
-          <button>
-            <img src="img/icons/information.png" alt="více informací">
-            <p>Informace</p>
-          </button>
-          <button>
+          <a onclick="showSection('tennis-school-competitions')">
             <img src="img/logo/cts.png" alt="český tenisový svaz">
             <p>Družstva</p>
-          </button>
-          <button href="TS-rad.html">
+          </a>
+          <a onclick="showSection('tennis-school-information')">
+            <img src="img/icons/information.png" alt="více informací">
+            <p>Informace</p>
+          </a>
+
+          <a onclick="showModal('tennisSchoolRulesModal')">
             <img src="img/icons/insurance.png" alt="dokument" title="organizační řád TŠ">
-            <p>Organiační řád</p>
-          </button>
-          <button href="https://www.facebook.com/profile.php?id=100057183500794" target="_blank">
+            <p>Organizační řád</p>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=100057183500794" target="_blank">
             <img src="img/icons/facebook.png"  alt="facebook" title="Facebook TŠ">
             <p>Facebook</p>
-          </button>
-          <button>
-            <img src="img/icons/telephone_black.png" alt="">
+          </a>
+          <a href="#kontakt" onclick="showSection('tennis-school-contact')">
+            <img src="img/icons/telephone_black.png"  alt="kontakt TŠ">
             <p>Kontakt</p>
-          </button>
+          </a>
         </div>
 
-        <!--TŠ INFORMACE -->
-        <p>Tenisová škola působí v rámci tenisového oddílu od roku 2002 a soustředí se hlavně na výchovu dětí a mládeže, jak pro závodní, tak i pro rekreační tenis. V rámci tenisové školy nabízíme velmi oblíbené a hojně navštěvované "Lekce pro dospělé".</p>
-        <p>Primárním cílem tenisové školy je vychovat co nejvíce mladých tenistů, naučit je lásce k tomuto sportu a vytvořit takové tréninkové podmínky, které zaručí jejich sportovní růst. Ti nejlepší, kteří mají závodní ambice, se mohou stát členem některého z družstev dle věkové kategorie a účastnit se registrovaných soutěží Českého tenisového svazu. </p>
+
       
       
         <!-- TŠ DRUŽSTVA -->
+        <div class="tennis-school-competitions">
         <p>Naše tenisová škola má aktuálně <strong>tyto družstva </strong> (kliknutím se dostanete na výsledky daných družstev):</p>
       
         <div class="competitions">
@@ -268,7 +270,66 @@
       
         </div>
       </div>
+
+        <!--TŠ INFORMACE -->
+        <div class="tennis-school-information">
+          <p>Tenisová škola působí v rámci tenisového oddílu od roku 2002 a soustředí se hlavně na výchovu dětí a mládeže, jak pro závodní, tak i pro rekreační tenis. V rámci tenisové školy nabízíme velmi oblíbené a hojně navštěvované "Lekce pro dospělé".</p>
+          <p>Primárním cílem tenisové školy je vychovat co nejvíce mladých tenistů, naučit je lásce k tomuto sportu a vytvořit takové tréninkové podmínky, které zaručí jejich sportovní růst. Ti nejlepší, kteří mají závodní ambice, se mohou stát členem některého z družstev dle věkové kategorie a účastnit se registrovaných soutěží Českého tenisového svazu. </p>
+        </div>
+
+       <!-- TŠ ORGANIZAČNÍ ŘÁD -->
+        <div id="tennisSchoolRulesModal" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="closeModal('tennisSchoolRulesModal')">&times;</span>
+          <h2>Organizační řád tenisové školy</h2>
+    
+          <p>Tento organizační řád slouží jako zdroj informací pro hráče naší TENISOVÉ ŠKOLY (dále jen TŠ). V tomto řádu jsou stručně shrnuta fakta a pravidla, kterými se TŠ řídí a platí pro všechny stejně bez výjimky.</p>
+    
+          <h4>1. Termíny tenisových tréninků</h4>
+          <p> Termíny tréninků jsou domluveny individuálně. Buď na určité období nebo z týdne na týden popř. z hodiny na hodinu a <strong>jsou pro hráče i trenéra závazné</strong>. V čase tréninku je hráč povinen dostavit se na trénink a to s potřebnou výbavou. Pokud hráč ještě nevlastní raketu, bude mu bezplatně zapůjčena.</p>
+    
+          <h4>2. Tenisový trénink</h4>
+          <p> Na hodinu tenisu by se hráč měl dostavit cca 10 minut před jejím zahájením tak, aby se stihnul před začátkem rozcvičit. Jedna tréninková hodina pak zahrnuje cca 55 minut hry a 5 minut času je vyhrazeno na úklid dvorce po tréninku. V případě delších tréninkových jednotek vždy posledních 5 minut náleží úpravě dvorce. </p>
+
+          <h4>3. Omluva z tréninku</h4>
+          <p> <strong>Omluvit se z naplánované tréninkové hodiny je hráč povinen alespoň 1 den předem</strong>. V opačném případě může být hodina účtována ve stejné výši, jako kdyby se tréninkové hodiny zúčastnil. V zimním období je navíc vždy (pokud se hráč včas neomluví) účtována částka, které je potřebná pro zaplacení pronájmu haly.</p>
+    
+          <h4> 4. Účtování tréninkových hodin </h4>
+          <p>Vyúčtování tenisových tréninků je prováděno dle individuálních potřeb zákazníka, a to buď měsíčně, týdně nebo z tréninku na trénink.
+          Cena zahrnuje: tréninkové hodiny + v zimním období pronájem haly. Tuto částku je pak možno platit hotově v době tréninků nebo bankovním převodem. Aktuální ceník najdete v záložce "Tenisová škola".</p>
+
+          <h4>5. Závodní tenis - turnaje jednotlivců</h4>
+          <p>Svěřenci, kteří již trénují delší dobu a výkonnostně jsou natolik vysoko, že to pro ně má smysl, se pod hlavičkou TJ Sokol Stará Bělá mohou vydat na turnaje jednotlivců, které jsou pořádány jinými oddíly v blízkém či vzdálenějším okolí. Tyto turnaje zaštiťuje Český tenisový svaz (ČTS), u kterého je náš oddíl řádně zaregistrován.</p>
+          <p>Jedinou podmínkou účasti jednotlivce na turnaji je platný registrační průkaz, který vydává ČTS. V případě zájmu a chuti do účasti na těchto oficiálních turnajích bez větších prodlení vyřídíme registraci v oddíle TJ Sokol Stará Bělá a požádáme ČTS o vystavení registračního průkazu. Celá administrativa probíhá elektronicky a lze vyřídit za pár minut.</p>
+    
+          <h4>6. Závodní tenis - soutěže družstev</h4>
+          <p>Registrace našeho tenisového oddílu u ČTS <strong>umožňuje našim svěřencům v jarních měsících změřit síly s hráči jiných klubů</strong> a to kolektivní formou v soutěžích družstev.</p>
+          <p>Družstva jsou rozdělena do kategorií dle věku dítěte: <strong>minitenis, babytenis, mladší žáci, starší žáci a dorost</strong>.</p>
+    
+          <h4> 7. Rekreační tenis</h4>
+          <p>Naše TŠ se nezabývá jen závodním tenisem. Pro ty, jenž nemají závodní ambice, funguje TŠ víceméně stejně. Poměr rekreačních hráčů k hráčům závodním a přípravce je cca 60:40.</p>
+          <p>TŠ se dále zaměřuje i na <strong>dospělé hráče</strong> a to většinou v individuálních trénincích (po domluvě i skupinových).</p>
+    
+          <h4>8. Závěr</h4>
+          <p>Věřím, že tento informační dokument alespoň částečně dopomohl k tomu, abych osvětlil současný stav TŠ a jeho organizační řád.</p>
+          <p>Zároveň si dovoluji upozornit, že body 1 - 4 jsou pro všechny závazné a mají sloužit k zprůhlednění jak organizace hodin, tak i způsobu omluvy z tréninkových hodin a úhrady tréninků. Na základě těchto odstavců jsou jasně stanovena pravidla, kterými se TŠ řídí bez výjimky. Je jen na Vás, zda se rozhodnete se do TŠ začlenit a těmto pravidlům se podřídit nebo třeba zvolíte jiný sport. V každém případě Vám všem přeji hodně sportovních úspěchů. </p>
+          <p>V případě jakýchkoliv nejasností Vám vše rád vysvětlím osobně nebo jakoukoliv jinou formou.</p>
+          <p>Za Tenisovou školu Stará Bělá Jirka Priesol</p>
+        </div>
+        </div>
+
+        <!--TŠ KONTAKT -->
+       <div class="tennis-school-contact">
+          <p>Kontaktní osoba tenisové školy:</p>
+          <p>Jiří Priesol</p>
+          <p>Tel. 604 601 387</p>
+          <p>Mail: jpriesol@seznam.cz</p>
+       </div>
+
+      </div>
     </div>
+  </div>
+
   </section>
 
 

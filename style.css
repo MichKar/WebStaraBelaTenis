@@ -310,7 +310,7 @@ marquee {
   text-align: center;
 }
 .prices-body {
-  height: 355px;
+  height: 300px;
   padding-bottom: 100px;
 }
 .prices-body p {
@@ -318,7 +318,7 @@ marquee {
 }
 .price-time {
   position: relative;
-  padding-top: 20px; 
+  padding-top: 15px; 
   font-size: 20px;
 }
 .price-time::before {
@@ -343,9 +343,13 @@ marquee {
 .rezervation-tel, .rezervation-sys {
   cursor: pointer;
   background-color: #ffffff;
-  padding: 30px;
+  padding: 25px;
   border-radius: 50%;
   transition: all 1s ease;
+}
+
+.rezervation-tel img, .rezervation-sys img {
+  width: 40px;
 }
 .rezervation-tel:hover, .rezervation-sys:hover {
   scale: 1.1;
@@ -365,7 +369,7 @@ marquee {
   background-repeat: no-repeat; 
 }
 .rezervation-alert {
-  background: linear-gradient(black 90%, rgb(44, 44, 44));
+  background: linear-gradient(rgb(53, 53, 53) 90%, rgb(44, 44, 44));
   border-radius: 15px;
   color: orange;
   display:flex;
@@ -413,20 +417,67 @@ marquee {
   justify-content: center;
   gap: 30px;
 }
-.school-icons button {
+.school-icons a {
+  text-decoration: none;
+  color: black;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   flex: 1;
   padding: 15px 0 10px 0;
   border-radius: 15px;
-  border: 1px solid grey;
+  border: 1px solid rgb(174, 174, 174);
   align-items: center;
+  transition: all .5s ease;
 }
 
-.school-icons button img {
+.school-icons a:hover {
+  background-color: rgba(63, 100, 71, 0.333);
+  transition: all .5s ease;
+}
+.school-icons a:active {
+  background-color: rgba(63, 100, 71, 0.458);
+  transition: all .5s ease;
+}
+
+.school-icons a img {
   width: 50px;
 }
+
+
+
+.tennis-school-information, .tennis-school-contact {
+  display: none;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+}
+.modal-content {
+  background-color: white;
+  margin: 5% auto;
+  padding: 20px;
+  width: 60%;
+  max-height: 80vh;
+  overflow-y: auto;
+  border-radius: 10px;
+  position: relative;
+}
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
 
 
 /* družstva */

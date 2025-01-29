@@ -86,8 +86,36 @@ leftBtn.addEventListener("click", function() {
 
 
 
+// TENISOVÁ ŠKOLA - rozklik tlačítek
+function showSection(className) {
+        document.querySelectorAll('.tennis-school-competitions, .tennis-school-information, .tennis-school-rules, .tennis-school-contact')
+          .forEach(el => el.style.display = 'none');
+        document.querySelector('.' + className).style.display = 'block';
+      }
 
 
+//TENISOVÁ ŠKOLA - MODAL
+function showModal(modalId) {
+        document.getElementById(modalId).style.display = "block";
+    }
+    
+    // Skrytí modalu
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = "none";
+    }
+    
+    // Zavření modalu kliknutím mimo obsah
+    window.onclick = function(event) {
+        let modals = document.querySelectorAll('.modal');
+        modals.forEach(modal => {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    }
+
+
+    
 
 // TENISOVÉ SOUSTŘEDĚNÍ - více info po rozkliknutí
 let btnSoustredeni = document.querySelector(".btn-soustredeni");
