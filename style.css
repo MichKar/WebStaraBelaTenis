@@ -587,7 +587,7 @@ marquee {
       rgba(255, 255, 255, 0.85)
     ),
     url(img/cup4.jpg);
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -601,22 +601,22 @@ marquee {
   transform: scaleY(0);
   transform-origin: top; 
   max-height: 0;
-  transition: all 2s ease; 
   margin: 0 auto;
-  width: 650px;
+  max-width: 650px;
   height: 210px;
   background-color: rgb(59, 59, 59);
   color: white;
   box-shadow: 5px 5px 20px rgb(59, 59, 59);
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 
 .success.visible {
   visibility: visible;
   opacity: 1;
   transform: scaleY(1);
-  max-height: 210px;
-  transition: all 2s ease;
+  max-height: 300px;
+  transition: all 1s ease;
+  margin-bottom: 20px;
 }
 
 #showMoreSuccess {
@@ -644,6 +644,7 @@ marquee {
 .success-photo img {
   height: 100%;
   width: 200px;
+  object-fit: cover;
 }
 
 .success-text {
