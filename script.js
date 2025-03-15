@@ -42,13 +42,10 @@ function closeMenu () {
         menu.style.display = "block";
         navigation.classList.remove("open"); 
 }
-
 // Zavření menu při stisknutí tlačítka Zavřít
 close.addEventListener("click", closeMenu);
-
 // Zavření menu při kliknutí na položku v menu
 navigation.addEventListener("click", closeMenu);
-
 // Zavření menu při scrollování
 window.addEventListener("scroll", function() {
         if (navigation.classList.contains("open")) {
@@ -59,28 +56,47 @@ window.addEventListener("scroll", function() {
 
 
     
-//prolínání úvodních obrázků
-const wrapper = document.querySelector('.wrapper');
-let images = Array.from(wrapper.children);
-const rightBtn = document.querySelector('.right');
-const leftBtn = document.querySelector('.left');
+//AREÁL - ÚVODNÍ FOTO
+let nextBtn = document.querySelector(".next");
+let prevBtn = document.querySelector(".prev");
+let slider = document.querySelector(".slider");
+let sliderList = slider.querySelector(".slider .list");
+let thumbnail = document.querySelector(".thumbnail");
+let thumbnailItems = thumbnail.querySelectorAll(".item");
 
-let currentIndex = 0;
-images[currentIndex].classList.add('active');
+thumbnail.appendChild(thumbnailItems[0]);
 
-// Posun obrázků vpravo
-rightBtn.addEventListener("click", function() {
-    images[currentIndex].classList.remove('active'); 
-    currentIndex = (currentIndex + 1) % images.length;
-    images[currentIndex].classList.add('active'); 
-});
+nextBtn.onclick = function() {
+        moveSlider("next");
+}
+prevBtn.onclick = function() {
+        moveSlider("prev");
+}
 
-// Posun obrázků vlevo
-leftBtn.addEventListener("click", function() {
-        images[currentIndex].classList.remove('active'); 
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        images[currentIndex].classList.add('active'); 
-});
+function moveSlider(direction) {
+        let sliderItems = sliderList.querySelectorAll(".item");
+        let thumbnailItems = document.querySelectorAll(".thumbnail .item");
+       
+        if(direction === "next") {
+        sliderList.appendChild(sliderItems[0]);
+        thumbnail.appendChild(thumbnailItems[0]);
+        slider.classList.add("next");
+       } else {
+        sliderList.prepend(sliderItems[sliderItems.length - 1]);
+        thumbnail.prepend(thumbnailItems[thumbnailItems.length - 1]);
+        slider.classList.add("prev");
+       }
+
+       slider.addEventListener("animationend", function() {
+        if(direction === "next") {
+                slider.classList.remove("next");        
+        } else {
+                slider.classList.remove("prev");
+        }
+       }, {once: true})
+}
+
+
 
 
 
@@ -93,24 +109,23 @@ function showSection(className) {
         document.querySelector('.' + className).style.display = 'block';
       }
 
-
 //TENISOVÁ ŠKOLA - MODAL
 function showModal(modalId) {
         document.getElementById(modalId).style.display = "block";
-    }
-    // Skrytí modalu
-    function closeModal(modalId) {
-        document.getElementById(modalId).style.display = "none";
-    }
-    // Zavření modalu kliknutím mimo obsah
-    window.onclick = function(event) {
+        }
+// Skrytí modalu
+function closeModal(modalId) {
+document.getElementById(modalId).style.display = "none";
+}
+// Zavření modalu kliknutím mimo obsah
+window.onclick = function(event) {
         let modals = document.querySelectorAll('.modal');
         modals.forEach(modal => {
-            if (event.target === modal) {
+                if (event.target === modal) {
                 modal.style.display = "none";
-            }
+                }
         });
-    }
+}
 
 
 
