@@ -98,7 +98,52 @@ function moveSlider(direction) {
 
 
 
+//CENÍK
+let summerPrice = document.querySelector(".prices-header .summer");
+let winterPrice = document.querySelector(".prices-header .winter");
+let summerCard = document.querySelector(".card-summer");
+let winterCard = document.querySelector(".card-winter");
+let originalDisplay = getComputedStyle(winterCard).display;
 
+function toggleSeason(isWinter) {
+        if (isWinter) {
+            summerPrice.classList.remove("active-price-header");
+            winterPrice.classList.add("active-price-header");
+            summerCard.style.opacity = "0";
+            setTimeout(() => {
+                summerCard.style.display = "none";
+                winterCard.style.display = "block";
+                setTimeout(() => {
+                    winterCard.style.opacity = "1";
+                }, 0);
+            }, 0);
+    
+        } else {
+            winterPrice.classList.remove("active-price-header");
+            summerPrice.classList.add("active-price-header");
+            winterCard.style.opacity = "0";
+            setTimeout(() => {
+                winterCard.style.display = "none";
+                summerCard.style.display = "block";
+                setTimeout(() => {
+                    summerCard.style.opacity = "1";
+                }, 0);
+            }, 0);
+        }
+    }
+winterPrice.addEventListener("click", function() { 
+        toggleSeason(true);   
+});
+summerPrice.addEventListener("click", function() { 
+        toggleSeason(false);  
+});
+
+//tlačítko "!" - alert
+let btnAlert = document.querySelector(".btn-alert");
+let rezervationAlertText = document.querySelector(".rezervation-alert");
+btnAlert.addEventListener("click", function() {
+        rezervationAlertText.classList.toggle("alert-active");
+})
 
 
 
@@ -150,44 +195,38 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-// TENISOVÉ SOUSTŘEDĚNÍ - více info po rozkliknutí
-let btnSoustredeni = document.querySelector(".btn-soustredeni");
-let soustredeni3 = document.querySelector(".soustredeni3");
+// // TENISOVÉ SOUSTŘEDĚNÍ - více info po rozkliknutí
+// let btnSoustredeni = document.querySelector(".btn-soustredeni");
+// let soustredeni3 = document.querySelector(".soustredeni3");
 
-btnSoustredeni.addEventListener("click", function(){
-        if (soustredeni3.style.display=="none"){
-        soustredeni3.style.display = "block";
-        btnSoustredeni.innerHTML="Méně informací &#9650";
-        } else if (soustredeni3.style.display=="block"){
-        soustredeni3.style.display = "none";
-        btnSoustredeni.innerHTML="Více informací &#9660";
-        } else {
-        soustredeni3.style.display = "block" ;
-        btnSoustredeni.innerHTML="Méně informací &#9650" ; 
-        }
-});
+// btnSoustredeni.addEventListener("click", function(){
+//         if (soustredeni3.style.display=="none"){
+//         soustredeni3.style.display = "block";
+//         btnSoustredeni.innerHTML="Méně informací &#9650";
+//         } else if (soustredeni3.style.display=="block"){
+//         soustredeni3.style.display = "none";
+//         btnSoustredeni.innerHTML="Více informací &#9660";
+//         } else {
+//         soustredeni3.style.display = "block" ;
+//         btnSoustredeni.innerHTML="Méně informací &#9650" ; 
+//         }
+// });
 
-// TENISOVÝ OBCHOD - kliknutí na btn open nebo Telephone
-let btnOpen = document.querySelector(".btn-open");
-let btnPhone = document.querySelector(".btn-phone");
+// // TENISOVÝ OBCHOD - kliknutí na btn open nebo Telephone
+// let btnOpen = document.querySelector(".btn-open");
+// let btnPhone = document.querySelector(".btn-phone");
 
-btnPhone.addEventListener("click", function(){
-        btnPhone.classList.toggle("active");
-        btnOpen.classList.toggle("active");
-});
+// btnPhone.addEventListener("click", function(){
+//         btnPhone.classList.toggle("active");
+//         btnOpen.classList.toggle("active");
+// });
 
-btnOpen.addEventListener("click", function(){
-        btnPhone.classList.toggle("active");
-        btnOpen.classList.toggle("active");
- });
+// btnOpen.addEventListener("click", function(){
+//         btnPhone.classList.toggle("active");
+//         btnOpen.classList.toggle("active");
+//  });
 
-// kliknutí na úspěch-foto, zvětší se a naopak
-let uspechFoto = document.querySelectorAll(".uspech-foto");
 
-uspechFoto.forEach(function(oneUspech){
-        oneUspech.addEventListener("click", function(){
-                oneUspech.classList.toggle("zoom");
-        })});
 
 
 

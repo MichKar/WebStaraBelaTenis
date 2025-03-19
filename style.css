@@ -22,7 +22,7 @@ body {
 h2 {
   font-size: 35px;
   width: auto;
-  padding-top: 40px;
+  padding-top: 30px;
   text-align: center;
 }
 h2:after {
@@ -149,15 +149,12 @@ p {
 /*********************************
             AREÁL 
 *********************************/
-
 .slider{
   width: 100vw;
   height: 100vh;
   overflow: hidden;
   position: relative;
- 
 }
-
 .slider .list .item {
   width: 100%;
   height: 100%;
@@ -165,14 +162,12 @@ p {
   inset: 0 0 0 0;
   background-color: rgba(0,0,0,0.6);  /*pro tmavší efekt fotek*/
 }
-
 .slider .list .item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   mix-blend-mode: multiply; /*pro tmavší efekt fotek*/
 }
-
 .slider .list .item .content {
   position: absolute;
   top: 20%;
@@ -185,7 +180,6 @@ p {
   color: white;
   text-shadow: 0 5px 10px black;
 }
-
 .slider .list .item .content .title {
   font-size: 5em;
   font-weight: bold;
@@ -199,7 +193,6 @@ p {
 }
 .slider .list .item .content .button {
   margin-top: 20px;
-
 }
 .slider .list .item .content .button button {
   border: none;
@@ -217,7 +210,6 @@ p {
   background-color: rgb(0, 180, 0);
   color: white;
 }
-
 .thumbnail {
   display: flex;
   gap: 20px;
@@ -240,7 +232,6 @@ p {
   border-radius: 20px;
   box-shadow: 5px 0 15px(rgba(0,0,0,0.3));
 }
-
 .nextPrevArrows {
   position: absolute;
   top: 80%;
@@ -264,15 +255,12 @@ p {
   cursor: pointer;
   transition: 0.5s;
 }
-
 .nextPrevArrows button:hover {
   background-color: rgb(0, 180, 0);
 }
-
 .slider .list .item:nth-child(1) {
   z-index: 1;
 }
-
 .slider .list .item:nth-child(1) .content .title,
 .slider .list .item:nth-child(1) .content .description,
 .slider .list .item:nth-child(1) .content .button {
@@ -281,7 +269,6 @@ p {
   opacity: 0;
   animation: showContent 0.5s 1s linear 1 forwards;
 }
-
 @keyframes showContent {
   to{
     transform: translateY(0px);
@@ -289,7 +276,6 @@ p {
     opacity: 1;
   }
 }
-
 .slider .list .item:nth-child(1) .content .title {
   animation-delay: 0.3s;
 }
@@ -299,7 +285,6 @@ p {
 .slider .list .item:nth-child(1) .content .button {
   animation-delay: 0.9s;
 }
-
 /* animace na další tlačítko */
 .slider.next .list .item:nth-child(1) img {
   width: 150px;
@@ -310,7 +295,6 @@ p {
   border-radius: 30px;
   animation: showImage 0.5s linear 1 forwards;
 }
-
 @keyframes showImage {
   to {
     bottom: 0;
@@ -320,7 +304,6 @@ p {
     border-radius: 0;
   }
 }
-
 .slider.next .thumbnail .item:nth-last-child(1) {
   overflow: hidden;
   animation: showThumbnail 0.5s linear 1 forwards;
@@ -328,35 +311,29 @@ p {
 .slider.prev .list .item img {
   z-index: 100;
 }
-
 @keyframes showThumbnail {
   from {
     width: 0;
     opacity: 0;
   }
 }
-
 .slider.next .thumbnail {
   animation: effectNext .5s linear 1 forwards;
 }
-
 @keyframes effectNext {
   from {
     transform: translateX(150px);
   }
 }
-
 .slider.prev .list .item:nth-child(2) {
   z-index: 2;
 }
-
 .slider.prev .list .item:nth-child(2) img {
   position: absolute;
   bottom: 0;
   left: 0;
   animation: outFrame 0.5s linear 1 forwards;
 }
-
 @keyframes outFrame {
   to {
     width: 150px;
@@ -366,19 +343,16 @@ p {
     border-radius: 20px;
   }
 }
-
 .slider.prev .thumbnail .item:nth-child(1) {
   overflow: hidden;
   opacity: 0;
   animation: showThumbnail .5s linear 1 forwards;
 }
-
 .slider.prev .list .item:nth-child(1) .content .title,
 .slider.prev .list .item:nth-child(1) .content .description,
 .slider.prev .list .item:nth-child(1) .content .button {
   animation: contentOut 0.5s 1s linear forwards;
 }
-
 @keyframes contentOut {
   to {
     transform: translateY(-150px);
@@ -386,7 +360,6 @@ p {
     opacity: 0;
   }
 }
-
 @media screen and (max-width: 678px) {
   .slider .list .item .content {
     padding-right: 0;
@@ -398,111 +371,9 @@ p {
 
 
 
-
-
-/* .wrapper-with-btns {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-.wrapper {
-  position: relative;
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  transition: opacity 1s ease;
-}
-
-.wrapper::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)); 
-  pointer-events: none; 
-}
-
-.wrapper::-webkit-scrollbar {
-  display: none;
-}
-
-.wrap {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.wrap.active {
-  opacity: 1;
-}
-
-.wrap img {
-  object-fit: cover;
-  user-select: none;
-  width: 100vw;
-  height: 100vh;
-  z-index: 10;
-}
-
-.wrap .picture-description {
-  z-index: 20;
-  position: absolute;
-  bottom: 50px;
-  left: 150px;
-  color: rgb(160, 160, 160);
-  background-color: rgba(0, 0, 0, 0.45);
-  padding: 50px;
-  user-select: none;
-  border-radius: 15px;
-  line-height: 30px;
-}
-
-.shop-columns {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.shop-columns li {
-  font-size: 15px;
-}
-
-.shop-columns img {
-  height: 20px;
-  width: auto;
-}
-
-.arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: black;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.arrow.right {
-  right: 0px;
-}
-.arrow img {
-  width: 50px;
-  height: auto;
-} */
-
-
-
 /*********************************
           AKTUALITY 
 *********************************/
-
 .news {
   display: none;
   /* display: block; */
@@ -510,6 +381,7 @@ p {
   padding: 0;
   position: absolute;
   top: 70px;
+  z-index: 100;
 }
 .img-arrow-down {
   width: 130px;
@@ -524,7 +396,6 @@ p {
   50% {transform: translateX(-50%) translateY(-20px);}
   100% {transform: translateX(-50%) translateY(0);}
 }
-
 marquee {
   padding: 5px;
   font-weight: 600;
@@ -541,52 +412,142 @@ marquee {
 .areal-prices {
   margin: 0 auto;
   width: 80%;
-  max-width: 700px;
+  max-width: 1000px;
 }
-.prices {
+.prices-cards {
   position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 10%;
+}
+.btn-alert {
+  z-index: 30;
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 8px;
+  bottom: 10px;
+  font-weight: 900;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 5px 5px 20px black;
+  transition: all 0.5s ease;
+  user-select: none;
+}
+.btn-alert:hover {
+  scale: 1.1;
 }
 .prices-card {
   min-width: 300px;
   align-items: center;
-  border-radius: 18px;
+  border-radius: 0 0 18px 18px;
   position: relative;
+  z-index: 10; 
+  box-shadow: 10px 10px 10px rgb(85, 85, 85);
+}
+.card-summer {
+  opacity: 1;
+  display: default;
+  width: 100%;
+  background: linear-gradient(rgb(255, 255, 255), rgba(255, 194, 80, 0.7)), url(img/sun-bg.png);
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+}
+.card-winter {
+  opacity: 0;
+  display:none;
+  width: 100%;
+   background: linear-gradient(rgba(255, 255, 255, 1),rgba(28, 124, 207, 0.7) ), url(img/snowflake-bg.png);
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
 }
 .prices-header {
-   background-color: white;
-  padding: 30px;
-  margin: 4px;
-  border-radius: 15px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-around;
+  }
+  .prices-header .summer,
+  .prices-header .winter {
+    background-color: rgb(208, 208, 208);
+    z-index: 0;
+    padding: 20px;
+    cursor: pointer;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 15px 15px 0 0; 
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+    p {
+      line-height: 10px;
+    }
 }
-.prices-header p {
-  margin: 0;
-  text-align: center;
+.prices-header .summer:hover,
+.prices-header .winter:hover {
+    background-color: rgb(239, 239, 239);
+}
+.active-price-header {
+  z-index: 10 !important; 
+  box-shadow: 10px 10px 10px rgb(85, 85, 85) !important;
+  background-color: white !important;
 }
 .prices-body {
-  height: 300px;
+  z-index: 10;
   padding-bottom: 100px;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  p {
+    text-align: center;
+    line-height: 20px;
+  }
 }
-.prices-body p {
-  text-align: center;
+.prices-text {
+  flex-shrink: 0;
+  padding-left: 50px;
+  padding-right: 30px;
+
+}
+.price {
+  border-bottom: 1px solid rgb(217, 217, 217);
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 5px 40px;
+  box-shadow: 3px 3px 13px rgb(45, 45, 45); 
+}
+.price:hover {
+  background-color: rgba(255, 255, 255, 0);
+}
+.prices-photo {
+  padding: 40px;
+  flex-shrink: 1;
+  overflow: hidden;
+  max-width: 450px;
+  height: 300px;
+  img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 5px 5px 20px;
+  transform: rotate(2deg);
+  }
 }
 .price-time {
   position: relative;
-  padding-top: 15px; 
   font-size: 20px;
-}
-.price-time::before {
-  content: '';
-  position: absolute;
-  top: 0; 
-  left: 50%;
-  width: 120px;
-  height: 1px;  
-  background-color: black; 
-  transform: translateX(-50%); 
 }
 .rezervation {
   display: flex;
@@ -598,49 +559,55 @@ marquee {
   bottom: -40px;
 }
 .rezervation-tel, .rezervation-sys {
+  z-index: 50;
   cursor: pointer;
   background-color: #ffffff;
   padding: 25px;
   border-radius: 50%;
-  transition: all 1s ease;
-}
-.rezervation-tel img, .rezervation-sys img {
-  width: 40px;
+  transition: all 0.5s ease;
+  box-shadow: 5px 5px 20px black;
+  img {
+    width: 40px;
+  }
 }
 .rezervation-tel:hover, .rezervation-sys:hover {
   scale: 1.1;
 }
-.card-summer {
-  width: 100%;
-  background: linear-gradient(rgba(219, 176, 143, 0.5), rgba(255, 194, 80, 0.8)), url(img/sun-bg.png);
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat;
-}
-.card-winter {
-  width: 100%;
-   background: linear-gradient(rgba(133, 253, 255, 0.85),rgba(15, 177, 91, 0.85) ), url(img/snowflake-bg.png);
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat; 
-}
 .rezervation-alert {
   background: linear-gradient(rgb(53, 53, 53) 90%, rgb(44, 44, 44));
   border-radius: 15px;
-  color: orange;
-  display:flex;
+  color: rgb(203, 203, 203);
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-top: 100px;
-  transition: all ease 1s;
+  transition: all 0.7s ease;
+  padding-top: 80px;
+  z-index: 5;
+  transform: translateY(-250px);
+  box-shadow: none;
+  position: relative;
+  visibility: hidden;
+  img {
+    width: auto;
+    height: 100%;
+    max-height: 100px;
+  }
+  p {
+    flex-grow: 1;
+    font-size: 16px;
+    font-weight: 100;
+  }
 }
-.rezervation-alert:hover {
-  color: rgb(255, 255, 255);
+.alert-active {
+  transform: translateY(-50px);
+  box-shadow: 10px 10px 10px rgb(85, 85, 85);
+  visibility: visible;
 }
 .rezervation-alert > * {
   padding: 20px;
 }
+
 
 
 
