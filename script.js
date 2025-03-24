@@ -149,7 +149,7 @@ btnAlert.addEventListener("click", function() {
 
 // TENISOVÁ ŠKOLA - rozklik tlačítek
 function showSection(className) {
-        document.querySelectorAll('.tennis-school-competitions, .tennis-school-information, .tennis-school-rules, .tennis-school-contact')
+        document.querySelectorAll('.tennis-school-competitions, .tennis-school-information, .tennis-school-price, .tennis-school-rules, .tennis-school-contact')
           .forEach(el => el.style.display = 'none');
         document.querySelector('.' + className).style.display = 'block';
       }
@@ -176,13 +176,8 @@ window.onclick = function(event) {
 
 // Tenisové úspěchy - karty
 function showMoreInfo(button) {
-        // Najdeme rodičovskou kartu
         const card = button.closest('.card');
-        
-        // Získáme blok "more-info"
         const moreInfo = card.querySelector('.more-info');
-        
-        // Přepneme zobrazení více informací
         if (moreInfo.style.display === 'none') {
             moreInfo.style.display = 'block';
             button.textContent = 'Zavřít informace';

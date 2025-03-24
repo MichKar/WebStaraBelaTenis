@@ -49,7 +49,6 @@ p {
 .navbar {
   display: flex;
   width: 100%;
-  max-width: 1800px;
   flex-direction: row;
   box-sizing: border-box;
   height: 70px;
@@ -598,13 +597,13 @@ marquee {
     font-weight: 100;
   }
 }
+.rezervation-alert > * {
+  padding: 20px;
+}
 .alert-active {
   transform: translateY(-50px);
   box-shadow: 10px 10px 10px rgb(85, 85, 85);
   visibility: visible;
-}
-.rezervation-alert > * {
-  padding: 20px;
 }
 
 
@@ -634,6 +633,7 @@ marquee {
   flex-direction: row;
   justify-content: center;
   gap: 30px;
+  user-select: none;
  
 }
 .school-icons a {
@@ -648,8 +648,12 @@ marquee {
   border: 1px solid rgba(63, 100, 71, 0.333);
   align-items: center;
   transition: all .5s ease;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), inset 0 0 5px rgba(255, 255, 255, 0.3); /* Vnější a vnitřní stín */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), inset 0 0 5px rgba(255, 255, 255, 0.716);
     transition: all 0.3s ease;
+}
+.school-icons p {
+  text-align: center;
+  padding: 0 10px;
 }
 .school-icons a:hover {
   background-color: rgba(63, 100, 71, 0.333);
@@ -662,8 +666,49 @@ marquee {
 .school-icons a img {
   width: 50px;
 }
-.tennis-school-information, .tennis-school-contact {
+.tennis-school-information,
+.tennis-school-price,
+.tennis-school-contact {
   display: none;
+}
+.ts-price-h {
+  color: #195905;
+  font-weight: 800;
+  font-size: 30px;
+}
+.tennis-school-price p  {
+  text-align: center;
+  padding: 0 5%;
+}
+.ts-prices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.ts-one-price {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 10px;
+  box-shadow: 10px 10px 10px #195905d3;
+  max-width: 500px; 
+  img {
+    height: 40px;
+    width: 40px;
+    padding: 20px;
+    /* flex-shrink: 1; */
+  }
+}
+.ts-one-price:hover {
+  background-color: #1959050a;
+}
+.ts-one-price:last-child {
+  background-color: rgba(128, 128, 128, 0.174);
 }
 .school-contact {
   display: flex;
@@ -746,7 +791,7 @@ marquee {
   width: 160px;
   border: 1px solid rgb(199, 170, 116);
   font-size: 14px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), inset 0 0 5px rgba(255, 255, 255, 0.3); /
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), inset 0 0 5px rgba(255, 255, 255, 0.3);
   transition: all 0.3s ease;
 }
 .competition > img {
@@ -815,7 +860,7 @@ marquee {
   bottom: 100%;
 }
 .success-card:hover .more-info {
-  bottom: 0;
+  bottom: 0px;
 }
 .less-info {
   position: absolute;
@@ -828,10 +873,10 @@ marquee {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.6);
   color: white;
   backdrop-filter: blur(5px);
-  transition: all 0.8s ease;
+  transition: all .8s ease;
   p {
     font-size: 11px;
     letter-spacing: 2px;
@@ -849,11 +894,11 @@ marquee {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.6);
   color: white;
   padding: 5% 10% 0 10%;
   backdrop-filter: blur(5px);
-  transition: all 0.8s ease;
+  transition: all .8s ease;
   .success-name {
     color: orange;
     font-weight: 700;
@@ -879,21 +924,28 @@ marquee {
     border-bottom: 0px;
     }
 }
-
-.special-card-green {
-  background-color: green;
+.special-card {
   height: 100%;
   width: 100%;
   color: white;
-  
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center; 
+  height: 100%;
   p {
     text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     padding: 10px;
     margin: 0;
     font-size: 20px;
     line-height: 100%;
   }
 }
+.special-card.green-card {
+  background-color: rgb(4, 99, 4);
+}
+
 
 
 

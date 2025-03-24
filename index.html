@@ -276,24 +276,32 @@
         </div>
         <div class="school-icons">
           <a onclick="showSection('tennis-school-competitions')">
-            <img src="img/logo/cts.png" alt="český tenisový svaz">
+            <img src="img/logo/cts.png" alt="družstva dle ČTS">
             <p>Družstva</p>
           </a>
+
           <a onclick="showSection('tennis-school-information')">
             <img src="img/icons/information.png" alt="více informací">
             <p>Informace</p>
+          </a>
+
+          <a onclick="showSection('tennis-school-price')">
+            <img src="img/icons/tag2.png" alt="ceník tréninků">
+            <p>Ceník tréninků</p>
           </a>
 
           <a onclick="showModal('tennisSchoolRulesModal')">
             <img src="img/icons/insurance.png" alt="dokument">
             <p>Organizační řád</p>
           </a>
+
           <a href="https://www.facebook.com/profile.php?id=100057183500794" target="_blank">
             <img src="img/icons/facebook.png" alt="facebook">
             <p>Facebook</p>
           </a>
+
           <a href="#kontakt" onclick="showSection('tennis-school-contact')">
-            <img src="img/icons/telephone_black.png" alt="kontakt TŠ">
+            <img src="img/icons/contact-us.png" alt="kontakt TŠ">
             <p>Kontakt</p>
           </a>
         </div>
@@ -365,6 +373,38 @@
               soutěží Českého tenisového svazu. </p>
           </div>
 
+          <!--TŠ CENÍK -->
+          <div class="tennis-school-price container">
+            <p class="ts-price-h">Ceník tréninkových jednotek</p>
+            <div class="ts-prices">
+              <div class="ts-one-price">
+                <img src="img/icons/1per.png">
+                <p>1&nbsp;hráč na&nbsp;1&nbsp;kurtu</p>
+                <p>440&nbsp;Kč/hod/ za&nbsp;1&nbsp;hráče</p>
+              </div>
+              <div class="ts-one-price">
+                <img src="img/icons/2per.png">
+                <p>2&nbsp;hráči na&nbsp;1&nbsp;kurtu</p>
+                <p>230&nbsp;Kč/hod/ za&nbsp;1&nbsp;hráče</p>
+              </div>
+              <div class="ts-one-price">
+                <img src="img/icons/3per.png">
+                <p>3&nbsp;hráči na&nbsp;1&nbsp;kurtu</p>
+                <p>160&nbsp;Kč/hod/ za&nbsp;1&nbsp;hráče</p>
+              </div>
+              <div class="ts-one-price">
+                <img src="img/icons/4per.png">
+                <p>4&nbsp;hráči na&nbsp;1&nbsp;kurtu</p>
+                <p>130&nbsp;Kč/hod/ za&nbsp;1&nbsp;hráče</p>
+              </div>
+              <div class="ts-one-price">
+                <p>Cena je vždy za 1 tréninkovou jednotku (60minut) a zahrnuje i pronájem kurtu - neplatí pro zimní sezónu!</p>
+              </div>
+            </div>
+            
+          
+          </div>
+
           <!--TŠ KONTAKT -->
           <div class="tennis-school-contact">
             <p>Kontaktní osoba tenisové školy:</p>
@@ -373,8 +413,6 @@
               <a href="tel:+420604601387"><img src="img/icons/telephone_black.png">604 601 387</a>
               <a href="mailto:jpriesol@seznam.cz"><img src="img/icons/arroba.png" alt="">jpriesol@seznam.cz</a>
             </div>
-
-
           </div>
         </div>
 
@@ -503,6 +541,10 @@
         </div>
 
         <div class="success-card">
+          <img src="img/cup2.jpg">
+        </div>
+
+        <div class="success-card">
           <img src="img/photos-TS/uspechyTS/2024_KristynaPrikrylova.jpg">
             <div class="less-info">
             <p>Starší žáci</p>
@@ -528,10 +570,6 @@
               <P>vítěz letní Babolat Tour 2023</P>
               <P>vítěz 5 turnajů v kategorii Babytenis</P>
             </div>
-        </div>
-
-        <div class="success-card">
-          <img src="img/cup2.jpg">
         </div>
 
         <div class="success-card">
@@ -588,16 +626,10 @@
         </div>
 
         <div class="success-card">
-          <div class="special-card-green">
+          <div class="special-card green-card">
             <p>NAŠE</p>
             <p>ÚSPĚCHY</p>
-
           </div>
-            
-         
-           
-            
-
         </div>
 
         <div class="success-card">
@@ -665,7 +697,7 @@
             </div>
         </div>
 
-        <div class="success-card">
+        <!-- <div class="success-card">
           <img src="img/photos-TS/uspechyTS/2020_Minitenis.jpg">
             <div class="less-info">
             <p>Minitenis</p>
@@ -675,9 +707,9 @@
               <p class="success-name">MINITENISOVÝ TÝM<br>(6 - 7 let)</p>
               <p>vítěz Oblastního přeboru</p>
             </div>
-        </div>
+        </div> -->
 
-        <div class="success-card">
+        <!-- <div class="success-card">
           <img src="img/photos-TS/uspechyTS/2020_KristynaPrikrylova.jpg">
             <div class="less-info">
             <p>Mladší žáci</p>
@@ -687,22 +719,13 @@
               <p class="success-name">KRISTÝNA PŘIKRYLOVÁ</p>
               <p>vítězka 6 turnajů v kategorii mladší žačky</p>
             </div>
-        </div>
+        </div> -->
 
       </div>
   </section>
 
 
-  <!------------- CENÍK TENISOVÉ ŠKOLY ---------------->
-  <!-- 
-        <p>Ceník tréninkových jednotek
-      
-        1 hráč           440 Kč/hod/za 1 hráče
-         2 hráči          230 Kč/hod/za 1 hráče
-        3 hráči         160 Kč/hod/za 1 hráče
-        4 hráči         130 Kč/hod/za 1 hráče
-        Cena je vždy za 1 tréninkovou jednotku (60 minut) a zahrnuje i pronájem kurtu<br>(neplatí pro zimní sezónu).
-        -->
+
 
   <!------------ TÝM TENISOVÉ ŠKOLY ------------------->
   <section class="tym">
