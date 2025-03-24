@@ -174,57 +174,23 @@ window.onclick = function(event) {
 
 
 
-//TENISOVÉ ÚSPĚCHY - tlačítko více úspěchů
-document.addEventListener("DOMContentLoaded", function () {
-        const successItems = document.querySelectorAll(".success");
-        const showMoreButton = document.getElementById("showMoreSuccess");
-        let visibleCount = 5;
-    
-        // Zobrazí se prvních 5 úspěchů
-        for (let i = 0; i < visibleCount; i++) {
-            successItems[i].classList.add("visible");
+// Tenisové úspěchy - karty
+function showMoreInfo(button) {
+        // Najdeme rodičovskou kartu
+        const card = button.closest('.card');
+        
+        // Získáme blok "more-info"
+        const moreInfo = card.querySelector('.more-info');
+        
+        // Přepneme zobrazení více informací
+        if (moreInfo.style.display === 'none') {
+            moreInfo.style.display = 'block';
+            button.textContent = 'Zavřít informace';
+        } else {
+            moreInfo.style.display = 'none';
+            button.textContent = 'Více informací';
         }
-    
-        showMoreButton.addEventListener("click", function () {
-            let hiddenItems = Array.from(successItems).filter(item => !item.classList.contains("visible"));
-            hiddenItems.slice(0, 5).forEach(item => item.classList.add("visible"));
-            if (hiddenItems.length <= 5) {
-                showMoreButton.style.display = "none";
-            }
-        });
-    });
-
-
-// // TENISOVÉ SOUSTŘEDĚNÍ - více info po rozkliknutí
-// let btnSoustredeni = document.querySelector(".btn-soustredeni");
-// let soustredeni3 = document.querySelector(".soustredeni3");
-
-// btnSoustredeni.addEventListener("click", function(){
-//         if (soustredeni3.style.display=="none"){
-//         soustredeni3.style.display = "block";
-//         btnSoustredeni.innerHTML="Méně informací &#9650";
-//         } else if (soustredeni3.style.display=="block"){
-//         soustredeni3.style.display = "none";
-//         btnSoustredeni.innerHTML="Více informací &#9660";
-//         } else {
-//         soustredeni3.style.display = "block" ;
-//         btnSoustredeni.innerHTML="Méně informací &#9650" ; 
-//         }
-// });
-
-// // TENISOVÝ OBCHOD - kliknutí na btn open nebo Telephone
-// let btnOpen = document.querySelector(".btn-open");
-// let btnPhone = document.querySelector(".btn-phone");
-
-// btnPhone.addEventListener("click", function(){
-//         btnPhone.classList.toggle("active");
-//         btnOpen.classList.toggle("active");
-// });
-
-// btnOpen.addEventListener("click", function(){
-//         btnPhone.classList.toggle("active");
-//         btnOpen.classList.toggle("active");
-//  });
+    }
 
 
 
