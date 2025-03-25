@@ -142,7 +142,7 @@ summerPrice.addEventListener("click", function() {
 let btnAlert = document.querySelector(".btn-alert");
 let rezervationAlertText = document.querySelector(".rezervation-alert");
 btnAlert.addEventListener("click", function() {
-        rezervationAlertText.classList.toggle("alert-active");
+        rezervationAlertText.classList.toggle("alert-active");    
 })
 
 

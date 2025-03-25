@@ -22,7 +22,7 @@ body {
 h2 {
   font-size: 35px;
   width: auto;
-  padding-top: 30px;
+  padding-top: 70px;
   text-align: center;
 }
 h2:after {
@@ -243,8 +243,8 @@ p {
   align-items: center;
 }
 .nextPrevArrows button {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background-color: green;
   border: none;
@@ -470,9 +470,9 @@ marquee {
   }
   .prices-header .summer,
   .prices-header .winter {
-    background-color: rgb(208, 208, 208);
+    background-color: none;
     z-index: 0;
-    padding: 20px;
+    padding: 10px;
     cursor: pointer;
     width: 100%;
     outline: none;
@@ -487,11 +487,15 @@ marquee {
     flex-wrap: wrap;
     p {
       line-height: 10px;
+      text-align: center;
+    }
+    img {
+      width: 70px;
     }
 }
 .prices-header .summer:hover,
 .prices-header .winter:hover {
-    background-color: rgb(239, 239, 239);
+    background-color: rgb(255, 255, 255);
 }
 .active-price-header {
   z-index: 10 !important; 
@@ -500,8 +504,8 @@ marquee {
 }
 .prices-body {
   z-index: 10;
-  padding-bottom: 100px;
-  padding-top: 60px;
+  padding-bottom: 70px;
+  padding-top: 30px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -510,12 +514,12 @@ marquee {
   position: relative;
   p {
     text-align: center;
-    line-height: 20px;
+    line-height: 10px;
   }
 }
 .prices-text {
   flex-shrink: 0;
-  padding-left: 50px;
+  padding-left: 30px;
   padding-right: 30px;
 }
 .price {
@@ -533,8 +537,9 @@ marquee {
   padding: 40px;
   flex-shrink: 1;
   overflow: hidden;
-  max-width: 450px;
-  height: 300px;
+  max-width: 400px;
+  height: 280px;
+  flex-shrink: 1;
   img {
   max-width: 100%;
   height: 100%;
@@ -582,10 +587,10 @@ marquee {
   transition: all 0.7s ease;
   padding-top: 80px;
   z-index: 5;
-  transform: translateY(-250px);
+  transform: translateY(-300px);
   box-shadow: none;
-  position: relative;
   visibility: hidden;
+  margin-bottom: -160px;
   img {
     width: auto;
     height: 100%;
@@ -604,6 +609,7 @@ marquee {
   transform: translateY(-50px);
   box-shadow: 10px 10px 10px rgb(85, 85, 85);
   visibility: visible;
+  margin-bottom: 0;
 }
 
 
@@ -613,6 +619,10 @@ marquee {
 /*********************************
           TENISOVÁ ŠKOLA 
 *********************************/
+#tennis-school-bg {
+  background: linear-gradient(to bottom, #195905cb, #195905), 
+            url(img/bg2.jpg) no-repeat center center / cover;
+}
 .school-keys {
   display: flex;
   flex-direction: row;
@@ -620,13 +630,10 @@ marquee {
   gap: 2px;
 }
 .school-key {
-  background-color: rgb(4, 99, 4); 
+  background-color: black; 
   color: white;
   padding-left: 10px;
   padding-right: 10px;
-}
-#tennis-school p {
-  line-height: 25px;
 }
 .school-icons {
   display: flex;
@@ -634,45 +641,54 @@ marquee {
   justify-content: center;
   gap: 30px;
   user-select: none;
- 
-}
-.school-icons a {
-  text-decoration: none;
-  color: black;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  padding: 15px 0 10px 0;
-  border-radius: 15px;
-  border: 1px solid rgba(63, 100, 71, 0.333);
-  align-items: center;
-  transition: all .5s ease;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), inset 0 0 5px rgba(255, 255, 255, 0.716);
+  a {
+    text-decoration: none;
+    background-color: rgba(227, 227, 227, 0.9);
+    color: black;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 15px 0 10px 0;
+    border-radius: 15px;
+    border: 1px solid rgba(63, 100, 71, 0.333);
+    align-items: center;
+    transition: all .5s ease;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), inset 0 0 5px rgba(255, 255, 255, 0.716);
     transition: all 0.3s ease;
+  }
+  img {
+    width: 50px;
+  }
+}
+.school-icons a:hover,
+.school-icons a:active {
+  background-color: rgba(227, 227, 227, 0.5);
+  transition: all .5s ease;
+}
+.school-icons > * {
+  flex: 1 1 200px;
+  max-width: 300px;
 }
 .school-icons p {
   text-align: center;
   padding: 0 10px;
 }
-.school-icons a:hover {
-  background-color: rgba(63, 100, 71, 0.333);
-  transition: all .5s ease;
-}
-.school-icons a:active {
-  background-color: rgba(63, 100, 71, 0.458);
-  transition: all .5s ease;
-}
-.school-icons a img {
-  width: 50px;
+.tennis-school-competitions p,
+.tennis-school-information p {
+  color: white;
+  font-weight: 100;
+  line-height: 2;
+  letter-spacing: 0.5px;
 }
 .tennis-school-information,
 .tennis-school-price,
 .tennis-school-contact {
   display: none;
+
 }
 .ts-price-h {
-  color: #195905;
+  color: white;
   font-weight: 800;
   font-size: 30px;
 }
@@ -688,7 +704,7 @@ marquee {
   gap: 10px;
 }
 .ts-one-price {
-  background-color: white;
+  background-color: #F2F2F2;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -701,14 +717,13 @@ marquee {
     height: 40px;
     width: 40px;
     padding: 20px;
-    /* flex-shrink: 1; */
   }
 }
 .ts-one-price:hover {
-  background-color: #1959050a;
+  background-color: #adadad;
 }
 .ts-one-price:last-child {
-  background-color: rgba(128, 128, 128, 0.174);
+  background-color: #adadad;
 }
 .school-contact {
   display: flex;
@@ -717,7 +732,7 @@ marquee {
 }
 .tennis-school-contact a {
   text-decoration: none;
-  color: black;
+  color: white;
   padding: 15px 20px;
   display:flex;
   flex-direction: row;
@@ -727,7 +742,7 @@ marquee {
   gap: 10px;
 }
 .tennis-school-contact a:hover {
-  background-color: rgb(207, 207, 207);
+  background-color: rgba(32, 32, 32, 0.5);
   border-radius: 15px;
 }
 .tennis-school-contact a img {
@@ -735,6 +750,8 @@ marquee {
 }
 .tennis-school-contact p {
   text-align: center;
+  color: white;
+  letter-spacing: 0.5px;
 }
 .ts-more-info {
   max-width: 900px;
@@ -811,7 +828,7 @@ marquee {
 .competition > div > a {
   text-decoration: none;
   color: black;
-  background-color: rgb(199, 170, 116);
+  background-color: #F29F05;
   text-align: center;
   flex-grow: 1;
   margin-right: 2px;
@@ -823,7 +840,7 @@ marquee {
   justify-content: center;
 }
 .competition > div > a:hover {
-  background-color: rgb(207, 186, 147);
+  background-color: #f29f0529;
   transition: all .5s ease;
 }
 .competition > div > a:last-child {
@@ -868,7 +885,7 @@ marquee {
   padding: 10px;
   box-sizing: border-box;
   width: 100%;
-  height: 50px;
+  height: 40px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -910,6 +927,8 @@ marquee {
     margin: 0;
     text-align: center;
     padding-top: 7px;
+    font-weight: 100;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   p::after {
     content: "";
@@ -982,8 +1001,7 @@ marquee {
 .trainer-info {
   width: 100%;
   height: 100%;
-  top: 0;
-  right: -100%;
+  bottom: -100%;
   position: absolute;
   background: #ffffff8f;
   backdrop-filter: blur(5px);
@@ -993,7 +1011,7 @@ marquee {
   margin: 15px 0;
 }
 .trainer:hover .trainer-info {
-  right: 0;
+  bottom: 0;
   visibility: visible;
 }
 .trainer-info p {
@@ -1021,98 +1039,105 @@ marquee {
   color: white;
 }
 
+
 /*********************************
            KONTAKTY 
 *********************************/
 .kontakt-backgr {
-  background-color: white;
-}
-.kontakt h1 {
-  margin-bottom: 0;
-}
-.kontakt h2 {
-  padding-top: 0px;
-  margin-top: 10px;
+  background-color: #F2F2F2;
 }
 .contact-box {
-  max-width: 100%;
-  display: grid;
-  grid-template-columns: 40% 60%;
-  color: black;
-  padding-top: 20px;
-  padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  background: linear-gradient(to bottom,  #F28705,#f2870552);
+  padding: 40px 0;
+  a {
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+  }
+  img {
+    width: 20px;
+    height: 20px;
+    object-fit:contain;
+  }
 }
-.div1 {
-  padding: 15px 40px 15px 40px;
-}
-.div1 p {
-  font-size: 13px;
-}
-.address {
-  height: 80px;
-}
-.address img {
-  width: 40px;
-  height: 40px;
-}
-.address p {
-  margin-left: 35px;
-  margin-top: 0;
-}
-.ts {
-  font-size: 17px;
+.contact-div1 {
+  padding: 40px;
+  width: auto;
+  min-width: 300px;
+  max-width: 40%; 
 }
 .contact-form {
-  margin-bottom: 7px;
+  display: flex;
+  flex-direction: row;
+  justify-content:left;
+  gap: 10px;
+  align-items: center;
+  img {
+    padding-left: 10px;
+  }
 }
-.contact-form img {
-  width: 23px;
-  height: 23px;
-  float: left;
-}
-.contact-form a {
-  margin: 0 0 0 10px;
-  font-size: 13px;
-  color: black;
-  text-decoration: none;
-}
-.contact-form a:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-.kontakt-leto {
-  /* background: linear-gradient(rgb(248, 186, 31),rgb(255, 241, 207));  -- EFEKTY */
-  /* animation: spravce .8s infinite;  -- EFEKTY*/
-  background-color: rgb(255, 241, 207);
+.contact-form.address,
+.contact-form.mail,
+.contact-summer,
+.contact-winter,
+.contact-ts {
+  background-color: #ffffffdd;
+  border-radius: 15px;
+  box-shadow: 10px 10px 10px rgb(85, 85, 85);
   padding: 10px;
-  border: 1px solid rgb(192, 192, 192);
-  margin-top: 30px;
+  margin-bottom: 20px;
 }
-@keyframes spravce {
-  0% {background: rgb(255, 241, 207);}
-  50% {background: rgb(255, 206, 91);}
-  100% {background: rgb(255, 241, 207);}
+.contact-ts {
+  margin-bottom: 0;
 }
-.kontakt-zima {
-  background-color: rgb(224, 234, 255);
-  padding: 10px;
-  border: 1px solid rgb(192, 192, 192);
-  margin-top: 30px;
+.address img {
+  margin-top: -90px;
 }
-.kontakt-ts {
-  background-color: #ececec;
-  padding: 10px;
-  border: 1px solid rgb(192, 192, 192);
-  margin-top: 30px;
-  margin-bottom: 50px;
+.contact-summer p,
+.contact-winter p,
+.contact-ts p {
+  font-weight: 800;
+  text-align: center;
+  font-size: 16px;
 }
-.div2 {
-  overflow: hidden;
-  height: 627px;
+.contact-form.mail a,
+.contact-form.phone a,
+.contact-ts a {
+  line-height: 40px;
+  padding-left: 10px;
 }
-.map {
+.contact-form.mail a:hover,
+.contact-form.phone a:hover,
+.contact-ts a:hover {
+  background-color: rgb(209, 209, 209);
+  border-radius: 10px;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+.contact-div2 {
+  height: auto;
+  flex-grow: 1;
+  width: 100%;
+  padding: 40px;
+}
+.contact-div2 .map {
   height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 10px 10px 10px rgb(85, 85, 85);
 }
+
+
+
+
+
 
 /*********************************
             PATIČKA 
