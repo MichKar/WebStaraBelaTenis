@@ -47,11 +47,3 @@
         z-index: 100;
     }
 }
-
-@media only screen and (max-width: 500px){
-    .section-areal {
-        padding: 0px;
-    }
-
- 
-}
