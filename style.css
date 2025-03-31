@@ -33,7 +33,7 @@ body {
   padding-right: 15px;
 }
 h2 {
-  padding-top: 70px;
+  padding-top: 90px;
   text-align: center;
   font-size: clamp(2em, 5vw, 4em);
   text-transform: uppercase;
@@ -420,6 +420,7 @@ marquee {
   margin: 0 auto;
   width: 80%;
   max-width: 1000px;
+  padding-bottom: 100px;
 }
 .prices-cards {
   position: relative;
@@ -456,7 +457,7 @@ marquee {
   opacity: 1;
   display: default;
   width: 100%;
-  background: linear-gradient(#ffffff, #ffc250b3), url(img/sun-bg.png);
+  background: linear-gradient(#ffffff, #ffc250b3), url(img/bg/sun-bg.png);
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat;
@@ -465,7 +466,7 @@ marquee {
   opacity: 0;
   display:none;
   width: 100%;
-   background: linear-gradient(#ffffff,#1c7ccfb3 ), url(img/snowflake-bg.png);
+   background: linear-gradient(#ffffff,#1c7ccfb3 ), url(img/bg/snowflake-bg.png);
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
@@ -626,7 +627,8 @@ marquee {
 *********************************/
 #tennis-school-bg {
   background: linear-gradient(to bottom, #195905cb, #195905), 
-            url(img/bg2.jpg) no-repeat center center / cover;
+            url(img/bg/bg-racket.jpg) no-repeat center center / cover;
+  padding-bottom: 100px;
 }
 .tennis-school h2 {
   color: var(--white);
@@ -806,7 +808,6 @@ marquee {
 .competitions {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
   flex-flow: wrap;
   gap: 20px;
 }
@@ -872,6 +873,7 @@ marquee {
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
   margin: 20px;
+  padding-bottom: 100px;
 }
 .success-card {
   position: relative;
@@ -986,7 +988,7 @@ marquee {
 *********************************/
 .trainers-bg {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(img/court-ballon.jpg);
+    url(img/bg/bg-court.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -1002,7 +1004,7 @@ marquee {
 .trainers {
   display: flex;
   justify-content: center;
-  padding: 50px 0;
+  padding: 50px 0 150px 0;
 }
 .trainer {
   height: 310px;
@@ -1053,7 +1055,14 @@ marquee {
            KONTAKTY 
 *********************************/
 #contact-bg {
-  background: linear-gradient(to bottom,  #F28705,#f2870552);
+  background: linear-gradient(#f28705ae, #f2870592),
+    url(img/bg/bg-net.jpg);
+    h2 {
+      margin-top: 0;
+      text-shadow: 
+      0 0 5px var(--white),
+      3px 3px 4px var(--white);
+    }
 }
 .contact-box {
   display: flex;
@@ -1063,6 +1072,7 @@ marquee {
   width: 100%;
   max-width: 1080px;
   margin: 0 auto;
+  padding-bottom: 100px;
   a {
     font-size: 14px;
     text-decoration: none;
@@ -1097,7 +1107,7 @@ marquee {
 .contact-ts {
   background-color: #ffffffae;
   border-radius: 15px;
-  box-shadow: 10px 10px 10px rgb(85, 85, 85);
+  box-shadow: 10px 10px 10px rgb(42, 42, 42);
   padding: 10px;
   margin-bottom: 20px;
 }
@@ -1126,7 +1136,7 @@ marquee {
 .contact-form.mail a:hover,
 .contact-form.phone a:hover,
 .contact-ts a:hover {
-  background-color: rgb(209, 209, 209);
+  background-color: #f28705ae;
   border-radius: 10px;
   width: 100%;
   transition: all 0.5s ease;
@@ -1141,7 +1151,7 @@ marquee {
   height: 100%;
   width: 100%;
   border-radius: 15px;
-  box-shadow: 10px 10px 10px rgb(85, 85, 85);
+  box-shadow: 10px 10px 10px rgb(42, 42, 42);
 }
 
 
