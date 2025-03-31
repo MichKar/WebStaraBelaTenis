@@ -75,10 +75,11 @@
               V&nbsp;areálu si můžeš přijít i odpočinout. Máme tady příjemné venkovní posezení s&nbsp;občerstvením.
             </div>
             <div class="button">
-              <button>Více info</button>
-            </div>
+              <button onclick="showModal('refreshmentModal')">Více info</button>
+            </div>            
           </div>
         </div>
+
 
         <div class="item">
           <img src="img/photos/shop/shop1.jpg" alt="">
@@ -87,17 +88,11 @@
             <div class="description">
              Praskl ti výplet? Nebo potřebuješ nové tenisové boty? Není problém.
               U&nbsp;Danka najdeš vše potřebné. Obchod je umístěn v&nbsp;1.&nbsp;patře našeho areálu. 
-              <!-- <li>vyplétání raket od 350 Kč vč. výpletu</li>
-                    <li>broušení bruslí od 100 Kč</li>
-                    <li>příjem a výdej balíků
-                      <br>Otevírací doba: <br>Po-Čt • 8:00-11:30 • 13:00-16:00 <br>Pátek • 8:00-11:30 • 13:00-15:00     
-                  <img src="img/photos-shop/DPD.png" alt="dpd"> <img src="img/photos-shop/GLS.png" alt="gls"> <img src="img/photos-shop/ppl.png" alt="ppl"> <img src="img/photos-shop/balikovna.png" alt="balíkovna"> <img src="img/photos-shop/WEDO.png" alt="wedo"></li>
-
-                  tel:+420603335254 Daniel Polášek -->
+     
             </div>
             <div class="button">
-              <button>Více info</button>
-            </div>
+              <button onclick="showModal('shopModal')">Více info</button>
+            </div> 
           </div>
         </div>
 
@@ -111,6 +106,42 @@
           </div>
         </div>
       </div>
+
+
+   
+      <!-- OBČERSTVENÍ - VÍCE INFO -->
+      <div id="refreshmentModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('refreshmentModal')">&times;</span>
+          <h3 class="more-info-h">Občerstvení</h3>
+          <p class="border-line">Více textu po rozkliknutí tlačítka u občerstvení</p>
+          <img src="img/pictures/hotdog.webp" width="100px">
+        </div>
+      </div>
+      
+      <!-- OBCHOD- VÍCE INFO -->
+      <div id="shopModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('shopModal')">&times;</span>
+          <h3 class="more-info-h">Tenisový obchod</h3>
+          <p class="border-line">vyplétání raket od&nbsp;350&nbsp;Kč včetně výpletu</p>
+          <p class="border-line">broušení bruslí od&nbsp;100&nbsp;Kč</p>
+          <p>příjem a výdej balíků:</p>
+            <div class="delivery border-line">
+              <img src="img/logo/DPD.png" alt="dpd">
+              <img src="img/logo/GLS.png" alt="gls">
+              <img src="img/logo/ppl.png" alt="ppl">
+              <img src="img/logo/balikovna.png" alt="balíkovna">
+              <img src="img/logo/WEDO.png" alt="wedo">
+            </div>
+          <p class="border-line"><strong>Otevírací doba</strong>
+          <br>Po-Čt • 8:00-11:30 • 13:00-16:00
+          <br>Pátek • 8:00-11:30 • 13:00-15:00 </p>
+          <p class="border-line"><strong>Kontaktní osoba</strong><br>
+            Daniel&nbsp;Polášek - tel.&nbsp;+420&nbsp;603&nbsp;335&nbsp;254</p>
+        </div>
+      </div>
+                
 
       <div class="thumbnail">
         <div class="item">
@@ -404,87 +435,56 @@
         <div id="tennisSchoolRulesModal" class="modal">
           <div class="modal-content">
             <span class="close" onclick="closeModal('tennisSchoolRulesModal')">&times;</span>
-            <h3>Organizační řád tenisové školy</h3>
+            <h3 class="more-info-h">Organizační řád tenisové školy</h3>
 
-            <p>Tento organizační řád slouží jako zdroj informací pro hráče naší TENISOVÉ ŠKOLY (dále jen TŠ). V tomto
-              řádu jsou
-              stručně shrnuta fakta a pravidla, kterými se TŠ řídí a platí pro všechny stejně bez výjimky.</p>
+            <p class="border-line">Tento organizační řád slouží jako zdroj informací pro hráče naší TENISOVÉ ŠKOLY (dále jen TŠ). Stručně shrnuje fakta a pravidla, kterými se TŠ řídí, a platí pro všechny bez výjimky.</p>
 
             <h4>1. Termíny tenisových tréninků</h4>
-            <p> Termíny tréninků jsou domluveny individuálně. Buď na určité období nebo z týdne na týden popř. z hodiny
+            <p class="border-line"> Termíny tréninků jsou domluveny individuálně. Buď na určité období nebo z týdne na týden popř. z hodiny
               na
-              hodinu a <strong>jsou pro hráče i trenéra závazné</strong>. V čase tréninku je hráč povinen dostavit se na
+              hodinu. <strong>Jsou závazné pro hráče i trenéra</strong>. V čase tréninku je hráč povinen dostavit se na
               trénink
               a to s potřebnou výbavou. Pokud hráč ještě nevlastní raketu, bude mu bezplatně zapůjčena.</p>
 
             <h4>2. Tenisový trénink</h4>
-            <p> Na hodinu tenisu by se hráč měl dostavit cca 10 minut před jejím zahájením tak, aby se stihnul před
-              začátkem
-              rozcvičit. Jedna tréninková hodina pak zahrnuje cca 55 minut hry a 5 minut času je vyhrazeno na úklid
-              dvorce po
-              tréninku. V případě delších tréninkových jednotek vždy posledních 5 minut náleží úpravě dvorce. </p>
+            <p class="border-line"> Hráč by se měl na hodinu tenisu dostavit přibližně 10 minut před jejím začátkem, aby měl dostatek času na rozcvičení. Tréninková hodina (tréninková jednotka) zahrnuje 60 minut hry, přičemž posledních 5 minut času je vyhrazeno na úklid dvorce. V případě delších tréninkových jednotek vždy posledních 5 minut náleží úpravě dvorce.</p>
 
             <h4>3. Omluva z tréninku</h4>
-            <p> <strong>Omluvit se z naplánované tréninkové hodiny je hráč povinen alespoň 1 den předem</strong>. V
-              opačném
-              případě může být hodina účtována ve stejné výši, jako kdyby se tréninkové hodiny zúčastnil. V zimním
-              období je
-              navíc vždy (pokud se hráč včas neomluví) účtována částka, které je potřebná pro zaplacení pronájmu haly.
+            <p class="border-line">Hráč je povinen<strong>se omluvit z naplánované tréninkové hodiny alespoň 1 den předem</strong>. V opačném případě může být hodina účtována ve stejné výši, jako kdyby se jí zúčastnil. V zimním období je navíc vždy účtována částka potřebná k úhradě pronájmu haly, pokud se hráč včas neomluví.
             </p>
 
             <h4> 4. Účtování tréninkových hodin </h4>
-            <p>Vyúčtování tenisových tréninků je prováděno dle individuálních potřeb zákazníka, a to buď měsíčně, týdně
-              nebo z
-              tréninku na trénink.
-              Cena zahrnuje: tréninkové hodiny + v zimním období pronájem haly. Tuto částku je pak možno platit hotově v
-              době
-              tréninků nebo bankovním převodem. Aktuální ceník najdete v záložce "Tenisová škola".</p>
+            <p class="border-line">Vyúčtování tenisových tréninků se provádí dle individuálních potřeb zákazníka - měsíčně, týdně nebo po každém tréninku. Cena zahrnuje: tréninkové hodiny a v zimním období také pronájem haly. Platbu lze provést hotově v době tréninků nebo bankovním převodem. Aktuální ceník najdete v této sekci Tenisová škola - tlačítko Ceník.</p>
 
             <h4>5. Závodní tenis - turnaje jednotlivců</h4>
-            <p>Svěřenci, kteří již trénují delší dobu a výkonnostně jsou natolik vysoko, že to pro ně má smysl, se pod
-              hlavičkou
-              TJ Sokol Stará Bělá mohou vydat na turnaje jednotlivců, které jsou pořádány jinými oddíly v blízkém či
-              vzdálenějším okolí. Tyto turnaje zaštiťuje Český tenisový svaz (ČTS), u kterého je náš oddíl řádně
+            <p>Svěřenci, kteří již trénují delší dobu a dosáhli odpovídající výkonnostní úrovně, se mohou pod hlavičkou TJ Sokol Stará Bělá účastnít turnajů jednotlivců pořádaných jinými oddíly v blízkém i
+              vzdálenějším okolí. Tyto turnaje jsou organizovány pod zaštitou Českého tenisového svazu (ČTS), u kterého je náš oddíl řádně
               zaregistrován.
             </p>
-            <p>Jedinou podmínkou účasti jednotlivce na turnaji je platný registrační průkaz, který vydává ČTS. V případě
-              zájmu a
-              chuti do účasti na těchto oficiálních turnajích bez větších prodlení vyřídíme registraci v oddíle TJ Sokol
+            <p class="border-line">Jedinou podmínkou účasti jednotlivce na turnaji je platný registrační průkaz, který vydává ČTS. V případě
+              zájmu o účast na těchto oficiálních turnajích bez zbytečných prodlev zajistíme registraci v oddíle TJ Sokol
               Stará
-              Bělá a požádáme ČTS o vystavení registračního průkazu. Celá administrativa probíhá elektronicky a lze
-              vyřídit za
-              pár minut.</p>
+              Bělá a požádáme ČTS o vystavení registračního průkazu. Celá administrativa probíhá elektronicky a lze ji vyřídit během
+              několika minut.</p>
 
             <h4>6. Závodní tenis - soutěže družstev</h4>
-            <p>Registrace našeho tenisového oddílu u ČTS <strong>umožňuje našim svěřencům v jarních měsících změřit síly
+            <p>Registrace našeho tenisového oddílu u ČTS <strong>umožňuje našim svěřencům v jarních měsících poměřit síly
                 s hráči
-                jiných klubů</strong> a to kolektivní formou v soutěžích družstev.</p>
-            <p>Družstva jsou rozdělena do kategorií dle věku dítěte: <strong>minitenis, babytenis, mladší žáci, starší
+                jiných klubů</strong>, a to kolektivní formou v soutěžích družstev.</p>
+            <p class="border-line">Družstva jsou rozdělena do kategorií podle věku dítěte: <strong>minitenis, babytenis, mladší žáci, starší
                 žáci a
                 dorost</strong>.</p>
 
             <h4> 7. Rekreační tenis</h4>
-            <p>Naše TŠ se nezabývá jen závodním tenisem. Pro ty, jenž nemají závodní ambice, funguje TŠ víceméně stejně.
-              Poměr
-              rekreačních hráčů k hráčům závodním a přípravce je cca 60:40.</p>
-            <p>TŠ se dále zaměřuje i na <strong>dospělé hráče</strong> a to většinou v individuálních trénincích (po
-              domluvě i
-              skupinových).</p>
+            <p>Naše TŠ se nezabývá jen závodním tenisem. Pro ty, kteří nemají závodní ambice, funguje TŠ víceméně stejně. Poměr rekreačních hráčů k závodním a přípravce je cca 60:40.</p>
+            <p class="border-line">TŠ se také zaměřuje i na <strong>dospělé hráče</strong>, a to většinou v individuálních trénincích (po domluvě i skupinových).</p>
 
             <h4>8. Závěr</h4>
-            <p>Věřím, že tento informační dokument alespoň částečně dopomohl k tomu, abych osvětlil současný stav TŠ a
-              jeho
-              organizační řád.</p>
-            <p>Zároveň si dovoluji upozornit, že body 1 - 4 jsou pro všechny závazné a mají sloužit k zprůhlednění jak
-              organizace hodin, tak i způsobu omluvy z tréninkových hodin a úhrady tréninků. Na základě těchto odstavců
-              jsou
-              jasně stanovena pravidla, kterými se TŠ řídí bez výjimky. Je jen na Vás, zda se rozhodnete se do TŠ
-              začlenit a
-              těmto pravidlům se podřídit nebo třeba zvolíte jiný sport. V každém případě Vám všem přeji hodně
-              sportovních
-              úspěchů. </p>
-            <p>V případě jakýchkoliv nejasností Vám vše rád vysvětlím osobně nebo jakoukoliv jinou formou.</p>
-            <p>Za Tenisovou školu Stará Bělá Jirka Priesol</p>
+            <p>Věřím, že tento informační dokument alespoň částečně přispěl k osvětlení současného stavu TŠ a jejího organizačního řádu.</p>
+            <p>Zároveň si dovoluji upozornit, že body 1 - 4 jsou pro všechny závazné a mají sloužit k zpřehlednění organizace tréninků, způsobu omluvy z tréninkových hodin a úhrady tréninků. Na základě těchto bodů jsou jasně stanovena pravidla, kterými se TŠ řídí bez výjimky. Je jen na Vás, zda se rozhodnete do TŠ začlenit a
+              těmto pravidlům se podřídit, nebo zvolíte jiný sport. V každém případě Vám všem přeji hodně sportovních úspěchů. </p>
+            <p class="border-line">V případě jakýchkoliv nejasností Vám vše rád vysvětlím osobně nebo jakoukoliv jinou formou.</p>
+            <p>Za Tenisovou školu Stará Bělá, Jirka Priesol</p>
           </div>
         </div>
 
