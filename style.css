@@ -436,6 +436,10 @@ p {
   flex-wrap: wrap;
   gap: 7px; 
 }
+.description > a {
+  color: white;
+  text-underline-offset: 5px;
+}
 
 
 /*********************************
