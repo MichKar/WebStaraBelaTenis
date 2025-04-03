@@ -157,6 +157,9 @@ p {
     transition: all 0.5s ease;
     position: relative;
   }
+  li a img {
+    display: none;
+  }
 }
 .navigation li a::after {
   content: '';
@@ -176,8 +179,8 @@ p {
   color: var(--light-orange);
 }
 .btn-rezervation-system {
-  height: 40px;
-  width: 50px;
+  height: 30px;
+  width: 40px;
   transition: scale 0.5s ease;
 }
 .btn-rezervation-system:hover {
@@ -713,7 +716,7 @@ marquee {
 }
 .school-icons {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   user-select: none;
   justify-items: center;
@@ -752,7 +755,8 @@ marquee {
   min-width: 150px;
 }
 .tennis-school-competitions p,
-.tennis-school-information p {
+.tennis-school-information p,
+.ts-camp p {
   color: var(--white);
   font-weight: 100;
   line-height: 2;
@@ -760,17 +764,16 @@ marquee {
 }
 .tennis-school-information,
 .tennis-school-price,
+.tennis-school-camp,
 .tennis-school-contact {
   display: none;
 }
-.ts-price-h {
+.ts-price-h,
+.ts-camp-h {
   color: var(--white);
   font-weight: 800;
   font-size: 30px;
-}
-.tennis-school-price p  {
   text-align: center;
-  padding: 0 5%;
 }
 .ts-prices {
   display: flex;
@@ -778,6 +781,9 @@ marquee {
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
+  p {
+    padding: 0 5%;
+  }
 }
 .ts-one-price {
   background-color: var(--light-grey);
@@ -892,6 +898,49 @@ marquee {
 }
 .competition > div > a:last-child {
   margin-bottom: 2px;
+}
+
+
+/* tábor & soustředění */
+.ts-camps {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 20px;
+  img {
+    flex: 1;
+    height: auto;
+    max-width: 50%;
+    object-fit: cover;
+  }
+}
+.one-camp {
+  background-color: grey;
+
+}
+.one-camp-without-head {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  align-items: center;
+}
+.one-camp-without-head > * {
+  flex: 1;
+}
+.camp-text {
+  padding: 25px;
+}
+.camp-photo {
+  min-width: 150px;
+  
+}
+.camp-photo img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  padding: 25px;
 }
 
 

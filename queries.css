@@ -1,6 +1,6 @@
 /* MIN WIDTH */
 
-@media only screen and (min-width: 850px){
+@media only screen and (min-width: 1150px){
     .btn-menu, .btn-close, .btn-menu-close {
         display: none !important;
     }
@@ -11,7 +11,7 @@
 
 /* MAX WIDTH */
 
-@media only screen and (max-width: 850px){
+@media only screen and (max-width: 1150px){
     .navbar {
         display: flex !important;
         padding-left: 0;
@@ -26,10 +26,25 @@
     }
     .navigation {
         display: none;
-    }
-    .navigation li {
-        text-align: left;
-        display: flex;
+        li {
+            text-align: left;
+            display: flex;
+        }
+        li a {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 30px;
+            width: 300px;
+        }
+        li a img {
+            display: block; 
+            height: 40px;
+            transition: filter 0.5s ease;
+          }
+          li a:hover img {
+            filter: invert(35%) sepia(100%) saturate(500%) hue-rotate(-10deg);
+          }
     }
     .navigation.open {
         display: flex;

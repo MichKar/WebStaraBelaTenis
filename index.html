@@ -26,11 +26,11 @@
        <h1><a href="index.html"><img src="img/logo/logo-small.png" alt="logo tenisové kurty Ostrava-Stará Bělá"></a></h1>
       </div>
       <ul class="navigation">
-        <li><a href="#section-areal">areál</a></li>
-        <li><a href="#areal-prices">ceník</a></li>
-        <li><a href="#tennis-school-bg">tenisová škola</a></li>
-        <li><a href="#tennis-school-bg">tábor & soustředění</a></li>
-        <li><a href="#contact-bg">kontakt</a></li>
+        <li><a href="#section-areal"><img src="img/icons/home1-white.png">areál</a></li>
+        <li><a href="#areal-prices"><img src="img/icons/price1-white.png">ceník</a></li>
+        <li><a href="#tennis-school-bg"><img src="img/icons/school-white.png">tenisová škola</a></li>
+        <li><a href="#tennis-school-bg"><img src="img/icons/camp-white.png">tábor & soustředění</a></li>
+        <li><a href="#contact-bg"><img src="img/icons/contact.png">kontakt</a></li>
       </ul>
       <a href="https://starabela.rezervujse.cz/StaraBelaServlet/app" target="_blank"><img class="btn-rezervation-system"
           src="img/icons/calendar-orange.png" alt="rezervační systém"></a>
@@ -311,17 +311,22 @@
           </a>
 
           <a onclick="showSection('tennis-school-information')">
-            <img src="img/icons/information.png" alt="více informací">
+            <img src="img/icons/information.png">
             <p>Informace</p>
           </a>
 
           <a onclick="showSection('tennis-school-price')">
-            <img src="img/icons/tag.png" alt="ceník tréninků">
+            <img src="img/icons/tag.png">
             <p>Ceník tréninků</p>
           </a>
 
+          <a onclick="showSection('tennis-school-camp')">
+            <img src="img/icons/camp.png">
+            <p>Tábor & Soustředění</p>
+          </a>
+
           <a onclick="showModal('tennisSchoolRulesModal')">
-            <img src="img/icons/insurance.png" alt="dokument">
+            <img src="img/icons/insurance.png">
             <p>Organizační řád</p>
           </a>
 
@@ -337,7 +342,7 @@
         </div>
 
 
-        <!-- TŠ VÍCE INFO PO ROZKLIKNUTÍ -->
+        <!-- TŠ VÍCE INFO PO ROZKLIKNUTÍ (družstva, informace, ceník, tábor, kontakt) -->
         <div class="ts-more-info">
           <!-- TŠ DRUŽSTVA -->
           <div class="tennis-school-competitions">
@@ -435,6 +440,57 @@
           
           </div>
 
+          <!--TŠ TÁBOR -->
+          <div class="tennis-school-camp">
+            <div class="ts-camps">
+              <div class="one-camp">
+                <p>Letní příměstský tábor</p>
+                <div class="one-camp-without-head">
+                  <div class="camp-text">
+                    <p><strong>&#128197; Termín: 7. - 11. 7. 2025</strong></p>
+                    <p>&#128205; Místo: náš tenisový areál ve Staré Bělé</p>
+                    <p>Tenisová škola každoročně v červenci pro děti pořádá příměstský tenisový tábor konaný v našem areálu. Program zahrnuje především tenisové tréninky, kondiční a koordinační cvičení a hry.</p>
+                    <p>&#128100; Zodpovědná osoba: Jirka Priesol</p>
+                    <p>&#128181; Cena 3.700&nbsp;Kč&nbsp;/&nbsp;5&nbsp;dní (možnost i jednotlivých dnů)</p>
+                  </div>
+                  <div class="camp-photo"><img src="img/photos/TSactions/tabor1.jpg"></div>
+                </div>
+              </div>
+
+              <div class="one-camp">
+                <p>Letní soustředění</p>
+                <div class="one-camp-without-head">
+                  <div class="camp-text">
+                  <p><strong>&#128197; Termín: 24. - 30. 8. 2025</strong></p>
+                  <p>&#128205; Místo: Hutisko-Solanec (Beskydy)</p>
+                  <p>Tenisová škola pro své svěřence pořádá tenisové soustředění.  Jedná se o týdenní pobyt plný tenisu a her.</p>
+                  <p>&#128100; Zodpovědná osoba: Jirka Priesol.</p>
+                  <p>&#128181; Cena ????&nbsp;Kč</p>
+                </div>
+                <img src="img/photos/TSactions/tabor2.jpg">
+              </div>
+              </div>
+
+              <div class="one-camp">
+                <p>Zimní kondiční soustředění</p>
+                <div class="one-camp-without-head">
+                  <div class="camp-text">
+                    <p><strong>&#128197; Termín: 13. - 16. 2. 2025</strong></p>
+                    <p>&#128205; Místo: Hutisko-Solanec</p>
+                    <p>Stěžejním programem kondičního tenisového soustředění budou kondiční tréninky zaměřené na kondici pro tenis, kruhové tréninky a další pohybové aktivity. Soustředění bude doplněno o klasické zábavné programy pro děti.</p>
+                    <p>&#128100; Zodpovědná osoba: Jirka Priesol</p>
+                    <p>&#128181; Cena 4.900&nbsp;Kč</p>
+                  </div>
+                  <img src="img/photos/TSactions/zimniSoustredeni1.jpg">
+                </div>
+              </div>
+        
+            </div>
+          </div>
+
+  
+
+
           <!--TŠ KONTAKT -->
           <div class="tennis-school-contact">
             <p>Kontaktní osoba tenisové školy:</p>
@@ -502,6 +558,7 @@
             <p>Za Tenisovou školu Stará Bělá, Jirka Priesol</p>
           </div>
         </div>
+
 
       </div>
     </div>
@@ -852,22 +909,29 @@
 </html>
 
 
+        <!--TŠ SOUSTŘEDĚNÍ
+            <div class="tennis-school-concentration">
+              <p class="ts-camp-h">Letní soustředění</p>
+              <div class="ts-camp">
+                <div class="camp-info">
+                <p><strong>&#128197; Termín: 24. - 30. 8. 2025</strong></p>
+                <p>Tenisová škola pro své svěřence pořádá každý rok v srpnu Tenisové soustředění v Beskydech v obci Hutisko-Solanec. Jedná se o týdenní pobyt plný tenisu a her.</p>
+                
+                <p>Ubytování je v Turist hotelu Euro v obci Hutisko-Solanec asi 7 km od Rožnova pod Radhoštěm ve dvou-pětilůžkových pokojích. V areálu přilehlého kempu je k dispozici  široké sportovní zázemí (4 antukové kurty, bazén, sportovní hřiště, fotbalové hřiště a venkovní posilovna). </p>
+                <p>Hlavním programem soustředění jsou tenisové tréninky přímo v areálu. Děti se zdokonalí v tenise, zlepší svou fyzickou kondici, a to pod vedením zkušených trenérů. Jako doplňkové sporty jsou zařazeny fotbal, jiné míčové hry, bazén a pro starší také intenzivní tréninky fyzické kondice. 
+                Po celou dobu soustředění probíhají celotáborové hry a soutěžedoplněné večerním promítáním filmů v improvizovaném letním kině a výlety do okolní přírody.</p>
+                <p>Toto tenisové soustředění probíhá společně s přátelským oddílem TJ Sokol Dolní Lhota (Jiří Výtisk).</p> 
+                <p>&#128100; Zodpovědná osoba: Jirka Priesol.</p>
+                <p>&#128181; Cena 3.700&nbsp;Kč&nbsp;/&nbsp;5&nbsp;dní (možnost i jednotlivých dnů)</p>
+              </div>
+                <img src="img/photos/TSactions/tabor2.jpg">
+              </div>
+            </div> -->
 
-  <!--------- TÁBOR ----
-        Příměstský tenisový tábor
-            &#128197 Termín: 8. 7. - 12. 7. 2024</strong></p>
-            <p>Tenisová škola každoročně v červenci pro děti pořádá <strong>Příměstský tenisový tábor konaný v našem areálu</strong>, jehož obsahem jsou především tenisové tréninky, kondiční a koordinační cvičení a hry. V rámci relaxace návštěva sousedního koupaliště. Pro hráče je zajištěn oběd + pitný režim, pronájem kurtů, kvalifikovaní trenéři, vstupy na koupaliště. Cena je 3.700&nbsp;Kč za 5 dní (lze i na jednotlivé dny). Sraz denně v 8:30, vyzvedávání v 15:30. Bližší informace a dotazy zodpoví Jirka Priesol. -->
+        <!--TÁBOR    
 
-  <!--------- SOUSTŘEDĚNÍ ---
-           <h2>Tenisové soustředění</h2>
-          <p>Tenisová škola pro své svěřence pořádá každý rok v srpnu Tenisové soustředění v Beskydech v obci Hutisko-Solanec. Jedná se o týdenní pobyt plný tenisu a her. </p>
-          <p><strong>&#128197 Termín: 27. 8. - 2. 9. 2023</strong></p>
-          <button class="btn-soustredeni">Více informací &#9660</button>
-        
-      Ubytování je v Turist hotelu Euro v obci Hutisko-Solanec</strong> asi 7 km od Rožnova pod Radhoštěm ve dvou-pětilůžkových pokojích. V areálu přilehlého kempu je k dispozici <strong>  široké sportovní zázemí</strong> (4 antukové kurty, bazén, sportovní hřiště, fotbalové hřiště a venkovní posilovna). 
-        <p>Hlavním programem soustředění jsou <strong>tenisové tréninky přímo v areálu</strong>. Děti se zdokonalí v tenise, zlepší svou fyzickou kondici, a to pod vedením zkušených trenérů. Jako doplňkové sporty jsou zařazeny fotbal, jiné míčové hry, bazén a pro starší také intenzivní tréninky fyzické kondice. 
-        Po celou dobu soustředění probíhají <strong>celotáborové hry a soutěže</strong> doplněné <strong>večerním promítáním filmů</strong> v improvizovaném letním kině a <strong>výlety do okolní přírody</strong>.</p>
-        <p>Toto tenisové soustředění probíhá společně s přátelským oddílem TJ Sokol Dolní Lhota (Jiří Výtisk).</p> 
-        <p><strong> Zodpovědná osoba: Jiří Priesol &#x2022 tel. 604 601 387 &#x2022 mail: jpriesol@seznam.cz -->
-
+            <p><strong>&#128197; Termín: 7. - 11. 7. 2025</strong></p>
+              <p>Tenisová škola každoročně v červenci pro děti pořádá Příměstský tenisový tábor konaný v našem areálu. Program zahrnuje především tenisové tréninky, kondiční a koordinační cvičení a hry. V horkých dnech je součástí programu také návštěva sousedního koupaliště. Pro hráče je zajištěno: pronájem kurtů, kvalifikovaní trenéři, oběd, pitný režim, vstupy na koupaliště. Sraz denně v 8:30, vyzvedávání v 15:30. </p>
+              <p>&#128100; Více informací: Jirka Priesol.</p>
+              <p>&#128181; Cena 3.700&nbsp;Kč&nbsp;/&nbsp;5&nbsp;dní (možnost i jednotlivých dnů)</p>-->
   
