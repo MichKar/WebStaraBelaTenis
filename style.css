@@ -746,7 +746,7 @@ marquee {
 }
 .school-icons a:hover,
 .school-icons a:active {
-  background-color: rgba(227, 227, 227, 0.5);
+  background-color: var(--white);
   transition: all .5s ease;
 }
 .school-icons > * {
@@ -836,7 +836,7 @@ marquee {
   letter-spacing: 0.5px;
 }
 .ts-more-info {
-  max-width: 900px;
+  max-width: 1080px;
   margin: 0 auto;
   padding-top: 40px;
   padding-bottom: 50px;
@@ -904,43 +904,74 @@ marquee {
 /* tábor & soustředění */
 .ts-camps {
   display: flex;
-  flex-direction: column;
-  /* align-items: center; */
+  flex-direction: row;
   gap: 20px;
-  img {
-    flex: 1;
-    height: auto;
-    max-width: 50%;
-    object-fit: cover;
-  }
+  justify-content: space-around;
+  max-width: 1700px;
 }
 .one-camp {
-  background-color: grey;
-
+  flex: 1;
+  background: #f9f9f9;
+  padding: 40px 30px 60px 30px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+.one-camp-head {
+  margin-bottom: 15px;
+  color: #333;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 22px;
+  text-align: center;
+  padding-bottom: 20px;
 }
 .one-camp-without-head {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  flex-shrink: 0;
-  align-items: center;
-}
-.one-camp-without-head > * {
-  flex: 1;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
 }
 .camp-text {
-  padding: 25px;
+  flex: 1;
+  p {
+    margin: 5px 0;
+    color: #555;
+  }
 }
 .camp-photo {
-  min-width: 150px;
-  
+  width:100%;
+  flex: 1;
+  box-shadow: 3px 3px 13px rgb(45, 45, 45); 
 }
-.camp-photo img {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
+.pdf-container {
+  margin-top: 10px;
+  text-align: center;
+  a {
+    border: 1px solid var(--dark-green);
+    padding: 10px 0;
+    transition: all 0.5s ease;
+  }
+  a:hover {
+    background-color: var(--light-orange);
+    border: 1px solid var(--light-orange);
+  }
+}
+
+.pdf-thumbnail {
+  width: 100px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.pdf-container a {
   display: block;
-  padding: 25px;
+  margin-top: 5px;
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--dark-green);
+  font-weight: bold;
 }
 
 

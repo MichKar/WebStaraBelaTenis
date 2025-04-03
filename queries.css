@@ -62,3 +62,16 @@
         z-index: 100;
     }
 }
+
+
+/* Responzivita tábor */
+@media (max-width: 768px) {
+    .one-camp-without-head {
+        flex-direction: column;
+        text-align: center;
+    }
+    .camp-photo {
+        width: 100%;
+        max-width: 300px;
+    }
+  }
