@@ -31,42 +31,54 @@
         z-index: 100;
     }
     .navigation {
-        display: none;
-        li {
-            text-align: left;
-            display: flex;
-        }
-        li a {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 30px;
-            width: 300px;
-        }
-        li a img {
-            display: block; 
-            height: 40px;
-            transition: filter 0.5s ease;
-          }
-          li a:hover img {
-            filter: invert(35%) sepia(100%) saturate(500%) hue-rotate(-10deg);
-          }
-    }
-    .navigation.open {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        position: absolute;
+        position: fixed;
         top: 0;
-        width: 100%; 
+        right: 0;
+        width: 100%;
         height: 100svh;
         padding-left: 0;
-        background-color: black; 
-    }
-    .btn-menu-close, .navbar a {
+        background-color: black;
+        transform: translateX(100%); /* mimo obrazovku doprava */
+        opacity: 0;
+        transition: transform 0.5s ease, opacity 0.5s ease;
+        z-index: 90;
+      }
+      .navigation.open {
+        transform: translateX(0); /* zpět na místo */
+        opacity: 1;
+      }
+      
+      .navigation li {
+        text-align: left;
+        display: flex;
+      }
+      
+      .navigation li a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+        width: 300px;
+      }
+      
+      .navigation li a img {
+        display: block;
+        height: 40px;
+        transition: filter 0.5s ease;
+      }
+      
+      .navigation li a:hover img {
+        filter: invert(35%) sepia(100%) saturate(500%) hue-rotate(-10deg);
+      }
+      
+      .btn-menu-close,
+      .navbar a {
         z-index: 100;
-    }
+      }
 }
 
 @media only screen and (max-width: 1024px){
@@ -98,7 +110,7 @@
         flex-direction: column;
     }
     .contact-div1 {
-        max-width: 100%; 
+        max-width: 100%;
     }
     .contact-div2 {
         width: auto;
@@ -120,6 +132,7 @@
     .nextPrevArrows {
         position: absolute;
         right: 60%;
+        gap:5px;
     }
     .prices-header .summer,
     .prices-header .winter {
@@ -168,6 +181,8 @@
         gap: 5px;
         padding: 0;
         margin-bottom: 100px;
+        margin-left: 0;
+        margin-right: 0;
         position: relative;
         perspective: 1000px; 
         overflow-x: auto;
@@ -188,7 +203,7 @@
     .success-arrow {
         display: block;
         position: absolute;
-        background-color: var(--light-orange);
+        background-color: #f2a922f0;
         width: 30px;
         height: 30px;
         right: 0;
@@ -209,12 +224,16 @@
         position: relative;
         width: 100%;
         height: 100%;
-        background-color: var(--dark-green);
-        padding: 20px;
+        background-color: rgb(21, 48, 21);
+        padding: 10px;
         transition: transform 1s ease;
         transform: scale(0.90);
         transform-origin: center;
         flex-shrink: 0;
+    }
+    .success-card img {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
     }
     .success-card.in-center {
         transform: scale(1);
@@ -227,6 +246,7 @@
         box-sizing: border-box;
         width: 100%;
         height: 40px;
+        background-color: rgb(21, 48, 21);
     }
     .more-info {
         position: relative;
@@ -238,6 +258,9 @@
         box-sizing: border-box;
         display: flex;
         padding-bottom: 20px;
+        background-color: rgb(21, 48, 21);
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
     }
     .success-card:hover .more-info {
         bottom: 0px;
@@ -251,9 +274,17 @@
         pointer-events: none;
         height: 1px;
     }
-    
+    .trainers {
+        width:100%;
+        padding-top: 20px;
+    }
     .trainer {
         position: relative;
+        width: 100%;
+        margin: 10px auto;
+        img {
+            object-position: top; 
+        }
     }
     .trainer-hand {
         position: absolute;
@@ -261,7 +292,6 @@
         right: 0;
         width: 50px;
         height: 50px;
-        
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
@@ -271,7 +301,6 @@
         z-index: 100;
         pointer-events: none; 
         background: #ffffffdb;
-
         img {
             width: 25px;
             height: 25px;
@@ -280,6 +309,7 @@
 
     .contact-div1 {
         padding: 0;
+        min-width: 90%;
     } 
     .contact-div2 {
         padding-left: 0;

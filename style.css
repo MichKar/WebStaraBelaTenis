@@ -137,9 +137,12 @@ p {
   transition: all 1s ease;
 }
 .navigation {
-  display: flex; 
+  display: flex;
   flex-direction: row;
   align-items: center;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transform: translateX(0); /* výchozí pro desktop */
+
   li {
   list-style-type: none;
   padding: 22px 0;
@@ -192,6 +195,7 @@ p {
   width: 30px;
   height: 30px;
   cursor: pointer;
+  transition: opacity 0.5s ease;
   img {
     width: 95%;
     height: 85%;
@@ -510,7 +514,7 @@ marquee {
   scale: 1.1;
 }
 .prices-card {
-  min-width: 300px;
+  min-width: 250px;
   align-items: center;
   border-radius: 0 0 18px 18px;
   position: relative;
