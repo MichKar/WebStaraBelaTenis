@@ -1149,6 +1149,9 @@ marquee {
     object-fit: cover;
   }
 }
+.trainer-hand {
+  display: none;
+}
 .trainer-info {
   width: 100%;
   height: 100%;
