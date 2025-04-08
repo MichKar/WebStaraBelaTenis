@@ -176,6 +176,48 @@ window.onclick = function(event) {
 
 
 
+// úspěchy na mobilech
+
+  const gallery = document.querySelector('.success-gallery');
+  const cards = gallery.querySelectorAll('.success-card');
+
+  function updateCardScaling() {
+    const galleryRect = gallery.getBoundingClientRect();
+    const galleryCenter = galleryRect.left + galleryRect.width / 2;
+
+    cards.forEach(card => {
+      const cardRect = card.getBoundingClientRect();
+      const cardCenter = cardRect.left + cardRect.width / 2;
+
+      const distance = Math.abs(galleryCenter - cardCenter);
+
+      if (distance < cardRect.width / 2) {
+        card.classList.add('in-center');
+      } else {
+        card.classList.remove('in-center');
+      }
+    });
+  }
+
+  gallery.addEventListener('scroll', () => {
+    requestAnimationFrame(updateCardScaling);
+  });
+
+  // Initial check
+  window.addEventListener('load', updateCardScaling);
+  window.addEventListener('resize', updateCardScaling);
+
+
+
+
+
+
+
+
+
+
+
+
 
 // FOOTER - aktuální rok
 document.querySelector(".year").innerText = (new Date().getFullYear());
