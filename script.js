@@ -35,8 +35,7 @@ menu.addEventListener("click", function(){
         navigation.classList.add("open"); 
         navbar.style.backgroundColor = "black";
 });
-
-//definice fce pro zavření menu
+//fce pro zavření menu
 function closeMenu () {
         close.style.display = "none";
         menu.style.display = "block";
@@ -148,11 +147,30 @@ btnAlert.addEventListener("click", function() {
 
 
 // TENISOVÁ ŠKOLA - rozklik tlačítek
-function showSection(className) {
+function showSection(className, isLink = false) {
         document.querySelectorAll('.tennis-school-competitions, .tennis-school-information, .tennis-school-price, .tennis-school-camp, .tennis-school-rules, .tennis-school-contact')
           .forEach(el => el.style.display = 'none');
-        document.querySelector('.' + className).style.display = 'block';
+          let section = document.querySelector('.' + className);
+          if (section) {
+              section.style.display = 'block';
+      
+              // Posun na sekci pro 'tennis-school-camp' pokud je volání z odkazu (isLink)
+              if (className === 'tennis-school-camp' && isLink) {
+                  section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+          }
       }
+// Pro správné posouvání při kliknutí na odkazy
+document.querySelectorAll("a[href='#tennis-school-camp']").forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault(); // Zabráníme výchozímu chování odkazu
+    
+            // Otevře sekci a zároveň posune na ní
+            showSection('tennis-school-camp', true);
+        });
+    });
+
+
 
 //TENISOVÁ ŠKOLA - MODAL
 function showModal(modalId) {

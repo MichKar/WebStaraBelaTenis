@@ -11,13 +11,12 @@
 
 /* MAX WIDTH */
 /* nejmenší 320px */
-@media only screen and (max-width: 1300px){
+@media (max-width: 1300px){
     .school-icons {
         grid-template-columns: repeat(4, 1fr);
     }
 }
-
-@media only screen and (max-width: 1150px){
+@media (max-width: 1150px){
     .navbar {
         display: flex !important;
         padding-left: 0;
@@ -80,14 +79,11 @@
         z-index: 100;
       }
 }
-
-@media only screen and (max-width: 1024px){
+@media (max-width: 1024px){
     .success-gallery {
         grid-template-columns: repeat(4, 1fr);
     }
 }
-
-
 @media (max-width: 768px) {
     .school-icons {
         grid-template-columns: repeat(3, 1fr);
@@ -164,6 +160,37 @@
     .school-icons {
         grid-template-columns: repeat(1, 1fr);
     }
+    .tennis-school {
+        width: 100%;
+    }
+    .tennis-school-price {
+        box-sizing: border-box;
+        width: 100%;
+       
+    }
+    .ts-more-info {
+        width: 100%;
+        margin: 0 auto;
+    }
+   .ts-prices {
+    width: 100%;
+    overflow: hidden;
+   }
+    .ts-one-price {
+        /* align-items:start; */
+        justify-content: center;
+        p {
+            font-size: 12px;
+            text-align: start;
+        }
+    }
+    .school-contact {
+        flex-direction: column;
+    }
+
+
+
+
     .tennis-success {
         width: 90%;
         margin: 0 auto;
@@ -280,7 +307,7 @@
     }
     .trainer {
         position: relative;
-        width: 100%;
+        width: 70%;
         margin: 10px auto;
         img {
             object-position: top; 
