@@ -422,16 +422,9 @@ p {
     opacity: 0;
   }
 }
-@media screen and (max-width: 678px) {
-  .slider .list .item .content {
-    padding-right: 0;
-  }
-  .slider .list .item .content .title {
-    font-size:30px; 
-  }
+#shopModal p img {
+  height: 18px;
 }
-
-
 #shopModal img {
   height: 30px;
 }
@@ -445,6 +438,14 @@ p {
   color: white;
   text-underline-offset: 5px;
 }
+.ovopen {
+  display: inline-block;
+  width: 70px;
+  img {
+    width: 100%;
+  }
+}
+
 
 
 /*********************************
@@ -951,6 +952,7 @@ marquee {
 .pdf-container {
   margin-top: 10px;
   text-align: center;
+
   a {
     border: 1px solid var(--dark-green);
     padding: 10px 0;
@@ -959,6 +961,10 @@ marquee {
   a:hover {
     background-color: var(--light-orange);
     border: 1px solid var(--light-orange);
+  }
+  a img {
+    vertical-align: middle;
+    height: 15px;
   }
 }
 

@@ -1,6 +1,6 @@
 /* MIN WIDTH */
 
-@media only screen and (min-width: 1150px){
+@media (min-width: 1150px){
     .btn-menu, .btn-close, .btn-menu-close {
         display: none !important;
     }
@@ -50,30 +50,25 @@
         transform: translateX(0); /* zpět na místo */
         opacity: 1;
       }
-      
       .navigation li {
         text-align: left;
         display: flex;
       }
-      
       .navigation li a {
         display: flex;
         flex-direction: row;
         align-items: center;
         gap: 30px;
         width: 300px;
-      }
-      
-      .navigation li a img {
-        display: block;
-        height: 40px;
-        transition: filter 0.5s ease;
-      }
-      
+        img {
+            display: block;
+            height: 40px;
+            transition: filter 0.5s ease;
+        }
+        }
       .navigation li a:hover img {
         filter: invert(35%) sepia(100%) saturate(500%) hue-rotate(-10deg);
       }
-      
       .btn-menu-close,
       .navbar a {
         z-index: 100;
@@ -91,13 +86,23 @@
     .school-icons > * {
         max-width: 200px;
     }
-    .one-camp-without-head {
+    .ts-camps {
+        display: flex;
         flex-direction: column;
-        text-align: center;
+        gap: 20px;
+        justify-content: space-around;
+        max-width: 1700px;
+    }
+    .one-camp-without-head {
+        align-items: center;
     }
     .camp-photo {
         width: 100%;
         max-width: 300px;
+        box-shadow: none;
+    }
+    .school-contact {
+        flex-direction: column;
     }
     .success-gallery {
         grid-template-columns: repeat(3, 1fr);
@@ -116,6 +121,15 @@
 
 }
 @media (max-width: 568px) {
+    .success-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .slider .list .item .content {
+        padding-right: 0;
+      }
+      .slider .list .item .content .title {
+        font-size:30px; 
+      }
     .school-icons {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -163,34 +177,21 @@
     .tennis-school {
         width: 100%;
     }
+    .ts-prices {
+        width: 100%;
+        overflow: hidden;
+       }
     .tennis-school-price {
         box-sizing: border-box;
         width: 100%;
-       
     }
-    .ts-more-info {
-        width: 100%;
-        margin: 0 auto;
-    }
-   .ts-prices {
-    width: 100%;
-    overflow: hidden;
-   }
     .ts-one-price {
-        /* align-items:start; */
         justify-content: center;
         p {
             font-size: 12px;
             text-align: start;
         }
     }
-    .school-contact {
-        flex-direction: column;
-    }
-
-
-
-
     .tennis-success {
         width: 90%;
         margin: 0 auto;
@@ -278,7 +279,7 @@
     .more-info {
         position: relative;
         bottom: 0;
-        margin: 0;
+        margin: 0 auto;
         width: 100%;
         min-height: 250px; 
         overflow-y: auto;
@@ -333,7 +334,6 @@
             height: 25px;
         }
     }
-
     .contact-div1 {
         padding: 0;
         min-width: 90%;
