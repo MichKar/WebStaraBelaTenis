@@ -146,20 +146,70 @@ btnAlert.addEventListener("click", function() {
 
 
 
+
 // TENISOVÁ ŠKOLA - rozklik tlačítek
-function showSection(className, isLink = false) {
-        document.querySelectorAll('.tennis-school-competitions, .tennis-school-information, .tennis-school-price, .tennis-school-camp, .tennis-school-rules, .tennis-school-contact')
-          .forEach(el => el.style.display = 'none');
-          let section = document.querySelector('.' + className);
-          if (section) {
-              section.style.display = 'block';
-      
-              // Posun na sekci pro 'tennis-school-camp' pokud je volání z odkazu (isLink)
-              if (className === 'tennis-school-camp' && isLink) {
-                  section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-              }
-          }
-      }
+const tabButtons = document.querySelectorAll(".ts-tab-buttons button");
+const tabContents = document.querySelectorAll(".ts-tab-content");
+const toggles = document.querySelectorAll(".ts-accordion-toggle");
+const accordionContents = document.querySelectorAll(".ts-accordion-content");
+
+// Funkce pro zavření všech tabů i accordionů
+function closeAllSections() {
+  tabButtons.forEach(b => b.classList.remove("active"));
+  tabContents.forEach(c => c.classList.remove("active"));
+  toggles.forEach(t => t.classList.remove("open"));
+  accordionContents.forEach(c => c.classList.remove("open"));
+}
+
+// Taby (desktop)
+tabButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const target = btn.dataset.tab;
+
+    tabButtons.forEach(b => b.classList.remove("active"));
+    tabContents.forEach(c => c.classList.remove("active"));
+
+    btn.classList.add("active");
+    document.querySelector(`.ts-tab-content[data-content="${target}"]`).classList.add("active");
+  });
+});
+
+// Accordion (mobile)
+toggles.forEach(toggle => {
+  toggle.addEventListener("click", () => {
+    const content = toggle.nextElementSibling;
+    const isOpen = content.classList.contains("open");
+
+    // Zavřít všechny
+    accordionContents.forEach(c => c.classList.remove("open"));
+    toggles.forEach(t => t.classList.remove("open"));
+
+    // Otevřít aktuální pokud nebyl otevřen
+    if (!isOpen) {
+      content.classList.add("open");
+      toggle.classList.add("open");
+    }
+  });
+});
+
+// Při načtení stránky nic neotvírej
+window.addEventListener("DOMContentLoaded", () => {
+  closeAllSections();
+});
+
+// Při změně velikosti okna také vše zavři
+window.addEventListener("resize", () => {
+  closeAllSections();
+});
+
+
+
+
+
+
+    
+
+
 // Pro správné posouvání při kliknutí na odkazy
 document.querySelectorAll("a[href='#tennis-school-camp']").forEach(anchor => {
         anchor.addEventListener('click', function (e) {

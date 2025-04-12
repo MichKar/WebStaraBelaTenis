@@ -8,14 +8,17 @@
         display: block !important;
     }
 }
+@media (min-width: 768px) {
+    .ts-tabs-desktop {
+      display: block;
+    }
+    .ts-accordion-mobile {
+      display: none;
+    }
+  }
 
 /* MAX WIDTH */
 /* nejmenší 320px */
-@media (max-width: 1300px){
-    .school-icons {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
 @media (max-width: 1150px){
     .navbar {
         display: flex !important;
@@ -80,30 +83,6 @@
     }
 }
 @media (max-width: 768px) {
-    .school-icons {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .school-icons > * {
-        max-width: 200px;
-    }
-    .ts-camps {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        justify-content: space-around;
-        max-width: 1700px;
-    }
-    .one-camp-without-head {
-        align-items: center;
-    }
-    .camp-photo {
-        width: 100%;
-        max-width: 300px;
-        box-shadow: none;
-    }
-    .school-contact {
-        flex-direction: column;
-    }
     .success-gallery {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -118,7 +97,10 @@
         height: 300px;
         padding-left: 40px;
     }
-
+    .ts-camps {
+        flex-direction: column;
+ 
+    }
 }
 @media (max-width: 568px) {
     .success-gallery {
@@ -130,8 +112,9 @@
       .slider .list .item .content .title {
         font-size:30px; 
       }
-    .school-icons {
-        grid-template-columns: repeat(2, 1fr);
+      .school-key {
+        margin-top: 0;
+        margin-bottom: 2px;
     }
 }
 @media (max-width: 480px) {
@@ -166,31 +149,6 @@
     }
     .rezervation-alert img {
         display: none;
-    }
-    .school-key {
-        margin-top: 0;
-        margin-bottom: 2px;
-    }
-    .school-icons {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .tennis-school {
-        width: 100%;
-    }
-    .ts-prices {
-        width: 100%;
-        overflow: hidden;
-       }
-    .tennis-school-price {
-        box-sizing: border-box;
-        width: 100%;
-    }
-    .ts-one-price {
-        justify-content: center;
-        p {
-            font-size: 12px;
-            text-align: start;
-        }
     }
     .tennis-success {
         width: 90%;
