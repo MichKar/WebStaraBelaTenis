@@ -309,6 +309,17 @@ p {
     border-radius: 20px;
     box-shadow: 5px 0 15px(rgba(0,0,0,0.3));
   }
+  p {
+    position: absolute;
+    color: var(--white);
+    font-weight: 800;
+    bottom: 0;
+    right: 0px;
+    margin: 0 auto;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    padding: 5px 10px;
+    border-bottom-right-radius:20px;
+  }
 }
 .nextPrevArrows {
   position: absolute;
