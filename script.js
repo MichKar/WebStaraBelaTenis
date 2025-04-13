@@ -62,20 +62,16 @@ let slider = document.querySelector(".slider");
 let sliderList = slider.querySelector(".slider .list");
 let thumbnail = document.querySelector(".thumbnail");
 let thumbnailItems = thumbnail.querySelectorAll(".item");
-
 thumbnail.appendChild(thumbnailItems[0]);
-
 nextBtn.onclick = function() {
         moveSlider("next");
 }
 prevBtn.onclick = function() {
         moveSlider("prev");
 }
-
 function moveSlider(direction) {
         let sliderItems = sliderList.querySelectorAll(".item");
         let thumbnailItems = document.querySelectorAll(".thumbnail .item");
-       
         if(direction === "next") {
         sliderList.appendChild(sliderItems[0]);
         thumbnail.appendChild(thumbnailItems[0]);
@@ -85,7 +81,6 @@ function moveSlider(direction) {
         thumbnail.prepend(thumbnailItems[thumbnailItems.length - 1]);
         slider.classList.add("prev");
        }
-
        slider.addEventListener("animationend", function() {
         if(direction === "next") {
                 slider.classList.remove("next");        
@@ -146,14 +141,13 @@ btnAlert.addEventListener("click", function() {
 
 
 
-
 // TENISOVÁ ŠKOLA - rozklik tlačítek
 const tabButtons = document.querySelectorAll(".ts-tab-buttons button");
 const tabContents = document.querySelectorAll(".ts-tab-content");
 const toggles = document.querySelectorAll(".ts-accordion-toggle");
 const accordionContents = document.querySelectorAll(".ts-accordion-content");
 
-// Funkce pro zavření všech tabů i accordionů
+// Funkce pro zavření všech tlačítek na desktopu i accordionů
 function closeAllSections() {
   tabButtons.forEach(b => b.classList.remove("active"));
   tabContents.forEach(c => c.classList.remove("active"));
@@ -161,7 +155,7 @@ function closeAllSections() {
   accordionContents.forEach(c => c.classList.remove("open"));
 }
 
-// Taby (desktop)
+// TŠ tlačítka - pro desktop
 tabButtons.forEach(btn => {
   btn.addEventListener("click", () => {
     const target = btn.dataset.tab;
@@ -174,7 +168,7 @@ tabButtons.forEach(btn => {
   });
 });
 
-// Accordion (mobile)
+// TŠ Acordion - pro mobily
 toggles.forEach(toggle => {
   toggle.addEventListener("click", () => {
     const content = toggle.nextElementSibling;
@@ -193,8 +187,38 @@ toggles.forEach(toggle => {
 });
 
 
+// HLAVIČKA tlačítko pro tábory
+const headerBtnCamp = document.querySelector(".header-btn-camp");
 
-// Accordion mobile pro tábory
+//pro desktop
+headerBtnCamp.addEventListener("click", () => {
+  if (window.innerWidth > 768) {
+    tabButtons.forEach(b => b.classList.remove("active"));
+    tabContents.forEach(c => c.classList.remove("active"));
+    document.querySelector(`.ts-tab-content[data-content="ts-camp"]`).classList.add("active");
+
+  } else {  //pro mobily
+    document.querySelectorAll(".ts-accordion-content").forEach(c => c.classList.remove("open"));
+    document.querySelectorAll(".ts-accordion-toggle").forEach(t => t.classList.remove("open"));
+
+    // Najít cílovou sekci
+    const targetSection = document.querySelector(".ts-section.tennis-school-camp");
+    if (targetSection) {
+      //nalezení odpovídající .ts-accordion-content a toggle
+      const accordionContent = targetSection.closest(".ts-accordion-content");
+      const toggle = accordionContent?.previousElementSibling;
+      // Otevření konkrétního akordeonu
+      accordionContent?.classList.add("open");
+      toggle?.classList.add("open");
+      toggle?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }
+});
+
+
+
+
+// Vnitřní accordion tábory pro mobil
   document.addEventListener('DOMContentLoaded', function () {
     const allButtons = document.querySelectorAll('.accordion2-btn');
     const allPanels = document.querySelectorAll('.panel2');
@@ -215,10 +239,6 @@ toggles.forEach(toggle => {
     });
   });
 
-
-
-
-
 // Při načtení stránky nic neotvírej
 window.addEventListener("DOMContentLoaded", () => {
   closeAllSections();
@@ -228,14 +248,6 @@ window.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("resize", () => {
   closeAllSections();
 });
-
-
-
-
-// ODKAZ NA TÁBOR
-
-
-
 
 
 
@@ -279,14 +291,11 @@ window.onclick = function(event) {
       }
     });
   }
-
   gallery.addEventListener('scroll', () => {
     requestAnimationFrame(updateCardScaling);
   });
-
   window.addEventListener('load', updateCardScaling);
   window.addEventListener('resize', updateCardScaling);
-
 
 
 

@@ -854,7 +854,7 @@ marquee {
 
 
 /* TŠ informace */
-#tennis-school-information {
+.tennis-school-information {
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -1090,7 +1090,7 @@ marquee {
 }
 
 /* TŠ kontakt */
-#tennis-school-contact > p {
+.tennis-school-contact > p {
   text-align: center;
 }
 .contact-card {
