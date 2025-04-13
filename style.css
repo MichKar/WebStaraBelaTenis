@@ -202,8 +202,8 @@ p {
 .btn-rezervation-system {
   position: relative;
   display: inline-block;
-  height: 30px;
-  width: 40px;
+  height: 25px;
+  width: 30px;
   transition: all 1s ease;
   overflow: hidden;
 }
@@ -464,14 +464,15 @@ p {
 }
 .description > a {
   color: white;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+  text-decoration-color: var(--light-orange); 
+  text-decoration-thickness:var(--dark-orange);
   text-underline-offset: 5px;
+  text-decoration-thickness: 3px;
 }
-.ovopen {
-  display: inline-block;
-  width: 70px;
-  img {
-    width: 100%;
-  }
+.description > a:hover {
+  color: var(--light-orange);
 }
 
 

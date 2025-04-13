@@ -275,7 +275,9 @@
     .trainer {
         position: relative;
         width: 70%;
-        margin: 10px auto;
+        margin: 0px auto;
+        height: 260px;
+        margin: 2%;
         img {
             object-position: top; 
         }
@@ -312,4 +314,9 @@
         flex-direction: column;
         gap: 20px;
     } 
+}
+@media (max-width: 405px) {
+    .hidden-element {
+        display: none;
+    }
 }
