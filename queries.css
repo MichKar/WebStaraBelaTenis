@@ -83,6 +83,17 @@
     }
 }
 @media (max-width: 768px) {
+    #tennis-school-information {
+        flex-direction: column;
+        align-items: center;
+        img {
+        order: 1;
+        }
+      }
+    .ts-camps {
+        flex-direction: column;
+        gap: 0;
+    }
     .success-gallery {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -97,10 +108,7 @@
         height: 300px;
         padding-left: 40px;
     }
-    .ts-camps {
-        flex-direction: column;
- 
-    }
+
 }
 @media (max-width: 568px) {
     .success-gallery {

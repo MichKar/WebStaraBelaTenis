@@ -192,6 +192,33 @@ toggles.forEach(toggle => {
   });
 });
 
+
+
+// Accordion mobile pro tábory
+  document.addEventListener('DOMContentLoaded', function () {
+    const allButtons = document.querySelectorAll('.accordion2-btn');
+    const allPanels = document.querySelectorAll('.panel2');
+
+    allButtons.forEach((button, index) => {
+      button.addEventListener('click', function () {
+        const panel = allPanels[index];
+        const isOpen = panel.classList.contains('open');
+        // Zavřít všechny
+        allButtons.forEach(btn => btn.classList.remove('active'));
+        allPanels.forEach(p => p.classList.remove('open'));
+        // Otevřít jen pokud nebyl aktivní
+        if (!isOpen) {
+          button.classList.add('active');
+          panel.classList.add('open');
+        }
+      });
+    });
+  });
+
+
+
+
+
 // Při načtení stránky nic neotvírej
 window.addEventListener("DOMContentLoaded", () => {
   closeAllSections();
@@ -205,20 +232,11 @@ window.addEventListener("resize", () => {
 
 
 
+// ODKAZ NA TÁBOR
 
 
-    
 
 
-// Pro správné posouvání při kliknutí na odkazy
-document.querySelectorAll("a[href='#tennis-school-camp']").forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault(); // Zabráníme výchozímu chování odkazu
-    
-            // Otevře sekci a zároveň posune na ní
-            showSection('tennis-school-camp', true);
-        });
-    });
 
 
 
@@ -243,22 +261,17 @@ window.onclick = function(event) {
 
 
 
-
 // úspěchy na mobilech
-
   const gallery = document.querySelector('.success-gallery');
   const cards = gallery.querySelectorAll('.success-card');
 
   function updateCardScaling() {
     const galleryRect = gallery.getBoundingClientRect();
     const galleryCenter = galleryRect.left + galleryRect.width / 2;
-
     cards.forEach(card => {
       const cardRect = card.getBoundingClientRect();
       const cardCenter = cardRect.left + cardRect.width / 2;
-
       const distance = Math.abs(galleryCenter - cardCenter);
-
       if (distance < cardRect.width / 2) {
         card.classList.add('in-center');
       } else {
@@ -271,16 +284,8 @@ window.onclick = function(event) {
     requestAnimationFrame(updateCardScaling);
   });
 
-  // Initial check
   window.addEventListener('load', updateCardScaling);
   window.addEventListener('resize', updateCardScaling);
-
-
-
-
-
-
-
 
 
 
