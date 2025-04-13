@@ -177,23 +177,42 @@ p {
 .navigation li a:hover {
   color: var(--light-orange);
 }
-.btn-rezervation-system {
-  height: 30px;
-  width: 40px;
+.header-rezervation {
+  text-decoration: none;
+  color: orange;
+  border: 1px solid orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  border-radius: 15px;
   transition: scale 0.5s ease;
 }
-.btn-rezervation-system:hover {
+.header-rezervation:hover {
+  background-color: rgb(255, 166, 0);
+  color: black;
+}
+.header-rezervation:hover .btn-rezervation-system {
   scale: 1.05;
 }
-.btn-rezervation-system:active {
-  scale: 0.95;
+.header-rezervation:hover .btn-rezervation-system {
+  content: url("img/icons/calendar-blackAndWhite.png");
+}
+.btn-rezervation-system {
+  position: relative;
+  display: inline-block;
+  height: 30px;
+  width: 40px;
+  transition: all 1s ease;
+  overflow: hidden;
 }
 .btn-menu,
 .btn-close {
   width: 30px;
   height: 30px;
   cursor: pointer;
-  transition: opacity 0.5s ease;
+  transition: all 0.5s ease;
   img {
     width: 95%;
     height: 85%;
