@@ -198,7 +198,7 @@ p {
   scale: 1.05;
 }
 .header-rezervation:hover .btn-rezervation-system {
-  content: url("img/icons/calendar-blackAndWhite.png");
+  content: url("img/icons/calendar-blackAndwhite.png");
 }
 .btn-rezervation-system {
   position: relative;
@@ -1028,7 +1028,7 @@ marquee {
 .camp-photo {
   width: 100%;
   max-width: 400px;
-  margin-top: 10px;
+  margin: 0 auto;
 }
 .ts-camps {
   display: flex;

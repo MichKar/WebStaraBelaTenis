@@ -94,9 +94,6 @@
         flex-direction: column;
         gap: 0;
     }
-    .camp-photo {
-        margin: 0 auto;
-    }
     .success-gallery {
         grid-template-columns: repeat(3, 1fr);
     }
