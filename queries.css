@@ -63,11 +63,11 @@
         align-items: center;
         gap: 30px;
         width: 300px;
-        img {
-            display: block;
-            height: 40px;
-            transition: filter 0.5s ease;
-        }
+      }
+      .navigation li a img {
+        display: block;
+        height: 40px;
+        transition: filter 0.5s ease;
         }
       .navigation li a:hover img {
         filter: invert(35%) sepia(100%) saturate(500%) hue-rotate(-10deg);
@@ -86,9 +86,9 @@
     .tennis-school-information {
         flex-direction: column;
         align-items: center;
-        img {
+    }
+    .tennis-school-information img {
         order: 1;
-        }
       }
     .ts-camps {
         flex-direction: column;
@@ -141,9 +141,6 @@
     .prices-header .summer,
     .prices-header .winter {
       gap: 13px;
-      img {
-        width: 50px;
-      }
     }
     #areal-prices {
         width: 90%;
@@ -166,9 +163,9 @@
         margin: 0 auto;
         overflow: visible;
         position: relative;
-        h2 {
-            width: 100%;
-        }
+    }
+    .tennis-success h2 {
+        width: 100%;
     }
     .success-gallery {
         display: flex;
@@ -281,9 +278,9 @@
         margin: 0px auto;
         height: 260px;
         margin: 2%;
-        img {
-            object-position: top; 
-        }
+    }
+    .trainer img {
+        object-position: top; 
     }
     .trainer-hand {
         position: absolute;
@@ -300,10 +297,10 @@
         z-index: 100;
         pointer-events: none; 
         background: #ffffffdb;
-        img {
-            width: 25px;
-            height: 25px;
-        }
+    }
+    .trainer-hand img {
+        width: 25px;
+        height: 25px;
     }
     .contact-div1 {
         padding: 0;

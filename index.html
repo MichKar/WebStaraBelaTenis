@@ -23,7 +23,7 @@
 
 <body>
 
-  <!------------------- HEADER --------------------->
+  <!-- HEADER -->
   <header>
     <nav class="navbar">
       <div class="logo">
@@ -31,11 +31,11 @@
         </h1>
       </div>
       <ul class="navigation">
-        <li><a href="#section-areal"><img src="img/icons/home1-white.png">areál</a></li>
-        <li><a href="#areal-prices"><img src="img/icons/price1-white.png">ceník</a></li>
-        <li><a href="#tennis-school-bg"><img src="img/icons/school-white.png">tenisová škola</a></li>
-        <li><a href="#tennis-school-camp" class="header-btn-camp"><img src="img/icons/camp-white.png">tábor & soustředění</a></li>
-        <li><a href="#contact-bg"><img src="img/icons/contact.png">kontakt</a></li>
+        <li><a href="#section-areal"><img src="img/icons/home1-white.png" alt="">areál</a></li>
+        <li><a href="#areal-prices"><img src="img/icons/price1-white.png" alt="">ceník</a></li>
+        <li><a href="#tennis-school-bg"><img src="img/icons/school-white.png" alt="">tenisová škola</a></li>
+        <li><a href="#tennis-school-camp" class="header-btn-camp"><img src="img/icons/camp-white.png" alt="">tábor & soustředění</a></li>
+        <li><a href="#contact-bg"><img src="img/icons/contact.png" alt="">kontakt</a></li>
       </ul>
       <a class="header-rezervation" href="https://starabela.rezervujse.cz/StaraBelaServlet/app" target="_blank">
         Rezervace
@@ -51,16 +51,16 @@
 
   <main>
 
-    <!---------- AKUALITY ------------------------>
+    <!-- AKUALITY-->
     <div class="news">
-      <marquee direction="left" onMouseOver="this.setAttribute('scrollamount', 0, 0);this.stop();"
+      <!-- <marquee direction="left" onMouseOver="this.setAttribute('scrollamount', 0, 0);this.stop();"
         OnMouseOut="this.setAttribute('scrollamount', 12, 0);this.start();" scrollamount="7" bgcolor="#F8BA1F">Kurty č.
         1 -
-        3 v provozu od 8. 4. 2024. Rezervace spuštěna.</marquee>
+        3 v provozu od 8. 4. 2024. Rezervace spuštěna.</marquee> -->
       <!-- Rezervace na přetlakovou halu je již spuštěna! V případě příznivého počasí jsou stále k dispozici kurty 1-3 (v tomto případě volejte správcům). -->
     </div>
 
-    <!-------------- SEKCE 1. AREÁL -------------------->
+    <!-- SEKCE 1. AREÁL -->
     <section id="section-areal">
       <div class="slider">
         <div class="list">
@@ -77,7 +77,7 @@
           </div>
 
           <div class="item">
-            <img src="img/photos/courts/kurty3.jpg">
+            <img src="img/photos/courts/kurty3.jpg" alt="foto kurtů">
             <div class="content">
               <div class="title">OBČERSTVENÍ</div>
               <div class="description">
@@ -90,7 +90,7 @@
           </div>
 
           <div class="item">
-            <img src="img/photos/shop/shop1.jpg">
+            <img src="img/photos/shop/shop1.jpg" alt="foto obchodu">
             <div class="content">
               <div class="title">TENISOVÝ OBCHOD</div>
               <div class="description">
@@ -136,7 +136,6 @@
             <span class="close" onclick="closeModal('refreshmentModal')">&times;</span>
             <h3 class="more-info-h">Občerstvení</h3>
             <p class="border-line">Více textu po rozkliknutí tlačítka u občerstvení</p>
-            <img src="img/pictures/hotdog.webp" width="100px">
           </div>
         </div>
 
@@ -147,10 +146,10 @@
             <h3 class="more-info-h">Tenisový obchod</h3>
             <p class="border-line">&#127934;&nbsp;vyplétání raket od&nbsp;350&nbsp;Kč včetně výpletu</p>
             <p class="border-line">
-              <img src="img/icons/roller-skates.png">&nbsp;&nbsp;broušení bruslí od&nbsp;100&nbsp;Kč
+              <img src="img/icons/roller-skates.png" alt="">&nbsp;&nbsp;broušení bruslí od&nbsp;100&nbsp;Kč
             </p>
             <p>
-              <img src="img/icons/box.png">&nbsp;&nbsp;příjem a výdej balíků:
+              <img src="img/icons/box.png" alt="">&nbsp;&nbsp;příjem a výdej balíků:
             </p>
             <div class="delivery border-line">
               <img src="img/logo/Zasilkovna.png" alt="zásilkovna">
@@ -172,23 +171,23 @@
         <div class="thumbnail">
           <div class="item">
             <p>areál</p>
-            <img src="img/photos/courts/kurty1.jpg">
+            <img src="img/photos/courts/kurty1.jpg" alt="foto kurty">
           </div>
           <div class="item">
             <p>občerstvení</p>
-            <img src="img/photos/courts/kurty3.jpg">
+            <img src="img/photos/courts/kurty3.jpg" alt="foto kurty">
           </div>
           <div class="item">
             <p>obchod</p>
-            <img src="img/photos/shop/shop1.jpg">
+            <img src="img/photos/shop/shop1.jpg" alt="foto obchodu">
           </div>
           <div class="item">
             <p>hala</p>
-            <img src="img/photos/courts/hala1.jpg">
+            <img src="img/photos/courts/hala1.jpg" alt="foto haly">
           </div>
           <div class="item">
             <p>turnaje</p>
-            <img src="img/photos/ovopen/ovopen1.jpg">
+            <img src="img/photos/ovopen/ovopen1.jpg" alt="foto turnaje">
           </div>
         </div>
 
@@ -199,26 +198,26 @@
       </div>
     </section>
 
-    <!---------- SEKCE 2 - CENÍK KURTŮ ------------------>
+    <!-- SEKCE 2 - CENÍK KURTŮ -->
     <section class="section-bg">
       <div id="areal-prices">
         <h2>Ceník kurtů</h2>
         <div class="prices">
           <div class="prices-header">
-            <button class="summer active-price-header">
-              <img src="img/icons/sun.png">
+            <a class="summer active-price-header">
+              <img src="img/icons/sun.png" alt="ikona slunce">
               <div>
                 <p>LETNÍ SEZÓNA</p>
                 <p>(duben - říjen)</p>
-              </div>
-            </button>
-            <button class="winter">
-              <img src="img/icons/snowflake.png">
+            </div>
+            </a>
+            <a class="winter">
+              <img src="img/icons/snowflake.png" alt="ikona vločky">
               <div>
                 <p>ZIMNÍ SEZÓNA</p>
                 <p>(říjen - duben)</p>
               </div>
-            </button>
+            </a>
           </div>
           <div class="prices-cards">
 
@@ -243,7 +242,7 @@
                   </div>
                 </div>
                 <div class="prices-photo">
-                  <img src="img/photos/courts/kurty2.jpg">
+                  <img src="img/photos/courts/kurty2.jpg" alt="foto kurty">
                 </div>
               </div>
               <div class="rezervation">
@@ -279,7 +278,7 @@
                   </div>
                 </div>
                 <div class="prices-photo">
-                  <img src="img/photos/courts/hala2.jpg">
+                  <img src="img/photos/courts/hala2.jpg" alt="foto nafukovací haly">
                 </div>
               </div>
 
@@ -299,7 +298,7 @@
           </div>
 
           <div class="rezervation-alert">
-            <img src="img/icons/alert.png">
+            <img src="img/icons/alert.png" alt="ikona vykričníku">
             <p>Upozornění! Rezervaci lze zrušit přes rezervační systém nejpozději 24h předem. Pokud vyjímečně chcete
               zrušit
               rezervaci na poslední chvíli, je nutné zrušit telefonicky.</p>
@@ -312,7 +311,7 @@
       </div>
     </section>
 
-    <!------------ SEKCE 3. TENISOVÁ ŠKOLA ----------------->
+    <!-- SEKCE 3. TENISOVÁ ŠKOLA -->
     <section id="tennis-school-bg">
       <div class="container">
         <div class="tennis-school">
@@ -328,22 +327,22 @@
           <div class="ts-tabs-desktop">
             <div class="ts-tab-buttons">
               <button data-tab="ts-info">
-                <img src="img/icons/information.png">
+                <img src="img/icons/information.png" alt="">
                 Informace</button>
               <button data-tab="ts-competition">
-                <img src="img/logo/cts.png">
+                <img src="img/logo/cts.png" alt="">
                 Družstva</button>
               <button data-tab="ts-price">
-                <img src="img/icons/tag.png">
+                <img src="img/icons/tag.png" alt="">
                 Ceník tréninků</button>
               <button data-tab="ts-camp">
-                <img src="img/icons/camp.png">
+                <img src="img/icons/camp.png" alt="">
                 Tábor & Soustředění</button>
               <button onclick="showModal('tennisSchoolRulesModal')">
-                <img src="img/icons/insurance.png">
+                <img src="img/icons/insurance.png" alt="">
                 Organizační řád</button>
               <button data-tab="ts-contact">
-                <img src="img/icons/contact-us.png">
+                <img src="img/icons/contact-us.png" alt="">
                 Kontakt</button>
             </div>
 
@@ -353,7 +352,7 @@
               <div class="ts-tab-content" data-content="ts-info">
                 <div id="tennis-school-information" class="ts-section tennis-school-information">
                  
-                    <img src="img/pictures/child.png">
+                    <img src="img/pictures/child.png" alt="foto úsmívajícího dítěte AI">
                   
                   <div class="ts-info-text">
                   <p>Tenisová škola působí v rámci tenisového oddílu od roku 2002 a soustředí se hlavně na výchovu dětí
@@ -378,7 +377,7 @@
                   <div class="competitions">
 
                     <div class="competition">
-                      <img src="img/icons/silueta_babytenis.png">
+                      <img src="img/icons/silueta_babytenis.png" alt="">
                       <div>
                         <a href="https://cztenis.cz/babytenis/druzstva/sezona/2024/soutez/8656"
                           target="_blank">Babytenis
@@ -386,8 +385,8 @@
                         <!-- <a href="https://cztenis.cz/babytenis/druzstva/sezona/2023/soutez/8309" target="_blank">Babytenis B</a> -->
                       </div>
                     </div>
-                    <div class="competition" href="#">
-                      <img src="img/icons/silueta_ml_zaci.png">
+                    <div class="competition">
+                      <img src="img/icons/silueta_ml_zaci.png" alt="">
                       <div>
                         <a href="https://cztenis.cz/mladsi-zactvo/druzstva/sezona/2024/soutez/8650"
                           target="_blank">Mladší
@@ -400,8 +399,8 @@
                           žáci C</a>
                       </div>
                     </div>
-                    <div class="competition" href="#">
-                      <img src="img/icons/silueta_st_zaci.png">
+                    <div class="competition">
+                      <img src="img/icons/silueta_st_zaci.png" alt="">
                       <div>
                         <a href="https://cztenis.cz/starsi-zactvo/druzstva/sezona/2024/soutez/8646"
                           target="_blank">Starší
@@ -411,8 +410,8 @@
                           žáci B</a>
                       </div>
                     </div>
-                    <div class="competition" href="#">
-                      <img src="img/icons/silueta_dorost.png">
+                    <div class="competition">
+                      <img src="img/icons/silueta_dorost.png" alt="">
                       <div>
                         <a href="https://cztenis.cz/dorost/druzstva/sezona/2024/soutez/8625" target="_blank">Dorost
                           A</a>
@@ -420,8 +419,8 @@
                           B</a>
                       </div>
                     </div>
-                    <div class="competition" href="#">
-                      <img src="img/icons/silueta_dospeli.png">
+                    <div class="competition">
+                      <img src="img/icons/silueta_dospeli.png" alt="">
                       <div>
                         <a href="https://cztenis.cz/dospeli/druzstva/sezona/2024/soutez/8581" target="_blank">Dospělí
                           A</a>
@@ -439,22 +438,22 @@
                   <p class="ts-price-h">Ceník tréninkových jednotek</p>
                   <div class="ts-prices">
                     <div class="ts-one-price">
-                      <img src="img/icons/1per.png">
+                      <img src="img/icons/1per.png" alt="">
                       <p>1&nbsp;hráč na&nbsp;kurtu</p>
                       <p>440&nbsp;Kč/hod za&nbsp;1&nbsp;hráče</p>
                     </div>
                     <div class="ts-one-price">
-                      <img src="img/icons/2per.png">
+                      <img src="img/icons/2per.png" alt="">
                       <p>2&nbsp;hráči na&nbsp;kurtu</p>
                       <p>230&nbsp;Kč/hod za&nbsp;1&nbsp;hráče</p>
                     </div>
                     <div class="ts-one-price">
-                      <img src="img/icons/3per.png">
+                      <img src="img/icons/3per.png" alt="">
                       <p>3&nbsp;hráči na&nbsp;kurtu</p>
                       <p>160&nbsp;Kč/hod za&nbsp;1&nbsp;hráče</p>
                     </div>
                     <div class="ts-one-price">
-                      <img src="img/icons/4per.png">
+                      <img src="img/icons/4per.png" alt="">
                       <p>4&nbsp;hráči na&nbsp;kurtu</p>
                       <p>130&nbsp;Kč/hod za&nbsp;1&nbsp;hráče</p>
                     </div>
@@ -488,7 +487,7 @@
                             </a>
                           </div> -->
                         </div>
-                        <img class="camp-photo" src="img/photos/TSactions/tabor1.jpg">
+                        <img class="camp-photo" src="img/photos/TSactions/tabor1.jpg" alt="foto příměstského tábora">
                       </div>
                     </div>
 
@@ -506,7 +505,7 @@
                               <img src="img/icons/download.png"> Otevřít leták v PDF</a>
                           </div> -->
                         </div>
-                        <img class="camp-photo" src="img/photos/TSactions/tabor2.jpg">
+                        <img class="camp-photo" src="img/photos/TSactions/tabor2.jpg" alt="foto dětí na letním soustředění">
                       </div>
                     </div>
 
@@ -520,10 +519,10 @@
                           <p>&#128100; Zodpovědná osoba: Jirka Priesol</p>
                            <div class="pdf-container">
                             <a href="documents/letak-zimni-soustredeni2025.pdf" target="_blank" download>
-                              <img src="img/icons/download.png"> Otevřít leták v PDF</a>
+                              <img src="img/icons/download.png" alt="ikona stažení"> Otevřít leták v PDF</a>
                           </div> 
                         </div>
-                        <img class="camp-photo" src="img/photos/TSactions/zimniSoustredeni2.jpg">
+                        <img class="camp-photo" src="img/photos/TSactions/zimniSoustredeni2.jpg" alt="foto zimního soustředění">
                       </div>
                     </div> -->
 
@@ -536,11 +535,11 @@
                 <div id="tennis-school-contact" class="ts-section tennis-school-contact">
                   <p>Kontaktní osoba tenisové školy:</p>
                   <div class="contact-card">
-                    <img src="img/photos/trainers/jirkaPriesol.png">
+                    <img src="img/photos/trainers/jirkaPriesol.png" alt="foto Jirka">
                     <div class="school-contact">
                       <p>Jiří Priesol</p>
-                      <a href="tel:+420604601387"><img src="img/icons/telephone_black.png">604 601 387</a>
-                      <a href="mailto:jpriesol@seznam.cz"><img src="img/icons/arroba.png">jpriesol@seznam.cz</a>
+                      <a href="tel:+420604601387"><img src="img/icons/telephone_black.png" alt="">604 601 387</a>
+                      <a href="mailto:jpriesol@seznam.cz"><img src="img/icons/arroba.png" alt="">jpriesol@seznam.cz</a>
                     </div>
                   </div>
                   <div class="ts-facebook">
@@ -559,7 +558,7 @@
           <div class="ts-accordion-mobile">
             <div class="ts-accordion-item">
               <button class="ts-accordion-toggle">
-                <img src="img/icons/information.png">
+                <img src="img/icons/information.png" alt="">
                 Informace
                 <svg class="arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#ffffff">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -567,7 +566,7 @@
               </button>
               <div class="ts-accordion-content">
                 <div class="ts-section tennis-school-information">
-                  <img src="img/pictures/child.png">
+                  <img src="img/pictures/child.png" alt="obrázek dítěte úspěvavého AI">
                   <div class="ts-info-text">
                   <p>Tenisová škola působí v rámci tenisového oddílu od roku 2002 a soustředí se hlavně na výchovu dětí
                     a
@@ -586,7 +585,7 @@
             </div>
             <div class="ts-accordion-item">
               <button class="ts-accordion-toggle">
-                <img src="img/logo/cts.png">
+                <img src="img/logo/cts.png" alt="logo Čts">
                 Družstva
                 <svg class="arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#ffffff">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -599,7 +598,7 @@
                   <div class="competitions">
 
                     <div class="competition">
-                      <img src="img/icons/silueta_babytenis.png">
+                      <img src="img/icons/silueta_babytenis.png" alt="">
                       <div>
                         <a href="https://cztenis.cz/babytenis/druzstva/sezona/2024/soutez/8656"
                           target="_blank">Babytenis
@@ -608,7 +607,7 @@
                       </div>
                     </div>
                     <div class="competition">
-                      <img src="img/icons/silueta_ml_zaci.png">
+                      <img src="img/icons/silueta_ml_zaci.png" alt="">
                       <div>
                         <a href="https://cztenis.cz/mladsi-zactvo/druzstva/sezona/2024/soutez/8650"
                           target="_blank">Mladší
@@ -622,7 +621,7 @@
                       </div>
                     </div>
                     <div class="competition">
-                      <img src="img/icons/silueta_st_zaci.png">
+                      <img src="img/icons/silueta_st_zaci.png" alt="">
                       <div>
                         <a href="https://cztenis.cz/starsi-zactvo/druzstva/sezona/2024/soutez/8646"
                           target="_blank">Starší
@@ -633,7 +632,7 @@
                       </div>
                     </div>
                     <div class="competition">
-                      <img src="img/icons/silueta_dorost.png">
+                      <img src="img/icons/silueta_dorost.png" alt="">
                       <div>
                         <a href="https://cztenis.cz/dorost/druzstva/sezona/2024/soutez/8625" target="_blank">Dorost
                           A</a>
@@ -642,7 +641,7 @@
                       </div>
                     </div>
                     <div class="competition">
-                      <img src="img/icons/silueta_dospeli.png">
+                      <img src="img/icons/silueta_dospeli.png" alt="">
                       <div>
                         <a href="https://cztenis.cz/dospeli/druzstva/sezona/2024/soutez/8581" target="_blank">Dospělí
                           A</a>
@@ -657,7 +656,7 @@
             </div>
             <div class="ts-accordion-item">
               <button class="ts-accordion-toggle">
-                <img src="img/icons/tag.png">
+                <img src="img/icons/tag.png" alt="ikona ceníku">
                 Ceník tréninků
                 <svg class="arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#ffffff">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -668,22 +667,22 @@
                   <!-- <p class="ts-price-h">Ceník tréninkových jednotek</p> -->
                   <div class="ts-prices">
                     <div class="ts-one-price">
-                      <img src="img/icons/1per.png">
+                      <img src="img/icons/1per.png" alt="ikona 1 osoby">
                       <p>1&nbsp;hráč na&nbsp;kurtu</p>
                       <p>440&nbsp;Kč/hod za&nbsp;1&nbsp;hráče</p>
                     </div>
                     <div class="ts-one-price">
-                      <img src="img/icons/2per.png">
+                      <img src="img/icons/2per.png" alt="ikona 2 osob">
                       <p>2&nbsp;hráči na&nbsp;kurtu</p>
                       <p>230&nbsp;Kč/hod za&nbsp;1&nbsp;hráče</p>
                     </div>
                     <div class="ts-one-price">
-                      <img src="img/icons/3per.png">
+                      <img src="img/icons/3per.png" alt="ikona 3 osob">
                       <p>3&nbsp;hráči na&nbsp;kurtu</p>
                       <p>160&nbsp;Kč/hod za&nbsp;1&nbsp;hráče</p>
                     </div>
                     <div class="ts-one-price">
-                      <img src="img/icons/4per.png">
+                      <img src="img/icons/4per.png" alt="ikona 4 osob">
                       <p>4&nbsp;hráči na&nbsp;kurtu</p>
                       <p>130&nbsp;Kč/hod za&nbsp;1&nbsp;hráče</p>
                     </div>
@@ -699,7 +698,7 @@
             </div>
             <div class="ts-accordion-item">
               <button class="ts-accordion-toggle">
-                <img src="img/icons/camp.png">
+                <img src="img/icons/camp.png" alt="ikona táboru">
                 Tábor & soustředění
                 <svg class="arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#ffffff">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -730,7 +729,7 @@
                             </a>
                           </div> -->
                         </div>
-                        <img class="camp-photo" src="img/photos/TSactions/tabor1.jpg">
+                        <img class="camp-photo" src="img/photos/TSactions/tabor1.jpg" alt="foto příměstkého tábora">
                       </div>
                     </div>
                 
@@ -750,11 +749,11 @@
                           <p>Tenisová škola pořádá pro své svěřence týdenní letní soustředění plné tréninků, pohybu a zábavy. Hlavním programem jsou tenisové tréninky přímo v areálu Turist hotelu Euro, které vedou zkušení trenéři. Děti si zlepší tenisové dovednosti, fyzickou kondici a užijí si aktivní týden v kolektivu.</p>
                           <!-- <div class="pdf-container">
                             <a href="documents/letak-zimni-soustredeni2025.pdf" target="_blank" download>
-                              <img src="img/icons/download.png"> Otevřít leták v PDF
+                              <img src="img/icons/download.png" alt="ikona stahování"> Otevřít leták v PDF
                             </a>
                           </div> -->
                         </div>
-                        <img class="camp-photo" src="img/photos/TSactions/tabor2.jpg">
+                        <img class="camp-photo" src="img/photos/TSactions/tabor2.jpg" alt="fotka příměstského tábora">
                       </div>
                     </div>
                 
@@ -773,11 +772,11 @@
                           <p>&#128100; Zodpovědná osoba: Jirka Priesol</p>
                           <div class="pdf-container">
                             <a href="documents/letak-zimni-soustredeni2025.pdf" target="_blank" download>
-                              <img src="img/icons/download.png"> Otevřít leták v PDF
+                              <img src="img/icons/download.png" alt="ikona stahování"> Otevřít leták v PDF
                             </a>
                           </div>
                         </div>
-                        <img class="camp-photo" src="img/photos/TSactions/zimniSoustredeni2.jpg">
+                        <img class="camp-photo" src="img/photos/TSactions/zimniSoustredeni2.jpg" alt="fotka zimního soustředění">
                       </div>
                     </div> -->
                 
@@ -790,7 +789,7 @@
             </div>
             <div class="ts-accordion-item">
               <button class="ts-accordion-toggle" onclick="showModal('tennisSchoolRulesModal')">
-                <img src="img/icons/insurance.png">
+                <img src="img/icons/insurance.png" alt="ikona pravidel">
                 Organizační řád
                 <svg class="arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#ffffff">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -800,7 +799,7 @@
             </div>
             <div class="ts-accordion-item">
               <button class="ts-accordion-toggle">
-                <img src="img/icons/contact-us.png">
+                <img src="img/icons/contact-us.png" alt="ikona kontaktu">
                 Kontakt
                 <svg class="arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#ffffff">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -810,17 +809,17 @@
                 <div class="ts-section tennis-school-contact">
                   <p>Kontaktní osoba tenisové školy:</p>
                   <div class="contact-card">
-                    <img src="img/photos/trainers/jirkaPriesol.png">
+                    <img src="img/photos/trainers/jirkaPriesol.png" alt="fotka Jirka Priesol">
                     <div class="school-contact">
                       <p>Jiří Priesol</p>
-                      <a href="tel:+420604601387"><img src="img/icons/telephone_black.png">604 601 387</a>
-                      <a href="mailto:jpriesol@seznam.cz"><img src="img/icons/arroba.png">jpriesol@seznam.cz</a>
+                      <a href="tel:+420604601387"><img src="img/icons/telephone_black.png" alt="">604 601 387</a>
+                      <a href="mailto:jpriesol@seznam.cz"><img src="img/icons/arroba.png" alt="">jpriesol@seznam.cz</a>
                     </div>
                   </div>
                   <div class="ts-facebook">
                     <p>Sledujte nás na našem Facebooku</p>
                     <a href="https://www.facebook.com/photo?fbid=992819629300811&set=pcb.992821835967257"
-                      target="_blank"><img src="img/icons/facebook.png" alt="odkaz za facebook"></a>
+                      target="_blank"><img src="img/icons/facebook.png" alt="ikona facebooku"></a>
                   </div>
                 </div>
               </div>
@@ -934,7 +933,7 @@
       </div>
     </section>
 
-    <!------- SEKCE 4. ÚSPĚCHY TENISOVÉ ŠKOLY ----------->
+    <!-- SEKCE 4. ÚSPĚCHY TENISOVÉ ŠKOLY -->
     <section class="tennis-success">
       <h2>Úspěchy tenisové školy</h2>
       <div class="success-arrow">&gt;</div>
@@ -942,7 +941,7 @@
         <div class="spacer"></div>
 
         <div class="success-card">
-          <img src="img/photos/TSsuccess/2025_KrystofMech.jpg">
+          <img src="img/photos/TSsuccess/2025_KrystofMech.jpg" alt="foto Kryštof Mech">
           <div class="less-info">
             <p>Babytenis</p>
             <p>2025</p>
@@ -954,7 +953,7 @@
         </div>
 
         <div class="success-card">
-          <img src="img/photos/TSsuccess/2024_starsiZaci.jpg">
+          <img src="img/photos/TSsuccess/2024_starsiZaci.jpg" alt="foto starší žáci">
           <div class="less-info">
             <p>Starší žáci</p>
             <p>2024</p>
@@ -966,7 +965,7 @@
         </div>
 
         <div class="success-card">
-          <img src="img/photos/TSsuccess/2024_KristynaPrikrylova.jpg">
+          <img src="img/photos/TSsuccess/2024_KristynaPrikrylova.jpg" alt="foto Krisýna Přikrylová">
           <div class="less-info">
             <p>Starší žáci</p>
             <p>2024</p>
@@ -980,11 +979,11 @@
         </div>
 
         <div class="success-card special-card">
-          <img src="img/pictures/cup.jpg">
+          <img src="img/pictures/cup.jpg" alt="foto poháru">
         </div>
 
         <div class="success-card">
-          <img src="img/photos/TSsuccess/2023_Babytenis_SipekSimon.jpg">
+          <img src="img/photos/TSsuccess/2023_Babytenis_SipekSimon.jpg" alt="foto Šimon Šípek">
           <div class="less-info">
             <p>Babytenis</p>
             <p>2023</p>
@@ -998,7 +997,7 @@
         </div>
 
         <div class="success-card">
-          <img src="img/photos/TSsuccess/2023_KrystofMech.jpg">
+          <img src="img/photos/TSsuccess/2023_KrystofMech.jpg" alt="foto Kryštof Mech">
           <div class="less-info">
             <p>Minitenis</p>
             <p>2023</p>
@@ -1010,7 +1009,7 @@
         </div>
 
         <div class="success-card">
-          <img src="img/photos/TSsuccess/2023_KP_StarsiZaci.jpg">
+          <img src="img/photos/TSsuccess/2023_KP_StarsiZaci.jpg" alt="foto Starší žáci">
           <div class="less-info">
             <p>Starší žáci</p>
             <p>2023</p>
@@ -1025,7 +1024,7 @@
         </div>
 
         <div class="success-card">
-          <img src="img/photos/TSsuccess/2023_mladsiZaci.jpg">
+          <img src="img/photos/TSsuccess/2023_mladsiZaci.jpg" alt="foto mladší žáci">
           <div class="less-info">
             <p>Mladší žáci</p>
             <p>2023</p>
@@ -1037,7 +1036,7 @@
         </div>
 
         <div class="success-card">
-          <img src="img/photos/TSsuccess/2023_MarieLoskova.jpg">
+          <img src="img/photos/TSsuccess/2023_MarieLoskova.jpg" alt="foto mladší žáci">
           <div class="less-info">
             <p>Mladší žáci</p>
             <p>2023</p>
@@ -1049,7 +1048,7 @@
         </div>
 
         <div class="success-card">
-          <img src="img/photos/TSsuccess/2023_babytenis.jpg">
+          <img src="img/photos/TSsuccess/2023_babytenis.jpg" alt="foot babytenis">
           <div class="less-info">
             <p>Babytenis</p>
             <p>2023</p>
@@ -1068,7 +1067,7 @@
         </div>
 
         <div class="success-card">
-          <img src="img/photos/TSsuccess/2022_Babytenis.jpg">
+          <img src="img/photos/TSsuccess/2022_Babytenis.jpg" alt="foto babytenis">
           <div class="less-info">
             <p>Babytenis</p>
             <p>2022</p>
@@ -1081,7 +1080,7 @@
         </div>
 
         <div class="success-card">
-          <img src="img/photos/TSsuccess/2022_mladsiZaci_KristynaPrikrylova.jpg">
+          <img src="img/photos/TSsuccess/2022_mladsiZaci_KristynaPrikrylova.jpg" alt="foto Kristýna Přikrylová">
           <div class="less-info">
             <p>Mladší žáci</p>
             <p>2022</p>
@@ -1096,7 +1095,7 @@
         </div>
 
         <div class="success-card">
-          <img src="img/photos/TSsuccess/2021_Minitenis.jpg">
+          <img src="img/photos/TSsuccess/2021_Minitenis.jpg" alt="foot Minitenis">
           <div class="less-info">
             <p>Minitenis</p>
             <p>2021</p>
@@ -1108,7 +1107,7 @@
         </div>
 
         <div class="success-card">
-          <img src="img/photos/TSsuccess/2021_Babytenis.jpg">
+          <img src="img/photos/TSsuccess/2021_Babytenis.jpg" alt="foto Babytenis">
           <div class="less-info">
             <p>Babytenis</p>
             <p>2021</p>
@@ -1120,7 +1119,7 @@
         </div>
 
         <!-- <div class="success-card">
-                  <img src="img/photos/TSsuccess/2020_Minitenis.jpg">
+                  <img src="img/photos/TSsuccess/2020_Minitenis.jpg" alt="foto Minitenis">
                     <div class="less-info">
                     <p>Minitenis</p>
                     <p>2020</p>
@@ -1132,7 +1131,7 @@
                 </div> -->
 
         <!-- <div class="success-card">
-                  <img src="img/photos/TSsuccess/2020_KristynaPrikrylova.jpg">
+                  <img src="img/photos/TSsuccess/2020_KristynaPrikrylova.jpg" alt="foto Kristýna Přikrylová">
                     <div class="less-info">
                     <p>Mladší žáci</p>
                     <p>2020</p>
@@ -1148,59 +1147,67 @@
       </div>
     </section>
 
-    <!--------SEKCE 5. TÝM TENISOVÉ ŠKOLY --------------->
+    <!--  SEKCE 5. TÝM TENISOVÉ ŠKOLY -->
     <section class="trainers-bg">
       <div class="container">
         <h2>Trenérský tým</h2>
         <div class="trainers">
           <div class="trainer">
-            <div class="trainer-hand"><img src="img/icons/click-black.png"></div>
-            <img src="img/photos/trainers/Jiri.jpg">
+            <div class="trainer-hand"><img src="img/icons/click-black.png" alt="ikona kliknutí"></div>
+            <img src="img/photos/trainers/Jiri.jpg" alt="Foto Jirka Priesol">
             <div class="trainer-info">
-              <p>Jiří Priesol</p>
-              <li>zakladatel a hlavní trenér tenisové školy</li>
-              <li>trenér II. třídy</li>
-              <li>17 let praxe na profesionální úrovni</li>
-              <li>hráč A-týmu Staré Bělé (Krajský přebor)</li>
-              <li class="hidden-element">v minulosti hráč Severomoravské divize</li>
+              <p class="trainer-name">Jiří Priesol</p>
+              <ul>
+                <li>zakladatel a hlavní trenér tenisové školy</li>
+                <li>trenér II. třídy</li>
+                <li>17 let praxe na profesionální úrovni</li>
+                <li>hráč A-týmu Staré Bělé (Krajský přebor)</li>
+                <li class="hidden-element">v minulosti hráč Severomoravské divize</li>
+            </ul>
             </div>
           </div>
 
           <div class="trainer">
-            <div class="trainer-hand"><img src="img/icons/click-black.png"></div>
-            <img src="img/photos/trainers/Jakub.jpg">
+            <div class="trainer-hand"><img src="img/icons/click-black.png" alt="ikona kliknutí"></div>
+            <img src="img/photos/trainers/Jakub.jpg" alt="foto Jakub Juttner">
             <div class="trainer-info">
               <p>Jakub Jüttner</p>
-              <li>trenér s dvouletou praxí v australském Sydney</li>
+              <ul>
+                <li>trenér s dvouletou praxí v australském Sydney</li>
+              </ul>
             </div>
           </div>
 
           <div class="trainer">
-            <div class="trainer-hand"><img src="img/icons/click-black.png"></div>
-            <img src="img/photos/trainers/Marek.jpg">
+            <div class="trainer-hand"><img src="img/icons/click-black.png" alt="ikona kliknutí"></div>
+            <img src="img/photos/trainers/Marek.jpg" alt="foto Marek Holaň">
             <div class="trainer-info">
               <p>Mgr. Marek Holaň</p>
-              <li>trenér III. třídy</li>
-              <li>hráč TJ Sokol Stará Bělá</li>
+              <ul>
+                <li>trenér III. třídy</li>
+                <li>hráč TJ Sokol Stará Bělá</li>
+            </ul>
             </div>
           </div>
 
           <div class="trainer">
-            <div class="trainer-hand"><img src="img/icons/click-black.png"></div>
-            <img src="img/photos/trainers/Tomas.jpg">
+            <div class="trainer-hand"><img src="img/icons/click-black.png" alt="ikona kliknutí"></div>
+            <img src="img/photos/trainers/Tomas.jpg" alt="foto Tomáš Vrzala">
             <div class="trainer-info">
               <p>Ing. Tomáš Vrzala</p>
-              <li>trenér</li>
-              <li>bývalý hráč ligového Milo Olomouc</li>
-              <li>Mistr ČR 2010, 2012, 2013, 2014 v kategorii 40-45 let</li>
-              <li> v minulosti hráč okolo 50. místa světového žebříčku ITF 50-55</li>
+              <ul>
+                <li>trenér</li>
+                <li>bývalý hráč ligového Milo Olomouc</li>
+                <li>Mistr ČR 2010, 2012, 2013, 2014 v kategorii 40-45 let</li>
+                <li> v minulosti hráč okolo 50. místa světového žebříčku ITF 50-55</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!------------ SEKCE 6. KONTAKTY ----------------->
+    <!-- SEKCE 6. KONTAKTY -->
     <section id="contact-bg">
       <div class="container">
         <h2>Kontakt</h2>
@@ -1208,46 +1215,46 @@
           <div class="contact-div1">
             <div class="contact-form-address-mail">
               <div class="contact-form address">
-                <img src="img/icons/maps-and-flags.png">
+                <img src="img/icons/maps-and-flags.png" alt="">
                 <p><strong>TJ Sokol Stará Bělá z. s.</strong><br>Nad Rybníkem 1173/7<br>724 00 Ostrava - Stará
                   Bělá<br>IČ:
                   44743980</p>
               </div>
               <div class="contact-form mail">
-                <img src="img/icons/arroba.png">
+                <img src="img/icons/arroba.png" alt="">
                 <a href="mailto:st.bela-tenis@seznam.cz">st.bela-tenis@seznam.cz</a>
               </div>
             </div>
             <div class="contact-summer">
               <p>LETNÍ SEZÓNA</p>
               <div class="contact-form phone">
-                <img src="img/icons/telephone_black.png">
+                <img src="img/icons/telephone_black.png" alt="">
                 <a href="tel:+420737560427">737&nbsp;560&nbsp;427 - správce</a>
               </div>
             </div>
             <div class="contact-winter">
               <p>ZIMNÍ SEZÓNA</p>
               <div class="contact-form phone">
-                <img src="img/icons/telephone_black.png">
+                <img src="img/icons/telephone_black.png" alt="">
                 <a href="tel:+420603335254">603&nbsp;335&nbsp;254 - Daniel Polášek</a>
               </div>
               <div class="contact-form phone">
-                <img src="img/icons/telephone_black.png">
+                <img src="img/icons/telephone_black.png" alt="">
                 <a href="tel:+420604601387">604&nbsp;601&nbsp;387 - Jiří Priesol</a>
               </div>
             </div>
             <div class="contact-ts">
               <p>TENISOVÁ ŠKOLA - Jiří Priesol</p>
               <div class="contact-form">
-                <img src="img/icons/telephone_black.png">
+                <img src="img/icons/telephone_black.png" alt="">
                 <a href="tel:+420604601387">604&nbsp;601&nbsp;387</a>
               </div>
               <div class="contact-form">
-                <img src="img/icons/arroba.png">
+                <img src="img/icons/arroba.png" alt="">
                 <a href="mailto:jpriesol@seznam.cz">jpriesol@seznam.cz</a>
               </div>
               <div class="contact-form">
-                <img src="img/icons/facebook.png">
+                <img src="img/icons/facebook.png" alt="facebook ikona">
                 <a href="https://www.facebook.com/profile.php?id=100057183500794" target="_blank">Tenisová škola Stará
                   Bělá</a>
               </div>
@@ -1267,7 +1274,7 @@
 
   </main>
 
-  <!------------------- FOOTER ------------------------>
+  <!-- FOOTER -->
   <footer class="footer-bg">
     <div class="container">
       <div class="footer-all">
@@ -1287,12 +1294,3 @@
 </body>
 
 </html>
-
-
-<!--TŠ SOUSTŘEDĚNÍ
-                <p>Tenisová škola pro své svěřence pořádá každý rok v srpnu Tenisové soustředění v Beskydech v obci Hutisko-Solanec. Jedná se o týdenní pobyt plný tenisu a her.</p>
-                
-                <p>Ubytování je v Turist hotelu Euro v obci Hutisko-Solanec asi 7 km od Rožnova pod Radhoštěm ve dvou-pětilůžkových pokojích. V areálu přilehlého kempu je k dispozici  široké sportovní zázemí (4 antukové kurty, bazén, sportovní hřiště, fotbalové hřiště a venkovní posilovna). </p>
-                <p>Hlavním programem soustředění jsou tenisové tréninky přímo v areálu. Děti se zdokonalí v tenise, zlepší svou fyzickou kondici, a to pod vedením zkušených trenérů. Jako doplňkové sporty jsou zařazeny fotbal, jiné míčové hry, bazén a pro starší také intenzivní tréninky fyzické kondice. 
-                Po celou dobu soustředění probíhají celotáborové hry a soutěžedoplněné večerním promítáním filmů v improvizovaném letním kině a výlety do okolní přírody.</p>
-                <p>Toto tenisové soustředění probíhá společně s přátelským oddílem TJ Sokol Dolní Lhota (Jiří Výtisk). -->
