@@ -116,6 +116,7 @@ p {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+  user-select: none;
 }
 .scroll-down header {
   display: none;
@@ -227,11 +228,12 @@ p {
 /*********************************
             AREÁL 
 *********************************/
-.slider{
+.slider {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
   position: relative;
+  user-select: none;
 }
 .slider .list .item {
   width: 100%;
@@ -756,6 +758,7 @@ marquee {
   gap: 1rem;
   padding: 1rem;
   justify-content: center;
+  user-select: none;
 }
 .ts-tab-buttons button {
   display: flex;
@@ -791,6 +794,7 @@ marquee {
   background: linear-gradient( rgb(109, 109, 109), var(--dark-grey));
   border-top: 3px solid #FFB30D;
   color: white;
+  user-select: none;
 }
 .ts-tab-content.active {
   display: block;
@@ -799,6 +803,7 @@ marquee {
 /* TŠ TLAČÍTKA PRO MOBILY - AKORDEON */
 .ts-accordion-mobile {
   display: block;
+  user-select: none;
 }
 .ts-accordion-item {
   margin-bottom: 0.5rem;
@@ -842,13 +847,13 @@ marquee {
 .ts-accordion-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.4s ease;
+  transition: all 0.4s ease;
   background: linear-gradient( rgb(109, 109, 109), var(--dark-grey));
   padding: 0 1.5rem;
   color: #ffffff;
 }
 .ts-accordion-content.open {
-  max-height: 100%;
+  max-height: 1000px;
   padding: 1.5rem;
 }
 
@@ -946,6 +951,7 @@ marquee {
   gap: 10px;
   p {
     padding: 0 5%;
+    text-align: center;
   }
 }
 .ts-one-price {
@@ -1050,6 +1056,7 @@ marquee {
   p {
     margin: 5px 0;
     color: #555;
+    text-align: left;
   }
 }
 .camp-photo {

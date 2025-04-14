@@ -169,22 +169,57 @@ tabButtons.forEach(btn => {
 });
 
 // TŠ Acordion - pro mobily
-toggles.forEach(toggle => {
-  toggle.addEventListener("click", () => {
-    const content = toggle.nextElementSibling;
-    const isOpen = content.classList.contains("open");
+document.addEventListener('DOMContentLoaded', function () {
+  const accordionToggles = document.querySelectorAll('.ts-accordion-toggle');
 
-    // Zavřít všechny
-    accordionContents.forEach(c => c.classList.remove("open"));
-    toggles.forEach(t => t.classList.remove("open"));
+  accordionToggles.forEach(toggle => {
+    toggle.addEventListener('click', function (event) {
+      event.preventDefault();
 
-    // Otevřít aktuální pokud nebyl otevřen
-    if (!isOpen) {
-      content.classList.add("open");
-      toggle.classList.add("open");
-    }
+      const content = toggle.nextElementSibling;
+      if (!content) return;
+
+      const isOpen = content.classList.contains('open');
+
+      // Ulož aktuální pozici tlačítka vůči viewportu
+      const rectBefore = toggle.getBoundingClientRect();
+      const offsetTopBefore = rectBefore.top;
+
+      // Zavřeme vše
+      document.querySelectorAll('.ts-accordion-toggle.open').forEach(btn => btn.classList.remove('open'));
+      document.querySelectorAll('.ts-accordion-content.open').forEach(panel => panel.classList.remove('open'));
+
+      // Otevřeme novou sekci jen pokud ještě nebyla otevřená
+      if (!isOpen) {
+        toggle.classList.add('open');
+        content.classList.add('open');
+      }
+
+      // Po DOM změně přepočítáme a korigujeme scroll
+      requestAnimationFrame(() => {
+        const rectAfter = toggle.getBoundingClientRect();
+        const offsetTopAfter = rectAfter.top;
+
+        const delta = offsetTopAfter - offsetTopBefore;
+
+        window.scrollBy({
+          top: delta,
+          behavior: 'smooth' 
+        });
+      });
+    });
   });
 });
+
+
+
+
+
+
+
+
+
+
 
 
 // HLAVIČKA tlačítko pro tábory
