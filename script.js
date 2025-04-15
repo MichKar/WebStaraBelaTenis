@@ -182,31 +182,34 @@ document.addEventListener('DOMContentLoaded', function () {
       const isOpen = content.classList.contains('open');
 
       // Ulož aktuální pozici tlačítka vůči viewportu
-      const rectBefore = toggle.getBoundingClientRect();
-      const offsetTopBefore = rectBefore.top;
+      // const rectBefore = toggle.getBoundingClientRect();
+      // const offsetTopBefore = rectBefore.top;
 
       // Zavřeme vše
-      document.querySelectorAll('.ts-accordion-toggle.open').forEach(btn => btn.classList.remove('open'));
-      document.querySelectorAll('.ts-accordion-content.open').forEach(panel => panel.classList.remove('open'));
+      // document.querySelectorAll('.ts-accordion-toggle.open').forEach(btn => btn.classList.remove('open'));
+      // document.querySelectorAll('.ts-accordion-content.open').forEach(panel => panel.classList.remove('open'));
 
       // Otevřeme novou sekci jen pokud ještě nebyla otevřená
       if (!isOpen) {
         toggle.classList.add('open');
         content.classList.add('open');
+      } else {
+        toggle.classList.remove('open');
+        content.classList.remove('open');
       }
 
       // Po DOM změně přepočítáme a korigujeme scroll
-      requestAnimationFrame(() => {
-        const rectAfter = toggle.getBoundingClientRect();
-        const offsetTopAfter = rectAfter.top;
+      // requestAnimationFrame(() => {
+      //   const rectAfter = toggle.getBoundingClientRect();
+      //   const offsetTopAfter = rectAfter.top;
 
-        const delta = offsetTopAfter - offsetTopBefore;
+      //   const delta = offsetTopAfter - offsetTopBefore;
 
-        window.scrollBy({
-          top: delta,
-          behavior: 'smooth' 
-        });
-      });
+      //   window.scrollBy({
+      //     top: delta,
+      //     behavior: 'smooth' 
+      //   });
+      // });
     });
   });
 });
