@@ -16,12 +16,17 @@
 html {
   scroll-behavior: smooth;
 }
+html {
+  height: 100%;
+}
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif, "Lucida Sans";
   background-color: #e4e4e4;
+  height: 100%;
+  overflow-y: scroll; 
 }
 .container {
   max-width: 1800px;
@@ -859,7 +864,8 @@ marquee {
 .ts-accordion-content {
   max-height: 0;
   overflow: hidden;
-  transition: all 0.4s ease;
+  box-sizing: border-box;
+  transition: max-height 0.4s ease, padding 0.2s ease;
   background: linear-gradient(rgb(109, 109, 109), var(--dark-grey));
   padding: 0 1.5rem;
   color: #ffffff;

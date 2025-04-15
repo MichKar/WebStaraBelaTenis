@@ -26,20 +26,20 @@ let navigation = document.querySelector(".navigation");
 let navbar = document.querySelector(".navbar");
 
 close.style.display = "none";
-navigation.classList.remove("open");
+navigation.classList.remove("nav-open");
 
 // Otevření menu
 menu.addEventListener("click", function(){
         menu.style.display = "none";
         close.style.display = "block";
-        navigation.classList.add("open"); 
+        navigation.classList.add("nav-open"); 
         navbar.style.backgroundColor = "black";
 });
 //fce pro zavření menu
 function closeMenu () {
         close.style.display = "none";
         menu.style.display = "block";
-        navigation.classList.remove("open"); 
+        navigation.classList.remove("nav-open"); 
 }
 // Zavření menu při stisknutí tlačítka Zavřít
 close.addEventListener("click", closeMenu);
@@ -47,7 +47,7 @@ close.addEventListener("click", closeMenu);
 navigation.addEventListener("click", closeMenu);
 // Zavření menu při scrollování
 window.addEventListener("scroll", function() {
-        if (navigation.classList.contains("open")) {
+        if (navigation.classList.contains("nav-open")) {
             closeMenu();
         }
     });
@@ -173,46 +173,52 @@ document.addEventListener('DOMContentLoaded', function () {
   const accordionToggles = document.querySelectorAll('.ts-accordion-toggle');
 
   accordionToggles.forEach(toggle => {
-    toggle.addEventListener('click', function (event) {
-      event.preventDefault();
+    let touchStartY = 0;
 
-      const content = toggle.nextElementSibling;
-      if (!content) return;
+    // Dotyk - začátek
+    toggle.addEventListener('touchstart', function (e) {
+      touchStartY = e.touches[0].clientY;
+    });
 
-      const isOpen = content.classList.contains('open');
+    // Dotyk - konec
+    toggle.addEventListener('touchend', function (e) {
+      const touchEndY = e.changedTouches[0].clientY;
+      const deltaY = Math.abs(touchEndY - touchStartY);
 
-      // Ulož aktuální pozici tlačítka vůči viewportu
-      // const rectBefore = toggle.getBoundingClientRect();
-      // const offsetTopBefore = rectBefore.top;
-
-      // Zavřeme vše
-      // document.querySelectorAll('.ts-accordion-toggle.open').forEach(btn => btn.classList.remove('open'));
-      // document.querySelectorAll('.ts-accordion-content.open').forEach(panel => panel.classList.remove('open'));
-
-      // Otevřeme novou sekci jen pokud ještě nebyla otevřená
-      if (!isOpen) {
-        toggle.classList.add('open');
-        content.classList.add('open');
-      } else {
-        toggle.classList.remove('open');
-        content.classList.remove('open');
+      if (deltaY < 10) {
+        // Skoro žádný pohyb = pravděpodobně klik
+        e.preventDefault(); // zabráníme klasickému clicku
+        handleToggle(toggle);
       }
+    });
 
-      // Po DOM změně přepočítáme a korigujeme scroll
-      // requestAnimationFrame(() => {
-      //   const rectAfter = toggle.getBoundingClientRect();
-      //   const offsetTopAfter = rectAfter.top;
-
-      //   const delta = offsetTopAfter - offsetTopBefore;
-
-      //   window.scrollBy({
-      //     top: delta,
-      //     behavior: 'smooth' 
-      //   });
-      // });
+    // Klik myší nebo dotyk bez touchstart/touchend
+    toggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      // na mobilech už jsme to řešili v touchend → aby se to nespustilo 2×
+      if (e.detail === 0) return; // ignoruj syntetický click po touchu
+      handleToggle(toggle);
     });
   });
+
+  function handleToggle(toggle) {
+    const content = toggle.nextElementSibling;
+    if (!content) return;
+
+    const isOpen = content.classList.contains('open');
+
+    if (!isOpen) {
+      toggle.classList.add('open');
+      content.classList.add('open');
+    } else {
+      toggle.classList.remove('open');
+      content.classList.remove('open');
+    }
+  }
 });
+
+
+
 
 
 
@@ -282,15 +288,26 @@ window.addEventListener("DOMContentLoaded", () => {
   closeAllSections();
 });
 
-// Při změně velikosti okna také vše zavři
+// Při změně velikosti okna (na šířku) také vše zavři
+// window.addEventListener("resize", () => {
+//   closeAllSections();
+// });
+let lastWindowWidth = window.innerWidth;
+
 window.addEventListener("resize", () => {
-  closeAllSections();
+  const currentWidth = window.innerWidth;
+
+  if (currentWidth !== lastWindowWidth) {
+    // Skutečná změna šířky – třeba při otočení telefonu nebo změně velikosti okna
+    closeAllSections();
+    lastWindowWidth = currentWidth;
+  }
 });
 
 
 
 
-//TENISOVÁ ŠKOLA - MODAL
+//MODAL
 function showModal(modalId) {
         document.getElementById(modalId).style.display = "block";
         }

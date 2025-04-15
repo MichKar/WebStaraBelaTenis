@@ -49,7 +49,7 @@
         transition: transform 0.5s ease, opacity 0.5s ease;
         z-index: 90;
       }
-      .navigation.open {
+      .navigation.nav-open {
         transform: translateX(0); /* zpět na místo */
         opacity: 1;
       }
@@ -199,13 +199,12 @@
         height: 30px;
         right: 0;
         top: 150px;
-        font-size: 1.5rem;
         z-index: 100;
         padding: 10px;
         border-radius: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    }
+    .success-arrow img {
+        width: 100%;
     }
     .special-card {
         display: none;
