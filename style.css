@@ -71,7 +71,7 @@ p {
   margin: 5% auto;
   padding: 20px;
   width: 60%;
-  max-height: 80vh;
+  max-height: 80svh;
   overflow-y: auto;
   border-radius: 10px;
   position: relative;
@@ -236,7 +236,7 @@ p {
 *********************************/
 .slider {
   width: 100vw;
-  height: 100vh;
+  height: 100svh;
   overflow: hidden;
   position: relative;
   user-select: none;
