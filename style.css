@@ -19,6 +19,7 @@ html {
 html {
   height: 100%;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -27,6 +28,7 @@ body {
   background-color: #e4e4e4;
   height: 100%;
   overflow-y: scroll; 
+  overflow-x: hidden;
 }
 .container {
   max-width: 1800px;
