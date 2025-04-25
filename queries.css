@@ -135,12 +135,12 @@
         right: 60%;
         gap:5px;
     }
+    .slider .list .item {
+        max-width: 480px;
+      }
     .prices-header .summer,
     .prices-header .winter {
       gap: 13px;
-    }
-    #areal-prices {
-        width: 90%;
     }
     .prices-body {
         padding-bottom: 100px;  
@@ -312,7 +312,24 @@
     } 
 }
 @media (max-width: 405px) {
+    .navbar {
+        width: 100svw;
+    }
+   
     .hidden-element {
         display: none;
     }
+    .quick-links {
+        flex-direction: column;
+    }
+}
+@media (max-width: 340px) {
+    .header-rezervation {
+        font-size: 0;
+        border: none;
+      }
+      .header-rezervation img {
+        width: 24px; 
+        height: auto;
+      }
 }
