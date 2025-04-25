@@ -18,7 +18,6 @@
   }
 
 /* MAX WIDTH */
-/* nejmenší 320px */
 @media (max-width: 1150px){
     .navbar {
         display: flex !important;
@@ -83,6 +82,7 @@
     }
 }
 @media (max-width: 768px) {
+
     .tennis-school-information {
         flex-direction: column;
         align-items: center;

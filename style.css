@@ -19,7 +19,6 @@ html {
 html {
   height: 100%;
 }
-
 body {
   margin: 0;
   padding: 0;
@@ -473,6 +472,18 @@ p {
   flex-wrap: wrap;
   gap: 7px;
 }
+.modal-text-refreshment {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 20px;
+}
+#refreshmentModal img {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
 .description>a {
   color: white;
   letter-spacing: 0.5px;
@@ -490,34 +501,32 @@ p {
           AKTUALITY 
 *********************************/
 .news {
-  display: none;
-  /* display: block; */
+  /* display: none; */
+  display: block;
   margin: 0;
   padding: 0;
   position: absolute;
   top: 70px;
   z-index: 100;
 }
-.img-arrow-down {
-  width: 130px;
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  animation: moveUpAndDown 2s ease-in-out infinite;
+.news {
+  background-color: #F8BA1F;
+  overflow: hidden;
+  white-space: nowrap;
 }
-@keyframes moveUpAndDown {
-  0% {
-    transform: translateX(-50%) translateY(0);
-  }
-  50% {
-    transform: translateX(-50%) translateY(-20px);
-  }
-  100% {
-    transform: translateX(-50%) translateY(0);
-  }
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 15s linear infinite;
 }
-marquee {
+.news:hover .marquee span {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+.marquee {
   padding: 5px;
   font-weight: 600;
   width: 100vw;
@@ -810,7 +819,6 @@ marquee {
 .ts-tab-content {
   display: none;
   padding: 1.5rem;
-  background: linear-gradient(rgb(109, 109, 109), var(--dark-grey));
   border-top: 3px solid #FFB30D;
   color: white;
   user-select: none;
